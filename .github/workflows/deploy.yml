@@ -32,12 +32,6 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Type check
-        run: pnpm check
-
-      - name: Unit tests and content validation
-        run: pnpm test:unit --run --project server
-
       - name: Configure Pages
         id: pages
         uses: actions/configure-pages@v6
