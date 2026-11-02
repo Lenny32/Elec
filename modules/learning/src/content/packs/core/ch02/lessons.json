@@ -1,0 +1,860 @@
+[
+	{
+		"id": "lesson.02.01.series_parallel",
+		"version": 1,
+		"chapterId": "chapter.02",
+		"number": "02.01",
+		"title": {
+			"en": "Series and parallel resistors",
+			"fr": "Résistances en série et en parallèle"
+		},
+		"objectives": [
+			{
+				"en": "Recognise series and parallel connections in a schematic",
+				"fr": "Reconnaître un montage en série et en parallèle sur un schéma"
+			},
+			{
+				"en": "Compute the total resistance of series and parallel resistors",
+				"fr": "Calculer la résistance totale de résistances en série et en parallèle"
+			}
+		],
+		"conceptsTaught": ["resistors.series", "resistors.parallel"],
+		"formulasUsed": ["formula.resistors.series", "formula.resistors.parallel"],
+		"estimatedMinutes": 14,
+		"safetyClass": "low_voltage_simulated",
+		"cards": [
+			{
+				"id": "c1",
+				"type": "explain",
+				"title": {
+					"en": "Series: one path",
+					"fr": "En série : un seul chemin"
+				},
+				"text": {
+					"en": "Parts are **in series** when they are connected end to end, with nothing else attached at the joins. Charge has only **one path**, so:\n\n- the **same current** flows through every part;\n- the battery voltage is **shared** between the parts (bigger resistor, bigger share);\n- the resistances **add up**.\n\nThink of old Christmas lights: one string, one path.",
+					"fr": "Des composants sont **en série** quand ils sont reliés bout à bout, sans rien d’autre branché aux points de jonction. La charge n’a qu’**un seul chemin**, donc :\n\n- le **même courant** traverse chaque composant ;\n- la tension de la pile est **partagée** entre eux (plus grande résistance, plus grande part) ;\n- les résistances **s’additionnent**.\n\nPensez aux anciennes guirlandes de Noël : une seule chaîne, un seul chemin."
+				}
+			},
+			{
+				"id": "c2",
+				"type": "diagram",
+				"diagramId": "diagram.ch02.series_string",
+				"caption": {
+					"en": "Three resistors in series: one loop, one current I.",
+					"fr": "Trois résistances en série : une boucle, un seul courant I."
+				}
+			},
+			{
+				"id": "c3",
+				"type": "formula",
+				"formulaId": "formula.resistors.series"
+			},
+			{
+				"id": "c4",
+				"type": "worked_example",
+				"title": {
+					"en": "Current in a series string",
+					"fr": "Courant dans une chaîne série"
+				},
+				"steps": [
+					{
+						"en": "A 12 V battery drives 1 kΩ, 2 kΩ and 3 kΩ in series. Find the current and each voltage.",
+						"fr": "Une batterie de 12 V alimente 1 kΩ, 2 kΩ et 3 kΩ en série. Trouver le courant et chaque tension."
+					},
+					{
+						"en": "Total: $R_\\text{t} = 1 + 2 + 3 = 6\\ \\text{k}\\Omega$.",
+						"fr": "Total : $R_\\text{t} = 1 + 2 + 3 = 6\\ \\text{k}\\Omega$."
+					},
+					{
+						"en": "Current (same everywhere): $I = \\frac{12}{6000} = 2\\ \\text{mA}$.",
+						"fr": "Courant (le même partout) : $I = \\frac{12}{6000} = 2\\ \\text{mA}$."
+					},
+					{
+						"en": "Voltages: $2\\ \\text{mA} \\times 1\\ \\text{k}\\Omega = 2$ V, then 4 V, then 6 V. Check: $2 + 4 + 6 = 12$ V. ✔",
+						"fr": "Tensions : $2\\ \\text{mA} \\times 1\\ \\text{k}\\Omega = 2$ V, puis 4 V, puis 6 V. Vérification : $2 + 4 + 6 = 12$ V. ✔"
+					}
+				]
+			},
+			{
+				"id": "c5",
+				"type": "exercise",
+				"exerciseId": "exercise.ch02.series_sum_three"
+			},
+			{
+				"id": "c6",
+				"type": "explain",
+				"title": {
+					"en": "Parallel: several paths",
+					"fr": "En parallèle : plusieurs chemins"
+				},
+				"text": {
+					"en": "Parts are **in parallel** when they are connected between the **same two nodes**. In a schematic, a **junction dot** shows where wires really join.\n\n- every branch has the **same voltage**;\n- the battery current **splits** between the branches (smaller resistor, bigger share);\n- each extra branch is an extra path, so the total resistance goes **down**.\n\nThe lights in a house are in parallel: switching one off leaves the others on.",
+					"fr": "Des composants sont **en parallèle** (ou « en dérivation ») quand ils sont reliés entre les **deux mêmes nœuds**. Sur un schéma, un **point de jonction** montre où des fils sont vraiment reliés.\n\n- chaque branche a la **même tension** ;\n- le courant de la pile **se partage** entre les branches (plus petite résistance, plus grande part) ;\n- chaque branche ajoute un chemin, donc la résistance totale **diminue**.\n\nLes lampes d’une maison sont en parallèle : en éteindre une laisse les autres allumées."
+				}
+			},
+			{
+				"id": "c7",
+				"type": "diagram",
+				"diagramId": "diagram.ch02.parallel_pair",
+				"caption": {
+					"en": "Two branches between the same two nodes. Note the junction dots.",
+					"fr": "Deux branches entre les deux mêmes nœuds. Remarquez les points de jonction."
+				}
+			},
+			{
+				"id": "c8",
+				"type": "formula",
+				"formulaId": "formula.resistors.parallel"
+			},
+			{
+				"id": "c9",
+				"type": "worked_example",
+				"title": {
+					"en": "Two branches on a 4 V battery",
+					"fr": "Deux branches sur une pile de 4 V"
+				},
+				"steps": [
+					{
+						"en": "100 Ω and 400 Ω are in parallel on a 4 V battery.",
+						"fr": "100 Ω et 400 Ω sont en parallèle sur une pile de 4 V."
+					},
+					{
+						"en": "Each branch sees 4 V: $I_1 = 4/100 = 40$ mA, $I_2 = 4/400 = 10$ mA.",
+						"fr": "Chaque branche reçoit 4 V : $I_1 = 4/100 = 40$ mA, $I_2 = 4/400 = 10$ mA."
+					},
+					{
+						"en": "Battery current: $40 + 10 = 50$ mA.",
+						"fr": "Courant de la pile : $40 + 10 = 50$ mA."
+					},
+					{
+						"en": "Equivalent: $R_\\text{t} = \\frac{100 \\times 400}{500} = 80\\ \\Omega$, and indeed $4 / 80 = 50$ mA. ✔ (80 Ω < 100 Ω.)",
+						"fr": "Équivalent : $R_\\text{t} = \\frac{100 \\times 400}{500} = 80\\ \\Omega$, et on retrouve $4 / 80 = 50$ mA. ✔ (80 Ω < 100 Ω.)"
+					}
+				]
+			},
+			{
+				"id": "c10",
+				"type": "parameter_lab",
+				"labId": "lab.ch02.parallel"
+			},
+			{
+				"id": "c11",
+				"type": "exercise",
+				"exerciseId": "exercise.ch02.parallel_two_equal"
+			},
+			{
+				"id": "c12",
+				"type": "summary",
+				"points": [
+					{
+						"en": "Series: one path, same current, $R_\\text{t} = R_1 + R_2 + \\dots$ (bigger than any part).",
+						"fr": "Série : un chemin, même courant, $R_\\text{t} = R_1 + R_2 + \\dots$ (plus grand que chaque composant)."
+					},
+					{
+						"en": "Parallel: same voltage, currents add, $\\frac{1}{R_\\text{t}} = \\frac{1}{R_1} + \\frac{1}{R_2} + \\dots$ (smaller than the smallest branch).",
+						"fr": "Parallèle : même tension, les courants s’additionnent, $\\frac{1}{R_\\text{t}} = \\frac{1}{R_1} + \\frac{1}{R_2} + \\dots$ (plus petit que la plus petite branche)."
+					},
+					{
+						"en": "Always convert prefixes before combining values.",
+						"fr": "Toujours convertir les préfixes avant de combiner des valeurs."
+					}
+				]
+			}
+		],
+		"references": []
+	},
+	{
+		"id": "lesson.02.02.open_short",
+		"version": 1,
+		"chapterId": "chapter.02",
+		"number": "02.02",
+		"title": {
+			"en": "Open circuits and short circuits",
+			"fr": "Circuit ouvert et court-circuit"
+		},
+		"objectives": [
+			{
+				"en": "Predict current and voltage in an open circuit",
+				"fr": "Prévoir le courant et la tension dans un circuit ouvert"
+			},
+			{
+				"en": "Recognise a short circuit and explain why it is dangerous",
+				"fr": "Reconnaître un court-circuit et expliquer pourquoi il est dangereux"
+			}
+		],
+		"conceptsTaught": ["circuits.open_short"],
+		"formulasUsed": [],
+		"estimatedMinutes": 10,
+		"safetyClass": "low_voltage_simulated",
+		"cards": [
+			{
+				"id": "c1",
+				"type": "explain",
+				"title": {
+					"en": "Open circuit: a break in the loop",
+					"fr": "Circuit ouvert : une coupure dans la boucle"
+				},
+				"text": {
+					"en": "An **open circuit** is a break in the path: an open switch, a cut wire, a loose breadboard lead, a burnt-out bulb. Its resistance is (practically) **infinite**.\n\n- No current flows anywhere in that loop: $I = 0$.\n- Surprise: the open point is where the voltage appears. With $I = 0$, every resistor has $V = IR = 0$, so the **whole supply voltage** sits across the gap.",
+					"fr": "Un **circuit ouvert** est une coupure du chemin : interrupteur ouvert, fil coupé, fil mal enfoncé dans la plaque, ampoule grillée. Sa résistance est (pratiquement) **infinie**.\n\n- Aucun courant ne circule dans cette boucle : $I = 0$.\n- Surprise : c’est à l’endroit de la coupure qu’apparaît la tension. Avec $I = 0$, chaque résistance a $V = IR = 0$, donc **toute la tension d’alimentation** se retrouve aux bornes de la coupure."
+				}
+			},
+			{
+				"id": "c2",
+				"type": "diagram",
+				"diagramId": "diagram.ch02.open_circuit",
+				"caption": {
+					"en": "The open switch breaks the only path: no current.",
+					"fr": "L’interrupteur ouvert coupe le seul chemin : aucun courant."
+				}
+			},
+			{
+				"id": "c3",
+				"type": "parameter_lab",
+				"labId": "lab.ch02.open_switch"
+			},
+			{
+				"id": "c4",
+				"type": "explain",
+				"title": {
+					"en": "Short circuit: a path with (almost) no resistance",
+					"fr": "Court-circuit : un chemin (presque) sans résistance"
+				},
+				"text": {
+					"en": "A **short circuit** is an unwanted path of (almost) **0 Ω**, such as a stray wire or two breadboard legs in the same row.\n\n- The voltage across a short is (almost) **0 V**.\n- Current takes the easy path and **bypasses** whatever is shorted.\n- With less resistance in the loop, the current **rises**. A short directly across a battery leaves only the battery’s tiny internal resistance: very large current and heat.",
+					"fr": "Un **court-circuit** est un chemin indésirable d’environ **0 Ω**, comme un fil égaré ou deux pattes dans la même rangée d’une plaque d’essai.\n\n- La tension aux bornes d’un court-circuit est (presque) **0 V**.\n- Le courant prend le chemin facile et **contourne** ce qui est court-circuité.\n- Avec moins de résistance dans la boucle, le courant **augmente**. Un court-circuit direct sur une pile ne laisse que sa minuscule résistance interne : courant très fort et forte chaleur."
+				}
+			},
+			{
+				"id": "c5",
+				"type": "diagram",
+				"diagramId": "diagram.ch02.short_circuit",
+				"caption": {
+					"en": "A stray jumper wire bypasses R2.",
+					"fr": "Un fil égaré contourne R2."
+				}
+			},
+			{
+				"id": "c6",
+				"type": "worked_example",
+				"title": {
+					"en": "What the short changes",
+					"fr": "Ce que change le court-circuit"
+				},
+				"steps": [
+					{
+						"en": "Normal: $R_\\text{t} = 1 + 2 = 3\\ \\text{k}\\Omega$, $I = 9/3000 = 3$ mA; $V_{R1} = 3$ V, $V_{R2} = 6$ V.",
+						"fr": "Normal : $R_\\text{t} = 1 + 2 = 3\\ \\text{k}\\Omega$, $I = 9/3000 = 3$ mA ; $V_{R1} = 3$ V, $V_{R2} = 6$ V."
+					},
+					{
+						"en": "With the jumper, R2 is bypassed: $V_{R2} = 0$ V.",
+						"fr": "Avec le fil, R2 est contournée : $V_{R2} = 0$ V."
+					},
+					{
+						"en": "Only R1 is left: $I = 9/1000 = 9$ mA, and $V_{R1} = 9$ V. R1 now dissipates $9 \\times 0.009 = 81$ mW instead of 9 mW.",
+						"fr": "Il ne reste que R1 : $I = 9/1000 = 9$ mA et $V_{R1} = 9$ V. R1 dissipe maintenant $9 \\times 0{,}009 = 81$ mW au lieu de 9 mW."
+					}
+				]
+			},
+			{
+				"id": "c7",
+				"type": "safety",
+				"text": {
+					"en": "**Never short-circuit a battery.** Even a 9 V or 1.5 V battery can get hot enough to burn you, leak or burst. Lithium cells (phone batteries, 18650s) can catch fire. Keep loose batteries away from keys and coins, and never connect a wire straight from + to −.",
+					"fr": "**Ne court-circuitez jamais une pile.** Même une pile de 9 V ou de 1,5 V peut chauffer au point de brûler, fuir ou éclater. Les éléments au lithium (batteries de téléphone, 18650) peuvent prendre feu. Éloignez les piles en vrac des clés et des pièces, et ne reliez jamais directement le + au − par un fil."
+				}
+			},
+			{
+				"id": "c8",
+				"type": "exercise",
+				"exerciseId": "exercise.ch02.open_switch_current"
+			},
+			{
+				"id": "c9",
+				"type": "exercise",
+				"exerciseId": "exercise.ch02.open_switch_voltage"
+			},
+			{
+				"id": "c10",
+				"type": "exercise",
+				"exerciseId": "exercise.ch02.short_jumper_effect"
+			},
+			{
+				"id": "c11",
+				"type": "summary",
+				"points": [
+					{
+						"en": "Open: infinite resistance, $I = 0$, full supply voltage across the gap.",
+						"fr": "Ouvert : résistance infinie, $I = 0$, toute la tension aux bornes de la coupure."
+					},
+					{
+						"en": "Short: ≈ 0 Ω, ≈ 0 V across it, current rises and bypasses the shorted part.",
+						"fr": "Court-circuit : ≈ 0 Ω, ≈ 0 V à ses bornes, le courant augmente et contourne le composant."
+					},
+					{
+						"en": "A short across a battery is a fire and burn hazard.",
+						"fr": "Un court-circuit sur une pile présente un risque de brûlure et d’incendie."
+					}
+				]
+			}
+		],
+		"references": []
+	},
+	{
+		"id": "lesson.02.03.breadboard",
+		"version": 1,
+		"chapterId": "chapter.02",
+		"number": "02.03",
+		"title": {
+			"en": "Building on a breadboard",
+			"fr": "Monter sur une plaque d’essai"
+		},
+		"objectives": [
+			{
+				"en": "Explain which breadboard holes are connected internally",
+				"fr": "Expliquer quels trous d’une plaque d’essai sont reliés à l’intérieur"
+			},
+			{
+				"en": "Turn a simple schematic into a breadboard layout",
+				"fr": "Transformer un schéma simple en montage sur plaque d’essai"
+			}
+		],
+		"conceptsTaught": ["practice.breadboard"],
+		"formulasUsed": [],
+		"estimatedMinutes": 12,
+		"safetyClass": "low_voltage_hands_on",
+		"cards": [
+			{
+				"id": "c1",
+				"type": "explain",
+				"title": {
+					"en": "What is a breadboard?",
+					"fr": "Qu’est-ce qu’une plaque d’essai ?"
+				},
+				"text": {
+					"en": "A **breadboard** (solderless breadboard) is a plastic board full of holes. Under the holes are springy metal clips. You push component legs and wires into the holes, and the clips connect them. Nothing is soldered, so you can build, test and change a circuit in minutes.",
+					"fr": "Une **plaque d’essai** (souvent appelée *breadboard*) est une plaque en plastique percée de trous. Sous les trous se trouvent des lames métalliques à ressort. On enfonce les pattes des composants et des fils dans les trous, et les lames les relient. Aucune soudure : on monte, teste et modifie un circuit en quelques minutes."
+				}
+			},
+			{
+				"id": "c2",
+				"type": "explain",
+				"title": {
+					"en": "How the holes are connected",
+					"fr": "Comment les trous sont reliés"
+				},
+				"text": {
+					"en": "- **Rows**: each numbered row has two groups of five holes, **a–e** and **f–j**. The five holes of one group are connected together: they form **one node**.\n- **Centre gap**: the groove down the middle separates a–e from f–j. Chips (DIP ICs) straddle it so each pin gets its own row.\n- **Power rails**: the long strips along the edges (marked red + and blue −) are connected along their length. On long boards they are often **split in the middle**.\n- Different rows are **not** connected to each other.",
+					"fr": "- **Rangées** : chaque rangée numérotée comporte deux groupes de cinq trous, **a–e** et **f–j**. Les cinq trous d’un groupe sont reliés : ils forment **un seul nœud**.\n- **Rainure centrale** : elle sépare a–e de f–j. Les puces (circuits intégrés DIP) l’enjambent pour que chaque broche ait sa propre rangée.\n- **Rails d’alimentation** : les longues bandes sur les bords (repérées + rouge et − bleu) sont reliées sur toute leur longueur. Sur les grandes plaques, elles sont souvent **coupées au milieu**.\n- Des rangées différentes ne sont **pas** reliées entre elles."
+				}
+			},
+			{
+				"id": "c3",
+				"type": "explain",
+				"title": {
+					"en": "From schematic to breadboard",
+					"fr": "Du schéma à la plaque"
+				},
+				"text": {
+					"en": "Rule: **every node of the schematic becomes one row (or one rail)**. A part bridges two different rows. Two parts that meet at a node have a leg in the same row.\n\nExample, battery → resistor → LED → battery:\n\n- battery + → **+ rail**; battery − → **− rail**;\n- resistor from the + rail to **row 10**;\n- LED long leg (anode) in **row 10**, short leg (cathode) in the **− rail**.\n\nNever put both legs of one part in the same row: that part would be shorted.",
+					"fr": "Règle : **chaque nœud du schéma devient une rangée (ou un rail)**. Un composant relie deux rangées différentes. Deux composants qui se rejoignent en un nœud ont chacun une patte dans la même rangée.\n\nExemple, pile → résistance → LED → pile :\n\n- + de la pile → **rail +** ; − de la pile → **rail −** ;\n- résistance entre le rail + et la **rangée 10** ;\n- patte longue de la LED (anode) dans la **rangée 10**, patte courte (cathode) dans le **rail −**.\n\nNe mettez jamais les deux pattes d’un composant dans la même rangée : il serait court-circuité."
+				}
+			},
+			{
+				"id": "c4",
+				"type": "worked_example",
+				"title": {
+					"en": "Checking a layout",
+					"fr": "Vérifier un montage"
+				},
+				"steps": [
+					{
+						"en": "Plan: R1 from + rail to row 10; LED anode in 10c, cathode in the − rail.",
+						"fr": "Plan : R1 du rail + à la rangée 10 ; anode de la LED en 10c, cathode dans le rail −."
+					},
+					{
+						"en": "Node check: row 10 holds only R1 and the LED anode — correct, it is the node between them.",
+						"fr": "Vérification des nœuds : la rangée 10 ne contient que R1 et l’anode de la LED — correct, c’est le nœud qui les relie."
+					},
+					{
+						"en": "Short check: no part has both legs in the same row or the same rail.",
+						"fr": "Vérification des courts-circuits : aucun composant n’a ses deux pattes dans la même rangée ou le même rail."
+					},
+					{
+						"en": "Polarity check: LED long leg towards +. Only then connect the battery.",
+						"fr": "Vérification du sens : patte longue de la LED côté +. Ensuite seulement, brancher la pile."
+					}
+				]
+			},
+			{
+				"id": "c5",
+				"type": "safety",
+				"text": {
+					"en": "Build and modify circuits with the **battery disconnected**. Use only batteries of 9 V or less. Always put a resistor in series with an LED. If anything gets hot or smells, disconnect immediately: a hot part usually means a short.",
+					"fr": "Montez et modifiez vos circuits **pile débranchée**. N’utilisez que des piles de 9 V maximum. Mettez toujours une résistance en série avec une LED. Si quelque chose chauffe ou sent le brûlé, débranchez immédiatement : un composant chaud signale souvent un court-circuit."
+				}
+			},
+			{
+				"id": "c6",
+				"type": "exercise",
+				"exerciseId": "exercise.ch02.breadboard_row_connections"
+			},
+			{
+				"id": "c7",
+				"type": "exercise",
+				"exerciseId": "exercise.ch02.breadboard_resistor_same_row"
+			},
+			{
+				"id": "c8",
+				"type": "exercise",
+				"exerciseId": "exercise.ch02.breadboard_build_order"
+			},
+			{
+				"id": "c9",
+				"type": "summary",
+				"points": [
+					{
+						"en": "Five holes of a half-row (a–e or f–j) form one node; the centre gap separates the halves.",
+						"fr": "Les cinq trous d’une demi-rangée (a–e ou f–j) forment un nœud ; la rainure centrale sépare les moitiés."
+					},
+					{
+						"en": "Rails run along the edges and may be split on long boards.",
+						"fr": "Les rails longent les bords et peuvent être coupés sur les grandes plaques."
+					},
+					{
+						"en": "One schematic node = one row; never put both legs of a part in the same row.",
+						"fr": "Un nœud du schéma = une rangée ; jamais les deux pattes d’un composant dans la même rangée."
+					}
+				]
+			}
+		],
+		"references": []
+	},
+	{
+		"id": "lesson.02.04.multimeter",
+		"version": 1,
+		"chapterId": "chapter.02",
+		"number": "02.04",
+		"title": {
+			"en": "Using a multimeter",
+			"fr": "Utiliser un multimètre"
+		},
+		"objectives": [
+			{
+				"en": "Connect a multimeter correctly to measure voltage, current and resistance",
+				"fr": "Brancher correctement un multimètre pour mesurer tension, courant et résistance"
+			},
+			{
+				"en": "Avoid the classic mistakes that blow the meter fuse or give wrong readings",
+				"fr": "Éviter les erreurs classiques qui grillent le fusible ou faussent la mesure"
+			}
+		],
+		"conceptsTaught": ["measure.multimeter"],
+		"formulasUsed": [],
+		"estimatedMinutes": 15,
+		"safetyClass": "low_voltage_hands_on",
+		"cards": [
+			{
+				"id": "c1",
+				"type": "explain",
+				"title": {
+					"en": "The multimeter",
+					"fr": "Le multimètre"
+				},
+				"text": {
+					"en": "A digital **multimeter** measures voltage (V), current (A) and resistance (Ω). It has a rotary dial and usually three or four jacks:\n\n- **COM**: black lead, always;\n- **VΩ**: red lead for voltage and resistance;\n- **mA** and/or **10 A**: red lead for current only.\n\nThe display shows the red probe’s value relative to the black probe; a minus sign just means the probes are swapped.",
+					"fr": "Un **multimètre** numérique mesure la tension (V), le courant (A) et la résistance (Ω). Il possède un commutateur rotatif et généralement trois ou quatre bornes :\n\n- **COM** : cordon noir, toujours ;\n- **VΩ** : cordon rouge pour la tension et la résistance ;\n- **mA** et/ou **10 A** : cordon rouge, pour le courant seulement.\n\nL’écran affiche la valeur de la pointe rouge par rapport à la noire ; un signe moins indique seulement que les pointes sont inversées."
+				}
+			},
+			{
+				"id": "c2",
+				"type": "explain",
+				"title": {
+					"en": "Voltage: in parallel",
+					"fr": "Tension : en parallèle"
+				},
+				"text": {
+					"en": "Voltage is a **difference between two points**, so the voltmeter goes **across** the part — in parallel. You do not change the wiring: just touch the probes to both ends, with the circuit powered. A good voltmeter has a very high resistance (about 10 MΩ), so it draws almost no current.",
+					"fr": "La tension est une **différence entre deux points** : le voltmètre se branche **aux bornes** du composant, en parallèle. On ne modifie pas le câblage : il suffit de poser les pointes aux deux extrémités, circuit alimenté. Un bon voltmètre a une résistance très élevée (environ 10 MΩ) : il ne tire presque aucun courant. (Les manuels français notent souvent la tension **U**.)"
+				}
+			},
+			{
+				"id": "c3",
+				"type": "diagram",
+				"diagramId": "diagram.ch02.voltmeter",
+				"caption": {
+					"en": "V1 is connected across R2, in parallel.",
+					"fr": "V1 est branché aux bornes de R2, en parallèle."
+				}
+			},
+			{
+				"id": "c4",
+				"type": "explain",
+				"title": {
+					"en": "Current: in series",
+					"fr": "Courant : en série"
+				},
+				"text": {
+					"en": "Current is a **flow through** a part, so all of it must pass through the ammeter: it goes **in series**. Power off, open the loop at one point, move the red lead to the **mA** jack, bridge the gap with the probes, then power on. An ammeter is almost **0 Ω**.\n\n**Never** put an ammeter across a battery or across a part: it is a short circuit and will blow the meter’s fuse.",
+					"fr": "Le courant **traverse** un composant : il doit entièrement passer dans l’ampèremètre, qui se branche donc **en série**. Hors tension, on ouvre la boucle en un point, on met le cordon rouge sur la borne **mA**, on referme la coupure avec les pointes, puis on alimente. Un ampèremètre fait presque **0 Ω**.\n\n**Jamais** d’ampèremètre aux bornes d’une pile ou d’un composant : c’est un court-circuit, qui grille le fusible de l’appareil."
+				}
+			},
+			{
+				"id": "c5",
+				"type": "diagram",
+				"diagramId": "diagram.ch02.ammeter",
+				"caption": {
+					"en": "A1 is inserted in the loop, in series.",
+					"fr": "A1 est inséré dans la boucle, en série."
+				}
+			},
+			{
+				"id": "c6",
+				"type": "explain",
+				"title": {
+					"en": "Resistance: power off",
+					"fr": "Résistance : hors tension"
+				},
+				"text": {
+					"en": "The ohmmeter sends its own small current through the part, so the circuit must be **unpowered**. For a true value, lift one leg of the part out of the circuit, otherwise other parts in parallel change the reading. The **continuity** setting (beep) is handy for checking wires and breadboard rails.",
+					"fr": "L’ohmmètre envoie son propre petit courant dans le composant : le circuit doit être **hors tension**. Pour une valeur juste, sortez une patte du composant du circuit, sinon d’autres composants en parallèle faussent la mesure. Le mode **continuité** (bip) est pratique pour vérifier des fils et les rails d’une plaque d’essai."
+				}
+			},
+			{
+				"id": "c7",
+				"type": "safety",
+				"text": {
+					"en": "Before measuring voltage, **check that the red lead is in the V jack**, not mA or 10 A. Choose a range larger than the value you expect (or use auto-range). In this course, measure only low-voltage battery circuits — never mains sockets.",
+					"fr": "Avant de mesurer une tension, **vérifiez que le cordon rouge est sur la borne V**, et non mA ou 10 A. Choisissez un calibre supérieur à la valeur attendue (ou le calibre automatique). Dans ce cours, ne mesurez que des circuits à piles basse tension — jamais une prise secteur."
+				}
+			},
+			{
+				"id": "c8",
+				"type": "diagram",
+				"diagramId": "diagram.ch02.led_measure",
+				"caption": {
+					"en": "The mini-project setup: A1 in series reads the LED current; V1 in parallel reads the LED voltage.",
+					"fr": "Le montage du mini-projet : A1 en série mesure le courant de la LED ; V1 en parallèle mesure sa tension."
+				}
+			},
+			{
+				"id": "c9",
+				"type": "parameter_lab",
+				"labId": "lab.ch02.series"
+			},
+			{
+				"id": "c10",
+				"type": "exercise",
+				"exerciseId": "exercise.ch02.meter_ammeter_series"
+			},
+			{
+				"id": "c11",
+				"type": "exercise",
+				"exerciseId": "exercise.ch02.meter_voltmeter_reading"
+			},
+			{
+				"id": "c12",
+				"type": "summary",
+				"points": [
+					{
+						"en": "Voltage: across the part (parallel), circuit powered, red lead in V.",
+						"fr": "Tension : aux bornes du composant (parallèle), circuit alimenté, cordon rouge sur V."
+					},
+					{
+						"en": "Current: in series, loop opened, red lead in mA/A. Never across a source.",
+						"fr": "Courant : en série, boucle ouverte, cordon rouge sur mA/A. Jamais aux bornes d’une source."
+					},
+					{
+						"en": "Resistance: power off, part ideally out of circuit.",
+						"fr": "Résistance : hors tension, composant idéalement sorti du circuit."
+					}
+				]
+			}
+		],
+		"references": []
+	},
+	{
+		"id": "lesson.02.05.measurement_errors",
+		"version": 1,
+		"chapterId": "chapter.02",
+		"number": "02.05",
+		"title": {
+			"en": "Measurement errors",
+			"fr": "Erreurs de mesure"
+		},
+		"objectives": [
+			{
+				"en": "Use tolerance to decide whether a measured value is acceptable",
+				"fr": "Utiliser la tolérance pour juger si une valeur mesurée est acceptable"
+			},
+			{
+				"en": "Explain resolution and meter loading, and choose a suitable range",
+				"fr": "Expliquer la résolution et l’effet de charge, et choisir un calibre adapté"
+			}
+		],
+		"conceptsTaught": ["measure.errors"],
+		"formulasUsed": ["formula.resistors.parallel"],
+		"estimatedMinutes": 13,
+		"safetyClass": "low_voltage_simulated",
+		"cards": [
+			{
+				"id": "c1",
+				"type": "explain",
+				"title": {
+					"en": "No measurement is perfect",
+					"fr": "Aucune mesure n’est parfaite"
+				},
+				"text": {
+					"en": "When a reading differs from your calculation, it is not always a fault. Three common reasons:\n\n- **Tolerance**: the parts are not exactly their marked value.\n- **Resolution and accuracy**: the meter can only show so many digits, and each reading has a small error.\n- **Loading**: connecting the meter slightly changes the circuit.",
+					"fr": "Quand une mesure diffère du calcul, ce n’est pas toujours une panne. Trois raisons fréquentes :\n\n- **Tolérance** : les composants ne valent pas exactement leur valeur marquée.\n- **Résolution et précision** : l’appareil n’affiche qu’un certain nombre de chiffres, et chaque mesure comporte une petite erreur.\n- **Effet de charge** : brancher l’appareil modifie légèrement le circuit."
+				}
+			},
+			{
+				"id": "c2",
+				"type": "explain",
+				"title": {
+					"en": "Tolerance",
+					"fr": "Tolérance"
+				},
+				"text": {
+					"en": "A resistor’s last colour band gives its **tolerance**: gold = ±5 %, brown = ±1 %. A 1 kΩ ±5 % resistor can be anywhere from 950 Ω to 1050 Ω and still be perfectly good. Your calculated currents and voltages inherit this uncertainty.",
+					"fr": "Le dernier anneau de couleur d’une résistance indique sa **tolérance** : or = ±5 %, marron = ±1 %. Une résistance de 1 kΩ ±5 % peut valoir de 950 Ω à 1050 Ω tout en étant parfaitement bonne. Les courants et tensions calculés héritent de cette incertitude."
+				}
+			},
+			{
+				"id": "c3",
+				"type": "worked_example",
+				"title": {
+					"en": "Is this resistor OK?",
+					"fr": "Cette résistance est-elle bonne ?"
+				},
+				"steps": [
+					{
+						"en": "Marked 470 Ω ±5 %, measured 462 Ω.",
+						"fr": "Marquée 470 Ω ±5 %, mesurée 462 Ω."
+					},
+					{
+						"en": "$0.05 \\times 470 = 23.5\\ \\Omega$, so the range is 446.5 Ω to 493.5 Ω.",
+						"fr": "$0{,}05 \\times 470 = 23{,}5\\ \\Omega$, l’intervalle va donc de 446,5 Ω à 493,5 Ω."
+					},
+					{
+						"en": "462 Ω is inside the range: the resistor is fine.",
+						"fr": "462 Ω est dans l’intervalle : la résistance est bonne."
+					}
+				]
+			},
+			{
+				"id": "c4",
+				"type": "explain",
+				"title": {
+					"en": "Resolution, accuracy and range",
+					"fr": "Résolution, précision et calibre"
+				},
+				"text": {
+					"en": "**Resolution** is the smallest step the display can show (on “4.97 V” it is 0.01 V). **Accuracy** is how close the reading is to the truth (e.g. ±0.5 % + 2 digits, from the meter’s manual). Choose the **smallest range that is still above** the expected value: 15 mA read on the 10 A range shows “0.01”, but on the 200 mA range it shows “15.0”.",
+					"fr": "La **résolution** est le plus petit pas affichable (sur « 4,97 V », c’est 0,01 V). La **précision** indique à quel point la mesure est proche de la réalité (par ex. ±0,5 % + 2 digits, d’après la notice). Choisissez le **plus petit calibre qui reste supérieur** à la valeur attendue : 15 mA sur le calibre 10 A affiche « 0,01 », mais sur le calibre 200 mA il affiche « 15,0 »."
+				}
+			},
+			{
+				"id": "c5",
+				"type": "explain",
+				"title": {
+					"en": "Meter loading",
+					"fr": "Effet de charge"
+				},
+				"text": {
+					"en": "A real voltmeter is a large resistor (typically **10 MΩ**) placed **in parallel** with what it measures. Across a 1 kΩ resistor it changes nothing you can see. Across resistors of hundreds of kΩ or more, it noticeably lowers the resistance and the voltage you read. A real ammeter adds a small series resistance, which slightly lowers the current.",
+					"fr": "Un vrai voltmètre est une grande résistance (typiquement **10 MΩ**) placée **en parallèle** sur ce qu’il mesure. Aux bornes d’une résistance de 1 kΩ, il ne change rien de visible. Aux bornes de résistances de centaines de kΩ ou plus, il diminue nettement la résistance et la tension lue. Un vrai ampèremètre ajoute une petite résistance en série, qui diminue un peu le courant."
+				}
+			},
+			{
+				"id": "c6",
+				"type": "formula",
+				"formulaId": "formula.resistors.parallel"
+			},
+			{
+				"id": "c7",
+				"type": "worked_example",
+				"title": {
+					"en": "Loading on a high-resistance divider",
+					"fr": "Effet de charge sur un pont très résistif"
+				},
+				"steps": [
+					{
+						"en": "Two 470 kΩ resistors in series on 9 V: you expect 4.5 V at the middle.",
+						"fr": "Deux résistances de 470 kΩ en série sur 9 V : on attend 4,5 V au point milieu."
+					},
+					{
+						"en": "The 10 MΩ meter across the lower resistor: $470\\ \\text{k} \\parallel 10\\ \\text{M} = \\frac{470 \\times 10\\,000}{10\\,470} \\approx 449\\ \\text{k}\\Omega$.",
+						"fr": "Le voltmètre de 10 MΩ sur la résistance du bas : $470\\ \\text{k} \\parallel 10\\ \\text{M} = \\frac{470 \\times 10\\,000}{10\\,470} \\approx 449\\ \\text{k}\\Omega$."
+					},
+					{
+						"en": "Reading: $9 \\times \\frac{449}{470 + 449} \\approx 4.40$ V — about 2 % low, caused only by the meter.",
+						"fr": "Lecture : $9 \\times \\frac{449}{470 + 449} \\approx 4{,}40$ V — environ 2 % de moins, uniquement à cause de l’appareil."
+					}
+				]
+			},
+			{
+				"id": "c8",
+				"type": "exercise",
+				"exerciseId": "exercise.ch02.errors_tolerance_range"
+			},
+			{
+				"id": "c9",
+				"type": "exercise",
+				"exerciseId": "exercise.ch02.errors_resolution"
+			},
+			{
+				"id": "c10",
+				"type": "exercise",
+				"exerciseId": "exercise.ch02.errors_meter_loading_1m"
+			},
+			{
+				"id": "c11",
+				"type": "summary",
+				"points": [
+					{
+						"en": "Tolerance: ±5 % of 1 kΩ is ±50 Ω; a value inside the range is normal.",
+						"fr": "Tolérance : ±5 % de 1 kΩ, c’est ±50 Ω ; une valeur dans l’intervalle est normale."
+					},
+					{
+						"en": "Resolution ≠ accuracy; pick the smallest range above the expected value.",
+						"fr": "Résolution ≠ précision ; choisir le plus petit calibre supérieur à la valeur attendue."
+					},
+					{
+						"en": "A voltmeter is ~10 MΩ in parallel: it loads high-resistance circuits.",
+						"fr": "Un voltmètre, c’est ~10 MΩ en parallèle : il charge les circuits très résistifs."
+					}
+				]
+			}
+		],
+		"references": []
+	},
+	{
+		"id": "lesson.02.06.troubleshooting",
+		"version": 1,
+		"chapterId": "chapter.02",
+		"number": "02.06",
+		"title": {
+			"en": "Troubleshooting a circuit",
+			"fr": "Dépanner un circuit"
+		},
+		"objectives": [
+			{
+				"en": "Follow a systematic troubleshooting method",
+				"fr": "Suivre une méthode de dépannage systématique"
+			},
+			{
+				"en": "Locate an open or a short from voltage measurements",
+				"fr": "Localiser une coupure ou un court-circuit à partir de mesures de tension"
+			}
+		],
+		"conceptsTaught": ["practice.troubleshooting"],
+		"formulasUsed": [],
+		"estimatedMinutes": 13,
+		"safetyClass": "low_voltage_hands_on",
+		"cards": [
+			{
+				"id": "c1",
+				"type": "explain",
+				"title": {
+					"en": "Expected vs measured",
+					"fr": "Attendu contre mesuré"
+				},
+				"text": {
+					"en": "Troubleshooting means comparing **what should be** with **what is**. Before measuring, write the expected values (current, voltage across each part). Then:\n\n- describe the symptom;\n- check the power source;\n- check the wiring against the schematic;\n- measure voltages and compare;\n- fix **one** thing, then test again.",
+					"fr": "Dépanner, c’est comparer **ce qui devrait être** avec **ce qui est**. Avant de mesurer, notez les valeurs attendues (courant, tension aux bornes de chaque composant). Ensuite :\n\n- décrire le symptôme ;\n- vérifier la source d’énergie ;\n- vérifier le câblage par rapport au schéma ;\n- mesurer les tensions et comparer ;\n- corriger **une seule** chose, puis retester."
+				}
+			},
+			{
+				"id": "c2",
+				"type": "explain",
+				"title": {
+					"en": "Fault signatures",
+					"fr": "Signatures des pannes"
+				},
+				"text": {
+					"en": "In a series loop, voltage readings point straight at the fault:\n\n- **Open part**: no current, so 0 V across the other parts and the **full supply voltage across the open part**.\n- **Shorted part**: about **0 V across it**, while the other parts get **more** voltage than expected.\n- **Flat or disconnected supply**: about 0 V everywhere, including at the battery leads.\n- **Wrong value**: everything works, but the voltages are shared in the wrong proportions.",
+					"fr": "Dans une boucle série, les tensions désignent directement la panne :\n\n- **Composant ouvert** : pas de courant, donc 0 V aux bornes des autres composants et **toute la tension aux bornes du composant ouvert**.\n- **Composant court-circuité** : environ **0 V à ses bornes**, les autres reçoivent **plus** de tension que prévu.\n- **Alimentation vide ou débranchée** : environ 0 V partout, y compris sur les fils de la pile.\n- **Mauvaise valeur** : tout fonctionne, mais les tensions se partagent dans de mauvaises proportions."
+				}
+			},
+			{
+				"id": "c3",
+				"type": "diagram",
+				"diagramId": "diagram.ch02.fault_led",
+				"caption": {
+					"en": "A dead LED circuit with two voltage readings. Which part is open?",
+					"fr": "Un circuit LED en panne avec deux mesures de tension. Quel composant est ouvert ?"
+				}
+			},
+			{
+				"id": "c4",
+				"type": "worked_example",
+				"title": {
+					"en": "Finding an open resistor",
+					"fr": "Trouver une résistance coupée"
+				},
+				"steps": [
+					{
+						"en": "Series string: 9 V, R1 = 100 Ω, R2 = 200 Ω, R3 = 150 Ω. Expected: 2 V, 4 V, 3 V.",
+						"fr": "Chaîne série : 9 V, R1 = 100 Ω, R2 = 200 Ω, R3 = 150 Ω. Attendu : 2 V, 4 V, 3 V."
+					},
+					{
+						"en": "Measured: R1 0 V, R2 0 V, R3 9 V.",
+						"fr": "Mesuré : R1 0 V, R2 0 V, R3 9 V."
+					},
+					{
+						"en": "0 V on R1 and R2 means no current; the full 9 V is across R3.",
+						"fr": "0 V sur R1 et R2 : aucun courant ; les 9 V sont aux bornes de R3."
+					},
+					{
+						"en": "Conclusion: R3 is open (or one of its legs is not making contact). Power off, check it with the ohmmeter, reseat or replace it.",
+						"fr": "Conclusion : R3 est ouverte (ou une de ses pattes ne fait pas contact). Couper l’alimentation, la vérifier à l’ohmmètre, la renfoncer ou la remplacer."
+					}
+				]
+			},
+			{
+				"id": "c5",
+				"type": "safety",
+				"text": {
+					"en": "Measure voltages with the circuit powered only at low voltage (≤ 9 V here). Change wiring and measure resistance with the power **off**. If a part is hot, disconnect first and let it cool before touching it.",
+					"fr": "Ne mesurez des tensions sur un circuit alimenté qu’en basse tension (≤ 9 V ici). Modifiez le câblage et mesurez les résistances **hors tension**. Si un composant est chaud, débranchez d’abord et laissez-le refroidir avant de le toucher."
+				}
+			},
+			{
+				"id": "c6",
+				"type": "exercise",
+				"exerciseId": "exercise.ch02.trouble_method_order"
+			},
+			{
+				"id": "c7",
+				"type": "exercise",
+				"exerciseId": "exercise.ch02.trouble_led_open"
+			},
+			{
+				"id": "c8",
+				"type": "exercise",
+				"exerciseId": "exercise.ch02.trouble_led_shorted"
+			},
+			{
+				"id": "c9",
+				"type": "summary",
+				"points": [
+					{
+						"en": "Predict first, then measure, then compare.",
+						"fr": "Prévoir d’abord, puis mesurer, puis comparer."
+					},
+					{
+						"en": "Full supply voltage across one part → that part is open. ≈ 0 V across a part with current flowing → that part is shorted.",
+						"fr": "Toute la tension aux bornes d’un composant → il est ouvert. ≈ 0 V à ses bornes alors que le courant passe → il est court-circuité."
+					},
+					{
+						"en": "Change one thing at a time. You are now ready for the mini-project: build and test a battery LED circuit.",
+						"fr": "Une seule modification à la fois. Vous êtes prêt pour le mini-projet : monter et tester un circuit pile-LED."
+					}
+				]
+			}
+		],
+		"references": []
+	}
+]

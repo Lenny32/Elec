@@ -1,0 +1,66 @@
+{
+	"name": "circuitpath",
+	"private": true,
+	"version": "0.0.1",
+	"type": "module",
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"prepare": "svelte-kit sync || echo ''",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"lint": "prettier --check . && eslint .",
+		"format": "prettier --write .",
+		"test:unit": "vitest",
+		"test": "pnpm test:unit --run && pnpm test:e2e",
+		"test:e2e": "playwright test",
+		"check:module": "tsc -p modules/learning/tsconfig.json",
+		"build:module": "tsc -p modules/learning/tsconfig.build.json",
+		"test:module": "vitest run --config modules/learning/vitest.config.ts"
+	},
+	"devDependencies": {
+		"@eslint/js": "10.0.1",
+		"@inlang/paraglide-js": "2.29.3",
+		"@playwright/test": "1.64.1",
+		"@sveltejs/adapter-static": "4.0.1",
+		"@sveltejs/kit": "3.1.1",
+		"@sveltejs/vite-plugin-svelte": "7.3.1",
+		"@tailwindcss/vite": "4.3.3",
+		"@types/katex": "0.16.8",
+		"@types/node": "24.19.2",
+		"@vitest/browser-playwright": "4.1.12",
+		"eslint": "10.14.0",
+		"eslint-config-prettier": "10.1.8",
+		"eslint-plugin-svelte": "3.23.1",
+		"fake-indexeddb": "6.2.7",
+		"globals": "17.13.0",
+		"playwright": "1.64.1",
+		"prettier": "3.9.10",
+		"prettier-plugin-svelte": "4.1.1",
+		"prettier-plugin-tailwindcss": "0.8.1",
+		"svelte": "5.57.3",
+		"svelte-check": "4.7.7",
+		"tailwindcss": "4.3.3",
+		"typescript": "6.0.3",
+		"typescript-eslint": "8.72.1",
+		"vite": "8.3.5",
+		"vitest": "4.1.12",
+		"vitest-browser-svelte": "2.2.1"
+	},
+	"imports": {
+		"#lib": "./src/lib/index.js",
+		"#lib/*": "./src/lib/*",
+		"#learning": "./modules/learning/src/index.ts",
+		"#learning/*": "./modules/learning/src/*"
+	},
+	"dependencies": {
+		"dexie": "4.4.7",
+		"katex": "0.19.1",
+		"zod": "4.6.7"
+	},
+	"packageManager": "pnpm@12.16.1",
+	"engines": {
+		"node": ">=24"
+	}
+}

@@ -1,0 +1,61 @@
+[
+	{
+		"id": "exam.ch02",
+		"version": 1,
+		"scope": "chapter",
+		"scopeId": "chapter.02",
+		"title": {
+			"en": "Chapter 2 exam: wiring and measurement",
+			"fr": "Examen du chapitre 2 : câblage et mesure"
+		},
+		"passPercent": 80,
+		"forms": [
+			{
+				"id": "A",
+				"itemIds": [
+					"exercise.ch02.exam_series_mixed_prefix",
+					"exercise.ch02.exam_series_tune_led",
+					"exercise.ch02.exam_parallel_220_330",
+					"exercise.ch02.exam_parallel_make_500",
+					"exercise.ch02.exam_short_current",
+					"exercise.ch02.exam_breadboard_centre_gap",
+					"exercise.ch02.exam_meter_ohms_powered",
+					"exercise.ch02.exam_meter_ammeter_reading",
+					"exercise.ch02.exam_errors_within_tolerance",
+					"exercise.ch02.exam_trouble_battery_clip"
+				]
+			},
+			{
+				"id": "B",
+				"itemIds": [
+					"exercise.ch02.exam_series_same_current",
+					"exercise.ch02.exam_parallel_three_equal",
+					"exercise.ch02.exam_parallel_branch_voltage",
+					"exercise.ch02.exam_open_resistance",
+					"exercise.ch02.exam_breadboard_led_reversed",
+					"exercise.ch02.exam_meter_voltmeter_in_series",
+					"exercise.ch02.exam_meter_negative_reading",
+					"exercise.ch02.exam_errors_loading_4m7",
+					"exercise.ch02.exam_trouble_wrong_resistor",
+					"exercise.ch02.exam_trouble_voltage_first"
+				]
+			},
+			{
+				"id": "C",
+				"itemIds": [
+					"exercise.ch02.exam_series_current_12v",
+					"exercise.ch02.exam_series_largest_voltage",
+					"exercise.ch02.exam_parallel_total_current",
+					"exercise.ch02.exam_series_led_open",
+					"exercise.ch02.exam_parallel_branch_open",
+					"exercise.ch02.exam_breadboard_series_placement",
+					"exercise.ch02.exam_meter_ideal_resistances",
+					"exercise.ch02.exam_errors_range_choice",
+					"exercise.ch02.exam_trouble_series_open",
+					"exercise.ch02.exam_trouble_parallel_bulb"
+				]
+			}
+		],
+		"drillItemsPerConcept": 2
+	}
+]

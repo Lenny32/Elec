@@ -1,0 +1,67 @@
+[
+	{
+		"id": "units.si_base",
+		"chapterId": "chapter.00",
+		"name": {
+			"en": "SI units and symbols",
+			"fr": "Unités SI et symboles"
+		},
+		"summary": {
+			"en": "Every quantity has a unit and symbol: ampere (A), volt (V), ohm (Ω), watt (W), second (s).",
+			"fr": "Chaque grandeur a une unité et un symbole : ampère (A), volt (V), ohm (Ω), watt (W), seconde (s)."
+		},
+		"prerequisites": []
+	},
+	{
+		"id": "math.rearranging",
+		"chapterId": "chapter.00",
+		"name": {
+			"en": "Rearranging formulas",
+			"fr": "Transformer une formule"
+		},
+		"summary": {
+			"en": "Isolate any variable of a simple product or quotient formula.",
+			"fr": "Isoler n’importe quelle variable d’une formule produit ou quotient."
+		},
+		"prerequisites": []
+	},
+	{
+		"id": "diagrams.symbols",
+		"chapterId": "chapter.00",
+		"name": {
+			"en": "Schematic symbols",
+			"fr": "Symboles des schémas"
+		},
+		"summary": {
+			"en": "Recognise battery, resistor, switch, LED, lamp, ground and wire-junction symbols.",
+			"fr": "Reconnaître les symboles de pile, résistance, interrupteur, LED, lampe, masse et jonction."
+		},
+		"prerequisites": []
+	},
+	{
+		"id": "diagrams.closed_loop",
+		"chapterId": "chapter.00",
+		"name": {
+			"en": "Closed loops",
+			"fr": "Boucle fermée"
+		},
+		"summary": {
+			"en": "Current only flows around a complete, closed path.",
+			"fr": "Le courant ne circule que dans un chemin complet et fermé."
+		},
+		"prerequisites": ["diagrams.symbols"]
+	},
+	{
+		"id": "safety.low_voltage",
+		"chapterId": "chapter.00",
+		"name": {
+			"en": "Low-voltage safety",
+			"fr": "Sécurité en basse tension"
+		},
+		"summary": {
+			"en": "Safe habits: never use mains, avoid shorting batteries, respect polarity and heat.",
+			"fr": "Bonnes pratiques : jamais le secteur, ne pas court-circuiter les piles, respecter la polarité et la chaleur."
+		},
+		"prerequisites": []
+	}
+]

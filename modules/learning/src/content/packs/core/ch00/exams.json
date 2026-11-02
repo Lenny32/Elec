@@ -1,0 +1,61 @@
+[
+	{
+		"id": "exam.ch00",
+		"version": 3,
+		"scope": "chapter",
+		"scopeId": "chapter.00",
+		"title": {
+			"en": "Chapter 00 exam — Before electricity",
+			"fr": "Examen du chapitre 00 — Avant l’électricité"
+		},
+		"passPercent": 80,
+		"forms": [
+			{
+				"id": "A",
+				"itemIds": [
+					"exercise.ch00.si_base.exam_match",
+					"exercise.ch00.sym.exam_resistor_symbol",
+					"exercise.ch00.loop.exam_broken_wire",
+					"exercise.ch00.rearr.exam_power",
+					"exercise.ch00.rearr.exam_led_part",
+					"exercise.ch00.si_base.exam_cell_label",
+					"exercise.ch00.sym.exam_open_switch",
+					"exercise.ch00.loop.exam_branches",
+					"exercise.ch00.safety.exam_pocket",
+					"exercise.ch00.safety.exam_hot_resistor"
+				]
+			},
+			{
+				"id": "B",
+				"itemIds": [
+					"exercise.ch00.si_base.exam_powerbank",
+					"exercise.ch00.sym.exam_ground",
+					"exercise.ch00.loop.exam_switch_position",
+					"exercise.ch00.rearr.exam_ohm_r",
+					"exercise.ch00.rearr.exam_powerbank_time",
+					"exercise.ch00.si_base.exam_heater_watts",
+					"exercise.ch00.sym.exam_shopping_list",
+					"exercise.ch00.loop.exam_doorbell",
+					"exercise.ch00.safety.exam_polarized",
+					"exercise.ch00.safety.exam_mains"
+				]
+			},
+			{
+				"id": "C",
+				"itemIds": [
+					"exercise.ch00.si_base.exam_time",
+					"exercise.ch00.sym.exam_junction_dot",
+					"exercise.ch00.loop.exam_one_terminal",
+					"exercise.ch00.rearr.exam_find_i",
+					"exercise.ch00.rearr.exam_reasoning",
+					"exercise.ch00.si_base.exam_meter_reading",
+					"exercise.ch00.sym.exam_led_direction",
+					"exercise.ch00.loop.exam_torch_open",
+					"exercise.ch00.safety.exam_fix_led",
+					"exercise.ch00.safety.exam_test_cell"
+				]
+			}
+		],
+		"drillItemsPerConcept": 2
+	}
+]

@@ -1,0 +1,880 @@
+[
+	{
+		"id": "diagram.ch01.single_resistor",
+		"version": 1,
+		"title": {
+			"en": "Battery and one resistor",
+			"fr": "Une pile et une résistance"
+		},
+		"alt": {
+			"en": "Schematic of a simple closed loop. A 5 V battery B1 stands on the left with its + terminal at the top. A wire goes from the + terminal to the left end of a 330 Ω resistor R1 on the top side. From the right end of R1 a wire runs down the right side and along the bottom back to the battery’s − terminal. An arrow labelled I on the right-hand wire points down: conventional current leaves the + terminal, flows through R1 and returns to the − terminal.",
+			"fr": "Schéma d’une boucle fermée simple. Une pile B1 de 5 V est à gauche, borne + en haut. Un fil relie la borne + à l’extrémité gauche d’une résistance R1 de 330 Ω placée en haut. De l’extrémité droite de R1, un fil descend sur le côté droit puis longe le bas jusqu’à la borne − de la pile. Une flèche notée I sur le fil de droite pointe vers le bas : le courant conventionnel sort par la borne +, traverse R1 et revient à la borne −."
+		},
+		"viewBox": [360, 220],
+		"components": [
+			{
+				"id": "B1",
+				"type": "battery",
+				"x": 60,
+				"y": 110,
+				"rotation": 90,
+				"label": "B1",
+				"value": {
+					"value": 5,
+					"unit": "V"
+				},
+				"pins": {
+					"a": "vplus",
+					"b": "gnd"
+				}
+			},
+			{
+				"id": "R1",
+				"type": "resistor",
+				"x": 180,
+				"y": 50,
+				"rotation": 0,
+				"label": "R1",
+				"value": {
+					"value": 330,
+					"unit": "ohm"
+				},
+				"pins": {
+					"a": "vplus",
+					"b": "gnd"
+				}
+			}
+		],
+		"wires": [
+			{
+				"net": "vplus",
+				"points": [
+					[60, 80],
+					[60, 50],
+					[150, 50]
+				]
+			},
+			{
+				"net": "gnd",
+				"points": [
+					[210, 50],
+					[300, 50],
+					[300, 170],
+					[60, 170],
+					[60, 140]
+				]
+			}
+		],
+		"junctions": [],
+		"annotations": [
+			{
+				"kind": "current_arrow",
+				"x": 300,
+				"y": 110,
+				"direction": "down",
+				"label": {
+					"en": "I",
+					"fr": "I"
+				}
+			}
+		]
+	},
+	{
+		"id": "diagram.ch01.ohms_lab",
+		"version": 1,
+		"title": {
+			"en": "Ohm’s law lab circuit",
+			"fr": "Circuit du labo loi d’Ohm"
+		},
+		"alt": {
+			"en": "Adjustable DC source V1 on the left, + terminal at the top, connected in a single loop with an adjustable resistor R1 on the top side. The source voltage is set by the V slider and the resistance by the R slider. Current I flows clockwise: out of the + terminal, through R1, down the right side and back to the − terminal.",
+			"fr": "Source continue réglable V1 à gauche, borne + en haut, reliée en une seule boucle à une résistance réglable R1 placée en haut. La tension de la source est réglée par le curseur V et la résistance par le curseur R. Le courant I circule dans le sens des aiguilles d’une montre : il sort par la borne +, traverse R1, descend à droite et revient à la borne −."
+		},
+		"viewBox": [360, 220],
+		"components": [
+			{
+				"id": "V1",
+				"type": "dc_source",
+				"x": 60,
+				"y": 110,
+				"rotation": 90,
+				"label": "V",
+				"value": {
+					"param": "V"
+				},
+				"pins": {
+					"a": "vplus",
+					"b": "gnd"
+				}
+			},
+			{
+				"id": "R1",
+				"type": "resistor",
+				"x": 180,
+				"y": 50,
+				"rotation": 0,
+				"label": "R",
+				"value": {
+					"param": "R"
+				},
+				"pins": {
+					"a": "vplus",
+					"b": "gnd"
+				}
+			}
+		],
+		"wires": [
+			{
+				"net": "vplus",
+				"points": [
+					[60, 80],
+					[60, 50],
+					[150, 50]
+				]
+			},
+			{
+				"net": "gnd",
+				"points": [
+					[210, 50],
+					[300, 50],
+					[300, 170],
+					[60, 170],
+					[60, 140]
+				]
+			}
+		],
+		"junctions": [],
+		"annotations": [
+			{
+				"kind": "current_arrow",
+				"x": 300,
+				"y": 110,
+				"direction": "down",
+				"label": {
+					"en": "I",
+					"fr": "I"
+				}
+			}
+		]
+	},
+	{
+		"id": "diagram.ch01.ammeter_loop",
+		"version": 1,
+		"title": {
+			"en": "Same current before and after a resistor",
+			"fr": "Le même courant avant et après une résistance"
+		},
+		"alt": {
+			"en": "Single loop: 5 V battery B1 on the left (+ at the top). From the + terminal the current passes through ammeter A1 on the top wire, then through a 330 Ω resistor R1, then down through ammeter A2 on the right side, and back along the bottom wire to the − terminal. A1 and A2 are both labelled 15 mA: the current is the same before and after the resistor. An arrow on the bottom wire points left, back towards the battery.",
+			"fr": "Boucle unique : pile B1 de 5 V à gauche (+ en haut). Depuis la borne +, le courant traverse l’ampèremètre A1 sur le fil du haut, puis une résistance R1 de 330 Ω, puis descend à travers l’ampèremètre A2 sur le côté droit, et revient par le fil du bas à la borne −. A1 et A2 indiquent tous deux 15 mA : le courant est le même avant et après la résistance. Une flèche sur le fil du bas pointe vers la gauche, vers la pile."
+		},
+		"viewBox": [360, 220],
+		"components": [
+			{
+				"id": "B1",
+				"type": "battery",
+				"x": 60,
+				"y": 110,
+				"rotation": 90,
+				"label": "B1",
+				"value": {
+					"value": 5,
+					"unit": "V"
+				},
+				"pins": {
+					"a": "vplus",
+					"b": "gnd"
+				}
+			},
+			{
+				"id": "A1",
+				"type": "meter_a",
+				"x": 110,
+				"y": 50,
+				"rotation": 0,
+				"label": "A1",
+				"pins": {
+					"a": "vplus",
+					"b": "n1"
+				}
+			},
+			{
+				"id": "R1",
+				"type": "resistor",
+				"x": 220,
+				"y": 50,
+				"rotation": 0,
+				"label": "R1",
+				"value": {
+					"value": 330,
+					"unit": "ohm"
+				},
+				"pins": {
+					"a": "n1",
+					"b": "n2"
+				}
+			},
+			{
+				"id": "A2",
+				"type": "meter_a",
+				"x": 300,
+				"y": 110,
+				"rotation": 90,
+				"label": "A2",
+				"pins": {
+					"a": "n2",
+					"b": "gnd"
+				}
+			}
+		],
+		"wires": [
+			{
+				"net": "vplus",
+				"points": [
+					[60, 80],
+					[60, 50],
+					[80, 50]
+				]
+			},
+			{
+				"net": "n1",
+				"points": [
+					[140, 50],
+					[190, 50]
+				]
+			},
+			{
+				"net": "n2",
+				"points": [
+					[250, 50],
+					[300, 50],
+					[300, 80]
+				]
+			},
+			{
+				"net": "gnd",
+				"points": [
+					[300, 140],
+					[300, 170],
+					[60, 170],
+					[60, 140]
+				]
+			}
+		],
+		"junctions": [],
+		"annotations": [
+			{
+				"kind": "text",
+				"x": 110,
+				"y": 90,
+				"text": {
+					"en": "A1: 15 mA",
+					"fr": "A1 : 15 mA"
+				}
+			},
+			{
+				"kind": "text",
+				"x": 240,
+				"y": 110,
+				"text": {
+					"en": "A2: 15 mA",
+					"fr": "A2 : 15 mA"
+				}
+			},
+			{
+				"kind": "current_arrow",
+				"x": 180,
+				"y": 170,
+				"direction": "left",
+				"label": {
+					"en": "I",
+					"fr": "I"
+				}
+			}
+		]
+	},
+	{
+		"id": "diagram.ch01.voltmeter_across_r",
+		"version": 1,
+		"title": {
+			"en": "Measuring voltage across a resistor",
+			"fr": "Mesurer la tension aux bornes d’une résistance"
+		},
+		"alt": {
+			"en": "A 9 V battery B1 (+ at the top) is connected in a loop with a 1 kΩ resistor R1 on the top side. A voltmeter V1 is connected below R1, side by side with it: its + probe joins the left end of R1 (the side connected to the battery’s +) and its − probe joins the right end of R1. Junction dots mark both connection points. The voltmeter reads the voltage between the two ends of R1: 9 V.",
+			"fr": "Une pile B1 de 9 V (+ en haut) est reliée en boucle à une résistance R1 de 1 kΩ placée en haut. Un voltmètre V1 est branché sous R1, en parallèle : sa pointe + rejoint l’extrémité gauche de R1 (côté + de la pile) et sa pointe − rejoint l’extrémité droite de R1. Des points de jonction marquent les deux connexions. Le voltmètre indique la tension entre les deux extrémités de R1 : 9 V."
+		},
+		"viewBox": [360, 220],
+		"components": [
+			{
+				"id": "B1",
+				"type": "battery",
+				"x": 60,
+				"y": 110,
+				"rotation": 90,
+				"label": "B1",
+				"value": {
+					"value": 9,
+					"unit": "V"
+				},
+				"pins": {
+					"a": "vplus",
+					"b": "gnd"
+				}
+			},
+			{
+				"id": "R1",
+				"type": "resistor",
+				"x": 180,
+				"y": 50,
+				"rotation": 0,
+				"label": "R1",
+				"value": {
+					"value": 1,
+					"unit": "kohm"
+				},
+				"pins": {
+					"a": "vplus",
+					"b": "gnd"
+				}
+			},
+			{
+				"id": "V1",
+				"type": "meter_v",
+				"x": 180,
+				"y": 110,
+				"rotation": 0,
+				"label": "V1",
+				"pins": {
+					"a": "vplus",
+					"b": "gnd"
+				}
+			}
+		],
+		"wires": [
+			{
+				"net": "vplus",
+				"points": [
+					[60, 80],
+					[60, 50],
+					[150, 50]
+				]
+			},
+			{
+				"net": "vplus",
+				"points": [
+					[150, 50],
+					[150, 110]
+				]
+			},
+			{
+				"net": "gnd",
+				"points": [
+					[210, 50],
+					[300, 50],
+					[300, 170],
+					[60, 170],
+					[60, 140]
+				]
+			},
+			{
+				"net": "gnd",
+				"points": [
+					[210, 50],
+					[210, 110]
+				]
+			}
+		],
+		"junctions": [
+			[150, 50],
+			[210, 50]
+		],
+		"annotations": [
+			{
+				"kind": "text",
+				"x": 180,
+				"y": 145,
+				"text": {
+					"en": "V1 reads 9 V",
+					"fr": "V1 indique 9 V"
+				}
+			}
+		]
+	},
+	{
+		"id": "diagram.ch01.ground_nodes",
+		"version": 1,
+		"title": {
+			"en": "Node voltages measured from ground",
+			"fr": "Tensions des nœuds mesurées par rapport à la masse"
+		},
+		"alt": {
+			"en": "A 9 V battery B1 on the left, + at the top. Node A is the top-left corner, connected to the battery’s + terminal. From A, a 1 kΩ resistor R1 runs along the top to node B in the top-right corner. From B, a second 1 kΩ resistor R2 runs down the right side to the bottom wire. The bottom wire returns to the battery’s − terminal and is connected to a ground symbol in the middle, marked 0 V. Labels: A = +9 V, B = +4.5 V, ground = 0 V. A voltage marker beside R2 shows V_B = 4.5 V, measured from ground.",
+			"fr": "Une pile B1 de 9 V à gauche, + en haut. Le nœud A est le coin supérieur gauche, relié à la borne + de la pile. Depuis A, une résistance R1 de 1 kΩ suit le haut jusqu’au nœud B, coin supérieur droit. Depuis B, une seconde résistance R2 de 1 kΩ descend sur le côté droit jusqu’au fil du bas. Ce fil revient à la borne − de la pile et est relié en son milieu à un symbole de masse noté 0 V. Étiquettes : A = +9 V, B = +4,5 V, masse = 0 V. Un repère de tension à côté de R2 indique V_B = 4,5 V, mesurée par rapport à la masse."
+		},
+		"viewBox": [380, 240],
+		"components": [
+			{
+				"id": "B1",
+				"type": "battery",
+				"x": 60,
+				"y": 120,
+				"rotation": 90,
+				"label": "B1",
+				"value": {
+					"value": 9,
+					"unit": "V"
+				},
+				"pins": {
+					"a": "vplus",
+					"b": "gnd"
+				}
+			},
+			{
+				"id": "R1",
+				"type": "resistor",
+				"x": 180,
+				"y": 50,
+				"rotation": 0,
+				"label": "R1",
+				"value": {
+					"value": 1,
+					"unit": "kohm"
+				},
+				"pins": {
+					"a": "vplus",
+					"b": "vmid"
+				}
+			},
+			{
+				"id": "R2",
+				"type": "resistor",
+				"x": 300,
+				"y": 115,
+				"rotation": 90,
+				"label": "R2",
+				"value": {
+					"value": 1,
+					"unit": "kohm"
+				},
+				"pins": {
+					"a": "vmid",
+					"b": "gnd"
+				}
+			},
+			{
+				"id": "NA",
+				"type": "node",
+				"x": 60,
+				"y": 50,
+				"rotation": 0,
+				"label": "A",
+				"pins": {
+					"a": "vplus"
+				}
+			},
+			{
+				"id": "NB",
+				"type": "node",
+				"x": 300,
+				"y": 50,
+				"rotation": 0,
+				"label": "B",
+				"pins": {
+					"a": "vmid"
+				}
+			},
+			{
+				"id": "G1",
+				"type": "ground",
+				"x": 180,
+				"y": 185,
+				"rotation": 0,
+				"pins": {
+					"a": "gnd"
+				}
+			}
+		],
+		"wires": [
+			{
+				"net": "vplus",
+				"points": [
+					[60, 90],
+					[60, 50],
+					[150, 50]
+				]
+			},
+			{
+				"net": "vmid",
+				"points": [
+					[210, 50],
+					[300, 50],
+					[300, 85]
+				]
+			},
+			{
+				"net": "gnd",
+				"points": [
+					[300, 145],
+					[300, 185],
+					[180, 185]
+				]
+			},
+			{
+				"net": "gnd",
+				"points": [
+					[180, 185],
+					[60, 185],
+					[60, 150]
+				]
+			}
+		],
+		"junctions": [],
+		"annotations": [
+			{
+				"kind": "text",
+				"x": 60,
+				"y": 28,
+				"text": {
+					"en": "A = +9 V",
+					"fr": "A = +9 V"
+				}
+			},
+			{
+				"kind": "text",
+				"x": 300,
+				"y": 28,
+				"text": {
+					"en": "B = +4.5 V",
+					"fr": "B = +4,5 V"
+				}
+			},
+			{
+				"kind": "text",
+				"x": 180,
+				"y": 225,
+				"text": {
+					"en": "0 V (ground)",
+					"fr": "0 V (masse)"
+				}
+			},
+			{
+				"kind": "voltage_marker",
+				"x1": 340,
+				"y1": 85,
+				"x2": 340,
+				"y2": 145,
+				"label": {
+					"en": "V_B = 4.5 V",
+					"fr": "V_B = 4,5 V"
+				}
+			}
+		]
+	},
+	{
+		"id": "diagram.ch01.led_resistor",
+		"version": 1,
+		"title": {
+			"en": "LED with a current-limiting resistor",
+			"fr": "LED avec résistance de limitation"
+		},
+		"alt": {
+			"en": "A 3 V battery B1 on the left, + at the top. The + terminal connects along the top wire to a 100 Ω resistor R1. From R1 the wire continues to the right and down to a red LED D1 on the right side, anode at the top and cathode at the bottom, so the LED points down in the direction of conventional current. The LED cathode returns along the bottom wire to the battery’s − terminal. An arrow labelled I on the top wire points right. A note beside the LED says Vf ≈ 2 V.",
+			"fr": "Une pile B1 de 3 V à gauche, + en haut. La borne + est reliée par le fil du haut à une résistance R1 de 100 Ω. Après R1, le fil continue vers la droite puis descend vers une LED rouge D1 placée à droite, anode en haut et cathode en bas : la LED pointe vers le bas, dans le sens du courant conventionnel. La cathode revient par le fil du bas à la borne − de la pile. Une flèche notée I sur le fil du haut pointe vers la droite. Une note à côté de la LED indique Vf ≈ 2 V."
+		},
+		"viewBox": [360, 220],
+		"components": [
+			{
+				"id": "B1",
+				"type": "battery",
+				"x": 60,
+				"y": 110,
+				"rotation": 90,
+				"label": "B1",
+				"value": {
+					"value": 3,
+					"unit": "V"
+				},
+				"pins": {
+					"a": "vplus",
+					"b": "gnd"
+				}
+			},
+			{
+				"id": "R1",
+				"type": "resistor",
+				"x": 180,
+				"y": 50,
+				"rotation": 0,
+				"label": "R1",
+				"value": {
+					"value": 100,
+					"unit": "ohm"
+				},
+				"pins": {
+					"a": "vplus",
+					"b": "n1"
+				}
+			},
+			{
+				"id": "D1",
+				"type": "led",
+				"x": 300,
+				"y": 110,
+				"rotation": 90,
+				"label": "D1",
+				"pins": {
+					"a": "n1",
+					"b": "gnd"
+				}
+			}
+		],
+		"wires": [
+			{
+				"net": "vplus",
+				"points": [
+					[60, 80],
+					[60, 50],
+					[150, 50]
+				]
+			},
+			{
+				"net": "n1",
+				"points": [
+					[210, 50],
+					[300, 50],
+					[300, 80]
+				]
+			},
+			{
+				"net": "gnd",
+				"points": [
+					[300, 140],
+					[300, 170],
+					[60, 170],
+					[60, 140]
+				]
+			}
+		],
+		"junctions": [],
+		"annotations": [
+			{
+				"kind": "current_arrow",
+				"x": 255,
+				"y": 50,
+				"direction": "right",
+				"label": {
+					"en": "I",
+					"fr": "I"
+				}
+			},
+			{
+				"kind": "text",
+				"x": 240,
+				"y": 115,
+				"text": {
+					"en": "Vf ≈ 2 V",
+					"fr": "Vf ≈ 2 V"
+				}
+			}
+		]
+	},
+	{
+		"id": "diagram.ch01.led_lab",
+		"version": 1,
+		"title": {
+			"en": "LED resistor lab circuit",
+			"fr": "Circuit du labo résistance de LED"
+		},
+		"alt": {
+			"en": "Adjustable DC source on the left (+ at the top, value set by the Vs slider) connected through an adjustable resistor R (top wire, set by the R slider) to an LED on the right side, anode at the top, cathode at the bottom. The LED’s forward voltage is set by the Vf slider. The cathode returns along the bottom wire to the source’s − terminal. Current flows clockwise.",
+			"fr": "Source continue réglable à gauche (+ en haut, valeur réglée par le curseur Vs) reliée par une résistance réglable R (fil du haut, curseur R) à une LED à droite, anode en haut, cathode en bas. La tension directe de la LED est réglée par le curseur Vf. La cathode revient par le fil du bas à la borne − de la source. Le courant circule dans le sens des aiguilles d’une montre."
+		},
+		"viewBox": [360, 220],
+		"components": [
+			{
+				"id": "V1",
+				"type": "dc_source",
+				"x": 60,
+				"y": 110,
+				"rotation": 90,
+				"label": "Vs",
+				"value": {
+					"param": "Vs"
+				},
+				"pins": {
+					"a": "vplus",
+					"b": "gnd"
+				}
+			},
+			{
+				"id": "R1",
+				"type": "resistor",
+				"x": 180,
+				"y": 50,
+				"rotation": 0,
+				"label": "R",
+				"value": {
+					"param": "R"
+				},
+				"pins": {
+					"a": "vplus",
+					"b": "n1"
+				}
+			},
+			{
+				"id": "D1",
+				"type": "led",
+				"x": 300,
+				"y": 110,
+				"rotation": 90,
+				"label": "LED",
+				"value": {
+					"param": "Vf"
+				},
+				"pins": {
+					"a": "n1",
+					"b": "gnd"
+				}
+			}
+		],
+		"wires": [
+			{
+				"net": "vplus",
+				"points": [
+					[60, 80],
+					[60, 50],
+					[150, 50]
+				]
+			},
+			{
+				"net": "n1",
+				"points": [
+					[210, 50],
+					[300, 50],
+					[300, 80]
+				]
+			},
+			{
+				"net": "gnd",
+				"points": [
+					[300, 140],
+					[300, 170],
+					[60, 170],
+					[60, 140]
+				]
+			}
+		],
+		"junctions": [],
+		"annotations": [
+			{
+				"kind": "current_arrow",
+				"x": 255,
+				"y": 50,
+				"direction": "right",
+				"label": {
+					"en": "I",
+					"fr": "I"
+				}
+			}
+		]
+	},
+	{
+		"id": "diagram.ch01.power_heating",
+		"version": 1,
+		"title": {
+			"en": "A resistor that runs too hot",
+			"fr": "Une résistance qui chauffe trop"
+		},
+		"alt": {
+			"en": "A 9 V battery B1 (+ at the top) connected in a single loop with a 100 Ω resistor R1 on the top wire; the return wire runs down the right side and along the bottom to the − terminal. Notes inside the loop: P = V²/R = 0.81 W, and \"0.25 W resistor: overheats!\". An arrow labelled I on the right side points down.",
+			"fr": "Une pile B1 de 9 V (+ en haut) reliée en une seule boucle à une résistance R1 de 100 Ω sur le fil du haut ; le fil de retour descend à droite puis longe le bas jusqu’à la borne −. Notes à l’intérieur de la boucle : P = V²/R = 0,81 W, et « résistance 0,25 W : elle surchauffe ! ». Une flèche notée I sur le côté droit pointe vers le bas."
+		},
+		"viewBox": [360, 220],
+		"components": [
+			{
+				"id": "B1",
+				"type": "battery",
+				"x": 60,
+				"y": 110,
+				"rotation": 90,
+				"label": "B1",
+				"value": {
+					"value": 9,
+					"unit": "V"
+				},
+				"pins": {
+					"a": "vplus",
+					"b": "gnd"
+				}
+			},
+			{
+				"id": "R1",
+				"type": "resistor",
+				"x": 180,
+				"y": 50,
+				"rotation": 0,
+				"label": "R1",
+				"value": {
+					"value": 100,
+					"unit": "ohm"
+				},
+				"pins": {
+					"a": "vplus",
+					"b": "gnd"
+				}
+			}
+		],
+		"wires": [
+			{
+				"net": "vplus",
+				"points": [
+					[60, 80],
+					[60, 50],
+					[150, 50]
+				]
+			},
+			{
+				"net": "gnd",
+				"points": [
+					[210, 50],
+					[300, 50],
+					[300, 170],
+					[60, 170],
+					[60, 140]
+				]
+			}
+		],
+		"junctions": [],
+		"annotations": [
+			{
+				"kind": "current_arrow",
+				"x": 300,
+				"y": 110,
+				"direction": "down",
+				"label": {
+					"en": "I",
+					"fr": "I"
+				}
+			},
+			{
+				"kind": "text",
+				"x": 180,
+				"y": 100,
+				"text": {
+					"en": "P = V²/R = 0.81 W",
+					"fr": "P = V²/R = 0,81 W"
+				}
+			},
+			{
+				"kind": "text",
+				"x": 180,
+				"y": 128,
+				"text": {
+					"en": "0.25 W resistor: overheats!",
+					"fr": "Résistance 0,25 W : elle surchauffe !"
+				}
+			}
+		]
+	}
+]

@@ -1,0 +1,135 @@
+{
+	"id": "chapter.02",
+	"number": "02",
+	"moduleId": "module.a",
+	"title": {
+		"en": "Wiring and measurement",
+		"fr": "Câblage et mesure"
+	},
+	"summary": {
+		"en": "Series and parallel circuits, open and short circuits, breadboards, the multimeter, measurement errors and troubleshooting.",
+		"fr": "Circuits série et parallèle, circuits ouverts et courts-circuits, plaques d’essai, multimètre, erreurs de mesure et dépannage."
+	},
+	"status": "authored",
+	"goals": [
+		{
+			"en": "Compute the total resistance of series and parallel resistors",
+			"fr": "Calculer la résistance totale de résistances en série et en parallèle"
+		},
+		{
+			"en": "Predict the effect of an open or a short circuit",
+			"fr": "Prévoir l’effet d’un circuit ouvert ou d’un court-circuit"
+		},
+		{
+			"en": "Build a circuit on a breadboard and measure voltage and current safely with a multimeter",
+			"fr": "Monter un circuit sur plaque d’essai et mesurer tension et courant en sécurité avec un multimètre"
+		},
+		{
+			"en": "Judge measurement errors and find faults methodically",
+			"fr": "Évaluer les erreurs de mesure et trouver les pannes avec méthode"
+		}
+	],
+	"prerequisites": ["dc.ohms_law", "dc.power"],
+	"topics": [
+		{
+			"en": "Series and parallel resistors",
+			"fr": "Résistances en série et en parallèle"
+		},
+		{
+			"en": "Open and short circuits",
+			"fr": "Circuit ouvert et court-circuit"
+		},
+		{
+			"en": "Breadboards",
+			"fr": "Plaques d’essai"
+		},
+		{
+			"en": "Using a multimeter",
+			"fr": "Utiliser un multimètre"
+		},
+		{
+			"en": "Measurement errors",
+			"fr": "Erreurs de mesure"
+		},
+		{
+			"en": "Troubleshooting",
+			"fr": "Dépannage"
+		}
+	],
+	"lessonIds": [
+		"lesson.02.01.series_parallel",
+		"lesson.02.02.open_short",
+		"lesson.02.03.breadboard",
+		"lesson.02.04.multimeter",
+		"lesson.02.05.measurement_errors",
+		"lesson.02.06.troubleshooting"
+	],
+	"labIds": ["lab.ch02.series", "lab.ch02.parallel", "lab.ch02.open_switch"],
+	"examId": "exam.ch02",
+	"safetyNotes": [
+		{
+			"en": "Use only batteries of 9 V or less. Never experiment with mains (wall sockets).",
+			"fr": "N’utilisez que des piles de 9 V maximum. Ne faites jamais d’expérience sur le secteur (prises murales)."
+		},
+		{
+			"en": "Never short-circuit a battery; lithium cells can catch fire.",
+			"fr": "Ne court-circuitez jamais une pile ; les éléments au lithium peuvent prendre feu."
+		},
+		{
+			"en": "Always put a resistor in series with an LED.",
+			"fr": "Mettez toujours une résistance en série avec une LED."
+		},
+		{
+			"en": "Never connect a multimeter set to current (mA/A jack) across a battery or a part.",
+			"fr": "Ne branchez jamais un multimètre réglé en courant (borne mA/A) aux bornes d’une pile ou d’un composant."
+		},
+		{
+			"en": "Wire and rewire with the battery disconnected; disconnect at once if anything gets hot.",
+			"fr": "Câblez et modifiez pile débranchée ; débranchez immédiatement si quelque chose chauffe."
+		}
+	],
+	"miniProject": {
+		"title": {
+			"en": "Build and test a battery LED circuit",
+			"fr": "Monter et tester un circuit pile-LED"
+		},
+		"description": {
+			"en": "Assemble a 9 V battery, a 470 Ω resistor and a red LED on a breadboard, then measure the LED current and the voltages across the resistor and the LED. Compare your measurements with the values you predict ($I \\approx \\frac{9 - 2}{470} \\approx 15$ mA, about 7 V across the resistor, about 2 V across the LED).",
+			"fr": "Montez une pile de 9 V, une résistance de 470 Ω et une LED rouge sur une plaque d’essai, puis mesurez le courant de la LED et les tensions aux bornes de la résistance et de la LED. Comparez vos mesures avec les valeurs prévues ($I \\approx \\frac{9 - 2}{470} \\approx 15$ mA, environ 7 V aux bornes de la résistance, environ 2 V aux bornes de la LED)."
+		},
+		"steps": [
+			{
+				"en": "Predict: write down the expected current and the voltage across each part.",
+				"fr": "Prévoir : notez le courant attendu et la tension aux bornes de chaque composant."
+			},
+			{
+				"en": "Battery disconnected: place the resistor from the + rail to a row, the LED long leg in that row and its short leg in the − rail.",
+				"fr": "Pile débranchée : placez la résistance entre le rail + et une rangée, la patte longue de la LED dans cette rangée et sa patte courte dans le rail −."
+			},
+			{
+				"en": "Check every connection against the schematic, then connect the battery. The LED should light.",
+				"fr": "Vérifiez chaque connexion par rapport au schéma, puis branchez la pile. La LED doit s’allumer."
+			},
+			{
+				"en": "Voltage mode (red lead in V): measure the battery, then across the resistor, then across the LED. The two part voltages should add up to the battery voltage.",
+				"fr": "Mode tension (cordon rouge sur V) : mesurez la pile, puis la résistance, puis la LED. Les deux tensions des composants doivent s’additionner pour donner celle de la pile."
+			},
+			{
+				"en": "Battery off, red lead to mA, open the loop at the resistor’s + rail leg and insert the meter in series. Reconnect and read the current.",
+				"fr": "Pile débranchée, cordon rouge sur mA, ouvrez la boucle à la patte de la résistance côté rail + et insérez l’appareil en série. Rebranchez et lisez le courant."
+			},
+			{
+				"en": "Compare with your predictions, explain any difference (tolerance, LED voltage, battery state), then return the red lead to V.",
+				"fr": "Comparez avec vos prévisions, expliquez les écarts (tolérance, tension de la LED, état de la pile), puis remettez le cordon rouge sur V."
+			}
+		],
+		"simulationFallback": {
+			"en": "No hardware? Use the LED measurement diagram in lesson 02.04 and the series lab. Predict the readings of A1 and V1 for a 9 V battery, 470 Ω and a 2 V LED, then compare with these sample bench measurements: battery 9.2 V, resistor 7.1 V, LED 2.0 V, current 15.1 mA. Check that 7.1 + 2.0 ≈ 9.2 V and that 7.1 V / 470 Ω ≈ 15.1 mA, and explain the small differences.",
+			"fr": "Pas de matériel ? Utilisez le schéma de mesure de la LED de la leçon 02.04 et le labo série. Prévoyez les indications de A1 et V1 pour une pile de 9 V, 470 Ω et une LED de 2 V, puis comparez avec ces mesures réelles d’exemple : pile 9,2 V, résistance 7,1 V, LED 2,0 V, courant 15,1 mA. Vérifiez que 7,1 + 2,0 ≈ 9,2 V et que 7,1 V / 470 Ω ≈ 15,1 mA, et expliquez les petits écarts."
+		}
+	},
+	"practicalOutcome": {
+		"en": "Assemble and test a battery LED circuit on a breadboard, measuring its voltages and current.",
+		"fr": "Monter et tester un circuit pile-LED sur plaque d’essai, en mesurant ses tensions et son courant."
+	}
+}

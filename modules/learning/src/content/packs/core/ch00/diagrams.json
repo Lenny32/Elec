@@ -1,0 +1,640 @@
+[
+	{
+		"id": "diagram.ch00.torch",
+		"version": 1,
+		"title": {
+			"en": "Torch (flashlight) circuit",
+			"fr": "Circuit d’une lampe de poche"
+		},
+		"alt": {
+			"en": "Torch schematic. Two 1.5 V cells B1 and B2 are stacked in series on the left: the + terminal of B1 is at the top, the − terminal of B1 connects to the + terminal of B2. From the + terminal of B1 a wire goes up and right to switch S1 (closed) on the top side. From S1 a wire goes right and down to lamp L1 on the right side. From the bottom of L1 a wire runs along the bottom back to the − terminal of B2. It is one single closed loop.",
+			"fr": "Schéma d’une lampe de poche. Deux piles de 1,5 V, B1 et B2, sont empilées en série à gauche : la borne + de B1 est en haut, la borne − de B1 est reliée à la borne + de B2. Depuis la borne + de B1, un fil monte puis part à droite vers l’interrupteur S1 (fermé), en haut. Depuis S1, un fil va à droite puis descend vers la lampe L1, à droite. Depuis le bas de L1, un fil revient par le bas jusqu’à la borne − de B2. C’est une seule boucle fermée."
+		},
+		"viewBox": [330, 250],
+		"components": [
+			{
+				"id": "B1",
+				"type": "battery",
+				"x": 50,
+				"y": 80,
+				"rotation": 90,
+				"label": "B1",
+				"value": {
+					"value": 1.5,
+					"unit": "V"
+				},
+				"pins": {
+					"a": "vplus",
+					"b": "mid"
+				}
+			},
+			{
+				"id": "B2",
+				"type": "battery",
+				"x": 50,
+				"y": 160,
+				"rotation": 90,
+				"label": "B2",
+				"value": {
+					"value": 1.5,
+					"unit": "V"
+				},
+				"pins": {
+					"a": "mid",
+					"b": "vminus"
+				}
+			},
+			{
+				"id": "S1",
+				"type": "switch",
+				"x": 160,
+				"y": 30,
+				"rotation": 0,
+				"label": "S1",
+				"pins": {
+					"a": "vplus",
+					"b": "n1"
+				},
+				"closed": true
+			},
+			{
+				"id": "L1",
+				"type": "lamp",
+				"x": 270,
+				"y": 110,
+				"rotation": 90,
+				"label": "L1",
+				"pins": {
+					"a": "n1",
+					"b": "vminus"
+				}
+			}
+		],
+		"wires": [
+			{
+				"net": "vplus",
+				"points": [
+					[50, 50],
+					[50, 30],
+					[130, 30]
+				]
+			},
+			{
+				"net": "mid",
+				"points": [
+					[50, 110],
+					[50, 130]
+				]
+			},
+			{
+				"net": "n1",
+				"points": [
+					[190, 30],
+					[270, 30],
+					[270, 80]
+				]
+			},
+			{
+				"net": "vminus",
+				"points": [
+					[270, 140],
+					[270, 220],
+					[50, 220],
+					[50, 190]
+				]
+			}
+		],
+		"junctions": [],
+		"annotations": [
+			{
+				"kind": "current_arrow",
+				"x": 230,
+				"y": 30,
+				"direction": "right",
+				"label": {
+					"en": "I",
+					"fr": "I"
+				}
+			}
+		]
+	},
+	{
+		"id": "diagram.ch00.symbol_circuit",
+		"version": 1,
+		"title": {
+			"en": "A circuit with the basic symbols",
+			"fr": "Un circuit avec les symboles de base"
+		},
+		"alt": {
+			"en": "Schematic with five symbols. On the left, a 4.5 V battery B1 stands vertically with its + terminal at the top. From the + terminal a wire goes up and right to switch S1 (closed), then to a 220 Ω resistor R1 along the top. From R1 the wire goes right and down to LED D1 on the right side, anode at the top. The cathode of D1 and the − terminal of B1 are both wired to a ground symbol G at the bottom centre, which closes the loop.",
+			"fr": "Schéma avec cinq symboles. À gauche, une pile B1 de 4,5 V est verticale, borne + en haut. Depuis la borne +, un fil monte puis part à droite vers l’interrupteur S1 (fermé), puis vers une résistance R1 de 220 Ω, en haut. Depuis R1, le fil va à droite puis descend vers la LED D1, à droite, anode en haut. La cathode de D1 et la borne − de B1 sont toutes deux reliées au symbole de masse G, en bas au centre, ce qui ferme la boucle."
+		},
+		"viewBox": [350, 240],
+		"components": [
+			{
+				"id": "B1",
+				"type": "battery",
+				"x": 50,
+				"y": 110,
+				"rotation": 90,
+				"label": "B1",
+				"value": {
+					"value": 4.5,
+					"unit": "V"
+				},
+				"pins": {
+					"a": "vplus",
+					"b": "gnd"
+				}
+			},
+			{
+				"id": "S1",
+				"type": "switch",
+				"x": 120,
+				"y": 40,
+				"rotation": 0,
+				"label": "S1",
+				"pins": {
+					"a": "vplus",
+					"b": "n1"
+				},
+				"closed": true
+			},
+			{
+				"id": "R1",
+				"type": "resistor",
+				"x": 220,
+				"y": 40,
+				"rotation": 0,
+				"label": "R1",
+				"value": {
+					"value": 220,
+					"unit": "ohm"
+				},
+				"pins": {
+					"a": "n1",
+					"b": "n2"
+				}
+			},
+			{
+				"id": "D1",
+				"type": "led",
+				"x": 300,
+				"y": 110,
+				"rotation": 90,
+				"label": "D1",
+				"pins": {
+					"a": "n2",
+					"b": "gnd"
+				}
+			},
+			{
+				"id": "G",
+				"type": "ground",
+				"x": 175,
+				"y": 190,
+				"rotation": 0,
+				"pins": {
+					"a": "gnd"
+				}
+			}
+		],
+		"wires": [
+			{
+				"net": "vplus",
+				"points": [
+					[50, 80],
+					[50, 40],
+					[90, 40]
+				]
+			},
+			{
+				"net": "n1",
+				"points": [
+					[150, 40],
+					[190, 40]
+				]
+			},
+			{
+				"net": "n2",
+				"points": [
+					[250, 40],
+					[300, 40],
+					[300, 80]
+				]
+			},
+			{
+				"net": "gnd",
+				"points": [
+					[50, 140],
+					[50, 190],
+					[175, 190]
+				]
+			},
+			{
+				"net": "gnd",
+				"points": [
+					[300, 140],
+					[300, 190],
+					[175, 190]
+				]
+			}
+		],
+		"junctions": [],
+		"annotations": []
+	},
+	{
+		"id": "diagram.ch00.junction_crossing",
+		"version": 1,
+		"title": {
+			"en": "Junction dot or crossing?",
+			"fr": "Point de jonction ou croisement ?"
+		},
+		"alt": {
+			"en": "Two separate circuits. Left circuit: battery B1 (9 V, + at the top) feeds two resistors R1 (1 kΩ) and R2 (1 kΩ) side by side. The top wire from B1 + runs right to R2, and R1 is tapped from it at a junction dot; the bottom wire is joined the same way with a second dot. Right circuit: battery B2 (3 V, + at the top) on the far right feeds lamp L1 at the top. The return wire from L1 runs straight down through the left circuit, crossing its top wire and its bottom wire with no dots, then along the very bottom back to the − terminal of B2. The crossings are not connections, so the two circuits are independent.",
+			"fr": "Deux circuits séparés. Circuit de gauche : la pile B1 (9 V, + en haut) alimente deux résistances R1 (1 kΩ) et R2 (1 kΩ) côte à côte. Le fil du haut part du + de B1 vers R2, et R1 s’y raccorde par un point de jonction ; le fil du bas est relié de la même façon, avec un second point. Circuit de droite : la pile B2 (3 V, + en haut), tout à droite, alimente la lampe L1 en haut. Le fil de retour de L1 descend tout droit à travers le circuit de gauche, croise son fil du haut et son fil du bas sans aucun point, puis longe le bas du schéma jusqu’à la borne − de B2. Ces croisements ne sont pas des connexions : les deux circuits sont indépendants."
+		},
+		"viewBox": [380, 260],
+		"components": [
+			{
+				"id": "B1",
+				"type": "battery",
+				"x": 50,
+				"y": 120,
+				"rotation": 90,
+				"label": "B1",
+				"value": {
+					"value": 9,
+					"unit": "V"
+				},
+				"pins": {
+					"a": "p1",
+					"b": "m1"
+				}
+			},
+			{
+				"id": "R1",
+				"type": "resistor",
+				"x": 150,
+				"y": 120,
+				"rotation": 90,
+				"label": "R1",
+				"value": {
+					"value": 1,
+					"unit": "kohm"
+				},
+				"pins": {
+					"a": "p1",
+					"b": "m1"
+				}
+			},
+			{
+				"id": "R2",
+				"type": "resistor",
+				"x": 250,
+				"y": 120,
+				"rotation": 90,
+				"label": "R2",
+				"value": {
+					"value": 1,
+					"unit": "kohm"
+				},
+				"pins": {
+					"a": "p1",
+					"b": "m1"
+				}
+			},
+			{
+				"id": "B2",
+				"type": "battery",
+				"x": 330,
+				"y": 130,
+				"rotation": 90,
+				"label": "B2",
+				"value": {
+					"value": 3,
+					"unit": "V"
+				},
+				"pins": {
+					"a": "p2",
+					"b": "m2"
+				}
+			},
+			{
+				"id": "L1",
+				"type": "lamp",
+				"x": 230,
+				"y": 30,
+				"rotation": 0,
+				"label": "L1",
+				"pins": {
+					"a": "m2",
+					"b": "p2"
+				}
+			}
+		],
+		"wires": [
+			{
+				"net": "p1",
+				"points": [
+					[50, 90],
+					[50, 60],
+					[250, 60],
+					[250, 90]
+				]
+			},
+			{
+				"net": "p1",
+				"points": [
+					[150, 60],
+					[150, 90]
+				]
+			},
+			{
+				"net": "m1",
+				"points": [
+					[50, 150],
+					[50, 190],
+					[250, 190],
+					[250, 150]
+				]
+			},
+			{
+				"net": "m1",
+				"points": [
+					[150, 190],
+					[150, 150]
+				]
+			},
+			{
+				"net": "p2",
+				"points": [
+					[330, 100],
+					[330, 30],
+					[260, 30]
+				]
+			},
+			{
+				"net": "m2",
+				"points": [
+					[200, 30],
+					[200, 230],
+					[330, 230],
+					[330, 160]
+				]
+			}
+		],
+		"junctions": [
+			[150, 60],
+			[150, 190]
+		],
+		"annotations": []
+	},
+	{
+		"id": "diagram.ch00.switched_loop",
+		"version": 1,
+		"title": {
+			"en": "Battery, switch and resistor",
+			"fr": "Pile, interrupteur et résistance"
+		},
+		"alt": {
+			"en": "A single loop. Battery B1 (adjustable voltage V, + at the top) on the left. From its + terminal a wire goes up and right to switch S1 on the top side. From S1 the wire goes right and down to resistor R1 (adjustable resistance R) on the right side. From the bottom of R1 a wire runs along the bottom back to the − terminal of B1. When S1 is open the loop is broken.",
+			"fr": "Une seule boucle. La pile B1 (tension réglable V, + en haut) est à gauche. Depuis sa borne +, un fil monte puis part à droite vers l’interrupteur S1, en haut. Depuis S1, le fil va à droite puis descend vers la résistance R1 (valeur réglable R), à droite. Depuis le bas de R1, un fil revient par le bas jusqu’à la borne − de B1. Quand S1 est ouvert, la boucle est coupée."
+		},
+		"viewBox": [320, 200],
+		"components": [
+			{
+				"id": "B1",
+				"type": "battery",
+				"x": 60,
+				"y": 100,
+				"rotation": 90,
+				"label": "B1",
+				"value": {
+					"param": "V"
+				},
+				"pins": {
+					"a": "vplus",
+					"b": "vminus"
+				}
+			},
+			{
+				"id": "S1",
+				"type": "switch",
+				"x": 160,
+				"y": 40,
+				"rotation": 0,
+				"label": "S1",
+				"pins": {
+					"a": "vplus",
+					"b": "n1"
+				},
+				"closed": false
+			},
+			{
+				"id": "R1",
+				"type": "resistor",
+				"x": 260,
+				"y": 100,
+				"rotation": 90,
+				"label": "R1",
+				"value": {
+					"param": "R"
+				},
+				"pins": {
+					"a": "n1",
+					"b": "vminus"
+				}
+			}
+		],
+		"wires": [
+			{
+				"net": "vplus",
+				"points": [
+					[60, 70],
+					[60, 40],
+					[130, 40]
+				]
+			},
+			{
+				"net": "n1",
+				"points": [
+					[190, 40],
+					[260, 40],
+					[260, 70]
+				]
+			},
+			{
+				"net": "vminus",
+				"points": [
+					[260, 130],
+					[260, 170],
+					[60, 170],
+					[60, 130]
+				]
+			}
+		],
+		"junctions": [],
+		"annotations": []
+	},
+	{
+		"id": "diagram.ch00.short_risk",
+		"version": 1,
+		"title": {
+			"en": "A switch that would short the battery",
+			"fr": "Un interrupteur qui court-circuiterait la pile"
+		},
+		"alt": {
+			"en": "Battery B1 (9 V, + at the top) on the left, lamp L1 on the right, both connected between a top wire and a bottom wire. In the middle, push-button switch S1 (shown open) is also connected between the top wire and the bottom wire, with junction dots where it joins them. Closing S1 would connect the + and − terminals of the battery directly through the switch: a short circuit.",
+			"fr": "La pile B1 (9 V, + en haut) est à gauche et la lampe L1 à droite, toutes deux branchées entre un fil du haut et un fil du bas. Au milieu, le bouton-poussoir S1 (représenté ouvert) est lui aussi branché entre le fil du haut et le fil du bas, avec des points de jonction là où il les rejoint. Fermer S1 relierait directement les bornes + et − de la pile à travers l’interrupteur : un court-circuit."
+		},
+		"viewBox": [320, 220],
+		"components": [
+			{
+				"id": "B1",
+				"type": "battery",
+				"x": 60,
+				"y": 110,
+				"rotation": 90,
+				"label": "B1",
+				"value": {
+					"value": 9,
+					"unit": "V"
+				},
+				"pins": {
+					"a": "vplus",
+					"b": "vminus"
+				}
+			},
+			{
+				"id": "S1",
+				"type": "switch",
+				"x": 160,
+				"y": 110,
+				"rotation": 90,
+				"label": "S1",
+				"pins": {
+					"a": "vplus",
+					"b": "vminus"
+				},
+				"closed": false
+			},
+			{
+				"id": "L1",
+				"type": "lamp",
+				"x": 260,
+				"y": 110,
+				"rotation": 90,
+				"label": "L1",
+				"pins": {
+					"a": "vplus",
+					"b": "vminus"
+				}
+			}
+		],
+		"wires": [
+			{
+				"net": "vplus",
+				"points": [
+					[60, 80],
+					[60, 50],
+					[260, 50],
+					[260, 80]
+				]
+			},
+			{
+				"net": "vplus",
+				"points": [
+					[160, 50],
+					[160, 80]
+				]
+			},
+			{
+				"net": "vminus",
+				"points": [
+					[60, 140],
+					[60, 170],
+					[260, 170],
+					[260, 140]
+				]
+			},
+			{
+				"net": "vminus",
+				"points": [
+					[160, 170],
+					[160, 140]
+				]
+			}
+		],
+		"junctions": [
+			[160, 50],
+			[160, 170]
+		],
+		"annotations": []
+	},
+	{
+		"id": "diagram.ch00.led_no_resistor",
+		"version": 1,
+		"title": {
+			"en": "LED wired straight to a battery",
+			"fr": "LED branchée directement sur une pile"
+		},
+		"alt": {
+			"en": "Battery B1 (9 V, + at the top) on the left. A wire from its + terminal goes up, right and down to the anode of LED D1 on the right. A wire from the cathode of D1 goes down, left and up to the − terminal of B1. There is no resistor in the loop.",
+			"fr": "La pile B1 (9 V, + en haut) est à gauche. Un fil part de sa borne +, monte, va à droite puis descend vers l’anode de la LED D1, à droite. Un fil part de la cathode de D1, descend, va à gauche puis remonte vers la borne − de B1. Il n’y a aucune résistance dans la boucle."
+		},
+		"viewBox": [260, 200],
+		"components": [
+			{
+				"id": "B1",
+				"type": "battery",
+				"x": 60,
+				"y": 100,
+				"rotation": 90,
+				"label": "B1",
+				"value": {
+					"value": 9,
+					"unit": "V"
+				},
+				"pins": {
+					"a": "vplus",
+					"b": "vminus"
+				}
+			},
+			{
+				"id": "D1",
+				"type": "led",
+				"x": 200,
+				"y": 100,
+				"rotation": 90,
+				"label": "D1",
+				"pins": {
+					"a": "vplus",
+					"b": "vminus"
+				}
+			}
+		],
+		"wires": [
+			{
+				"net": "vplus",
+				"points": [
+					[60, 70],
+					[60, 40],
+					[200, 40],
+					[200, 70]
+				]
+			},
+			{
+				"net": "vminus",
+				"points": [
+					[60, 130],
+					[60, 160],
+					[200, 160],
+					[200, 130]
+				]
+			}
+		],
+		"junctions": [],
+		"annotations": []
+	}
+]

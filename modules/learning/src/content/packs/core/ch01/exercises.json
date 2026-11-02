@@ -1,0 +1,3564 @@
+[
+	{
+		"id": "exercise.ch01.charge_basic",
+		"version": 1,
+		"type": "numeric",
+		"conceptIds": ["dc.charge"],
+		"formulaIds": ["formula.charge.it"],
+		"difficulty": 1,
+		"kind": "guided",
+		"pool": "practice",
+		"prompt": {
+			"en": "A current of 2 A flows for 5 s. How much charge passes? Give the answer in coulombs.",
+			"fr": "Un courant de 2 A circule pendant 5 s. Quelle charge est passée ? Donnez la réponse en coulombs."
+		},
+		"hints": [
+			{
+				"en": "Use $Q = I \\cdot t$.",
+				"fr": "Utilisez $Q = I \\cdot t$."
+			},
+			{
+				"en": "The values are already in A and s, so the answer comes out in C.",
+				"fr": "Les valeurs sont déjà en A et en s : le résultat sort directement en C."
+			}
+		],
+		"solution": [
+			{
+				"en": "$Q = I \\cdot t$",
+				"fr": "$Q = I \\cdot t$"
+			},
+			{
+				"en": "$Q = 2\\ \\text{A} \\times 5\\ \\text{s} = 10\\ \\text{C}$",
+				"fr": "$Q = 2\\ \\text{A} \\times 5\\ \\text{s} = 10\\ \\text{C}$"
+			}
+		],
+		"answer": {
+			"algorithm": "charge_it",
+			"inputs": {
+				"I": {
+					"value": 2,
+					"unit": "A"
+				},
+				"t": {
+					"value": 5,
+					"unit": "s"
+				}
+			},
+			"canonicalValue": 10,
+			"canonicalUnit": "C",
+			"acceptedUnits": ["C", "mC"],
+			"absoluteTolerance": 0.00001,
+			"relativeTolerance": 0.01
+		}
+	},
+	{
+		"id": "exercise.ch01.charge_ma_minutes",
+		"version": 1,
+		"type": "numeric",
+		"conceptIds": ["dc.charge"],
+		"formulaIds": ["formula.charge.it"],
+		"difficulty": 2,
+		"kind": "independent",
+		"pool": "practice",
+		"prompt": {
+			"en": "An LED draws 50 mA for 2 minutes. How much charge flows through it, in coulombs?",
+			"fr": "Une LED consomme 50 mA pendant 2 minutes. Quelle charge la traverse, en coulombs ?"
+		},
+		"hints": [
+			{
+				"en": "Convert first: 50 mA = 0.05 A and 2 min = 120 s.",
+				"fr": "Convertissez d’abord : 50 mA = 0,05 A et 2 min = 120 s."
+			}
+		],
+		"solution": [
+			{
+				"en": "Convert: $I = 0.05$ A, $t = 120$ s.",
+				"fr": "Conversion : $I = 0{,}05$ A, $t = 120$ s."
+			},
+			{
+				"en": "$Q = 0.05 \\times 120 = 6\\ \\text{C}$",
+				"fr": "$Q = 0{,}05 \\times 120 = 6\\ \\text{C}$"
+			},
+			{
+				"en": "Common slip: $50 \\times 2 = 100$ mixes mA and minutes — that is not coulombs.",
+				"fr": "Erreur fréquente : $50 \\times 2 = 100$ mélange mA et minutes — ce ne sont pas des coulombs."
+			}
+		],
+		"answer": {
+			"algorithm": "charge_it",
+			"inputs": {
+				"I": {
+					"value": 50,
+					"unit": "mA"
+				},
+				"t": {
+					"value": 2,
+					"unit": "min"
+				}
+			},
+			"canonicalValue": 6,
+			"canonicalUnit": "C",
+			"acceptedUnits": ["C", "mC"],
+			"absoluteTolerance": 0.000006,
+			"relativeTolerance": 0.01
+		}
+	},
+	{
+		"id": "exercise.ch01.charge_mah_to_coulomb",
+		"version": 1,
+		"type": "unit_conversion",
+		"conceptIds": ["dc.charge"],
+		"formulaIds": [],
+		"difficulty": 2,
+		"kind": "independent",
+		"pool": "practice",
+		"prompt": {
+			"en": "A phone battery is rated 2000 mAh. Convert this charge to coulombs. (1 mAh = 1 mA for 3600 s.)",
+			"fr": "Une batterie de téléphone est notée 2000 mAh. Convertissez cette charge en coulombs. (1 mAh = 1 mA pendant 3600 s.)"
+		},
+		"hints": [
+			{
+				"en": "1 mAh = 0.001 A × 3600 s = 3.6 C.",
+				"fr": "1 mAh = 0,001 A × 3600 s = 3,6 C."
+			}
+		],
+		"solution": [
+			{
+				"en": "1 mAh = 0.001 A × 3600 s = 3.6 C.",
+				"fr": "1 mAh = 0,001 A × 3600 s = 3,6 C."
+			},
+			{
+				"en": "2000 mAh × 3.6 C/mAh = 7200 C.",
+				"fr": "2000 mAh × 3,6 C/mAh = 7200 C."
+			}
+		],
+		"answer": {
+			"canonicalValue": 7200,
+			"canonicalUnit": "C",
+			"acceptedUnits": ["C"],
+			"absoluteTolerance": 0.0072,
+			"relativeTolerance": 0.005
+		}
+	},
+	{
+		"id": "exercise.ch01.charge_phone_mah",
+		"version": 1,
+		"type": "numeric",
+		"conceptIds": ["dc.charge"],
+		"formulaIds": ["formula.charge.it"],
+		"difficulty": 2,
+		"kind": "applied",
+		"pool": "practice",
+		"prompt": {
+			"en": "A phone uses an average of 400 mA for 5 hours of video. How much battery charge has it used, in mAh?",
+			"fr": "Un téléphone consomme en moyenne 400 mA pendant 5 heures de vidéo. Quelle charge de batterie a-t-il utilisée, en mAh ?"
+		},
+		"hints": [
+			{
+				"en": "mA × h gives mAh directly.",
+				"fr": "Des mA × des h donnent directement des mAh."
+			}
+		],
+		"solution": [
+			{
+				"en": "$Q = I \\cdot t = 400\\ \\text{mA} \\times 5\\ \\text{h}$",
+				"fr": "$Q = I \\cdot t = 400\\ \\text{mA} \\times 5\\ \\text{h}$"
+			},
+			{
+				"en": "$Q = 2000\\ \\text{mAh}$ — the whole of a 2000 mAh battery.",
+				"fr": "$Q = 2000\\ \\text{mAh}$ — toute une batterie de 2000 mAh."
+			}
+		],
+		"answer": {
+			"algorithm": "charge_it",
+			"inputs": {
+				"I": {
+					"value": 400,
+					"unit": "mA"
+				},
+				"t": {
+					"value": 5,
+					"unit": "h"
+				}
+			},
+			"canonicalValue": 2000,
+			"canonicalUnit": "mAh",
+			"acceptedUnits": ["mAh", "Ah", "C"],
+			"absoluteTolerance": 0.002,
+			"relativeTolerance": 0.01
+		}
+	},
+	{
+		"id": "exercise.ch01.charge_exam_basic",
+		"version": 1,
+		"type": "numeric",
+		"conceptIds": ["dc.charge"],
+		"formulaIds": ["formula.charge.it"],
+		"difficulty": 1,
+		"kind": "independent",
+		"pool": "exam",
+		"prompt": {
+			"en": "A current of 0.25 A flows for 40 s. How much charge passes, in coulombs?",
+			"fr": "Un courant de 0,25 A circule pendant 40 s. Quelle charge est passée, en coulombs ?"
+		},
+		"solution": [
+			{
+				"en": "$Q = I \\cdot t = 0.25 \\times 40 = 10\\ \\text{C}$",
+				"fr": "$Q = I \\cdot t = 0{,}25 \\times 40 = 10\\ \\text{C}$"
+			}
+		],
+		"answer": {
+			"algorithm": "charge_it",
+			"inputs": {
+				"I": {
+					"value": 0.25,
+					"unit": "A"
+				},
+				"t": {
+					"value": 40,
+					"unit": "s"
+				}
+			},
+			"canonicalValue": 10,
+			"canonicalUnit": "C",
+			"acceptedUnits": ["C", "mC"],
+			"absoluteTolerance": 0.00001,
+			"relativeTolerance": 0.01
+		}
+	},
+	{
+		"id": "exercise.ch01.charge_exam_mah_meaning",
+		"version": 1,
+		"type": "multiple_choice",
+		"conceptIds": ["dc.charge"],
+		"formulaIds": [],
+		"difficulty": 1,
+		"kind": "independent",
+		"pool": "exam",
+		"prompt": {
+			"en": "A power bank is labelled “10 000 mAh”. What does mAh measure?",
+			"fr": "Une batterie externe porte l’indication « 10 000 mAh ». Que mesurent les mAh ?"
+		},
+		"solution": [
+			{
+				"en": "mA × h = charge. 10 000 mAh = 10 Ah = 36 000 C.",
+				"fr": "mA × h = charge. 10 000 mAh = 10 Ah = 36 000 C."
+			}
+		],
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "Charge (current × time)",
+					"fr": "Une charge (courant × durée)"
+				},
+				"rationale": {
+					"en": "Correct: milliamperes multiplied by hours is an amount of charge, like coulombs.",
+					"fr": "Exact : des milliampères multipliés par des heures donnent une quantité de charge, comme les coulombs."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "Current",
+					"fr": "Un courant"
+				},
+				"rationale": {
+					"en": "Current is in mA or A. The extra “h” (hours) turns it into charge.",
+					"fr": "Le courant s’exprime en mA ou en A. Le « h » (heures) en plus en fait une charge."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "Voltage",
+					"fr": "Une tension"
+				},
+				"rationale": {
+					"en": "Voltage is in volts; the label would say “V”.",
+					"fr": "La tension s’exprime en volts ; l’étiquette indiquerait « V »."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "Power",
+					"fr": "Une puissance"
+				},
+				"rationale": {
+					"en": "Power is in watts (W). mAh says nothing about how fast energy is used.",
+					"fr": "La puissance s’exprime en watts (W). Les mAh ne disent rien de la vitesse de consommation."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch01.charge_exam_battery_life",
+		"version": 1,
+		"type": "numeric",
+		"conceptIds": ["dc.charge"],
+		"formulaIds": ["formula.charge.it"],
+		"difficulty": 2,
+		"kind": "applied",
+		"pool": "exam",
+		"prompt": {
+			"en": "A 1200 mAh battery powers a night light that draws a steady 20 mA. Ideally, how many hours will it last?",
+			"fr": "Une batterie de 1200 mAh alimente une veilleuse qui consomme 20 mA en continu. En théorie, combien d’heures tiendra-t-elle ?"
+		},
+		"solution": [
+			{
+				"en": "Rearrange $Q = I \\cdot t$: $t = \\frac{Q}{I}$.",
+				"fr": "On réarrange $Q = I \\cdot t$ : $t = \\frac{Q}{I}$."
+			},
+			{
+				"en": "$t = \\frac{1200\\ \\text{mAh}}{20\\ \\text{mA}} = 60\\ \\text{h}$",
+				"fr": "$t = \\frac{1200\\ \\text{mAh}}{20\\ \\text{mA}} = 60\\ \\text{h}$"
+			}
+		],
+		"assumptions": {
+			"en": "Ideal battery: all its rated charge is usable and the current stays constant.",
+			"fr": "Batterie idéale : toute la charge nominale est utilisable et le courant reste constant."
+		},
+		"answer": {
+			"algorithm": "time_qi",
+			"inputs": {
+				"Q": {
+					"value": 1200,
+					"unit": "mAh"
+				},
+				"I": {
+					"value": 20,
+					"unit": "mA"
+				}
+			},
+			"canonicalValue": 60,
+			"canonicalUnit": "h",
+			"acceptedUnits": ["h", "min", "s"],
+			"absoluteTolerance": 0.00006,
+			"relativeTolerance": 0.01
+		}
+	},
+	{
+		"id": "exercise.ch01.current_definition",
+		"version": 1,
+		"type": "multiple_choice",
+		"conceptIds": ["dc.current"],
+		"formulaIds": [],
+		"difficulty": 1,
+		"kind": "guided",
+		"pool": "practice",
+		"prompt": {
+			"en": "What is electric current?",
+			"fr": "Qu’est-ce que le courant électrique ?"
+		},
+		"hints": [
+			{
+				"en": "Think of “per second”.",
+				"fr": "Pensez à « par seconde »."
+			}
+		],
+		"solution": [
+			{
+				"en": "Current = charge per time: $I = \\frac{Q}{t}$, in amperes (1 A = 1 C/s).",
+				"fr": "Courant = charge par unité de temps : $I = \\frac{Q}{t}$, en ampères (1 A = 1 C/s)."
+			}
+		],
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "The amount of charge passing a point each second",
+					"fr": "La quantité de charge qui passe en un point chaque seconde"
+				},
+				"rationale": {
+					"en": "Correct: current is a flow rate of charge, 1 A = 1 C/s.",
+					"fr": "Exact : le courant est un débit de charge, 1 A = 1 C/s."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "The amount of charge stored in a battery",
+					"fr": "La quantité de charge stockée dans une batterie"
+				},
+				"rationale": {
+					"en": "That is capacity (a charge, in mAh or C), not a flow.",
+					"fr": "C’est la capacité (une charge, en mAh ou en C), pas un débit."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "The energy given to each coulomb",
+					"fr": "L’énergie donnée à chaque coulomb"
+				},
+				"rationale": {
+					"en": "That is voltage.",
+					"fr": "C’est la tension."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "Something the bulb uses up, so less returns to the battery",
+					"fr": "Quelque chose que l’ampoule consomme, si bien qu’il en revient moins à la pile"
+				},
+				"rationale": {
+					"en": "Current is not used up: the same current returns to the battery. Energy is what gets used.",
+					"fr": "Le courant ne s’use pas : le même courant revient à la pile. C’est l’énergie qui est consommée."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch01.current_from_charge",
+		"version": 1,
+		"type": "numeric",
+		"conceptIds": ["dc.current"],
+		"formulaIds": ["formula.charge.it"],
+		"difficulty": 1,
+		"kind": "independent",
+		"pool": "practice",
+		"prompt": {
+			"en": "12 C of charge passes through a wire in 4 s. What is the current?",
+			"fr": "Une charge de 12 C traverse un fil en 4 s. Quel est le courant ?"
+		},
+		"hints": [
+			{
+				"en": "Rearrange $Q = I \\cdot t$ to $I = \\frac{Q}{t}$.",
+				"fr": "Réarrangez $Q = I \\cdot t$ en $I = \\frac{Q}{t}$."
+			}
+		],
+		"solution": [
+			{
+				"en": "$I = \\frac{Q}{t} = \\frac{12\\ \\text{C}}{4\\ \\text{s}} = 3\\ \\text{A}$",
+				"fr": "$I = \\frac{Q}{t} = \\frac{12\\ \\text{C}}{4\\ \\text{s}} = 3\\ \\text{A}$"
+			}
+		],
+		"answer": {
+			"algorithm": "current_qt",
+			"inputs": {
+				"Q": {
+					"value": 12,
+					"unit": "C"
+				},
+				"t": {
+					"value": 4,
+					"unit": "s"
+				}
+			},
+			"canonicalValue": 3,
+			"canonicalUnit": "A",
+			"acceptedUnits": ["A", "mA"],
+			"absoluteTolerance": 0.000003,
+			"relativeTolerance": 0.01
+		}
+	},
+	{
+		"id": "exercise.ch01.current_not_used_up",
+		"version": 1,
+		"type": "prediction",
+		"conceptIds": ["dc.current"],
+		"formulaIds": [],
+		"difficulty": 2,
+		"kind": "independent",
+		"pool": "practice",
+		"prompt": {
+			"en": "In this loop, ammeter A1 (before the resistor) reads 15 mA. Predict what A2 (after the resistor) reads.",
+			"fr": "Dans cette boucle, l’ampèremètre A1 (avant la résistance) indique 15 mA. Prédisez l’indication de A2 (après la résistance)."
+		},
+		"diagramId": "diagram.ch01.ammeter_loop",
+		"hints": [
+			{
+				"en": "Can charge pile up or vanish inside a resistor?",
+				"fr": "La charge peut-elle s’accumuler ou disparaître dans une résistance ?"
+			}
+		],
+		"solution": [
+			{
+				"en": "There is only one path, so every coulomb that passes A1 must also pass A2.",
+				"fr": "Il n’y a qu’un seul chemin : chaque coulomb qui passe par A1 doit aussi passer par A2."
+			},
+			{
+				"en": "A2 reads 15 mA. What the resistor “uses” is energy (it gets warm), not current.",
+				"fr": "A2 indique 15 mA. Ce que la résistance « consomme », c’est de l’énergie (elle chauffe), pas du courant."
+			}
+		],
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "15 mA",
+					"fr": "15 mA"
+				},
+				"rationale": {
+					"en": "Correct: in a single loop, the same current flows everywhere. Charge is not destroyed in the resistor.",
+					"fr": "Exact : dans une boucle unique, le même courant circule partout. La charge n’est pas détruite dans la résistance."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "Less than 15 mA, because the resistor uses some current",
+					"fr": "Moins de 15 mA, car la résistance consomme du courant"
+				},
+				"rationale": {
+					"en": "Classic misconception: the resistor takes **energy** from the charges, not the charges themselves.",
+					"fr": "Idée reçue classique : la résistance prend de l’**énergie** aux charges, pas les charges elles-mêmes."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "0 mA, the resistor uses it all",
+					"fr": "0 mA, la résistance consomme tout"
+				},
+				"rationale": {
+					"en": "If no current left the resistor, charge would pile up inside it. It does not.",
+					"fr": "Si aucun courant ne sortait de la résistance, la charge s’y accumulerait. Ce n’est pas le cas."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "More than 15 mA",
+					"fr": "Plus de 15 mA"
+				},
+				"rationale": {
+					"en": "Nothing in the loop adds charge between A1 and A2.",
+					"fr": "Rien dans la boucle n’ajoute de charge entre A1 et A2."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch01.current_usb_lamp",
+		"version": 1,
+		"type": "numeric",
+		"conceptIds": ["dc.current"],
+		"formulaIds": ["formula.charge.it"],
+		"difficulty": 2,
+		"kind": "applied",
+		"pool": "practice",
+		"prompt": {
+			"en": "A USB desk lamp ran for 3 hours and took 1500 mAh from a power bank. What was its average current, in mA?",
+			"fr": "Une lampe de bureau USB a fonctionné 3 heures et a pris 1500 mAh à une batterie externe. Quel était son courant moyen, en mA ?"
+		},
+		"hints": [
+			{
+				"en": "$I = \\frac{Q}{t}$; mAh divided by h gives mA.",
+				"fr": "$I = \\frac{Q}{t}$ ; des mAh divisés par des h donnent des mA."
+			}
+		],
+		"solution": [
+			{
+				"en": "$I = \\frac{Q}{t} = \\frac{1500\\ \\text{mAh}}{3\\ \\text{h}} = 500\\ \\text{mA}$",
+				"fr": "$I = \\frac{Q}{t} = \\frac{1500\\ \\text{mAh}}{3\\ \\text{h}} = 500\\ \\text{mA}$"
+			},
+			{
+				"en": "= 0.5 A.",
+				"fr": "= 0,5 A."
+			}
+		],
+		"answer": {
+			"algorithm": "current_qt",
+			"inputs": {
+				"Q": {
+					"value": 1500,
+					"unit": "mAh"
+				},
+				"t": {
+					"value": 3,
+					"unit": "h"
+				}
+			},
+			"canonicalValue": 500,
+			"canonicalUnit": "mA",
+			"acceptedUnits": ["mA", "A"],
+			"absoluteTolerance": 0.0005,
+			"relativeTolerance": 0.01
+		}
+	},
+	{
+		"id": "exercise.ch01.current_exam_direction",
+		"version": 1,
+		"type": "multiple_choice",
+		"conceptIds": ["dc.current"],
+		"formulaIds": [],
+		"difficulty": 1,
+		"kind": "independent",
+		"pool": "exam",
+		"prompt": {
+			"en": "In this battery-and-resistor loop, which way does **conventional** current flow through the external circuit?",
+			"fr": "Dans cette boucle pile-résistance, dans quel sens circule le courant **conventionnel** dans le circuit extérieur ?"
+		},
+		"diagramId": "diagram.ch01.single_resistor",
+		"solution": [
+			{
+				"en": "Conventional current leaves the + terminal, flows through the resistor and returns to the − terminal.",
+				"fr": "Le courant conventionnel sort par la borne +, traverse la résistance et revient par la borne −."
+			}
+		],
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "From the + terminal, through the resistor, to the − terminal",
+					"fr": "De la borne +, à travers la résistance, vers la borne −"
+				},
+				"rationale": {
+					"en": "Correct: by convention, current flows from + to − outside the source.",
+					"fr": "Exact : par convention, le courant va du + vers le − à l’extérieur de la source."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "From the − terminal, through the resistor, to the + terminal",
+					"fr": "De la borne −, à travers la résistance, vers la borne +"
+				},
+				"rationale": {
+					"en": "That is the direction electrons move. Conventional current is defined the other way.",
+					"fr": "C’est le sens de déplacement des électrons. Le courant conventionnel est défini dans l’autre sens."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "Out of both terminals towards the resistor",
+					"fr": "Hors des deux bornes, vers la résistance"
+				},
+				"rationale": {
+					"en": "Current goes round the loop; it does not meet in the middle.",
+					"fr": "Le courant fait le tour de la boucle ; il ne se rejoint pas au milieu."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "Back and forth",
+					"fr": "Dans un sens puis dans l’autre"
+				},
+				"rationale": {
+					"en": "A battery gives direct current (DC): one direction only.",
+					"fr": "Une pile fournit du courant continu : un seul sens."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch01.current_exam_charger",
+		"version": 1,
+		"type": "numeric",
+		"conceptIds": ["dc.current"],
+		"formulaIds": ["formula.charge.it"],
+		"difficulty": 2,
+		"kind": "applied",
+		"pool": "exam",
+		"prompt": {
+			"en": "A charging cable delivers 7200 C to a battery in 2 hours. What is the average charging current, in amperes?",
+			"fr": "Un câble de charge apporte 7200 C à une batterie en 2 heures. Quel est le courant de charge moyen, en ampères ?"
+		},
+		"solution": [
+			{
+				"en": "Convert: 2 h = 7200 s.",
+				"fr": "Conversion : 2 h = 7200 s."
+			},
+			{
+				"en": "$I = \\frac{Q}{t} = \\frac{7200}{7200} = 1\\ \\text{A}$",
+				"fr": "$I = \\frac{Q}{t} = \\frac{7200}{7200} = 1\\ \\text{A}$"
+			}
+		],
+		"answer": {
+			"algorithm": "current_qt",
+			"inputs": {
+				"Q": {
+					"value": 7200,
+					"unit": "C"
+				},
+				"t": {
+					"value": 2,
+					"unit": "h"
+				}
+			},
+			"canonicalValue": 1,
+			"canonicalUnit": "A",
+			"acceptedUnits": ["A", "mA"],
+			"absoluteTolerance": 0.000001,
+			"relativeTolerance": 0.01
+		}
+	},
+	{
+		"id": "exercise.ch01.voltage_definition",
+		"version": 1,
+		"type": "multiple_choice",
+		"conceptIds": ["dc.voltage"],
+		"formulaIds": [],
+		"difficulty": 1,
+		"kind": "guided",
+		"pool": "practice",
+		"prompt": {
+			"en": "A battery is labelled 9 V. What does “9 V” tell you?",
+			"fr": "Une pile porte l’indication 9 V. Que signifie « 9 V » ?"
+		},
+		"hints": [
+			{
+				"en": "Volts are joules per coulomb.",
+				"fr": "Les volts sont des joules par coulomb."
+			}
+		],
+		"solution": [
+			{
+				"en": "Voltage = energy per charge between two points: 9 V = 9 J/C between + and −.",
+				"fr": "Tension = énergie par charge entre deux points : 9 V = 9 J/C entre + et −."
+			}
+		],
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "Each coulomb moving from − to + inside it gains 9 J of energy",
+					"fr": "Chaque coulomb qui va du − au + à l’intérieur gagne 9 J d’énergie"
+				},
+				"rationale": {
+					"en": "Correct: 1 V = 1 J/C, the energy per charge between the two terminals.",
+					"fr": "Exact : 1 V = 1 J/C, l’énergie par charge entre les deux bornes."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "It pushes 9 A through any circuit",
+					"fr": "Elle pousse 9 A dans n’importe quel circuit"
+				},
+				"rationale": {
+					"en": "The current depends on the circuit’s resistance, not just the battery.",
+					"fr": "Le courant dépend de la résistance du circuit, pas seulement de la pile."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "It stores 9 C of charge",
+					"fr": "Elle stocke 9 C de charge"
+				},
+				"rationale": {
+					"en": "Stored charge is the capacity (mAh), a different quantity.",
+					"fr": "La charge stockée, c’est la capacité (mAh), une autre grandeur."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "Its + terminal on its own is at 9 V, whatever you compare it with",
+					"fr": "Sa borne + seule est à 9 V, quel que soit le point de comparaison"
+				},
+				"rationale": {
+					"en": "Voltage is always between **two** points; 9 V is + compared with −.",
+					"fr": "Une tension se mesure toujours entre **deux** points ; 9 V, c’est le + par rapport au −."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch01.voltage_meter_connection",
+		"version": 1,
+		"type": "multiple_choice",
+		"conceptIds": ["dc.voltage"],
+		"formulaIds": [],
+		"difficulty": 1,
+		"kind": "independent",
+		"pool": "practice",
+		"prompt": {
+			"en": "You want to measure the voltage across R1. How must the voltmeter be connected?",
+			"fr": "Vous voulez mesurer la tension aux bornes de R1. Comment brancher le voltmètre ?"
+		},
+		"diagramId": "diagram.ch01.voltmeter_across_r",
+		"hints": [
+			{
+				"en": "Voltage is measured **between** two points.",
+				"fr": "Une tension se mesure **entre** deux points."
+			}
+		],
+		"solution": [
+			{
+				"en": "A voltmeter goes in parallel, across the part: + probe on the end nearer the battery’s +, − probe on the other end.",
+				"fr": "Le voltmètre se branche en parallèle, aux bornes du composant : pointe + du côté du + de la pile, pointe − de l’autre côté."
+			}
+		],
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "Across R1: one probe on each end of the resistor (in parallel)",
+					"fr": "Aux bornes de R1 : une pointe à chaque extrémité de la résistance (en parallèle)"
+				},
+				"rationale": {
+					"en": "Correct: voltage is a difference between two points, so the meter touches both.",
+					"fr": "Exact : une tension est une différence entre deux points, le voltmètre touche donc les deux."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "In series, by cutting the wire and inserting the meter",
+					"fr": "En série, en coupant le fil pour insérer l’appareil"
+				},
+				"rationale": {
+					"en": "That is how an ammeter is connected, to measure current.",
+					"fr": "C’est ainsi qu’on branche un ampèremètre, pour mesurer un courant."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "With one probe on R1 and the other probe left in the air",
+					"fr": "Une pointe sur R1, l’autre en l’air"
+				},
+				"rationale": {
+					"en": "With only one point there is no difference to measure: the reading is meaningless.",
+					"fr": "Avec un seul point, il n’y a pas de différence à mesurer : la lecture n’a pas de sens."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "Both probes on the same end of R1",
+					"fr": "Les deux pointes sur la même extrémité de R1"
+				},
+				"rationale": {
+					"en": "Same point twice: the difference is 0 V.",
+					"fr": "Deux fois le même point : la différence vaut 0 V."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch01.voltage_one_probe",
+		"version": 1,
+		"type": "diagnose",
+		"conceptIds": ["dc.voltage"],
+		"formulaIds": [],
+		"difficulty": 2,
+		"kind": "independent",
+		"pool": "practice",
+		"prompt": {
+			"en": "Sam touches both voltmeter probes to two points on the **same** plain copper wire of a working circuit and reads 0.00 V. Sam concludes the circuit has no voltage. What is the best diagnosis?",
+			"fr": "Sam pose les deux pointes du voltmètre sur deux points du **même** fil de cuivre d’un circuit qui fonctionne et lit 0,00 V. Il en conclut que le circuit n’a pas de tension. Quel est le meilleur diagnostic ?"
+		},
+		"hints": [
+			{
+				"en": "Where is energy given or taken in the loop? On a wire, or on the parts?",
+				"fr": "Où l’énergie est-elle donnée ou prise dans la boucle ? Sur un fil, ou dans les composants ?"
+			}
+		],
+		"solution": [
+			{
+				"en": "Voltage is the energy difference per coulomb between two points.",
+				"fr": "La tension est la différence d’énergie par coulomb entre deux points."
+			},
+			{
+				"en": "Two points on one ideal wire are at the same potential: 0 V between them is normal. Measure across the battery or across a component.",
+				"fr": "Deux points d’un même fil idéal sont au même potentiel : 0 V entre eux est normal. Mesurez aux bornes de la pile ou d’un composant."
+			}
+		],
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "The two points are on the same wire, so there is (almost) no energy difference between them; measure across a component instead",
+					"fr": "Les deux points sont sur le même fil, donc il n’y a (presque) pas de différence d’énergie entre eux ; il faut mesurer aux bornes d’un composant"
+				},
+				"rationale": {
+					"en": "Correct: an ideal wire has no voltage across it. The voltage appears across the battery and the parts.",
+					"fr": "Exact : un fil idéal n’a pas de tension à ses bornes. La tension apparaît aux bornes de la pile et des composants."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "The battery is flat",
+					"fr": "La pile est à plat"
+				},
+				"rationale": {
+					"en": "Possible in general, but this reading cannot show it: any wire reads ≈0 V even with a full battery.",
+					"fr": "C’est possible en général, mais cette mesure ne le montre pas : un fil indique ≈0 V même avec une pile neuve."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "The current is used up before it reaches the wire",
+					"fr": "Le courant est consommé avant d’arriver au fil"
+				},
+				"rationale": {
+					"en": "Current is not used up; and the reading is about voltage, not current.",
+					"fr": "Le courant ne s’use pas ; et la mesure porte sur une tension, pas sur un courant."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "The voltmeter must be connected in series",
+					"fr": "Le voltmètre doit être branché en série"
+				},
+				"rationale": {
+					"en": "No: a voltmeter is always connected across (in parallel).",
+					"fr": "Non : un voltmètre se branche toujours en parallèle."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch01.voltage_cells_in_series",
+		"version": 1,
+		"type": "multiple_choice",
+		"conceptIds": ["dc.voltage"],
+		"formulaIds": [],
+		"difficulty": 1,
+		"kind": "applied",
+		"pool": "practice",
+		"prompt": {
+			"en": "A TV remote holds two 1.5 V AA cells, placed + to − one after the other (in series). What voltage does the remote’s circuit get?",
+			"fr": "Une télécommande contient deux piles AA de 1,5 V, placées l’une après l’autre, + contre − (en série). Quelle tension reçoit le circuit ?"
+		},
+		"hints": [
+			{
+				"en": "Each cell adds energy to every coulomb that passes through it.",
+				"fr": "Chaque pile ajoute de l’énergie à chaque coulomb qui la traverse."
+			}
+		],
+		"solution": [
+			{
+				"en": "Cells in series, same direction: voltages add.",
+				"fr": "Piles en série, dans le même sens : les tensions s’additionnent."
+			},
+			{
+				"en": "1.5 V + 1.5 V = 3 V.",
+				"fr": "1,5 V + 1,5 V = 3 V."
+			}
+		],
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "3 V",
+					"fr": "3 V"
+				},
+				"rationale": {
+					"en": "Correct: each coulomb gains 1.5 J in each cell, so 3 J in total: 3 V.",
+					"fr": "Exact : chaque coulomb gagne 1,5 J dans chaque pile, soit 3 J au total : 3 V."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "1.5 V",
+					"fr": "1,5 V"
+				},
+				"rationale": {
+					"en": "That would be the case side by side (in parallel), not one after the other.",
+					"fr": "Ce serait le cas côte à côte (en parallèle), pas l’une après l’autre."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "0 V, the cells cancel out",
+					"fr": "0 V, les piles s’annulent"
+				},
+				"rationale": {
+					"en": "They would cancel only if one were reversed (+ to +).",
+					"fr": "Elles ne s’annuleraient que si l’une était retournée (+ contre +)."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "2.25 V (1.5 × 1.5)",
+					"fr": "2,25 V (1,5 × 1,5)"
+				},
+				"rationale": {
+					"en": "Voltages in series add; they are not multiplied.",
+					"fr": "Les tensions en série s’additionnent ; elles ne se multiplient pas."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch01.voltage_exam_usb",
+		"version": 1,
+		"type": "multiple_choice",
+		"conceptIds": ["dc.voltage"],
+		"formulaIds": [],
+		"difficulty": 1,
+		"kind": "independent",
+		"pool": "exam",
+		"prompt": {
+			"en": "A USB port supplies 5 V. Which statement is correct?",
+			"fr": "Un port USB fournit 5 V. Quelle affirmation est correcte ?"
+		},
+		"solution": [
+			{
+				"en": "1 V = 1 J/C. 5 V means 5 J per coulomb between the + and − pins.",
+				"fr": "1 V = 1 J/C. 5 V signifie 5 J par coulomb entre les broches + et −."
+			}
+		],
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "Each coulomb flowing out through the circuit carries 5 J between the + and − pins",
+					"fr": "Chaque coulomb qui circule dans le circuit transporte 5 J entre les broches + et −"
+				},
+				"rationale": {
+					"en": "Correct: 5 V = 5 J per coulomb between the two pins.",
+					"fr": "Exact : 5 V = 5 J par coulomb entre les deux broches."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "It always delivers 5 A",
+					"fr": "Il fournit toujours 5 A"
+				},
+				"rationale": {
+					"en": "The current depends on what is plugged in.",
+					"fr": "Le courant dépend de ce qui est branché."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "The + pin is at 5 V by itself, without any second point",
+					"fr": "La broche + est à 5 V toute seule, sans second point"
+				},
+				"rationale": {
+					"en": "A voltage always compares two points (here + and −/GND).",
+					"fr": "Une tension compare toujours deux points (ici + et −/GND)."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "It stores 5 C of charge",
+					"fr": "Il stocke 5 C de charge"
+				},
+				"rationale": {
+					"en": "Volts are not coulombs: voltage is energy per charge, not charge.",
+					"fr": "Les volts ne sont pas des coulombs : la tension est une énergie par charge, pas une charge."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch01.voltage_exam_where",
+		"version": 1,
+		"type": "multiple_choice",
+		"conceptIds": ["dc.voltage"],
+		"formulaIds": [],
+		"difficulty": 2,
+		"kind": "applied",
+		"pool": "exam",
+		"prompt": {
+			"en": "In this circuit (9 V battery, 1 kΩ resistor, ideal wires), you move the voltmeter to two points on the top wire between the battery’s + and R1. What does it read?",
+			"fr": "Dans ce circuit (pile de 9 V, résistance de 1 kΩ, fils idéaux), vous déplacez le voltmètre sur deux points du fil du haut, entre le + de la pile et R1. Qu’indique-t-il ?"
+		},
+		"diagramId": "diagram.ch01.voltmeter_across_r",
+		"solution": [
+			{
+				"en": "Voltage appears only across parts that give or take energy (battery, resistor).",
+				"fr": "La tension n’apparaît qu’aux bornes des éléments qui donnent ou prennent de l’énergie (pile, résistance)."
+			},
+			{
+				"en": "Between two points of the same ideal wire: ≈0 V.",
+				"fr": "Entre deux points d’un même fil idéal : ≈0 V."
+			}
+		],
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "About 0 V",
+					"fr": "Environ 0 V"
+				},
+				"rationale": {
+					"en": "Correct: both points are on the same ideal wire, so they are at the same potential.",
+					"fr": "Exact : les deux points sont sur le même fil idéal, donc au même potentiel."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "9 V",
+					"fr": "9 V"
+				},
+				"rationale": {
+					"en": "9 V appears across the battery and across R1, not between two points of one wire.",
+					"fr": "9 V apparaissent aux bornes de la pile et de R1, pas entre deux points d’un même fil."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "4.5 V",
+					"fr": "4,5 V"
+				},
+				"rationale": {
+					"en": "There is no reason for half: the wire takes no energy.",
+					"fr": "Aucune raison d’avoir la moitié : le fil ne prend pas d’énergie."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "9 mA",
+					"fr": "9 mA"
+				},
+				"rationale": {
+					"en": "A voltmeter shows volts, not milliamperes.",
+					"fr": "Un voltmètre affiche des volts, pas des milliampères."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch01.ground_definition",
+		"version": 1,
+		"type": "multiple_choice",
+		"conceptIds": ["dc.ground_reference"],
+		"formulaIds": [],
+		"difficulty": 1,
+		"kind": "guided",
+		"pool": "practice",
+		"prompt": {
+			"en": "In a battery circuit diagram, what does the ground symbol (⏚) mean?",
+			"fr": "Dans le schéma d’un circuit à pile, que signifie le symbole de masse (⏚) ?"
+		},
+		"hints": [
+			{
+				"en": "A voltage needs two points. Ground fixes one of them once and for all.",
+				"fr": "Une tension demande deux points. La masse en fixe un une fois pour toutes."
+			}
+		],
+		"solution": [
+			{
+				"en": "Ground = the reference node, defined as 0 V. “The voltage at B” means the voltage between B and ground.",
+				"fr": "Masse = nœud de référence, défini à 0 V. « La tension en B » signifie la tension entre B et la masse."
+			}
+		],
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "The point we chose as 0 V, from which other voltages are measured",
+					"fr": "Le point choisi comme 0 V, à partir duquel on mesure les autres tensions"
+				},
+				"rationale": {
+					"en": "Correct: ground is a reference we pick, usually the battery’s − terminal.",
+					"fr": "Exact : la masse est une référence que l’on choisit, en général la borne − de la pile."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "A wire that must be pushed into the earth outside",
+					"fr": "Un fil qu’il faut planter dans la terre dehors"
+				},
+				"rationale": {
+					"en": "In a battery circuit, ground is just a reference node; no earth connection is needed.",
+					"fr": "Dans un circuit à pile, la masse n’est qu’un nœud de référence ; aucune liaison à la terre n’est nécessaire."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "The place where the current disappears",
+					"fr": "L’endroit où le courant disparaît"
+				},
+				"rationale": {
+					"en": "Current never disappears: it returns to the battery through the ground wire.",
+					"fr": "Le courant ne disparaît jamais : il revient à la pile par le fil de masse."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "The point with the highest voltage",
+					"fr": "Le point qui a la tension la plus élevée"
+				},
+				"rationale": {
+					"en": "Ground is 0 V by definition; it is often the lowest point.",
+					"fr": "La masse vaut 0 V par définition ; c’est souvent le point le plus bas."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch01.ground_node_voltage",
+		"version": 1,
+		"type": "numeric",
+		"conceptIds": ["dc.ground_reference"],
+		"formulaIds": [],
+		"difficulty": 2,
+		"kind": "independent",
+		"pool": "practice",
+		"prompt": {
+			"en": "Node A is at +9 V relative to ground. A voltmeter across R1 (from A to B) reads 4.5 V. What is the voltage at node B relative to ground?",
+			"fr": "Le nœud A est à +9 V par rapport à la masse. Un voltmètre aux bornes de R1 (de A vers B) indique 4,5 V. Quelle est la tension du nœud B par rapport à la masse ?"
+		},
+		"diagramId": "diagram.ch01.ground_nodes",
+		"hints": [
+			{
+				"en": "$V_{AB} = V_A - V_B$, so $V_B = V_A - V_{AB}$.",
+				"fr": "$V_{AB} = V_A - V_B$, donc $V_B = V_A - V_{AB}$."
+			}
+		],
+		"solution": [
+			{
+				"en": "$V_{AB} = V_A - V_B$",
+				"fr": "$V_{AB} = V_A - V_B$"
+			},
+			{
+				"en": "$V_B = 9 - 4.5 = 4.5\\ \\text{V}$",
+				"fr": "$V_B = 9 - 4{,}5 = 4{,}5\\ \\text{V}$"
+			}
+		],
+		"answer": {
+			"algorithm": "kvl_remaining",
+			"inputs": {
+				"Vs": {
+					"value": 9,
+					"unit": "V"
+				},
+				"V1": {
+					"value": 4.5,
+					"unit": "V"
+				}
+			},
+			"canonicalValue": 4.5,
+			"canonicalUnit": "V",
+			"acceptedUnits": ["V", "mV"],
+			"absoluteTolerance": 0.0000045,
+			"relativeTolerance": 0.01
+		}
+	},
+	{
+		"id": "exercise.ch01.ground_move_reference",
+		"version": 1,
+		"type": "prediction",
+		"conceptIds": ["dc.ground_reference"],
+		"formulaIds": [],
+		"difficulty": 3,
+		"kind": "independent",
+		"pool": "practice",
+		"prompt": {
+			"en": "In this 9 V circuit, imagine moving the ground symbol from the battery’s − terminal to node A (the + terminal). Predict the new voltage of the battery’s − terminal relative to ground.",
+			"fr": "Dans ce circuit de 9 V, imaginez que l’on déplace le symbole de masse de la borne − de la pile vers le nœud A (la borne +). Prédisez la nouvelle tension de la borne − par rapport à la masse."
+		},
+		"diagramId": "diagram.ch01.ground_nodes",
+		"hints": [
+			{
+				"en": "The battery still makes + exactly 9 V above −.",
+				"fr": "La pile place toujours le + exactement 9 V au-dessus du −."
+			}
+		],
+		"solution": [
+			{
+				"en": "Voltage differences do not depend on the reference: $V_+ - V_- = 9$ V.",
+				"fr": "Les différences de tension ne dépendent pas de la référence : $V_+ - V_- = 9$ V."
+			},
+			{
+				"en": "With $V_+ = 0$ V: $V_- = -9$ V.",
+				"fr": "Avec $V_+ = 0$ V : $V_- = -9$ V."
+			}
+		],
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "−9 V",
+					"fr": "−9 V"
+				},
+				"rationale": {
+					"en": "Correct: the − terminal is still 9 V below the + terminal, which is now 0 V.",
+					"fr": "Exact : la borne − reste 9 V en dessous de la borne +, qui vaut maintenant 0 V."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "0 V",
+					"fr": "0 V"
+				},
+				"rationale": {
+					"en": "The − terminal was 0 V only because it was the reference. It is no longer.",
+					"fr": "La borne − ne valait 0 V que parce qu’elle était la référence. Ce n’est plus le cas."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "+9 V",
+					"fr": "+9 V"
+				},
+				"rationale": {
+					"en": "Sign error: the − terminal is below the +, not above.",
+					"fr": "Erreur de signe : la borne − est en dessous du +, pas au-dessus."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "Moving ground changes the current, so it cannot be predicted",
+					"fr": "Déplacer la masse change le courant, on ne peut donc rien prédire"
+				},
+				"rationale": {
+					"en": "Choosing a reference changes no current and no voltage **difference**; only the labels change.",
+					"fr": "Choisir une référence ne change aucun courant ni aucune **différence** de tension ; seules les étiquettes changent."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch01.ground_board_probe",
+		"version": 1,
+		"type": "multiple_choice",
+		"conceptIds": ["dc.ground_reference"],
+		"formulaIds": [],
+		"difficulty": 1,
+		"kind": "applied",
+		"pool": "practice",
+		"prompt": {
+			"en": "A microcontroller board has pins labelled “3V3” and “GND”. To check that the 3V3 pin really gives 3.3 V, where do you put the black (COM) probe?",
+			"fr": "Une carte microcontrôleur a des broches marquées « 3V3 » et « GND ». Pour vérifier que la broche 3V3 donne bien 3,3 V, où placez-vous la pointe noire (COM) ?"
+		},
+		"hints": [
+			{
+				"en": "The label “3.3 V” is relative to which point?",
+				"fr": "L’indication « 3,3 V » est donnée par rapport à quel point ?"
+			}
+		],
+		"solution": [
+			{
+				"en": "Supply voltages on a board are given relative to GND.",
+				"fr": "Les tensions d’une carte sont données par rapport à GND."
+			},
+			{
+				"en": "Black probe on GND, red probe on 3V3: the meter should show about 3.3 V.",
+				"fr": "Pointe noire sur GND, pointe rouge sur 3V3 : le multimètre doit indiquer environ 3,3 V."
+			}
+		],
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "On a GND pin",
+					"fr": "Sur une broche GND"
+				},
+				"rationale": {
+					"en": "Correct: “3.3 V” is measured relative to GND, the board’s reference.",
+					"fr": "Exact : « 3,3 V » se mesure par rapport à GND, la référence de la carte."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "On the 3V3 pin too",
+					"fr": "Aussi sur la broche 3V3"
+				},
+				"rationale": {
+					"en": "Both probes on one point always read 0 V.",
+					"fr": "Deux pointes sur un même point indiquent toujours 0 V."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "On the table, or held in your hand",
+					"fr": "Sur la table, ou tenue à la main"
+				},
+				"rationale": {
+					"en": "The meter needs a second point of the circuit, not an object outside it.",
+					"fr": "Le multimètre a besoin d’un second point du circuit, pas d’un objet extérieur."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "Nowhere: one probe is enough for voltage",
+					"fr": "Nulle part : une seule pointe suffit pour une tension"
+				},
+				"rationale": {
+					"en": "Voltage is always between two points.",
+					"fr": "Une tension se mesure toujours entre deux points."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch01.ground_exam_vab",
+		"version": 1,
+		"type": "numeric",
+		"conceptIds": ["dc.ground_reference"],
+		"formulaIds": [],
+		"difficulty": 2,
+		"kind": "independent",
+		"pool": "exam",
+		"prompt": {
+			"en": "Relative to ground, node A is at 5 V and node B is at 2 V. What is the voltage $V_{AB}$ between A and B?",
+			"fr": "Par rapport à la masse, le nœud A est à 5 V et le nœud B à 2 V. Quelle est la tension $V_{AB}$ entre A et B ?"
+		},
+		"solution": [
+			{
+				"en": "$V_{AB} = V_A - V_B = 5 - 2 = 3\\ \\text{V}$",
+				"fr": "$V_{AB} = V_A - V_B = 5 - 2 = 3\\ \\text{V}$"
+			}
+		],
+		"answer": {
+			"algorithm": "kvl_remaining",
+			"inputs": {
+				"Vs": {
+					"value": 5,
+					"unit": "V"
+				},
+				"V1": {
+					"value": 2,
+					"unit": "V"
+				}
+			},
+			"canonicalValue": 3,
+			"canonicalUnit": "V",
+			"acceptedUnits": ["V", "mV"],
+			"absoluteTolerance": 0.000003,
+			"relativeTolerance": 0.01
+		}
+	},
+	{
+		"id": "exercise.ch01.ground_exam_meaning",
+		"version": 1,
+		"type": "multiple_choice",
+		"conceptIds": ["dc.ground_reference"],
+		"formulaIds": [],
+		"difficulty": 1,
+		"kind": "independent",
+		"pool": "exam",
+		"prompt": {
+			"en": "In this schematic, the text says “B = +4.5 V”. What does this mean exactly?",
+			"fr": "Sur ce schéma, il est écrit « B = +4,5 V ». Qu’est-ce que cela signifie exactement ?"
+		},
+		"diagramId": "diagram.ch01.ground_nodes",
+		"solution": [
+			{
+				"en": "“B = +4.5 V” is shorthand for $V_B$ measured from ground: $V_B - V_{GND} = 4.5$ V.",
+				"fr": "« B = +4,5 V » est un raccourci pour $V_B$ mesurée depuis la masse : $V_B - V_{masse} = 4{,}5$ V."
+			}
+		],
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "Node B is 4.5 V above the ground node",
+					"fr": "Le nœud B est 4,5 V au-dessus du nœud de masse"
+				},
+				"rationale": {
+					"en": "Correct: a single-node voltage is always relative to ground.",
+					"fr": "Exact : la tension d’un nœud seul est toujours donnée par rapport à la masse."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "4.5 V is stored at node B",
+					"fr": "4,5 V sont stockés au nœud B"
+				},
+				"rationale": {
+					"en": "Voltage is not stored at a point; it compares two points.",
+					"fr": "Une tension ne se stocke pas en un point ; elle compare deux points."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "Node B is 4.5 V above node A",
+					"fr": "Le nœud B est 4,5 V au-dessus du nœud A"
+				},
+				"rationale": {
+					"en": "B is below A (A is at +9 V).",
+					"fr": "B est en dessous de A (A est à +9 V)."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "4.5 A flow through node B",
+					"fr": "4,5 A traversent le nœud B"
+				},
+				"rationale": {
+					"en": "Volts are not amperes.",
+					"fr": "Les volts ne sont pas des ampères."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch01.ground_exam_led_board",
+		"version": 1,
+		"type": "numeric",
+		"conceptIds": ["dc.ground_reference"],
+		"formulaIds": [],
+		"difficulty": 2,
+		"kind": "applied",
+		"pool": "exam",
+		"prompt": {
+			"en": "On a 5 V board, an LED and its resistor are connected from the 5 V rail to GND. With the black probe on GND, the meter reads 1.8 V at node X between the resistor and the LED. What is the voltage across the resistor (between the 5 V rail and X)?",
+			"fr": "Sur une carte 5 V, une LED et sa résistance sont reliées entre le rail 5 V et GND. Pointe noire sur GND, le multimètre indique 1,8 V au nœud X entre la résistance et la LED. Quelle est la tension aux bornes de la résistance (entre le rail 5 V et X) ?"
+		},
+		"solution": [
+			{
+				"en": "Both values are relative to GND: $V_{rail} = 5$ V, $V_X = 1.8$ V.",
+				"fr": "Les deux valeurs sont mesurées par rapport à GND : $V_{rail} = 5$ V, $V_X = 1{,}8$ V."
+			},
+			{
+				"en": "$V_R = V_{rail} - V_X = 5 - 1.8 = 3.2\\ \\text{V}$",
+				"fr": "$V_R = V_{rail} - V_X = 5 - 1{,}8 = 3{,}2\\ \\text{V}$"
+			}
+		],
+		"answer": {
+			"algorithm": "kvl_remaining",
+			"inputs": {
+				"Vs": {
+					"value": 5,
+					"unit": "V"
+				},
+				"V1": {
+					"value": 1.8,
+					"unit": "V"
+				}
+			},
+			"canonicalValue": 3.2,
+			"canonicalUnit": "V",
+			"acceptedUnits": ["V", "mV"],
+			"absoluteTolerance": 0.0000032,
+			"relativeTolerance": 0.01
+		}
+	},
+	{
+		"id": "exercise.ch01.resistance_definition",
+		"version": 1,
+		"type": "multiple_choice",
+		"conceptIds": ["dc.resistance"],
+		"formulaIds": [],
+		"difficulty": 1,
+		"kind": "guided",
+		"pool": "practice",
+		"prompt": {
+			"en": "What does a resistor’s resistance (in ohms) describe?",
+			"fr": "Que décrit la valeur d’une résistance, en ohms ?"
+		},
+		"hints": [
+			{
+				"en": "Think “resist”.",
+				"fr": "Pensez à « résister »."
+			}
+		],
+		"solution": [
+			{
+				"en": "Resistance R measures opposition to current, in ohms. 1 Ω: 1 V drives 1 A through it.",
+				"fr": "La résistance R mesure l’opposition au courant, en ohms. 1 Ω : 1 V y fait passer 1 A."
+			}
+		],
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "How strongly it opposes current: more ohms, less current for the same voltage",
+					"fr": "À quel point il s’oppose au courant : plus d’ohms, moins de courant pour une même tension"
+				},
+				"rationale": {
+					"en": "Correct: resistance is opposition to current, measured in ohms (Ω).",
+					"fr": "Exact : la résistance est l’opposition au courant, mesurée en ohms (Ω)."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "How much charge it stores",
+					"fr": "La quantité de charge qu’il stocke"
+				},
+				"rationale": {
+					"en": "Storing charge is what a capacitor does (chapter 5).",
+					"fr": "Stocker de la charge, c’est le rôle d’un condensateur (chapitre 5)."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "How much voltage it produces",
+					"fr": "La tension qu’il produit"
+				},
+				"rationale": {
+					"en": "A resistor produces no voltage on its own; it only has a voltage across it when current flows.",
+					"fr": "Une résistance ne produit aucune tension seule ; elle n’en a une à ses bornes que si un courant la traverse."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "The current it uses up",
+					"fr": "Le courant qu’elle consomme"
+				},
+				"rationale": {
+					"en": "Current is not used up; the resistor turns energy into heat.",
+					"fr": "Le courant ne s’use pas ; la résistance transforme de l’énergie en chaleur."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch01.resistance_long_thin",
+		"version": 1,
+		"type": "prediction",
+		"conceptIds": ["dc.resistance"],
+		"formulaIds": [],
+		"difficulty": 2,
+		"kind": "independent",
+		"pool": "practice",
+		"prompt": {
+			"en": "Two copper wires: wire X is long and thin, wire Y is short and thick. Predict which has the larger resistance.",
+			"fr": "Deux fils de cuivre : le fil X est long et fin, le fil Y est court et épais. Prédisez lequel a la plus grande résistance."
+		},
+		"hints": [
+			{
+				"en": "Imagine a crowd moving through a long narrow corridor versus a short wide one.",
+				"fr": "Imaginez une foule dans un long couloir étroit, puis dans un couloir court et large."
+			}
+		],
+		"solution": [
+			{
+				"en": "Resistance ∝ length / area (same material, same temperature).",
+				"fr": "Résistance ∝ longueur / section (même matériau, même température)."
+			},
+			{
+				"en": "Long and thin → larger resistance: X.",
+				"fr": "Long et fin → résistance plus grande : X."
+			}
+		],
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "X, the long thin wire",
+					"fr": "X, le fil long et fin"
+				},
+				"rationale": {
+					"en": "Correct: resistance grows with length and shrinks with cross-section area.",
+					"fr": "Exact : la résistance augmente avec la longueur et diminue avec la section."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "Y, the short thick wire",
+					"fr": "Y, le fil court et épais"
+				},
+				"rationale": {
+					"en": "Thick wires offer a wider path, and short ones a shorter path: both lower resistance.",
+					"fr": "Un fil épais offre un passage plus large et un fil court un trajet plus court : les deux diminuent la résistance."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "Both are equal, they are both copper",
+					"fr": "Les deux sont égales, elles sont toutes deux en cuivre"
+				},
+				"rationale": {
+					"en": "The material matters, but so do length and thickness.",
+					"fr": "Le matériau compte, mais la longueur et l’épaisseur aussi."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "Neither: copper has no resistance",
+					"fr": "Aucun : le cuivre n’a pas de résistance"
+				},
+				"rationale": {
+					"en": "Copper has very low resistance, but not zero; long thin wires get noticeably resistive.",
+					"fr": "Le cuivre a une très faible résistance, mais pas nulle ; un long fil fin devient sensiblement résistif."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch01.resistance_cable_length",
+		"version": 1,
+		"type": "multiple_choice",
+		"conceptIds": ["dc.resistance"],
+		"formulaIds": [],
+		"difficulty": 2,
+		"kind": "applied",
+		"pool": "practice",
+		"prompt": {
+			"en": "A 1 m USB cable has 0.2 Ω of wire resistance. You buy a 2 m cable of exactly the same type. Its wire resistance is about…",
+			"fr": "Un câble USB de 1 m a une résistance de fil de 0,2 Ω. Vous achetez un câble de 2 m exactement du même type. Sa résistance est d’environ…"
+		},
+		"hints": [
+			{
+				"en": "Resistance is proportional to length.",
+				"fr": "La résistance est proportionnelle à la longueur."
+			}
+		],
+		"solution": [
+			{
+				"en": "R ∝ L at fixed thickness and material.",
+				"fr": "R ∝ L à section et matériau fixés."
+			},
+			{
+				"en": "2 × 0.2 Ω = 0.4 Ω.",
+				"fr": "2 × 0,2 Ω = 0,4 Ω."
+			}
+		],
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "0.4 Ω (doubles)",
+					"fr": "0,4 Ω (elle double)"
+				},
+				"rationale": {
+					"en": "Correct: same wire, twice the length → twice the resistance. That is why long cables charge phones more slowly.",
+					"fr": "Exact : même fil, longueur doublée → résistance doublée. C’est pourquoi un long câble charge plus lentement un téléphone."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "0.1 Ω (halves)",
+					"fr": "0,1 Ω (elle diminue de moitié)"
+				},
+				"rationale": {
+					"en": "Inverted: halving would need a thicker wire, not a longer one.",
+					"fr": "Inversé : il faudrait un fil plus épais pour la diviser par deux, pas plus long."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "0.2 Ω (unchanged)",
+					"fr": "0,2 Ω (inchangée)"
+				},
+				"rationale": {
+					"en": "Length does matter for resistance.",
+					"fr": "La longueur compte bien pour la résistance."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "0.8 Ω (four times)",
+					"fr": "0,8 Ω (quatre fois)"
+				},
+				"rationale": {
+					"en": "Resistance is proportional to length, not to its square.",
+					"fr": "La résistance est proportionnelle à la longueur, pas à son carré."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch01.resistance_exam_one_ohm",
+		"version": 1,
+		"type": "multiple_choice",
+		"conceptIds": ["dc.resistance"],
+		"formulaIds": [],
+		"difficulty": 1,
+		"kind": "independent",
+		"pool": "exam",
+		"prompt": {
+			"en": "Which statement describes 1 ohm?",
+			"fr": "Quelle affirmation décrit 1 ohm ?"
+		},
+		"solution": [
+			{
+				"en": "From $R = V/I$: 1 Ω = 1 V / 1 A.",
+				"fr": "D’après $R = V/I$ : 1 Ω = 1 V / 1 A."
+			}
+		],
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "The resistance through which 1 V drives a current of 1 A",
+					"fr": "La résistance dans laquelle 1 V fait passer un courant de 1 A"
+				},
+				"rationale": {
+					"en": "Correct: 1 Ω = 1 V/A.",
+					"fr": "Exact : 1 Ω = 1 V/A."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "The resistance that stores 1 C",
+					"fr": "La résistance qui stocke 1 C"
+				},
+				"rationale": {
+					"en": "Resistors do not store charge.",
+					"fr": "Les résistances ne stockent pas de charge."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "The resistance that turns 1 A into 1 V at its output",
+					"fr": "La résistance qui transforme 1 A en 1 V à sa sortie"
+				},
+				"rationale": {
+					"en": "A resistor does not convert current into voltage at an output; V is across it while I flows through it.",
+					"fr": "Une résistance ne transforme pas un courant en tension de sortie ; V est à ses bornes pendant que I la traverse."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "The resistance that uses up 1 A each second",
+					"fr": "La résistance qui consomme 1 A par seconde"
+				},
+				"rationale": {
+					"en": "Current is not used up.",
+					"fr": "Le courant ne s’use pas."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch01.resistance_exam_thicker",
+		"version": 1,
+		"type": "prediction",
+		"conceptIds": ["dc.resistance"],
+		"formulaIds": [],
+		"difficulty": 2,
+		"kind": "applied",
+		"pool": "exam",
+		"prompt": {
+			"en": "For a speaker, you replace a thin wire with one of the same length and material but **twice the cross-section area**. Predict its resistance compared with the old wire.",
+			"fr": "Pour une enceinte, vous remplacez un fil fin par un fil de même longueur et même matériau, mais de **section deux fois plus grande**. Prédisez sa résistance par rapport à l’ancien fil."
+		},
+		"solution": [
+			{
+				"en": "R ∝ L / A. Same L, A doubled → R halved.",
+				"fr": "R ∝ L / A. Même L, A doublée → R divisée par deux."
+			}
+		],
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "Half",
+					"fr": "La moitié"
+				},
+				"rationale": {
+					"en": "Correct: resistance is inversely proportional to cross-section area.",
+					"fr": "Exact : la résistance est inversement proportionnelle à la section."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "Double",
+					"fr": "Le double"
+				},
+				"rationale": {
+					"en": "Inverted: a wider path makes it easier for current, not harder.",
+					"fr": "Inversé : un passage plus large facilite le courant au lieu de le gêner."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "The same",
+					"fr": "La même"
+				},
+				"rationale": {
+					"en": "Thickness matters as well as length and material.",
+					"fr": "L’épaisseur compte, comme la longueur et le matériau."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "A quarter",
+					"fr": "Le quart"
+				},
+				"rationale": {
+					"en": "That would be for twice the **diameter** (area × 4); here the area itself doubles.",
+					"fr": "Ce serait le cas pour un **diamètre** doublé (section × 4) ; ici, c’est la section qui double."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch01.ohm_9v_300ohm",
+		"version": 1,
+		"type": "numeric",
+		"conceptIds": ["dc.ohms_law"],
+		"formulaIds": ["formula.ohm.current"],
+		"difficulty": 1,
+		"kind": "guided",
+		"pool": "practice",
+		"prompt": {
+			"en": "A 9 V supply is applied across a 300 Ω resistor. Find the current.",
+			"fr": "Une alimentation de 9 V est appliquée aux bornes d’une résistance de 300 Ω. Calculez le courant."
+		},
+		"hints": [
+			{
+				"en": "Start with $I = \\frac{V}{R}$.",
+				"fr": "Partez de $I = \\frac{V}{R}$."
+			},
+			{
+				"en": "To convert amperes to milliamperes, multiply by 1000.",
+				"fr": "Pour convertir des ampères en milliampères, multipliez par 1000."
+			}
+		],
+		"solution": [
+			{
+				"en": "$I = \\frac{V}{R}$",
+				"fr": "$I = \\frac{V}{R}$"
+			},
+			{
+				"en": "$I = \\frac{9}{300}\\ \\text{A}$",
+				"fr": "$I = \\frac{9}{300}\\ \\text{A}$"
+			},
+			{
+				"en": "$I = 0.03\\ \\text{A} = 30\\ \\text{mA}$",
+				"fr": "$I = 0{,}03\\ \\text{A} = 30\\ \\text{mA}$"
+			}
+		],
+		"answer": {
+			"algorithm": "ohm_current",
+			"inputs": {
+				"V": {
+					"value": 9,
+					"unit": "V"
+				},
+				"R": {
+					"value": 300,
+					"unit": "ohm"
+				}
+			},
+			"canonicalValue": 0.03,
+			"canonicalUnit": "A",
+			"acceptedUnits": ["A", "mA"],
+			"absoluteTolerance": 3e-8,
+			"relativeTolerance": 0.001
+		}
+	},
+	{
+		"id": "exercise.ch01.ohm_voltage_from_current",
+		"version": 1,
+		"type": "numeric",
+		"conceptIds": ["dc.ohms_law"],
+		"formulaIds": ["formula.ohm.voltage"],
+		"difficulty": 2,
+		"kind": "independent",
+		"pool": "practice",
+		"prompt": {
+			"en": "A current of 25 mA flows through a 220 Ω resistor. What is the voltage across it?",
+			"fr": "Un courant de 25 mA traverse une résistance de 220 Ω. Quelle est la tension à ses bornes ?"
+		},
+		"hints": [
+			{
+				"en": "$V = I \\cdot R$ — convert 25 mA to amperes first.",
+				"fr": "$V = I \\cdot R$ — convertissez d’abord 25 mA en ampères."
+			}
+		],
+		"solution": [
+			{
+				"en": "25 mA = 0.025 A.",
+				"fr": "25 mA = 0,025 A."
+			},
+			{
+				"en": "$V = 0.025 \\times 220 = 5.5\\ \\text{V}$",
+				"fr": "$V = 0{,}025 \\times 220 = 5{,}5\\ \\text{V}$"
+			},
+			{
+				"en": "If you got 5500 V, you forgot to convert mA to A.",
+				"fr": "Si vous trouvez 5500 V, vous avez oublié de convertir les mA en A."
+			}
+		],
+		"answer": {
+			"algorithm": "ohm_voltage",
+			"inputs": {
+				"I": {
+					"value": 25,
+					"unit": "mA"
+				},
+				"R": {
+					"value": 220,
+					"unit": "ohm"
+				}
+			},
+			"canonicalValue": 5.5,
+			"canonicalUnit": "V",
+			"acceptedUnits": ["V", "mV"],
+			"absoluteTolerance": 0.0000055,
+			"relativeTolerance": 0.01
+		}
+	},
+	{
+		"id": "exercise.ch01.ohm_unknown_resistor",
+		"version": 1,
+		"type": "numeric",
+		"conceptIds": ["dc.ohms_law", "dc.resistance"],
+		"formulaIds": ["formula.ohm.resistance"],
+		"difficulty": 2,
+		"kind": "independent",
+		"pool": "practice",
+		"prompt": {
+			"en": "An unmarked resistor has 12 V across it and a meter shows 4 mA through it. What is its resistance?",
+			"fr": "Une résistance sans marquage a 12 V à ses bornes et un multimètre indique 4 mA la traversant. Quelle est sa valeur ?"
+		},
+		"hints": [
+			{
+				"en": "$R = \\frac{V}{I}$ with I in amperes.",
+				"fr": "$R = \\frac{V}{I}$ avec I en ampères."
+			}
+		],
+		"solution": [
+			{
+				"en": "4 mA = 0.004 A.",
+				"fr": "4 mA = 0,004 A."
+			},
+			{
+				"en": "$R = \\frac{12}{0.004} = 3000\\ \\Omega = 3\\ \\text{k}\\Omega$",
+				"fr": "$R = \\frac{12}{0{,}004} = 3000\\ \\Omega = 3\\ \\text{k}\\Omega$"
+			}
+		],
+		"answer": {
+			"algorithm": "ohm_resistance",
+			"inputs": {
+				"V": {
+					"value": 12,
+					"unit": "V"
+				},
+				"I": {
+					"value": 4,
+					"unit": "mA"
+				}
+			},
+			"canonicalValue": 3000,
+			"canonicalUnit": "ohm",
+			"acceptedUnits": ["ohm", "kohm"],
+			"absoluteTolerance": 0.003,
+			"relativeTolerance": 0.01
+		}
+	},
+	{
+		"id": "exercise.ch01.ohm_led_not_ohmic",
+		"version": 1,
+		"type": "diagnose",
+		"conceptIds": ["dc.ohms_law"],
+		"formulaIds": ["formula.led.resistor"],
+		"difficulty": 3,
+		"kind": "independent",
+		"pool": "practice",
+		"prompt": {
+			"en": "Alex measured a lit red LED: 2 V across it with 20 mA through it, so “R = 100 Ω”. Alex then predicts that on 4 V, with no resistor, the LED will carry 4 / 100 = 40 mA. What is wrong?",
+			"fr": "Alex a mesuré une LED rouge allumée : 2 V à ses bornes et 20 mA, donc « R = 100 Ω ». Il prédit alors que sous 4 V, sans résistance, la LED laissera passer 4 / 100 = 40 mA. Où est l’erreur ?"
+		},
+		"hints": [
+			{
+				"en": "Is the LED’s V/I the same at 1.8 V, 2 V and 2.2 V?",
+				"fr": "Le rapport V/I de la LED est-il le même à 1,8 V, 2 V et 2,2 V ?"
+			}
+		],
+		"solution": [
+			{
+				"en": "Ohm’s law with a constant R only applies to ohmic parts.",
+				"fr": "La loi d’Ohm avec R constante ne s’applique qu’aux composants ohmiques."
+			},
+			{
+				"en": "An LED behaves like a fixed forward voltage (≈2 V for red): any extra voltage drives a huge current. Always add a series resistor: $R = \\frac{V_s - V_f}{I}$.",
+				"fr": "Une LED se comporte comme une tension directe fixe (≈2 V pour une rouge) : tout surplus de tension provoque un courant énorme. Ajoutez toujours une résistance série : $R = \\frac{V_s - V_f}{I}$."
+			}
+		],
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "An LED is not ohmic: its V/I ratio collapses as voltage rises, so the real current would be far larger and destroy it",
+					"fr": "Une LED n’est pas ohmique : son rapport V/I s’effondre quand la tension monte, le vrai courant serait bien plus grand et la détruirait"
+				},
+				"rationale": {
+					"en": "Correct: above its forward voltage an LED’s current rises extremely fast. Ohm’s law does not apply to it.",
+					"fr": "Exact : au-delà de sa tension directe, le courant d’une LED grimpe extrêmement vite. La loi d’Ohm ne s’y applique pas."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "Nothing: 40 mA is right",
+					"fr": "Rien : 40 mA est juste"
+				},
+				"rationale": {
+					"en": "This assumes the LED has a constant resistance, which it does not.",
+					"fr": "Cela suppose que la LED a une résistance constante, ce qui est faux."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "The current should be 20 mA because current is fixed by the LED",
+					"fr": "Le courant devrait être 20 mA, car c’est la LED qui fixe le courant"
+				},
+				"rationale": {
+					"en": "The LED does not limit its own current; that is the job of a series resistor.",
+					"fr": "La LED ne limite pas son propre courant ; c’est le rôle d’une résistance série."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "He should have divided 100 by 4",
+					"fr": "Il aurait dû diviser 100 par 4"
+				},
+				"rationale": {
+					"en": "Inverting the fraction gives no current at all; the real problem is that the LED is non-ohmic.",
+					"fr": "Inverser la fraction ne donne pas un courant ; le vrai problème est que la LED n’est pas ohmique."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch01.ohm_usb_led_resistor",
+		"version": 1,
+		"type": "numeric",
+		"conceptIds": ["dc.ohms_law"],
+		"formulaIds": ["formula.led.resistor"],
+		"difficulty": 2,
+		"kind": "applied",
+		"pool": "practice",
+		"prompt": {
+			"en": "You want to light a red LED ($V_f$ = 2 V) from a USB 5 V supply at 15 mA. What series resistance is needed?",
+			"fr": "Vous voulez allumer une LED rouge ($V_f$ = 2 V) sur une alimentation USB de 5 V à 15 mA. Quelle résistance série faut-il ?"
+		},
+		"diagramId": "diagram.ch01.led_resistor",
+		"hints": [
+			{
+				"en": "The resistor gets $V_s - V_f$.",
+				"fr": "La résistance reçoit $V_s - V_f$."
+			},
+			{
+				"en": "15 mA = 0.015 A.",
+				"fr": "15 mA = 0,015 A."
+			}
+		],
+		"solution": [
+			{
+				"en": "Voltage across R: $5 - 2 = 3$ V.",
+				"fr": "Tension aux bornes de R : $5 - 2 = 3$ V."
+			},
+			{
+				"en": "$R = \\frac{3}{0.015} = 200\\ \\Omega$",
+				"fr": "$R = \\frac{3}{0{,}015} = 200\\ \\Omega$"
+			},
+			{
+				"en": "Pick the next standard value up (220 Ω): the current becomes a bit lower and safer, about 13.6 mA.",
+				"fr": "Choisissez la valeur normalisée juste au-dessus (220 Ω) : le courant devient un peu plus faible et plus sûr, environ 13,6 mA."
+			}
+		],
+		"assumptions": {
+			"en": "LED modelled as a fixed 2 V forward voltage; ideal 5 V supply.",
+			"fr": "LED modélisée par une tension directe fixe de 2 V ; alimentation 5 V idéale."
+		},
+		"answer": {
+			"algorithm": "led_resistor",
+			"inputs": {
+				"Vs": {
+					"value": 5,
+					"unit": "V"
+				},
+				"Vf": {
+					"value": 2,
+					"unit": "V"
+				},
+				"I": {
+					"value": 15,
+					"unit": "mA"
+				}
+			},
+			"canonicalValue": 200,
+			"canonicalUnit": "ohm",
+			"acceptedUnits": ["ohm", "kohm"],
+			"absoluteTolerance": 0.0002,
+			"relativeTolerance": 0.01
+		}
+	},
+	{
+		"id": "exercise.ch01.ohm_exam_current_kohm",
+		"version": 1,
+		"type": "numeric",
+		"conceptIds": ["dc.ohms_law"],
+		"formulaIds": ["formula.ohm.current"],
+		"difficulty": 2,
+		"kind": "independent",
+		"pool": "exam",
+		"prompt": {
+			"en": "A 6 V battery is connected across a 1.2 kΩ resistor. What current flows?",
+			"fr": "Une pile de 6 V est branchée aux bornes d’une résistance de 1,2 kΩ. Quel courant circule ?"
+		},
+		"solution": [
+			{
+				"en": "1.2 kΩ = 1200 Ω.",
+				"fr": "1,2 kΩ = 1200 Ω."
+			},
+			{
+				"en": "$I = \\frac{6}{1200} = 0.005\\ \\text{A} = 5\\ \\text{mA}$",
+				"fr": "$I = \\frac{6}{1200} = 0{,}005\\ \\text{A} = 5\\ \\text{mA}$"
+			}
+		],
+		"answer": {
+			"algorithm": "ohm_current",
+			"inputs": {
+				"V": {
+					"value": 6,
+					"unit": "V"
+				},
+				"R": {
+					"value": 1.2,
+					"unit": "kohm"
+				}
+			},
+			"canonicalValue": 5,
+			"canonicalUnit": "mA",
+			"acceptedUnits": ["mA", "A"],
+			"absoluteTolerance": 0.000005,
+			"relativeTolerance": 0.01
+		}
+	},
+	{
+		"id": "exercise.ch01.ohm_exam_voltage",
+		"version": 1,
+		"type": "numeric",
+		"conceptIds": ["dc.ohms_law"],
+		"formulaIds": ["formula.ohm.voltage"],
+		"difficulty": 1,
+		"kind": "independent",
+		"pool": "exam",
+		"prompt": {
+			"en": "A current of 0.1 A flows through a 47 Ω resistor. What is the voltage across it?",
+			"fr": "Un courant de 0,1 A traverse une résistance de 47 Ω. Quelle est la tension à ses bornes ?"
+		},
+		"solution": [
+			{
+				"en": "$V = I \\cdot R = 0.1 \\times 47 = 4.7\\ \\text{V}$",
+				"fr": "$V = R \\cdot I = 47 \\times 0{,}1 = 4{,}7\\ \\text{V}$"
+			}
+		],
+		"answer": {
+			"algorithm": "ohm_voltage",
+			"inputs": {
+				"I": {
+					"value": 0.1,
+					"unit": "A"
+				},
+				"R": {
+					"value": 47,
+					"unit": "ohm"
+				}
+			},
+			"canonicalValue": 4.7,
+			"canonicalUnit": "V",
+			"acceptedUnits": ["V", "mV"],
+			"absoluteTolerance": 0.0000047,
+			"relativeTolerance": 0.01
+		}
+	},
+	{
+		"id": "exercise.ch01.ohm_exam_resistance",
+		"version": 1,
+		"type": "numeric",
+		"conceptIds": ["dc.ohms_law"],
+		"formulaIds": ["formula.ohm.resistance"],
+		"difficulty": 2,
+		"kind": "independent",
+		"pool": "exam",
+		"prompt": {
+			"en": "A resistor has 3 V across it and 10 mA flowing through it. What is its resistance?",
+			"fr": "Une résistance a 3 V à ses bornes et 10 mA la traversent. Quelle est sa valeur ?"
+		},
+		"solution": [
+			{
+				"en": "10 mA = 0.01 A.",
+				"fr": "10 mA = 0,01 A."
+			},
+			{
+				"en": "$R = \\frac{3}{0.01} = 300\\ \\Omega$",
+				"fr": "$R = \\frac{3}{0{,}01} = 300\\ \\Omega$"
+			}
+		],
+		"answer": {
+			"algorithm": "ohm_resistance",
+			"inputs": {
+				"V": {
+					"value": 3,
+					"unit": "V"
+				},
+				"I": {
+					"value": 10,
+					"unit": "mA"
+				}
+			},
+			"canonicalValue": 300,
+			"canonicalUnit": "ohm",
+			"acceptedUnits": ["ohm", "kohm"],
+			"absoluteTolerance": 0.0003,
+			"relativeTolerance": 0.01
+		}
+	},
+	{
+		"id": "exercise.ch01.ohm_exam_led_current",
+		"version": 1,
+		"type": "numeric",
+		"conceptIds": ["dc.ohms_law"],
+		"formulaIds": ["formula.led.resistor"],
+		"difficulty": 2,
+		"kind": "applied",
+		"pool": "exam",
+		"prompt": {
+			"en": "A 3 V battery drives a red LED ($V_f$ = 2 V) through a 100 Ω resistor, as shown. What current flows through the LED?",
+			"fr": "Une pile de 3 V alimente une LED rouge ($V_f$ = 2 V) à travers une résistance de 100 Ω, comme sur le schéma. Quel courant traverse la LED ?"
+		},
+		"diagramId": "diagram.ch01.led_resistor",
+		"solution": [
+			{
+				"en": "Voltage across the resistor: $3 - 2 = 1$ V.",
+				"fr": "Tension aux bornes de la résistance : $3 - 2 = 1$ V."
+			},
+			{
+				"en": "$I = \\frac{1}{100} = 0.01\\ \\text{A} = 10\\ \\text{mA}$",
+				"fr": "$I = \\frac{1}{100} = 0{,}01\\ \\text{A} = 10\\ \\text{mA}$"
+			}
+		],
+		"assumptions": {
+			"en": "LED modelled as a fixed 2 V forward voltage.",
+			"fr": "LED modélisée par une tension directe fixe de 2 V."
+		},
+		"answer": {
+			"algorithm": "led_current",
+			"inputs": {
+				"Vs": {
+					"value": 3,
+					"unit": "V"
+				},
+				"Vf": {
+					"value": 2,
+					"unit": "V"
+				},
+				"R": {
+					"value": 100,
+					"unit": "ohm"
+				}
+			},
+			"canonicalValue": 0.01,
+			"canonicalUnit": "A",
+			"acceptedUnits": ["A", "mA"],
+			"absoluteTolerance": 1e-8,
+			"relativeTolerance": 0.01
+		}
+	},
+	{
+		"id": "exercise.ch01.ohm_exam_double_v",
+		"version": 1,
+		"type": "prediction",
+		"conceptIds": ["dc.ohms_law"],
+		"formulaIds": [],
+		"difficulty": 1,
+		"kind": "independent",
+		"pool": "exam",
+		"prompt": {
+			"en": "The voltage across a fixed resistor is doubled, from 3 V to 6 V. Predict the current.",
+			"fr": "La tension aux bornes d’une résistance fixe double, de 3 V à 6 V. Prédisez le courant."
+		},
+		"solution": [
+			{
+				"en": "$I = V/R$: double V with the same R → double I.",
+				"fr": "$I = V/R$ : V doublée avec la même R → I doublé."
+			}
+		],
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "It doubles",
+					"fr": "Il double"
+				},
+				"rationale": {
+					"en": "Correct: $I = V/R$ with R fixed, so I is proportional to V.",
+					"fr": "Exact : $I = V/R$ avec R fixe, donc I est proportionnel à V."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "It halves",
+					"fr": "Il est divisé par deux"
+				},
+				"rationale": {
+					"en": "Inverted relationship: that is what happens when R doubles.",
+					"fr": "Relation inversée : c’est ce qui se passe quand R double."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "It stays the same",
+					"fr": "Il reste le même"
+				},
+				"rationale": {
+					"en": "Only true for an ideal current source, not for a resistor.",
+					"fr": "Vrai seulement pour une source de courant idéale, pas pour une résistance."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "It quadruples",
+					"fr": "Il est multiplié par quatre"
+				},
+				"rationale": {
+					"en": "That is what happens to the **power** ($V^2/R$), not the current.",
+					"fr": "C’est ce qui arrive à la **puissance** ($V^2/R$), pas au courant."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch01.ohm_exam_9v_led",
+		"version": 1,
+		"type": "numeric",
+		"conceptIds": ["dc.ohms_law"],
+		"formulaIds": ["formula.led.resistor"],
+		"difficulty": 3,
+		"kind": "applied",
+		"pool": "exam",
+		"prompt": {
+			"en": "You power a red LED ($V_f$ = 2 V) from a 9 V battery and want 20 mA. What series resistance do you need?",
+			"fr": "Vous alimentez une LED rouge ($V_f$ = 2 V) avec une pile de 9 V et voulez 20 mA. Quelle résistance série faut-il ?"
+		},
+		"solution": [
+			{
+				"en": "Voltage across R: $9 - 2 = 7$ V.",
+				"fr": "Tension aux bornes de R : $9 - 2 = 7$ V."
+			},
+			{
+				"en": "$R = \\frac{7}{0.02} = 350\\ \\Omega$ (use the next standard value up, 390 Ω).",
+				"fr": "$R = \\frac{7}{0{,}02} = 350\\ \\Omega$ (prenez la valeur normalisée supérieure, 390 Ω)."
+			}
+		],
+		"assumptions": {
+			"en": "LED modelled as a fixed 2 V forward voltage; ideal 9 V battery.",
+			"fr": "LED modélisée par une tension directe fixe de 2 V ; pile de 9 V idéale."
+		},
+		"answer": {
+			"algorithm": "led_resistor",
+			"inputs": {
+				"Vs": {
+					"value": 9,
+					"unit": "V"
+				},
+				"Vf": {
+					"value": 2,
+					"unit": "V"
+				},
+				"I": {
+					"value": 20,
+					"unit": "mA"
+				}
+			},
+			"canonicalValue": 350,
+			"canonicalUnit": "ohm",
+			"acceptedUnits": ["ohm", "kohm"],
+			"absoluteTolerance": 0.00035,
+			"relativeTolerance": 0.01
+		}
+	},
+	{
+		"id": "exercise.ch01.power_vi_basic",
+		"version": 1,
+		"type": "numeric",
+		"conceptIds": ["dc.power"],
+		"formulaIds": ["formula.power.vi"],
+		"difficulty": 1,
+		"kind": "guided",
+		"pool": "practice",
+		"prompt": {
+			"en": "A small motor runs on 5 V and draws 0.2 A. What power does it take?",
+			"fr": "Un petit moteur fonctionne sous 5 V et consomme 0,2 A. Quelle puissance absorbe-t-il ?"
+		},
+		"hints": [
+			{
+				"en": "$P = V \\cdot I$.",
+				"fr": "$P = V \\cdot I$."
+			}
+		],
+		"solution": [
+			{
+				"en": "$P = V \\cdot I = 5 \\times 0.2 = 1\\ \\text{W}$",
+				"fr": "$P = V \\cdot I = 5 \\times 0{,}2 = 1\\ \\text{W}$"
+			}
+		],
+		"answer": {
+			"algorithm": "power_vi",
+			"inputs": {
+				"V": {
+					"value": 5,
+					"unit": "V"
+				},
+				"I": {
+					"value": 0.2,
+					"unit": "A"
+				}
+			},
+			"canonicalValue": 1,
+			"canonicalUnit": "W",
+			"acceptedUnits": ["W", "mW"],
+			"absoluteTolerance": 0.000001,
+			"relativeTolerance": 0.01
+		}
+	},
+	{
+		"id": "exercise.ch01.power_i2r_led_resistor",
+		"version": 1,
+		"type": "numeric",
+		"conceptIds": ["dc.power"],
+		"formulaIds": ["formula.power.i2r"],
+		"difficulty": 2,
+		"kind": "independent",
+		"pool": "practice",
+		"prompt": {
+			"en": "20 mA flows through a 150 Ω resistor. How much power does it turn into heat? Answer in mW.",
+			"fr": "20 mA traversent une résistance de 150 Ω. Quelle puissance transforme-t-elle en chaleur ? Répondez en mW."
+		},
+		"hints": [
+			{
+				"en": "$P = I^2 R$ with I in amperes.",
+				"fr": "$P = R I^2$ avec I en ampères."
+			}
+		],
+		"solution": [
+			{
+				"en": "$I = 0.02$ A.",
+				"fr": "$I = 0{,}02$ A."
+			},
+			{
+				"en": "$P = 0.02^2 \\times 150 = 0.06\\ \\text{W} = 60\\ \\text{mW}$",
+				"fr": "$P = 150 \\times 0{,}02^2 = 0{,}06\\ \\text{W} = 60\\ \\text{mW}$"
+			}
+		],
+		"answer": {
+			"algorithm": "power_i2r",
+			"inputs": {
+				"I": {
+					"value": 20,
+					"unit": "mA"
+				},
+				"R": {
+					"value": 150,
+					"unit": "ohm"
+				}
+			},
+			"canonicalValue": 60,
+			"canonicalUnit": "mW",
+			"acceptedUnits": ["mW", "W"],
+			"absoluteTolerance": 0.00006,
+			"relativeTolerance": 0.01
+		}
+	},
+	{
+		"id": "exercise.ch01.power_v2r_hot",
+		"version": 1,
+		"type": "numeric",
+		"conceptIds": ["dc.power"],
+		"formulaIds": ["formula.power.v2r"],
+		"difficulty": 2,
+		"kind": "independent",
+		"pool": "practice",
+		"prompt": {
+			"en": "A 100 Ω resistor is connected directly across a 9 V battery. How much power does it dissipate?",
+			"fr": "Une résistance de 100 Ω est branchée directement sur une pile de 9 V. Quelle puissance dissipe-t-elle ?"
+		},
+		"diagramId": "diagram.ch01.power_heating",
+		"hints": [
+			{
+				"en": "$P = \\frac{V^2}{R}$.",
+				"fr": "$P = \\frac{V^2}{R}$."
+			}
+		],
+		"solution": [
+			{
+				"en": "$P = \\frac{9^2}{100} = \\frac{81}{100} = 0.81\\ \\text{W}$",
+				"fr": "$P = \\frac{9^2}{100} = \\frac{81}{100} = 0{,}81\\ \\text{W}$"
+			},
+			{
+				"en": "That is more than a standard 0.25 W resistor can handle.",
+				"fr": "C’est plus que ce que supporte une résistance standard de 0,25 W."
+			}
+		],
+		"answer": {
+			"algorithm": "power_v2r",
+			"inputs": {
+				"V": {
+					"value": 9,
+					"unit": "V"
+				},
+				"R": {
+					"value": 100,
+					"unit": "ohm"
+				}
+			},
+			"canonicalValue": 0.81,
+			"canonicalUnit": "W",
+			"acceptedUnits": ["W", "mW"],
+			"absoluteTolerance": 8.1e-7,
+			"relativeTolerance": 0.01
+		}
+	},
+	{
+		"id": "exercise.ch01.power_choose_rating",
+		"version": 1,
+		"type": "multiple_choice",
+		"conceptIds": ["dc.power"],
+		"formulaIds": ["formula.power.v2r"],
+		"difficulty": 3,
+		"kind": "applied",
+		"pool": "practice",
+		"prompt": {
+			"en": "Your circuit puts 5 V across a 47 Ω resistor. Which resistor power rating should you buy?",
+			"fr": "Votre circuit applique 5 V aux bornes d’une résistance de 47 Ω. Quelle puissance nominale de résistance devez-vous acheter ?"
+		},
+		"hints": [
+			{
+				"en": "Compute $P = \\frac{V^2}{R}$, then add a margin (about 2×).",
+				"fr": "Calculez $P = \\frac{V^2}{R}$, puis prenez une marge (environ 2×)."
+			}
+		],
+		"solution": [
+			{
+				"en": "$P = \\frac{5^2}{47} = \\frac{25}{47} \\approx 0.53\\ \\text{W}$",
+				"fr": "$P = \\frac{5^2}{47} = \\frac{25}{47} \\approx 0{,}53\\ \\text{W}$"
+			},
+			{
+				"en": "Rule of thumb: choose a rating at least twice the expected power → 1 W.",
+				"fr": "Règle pratique : choisissez une puissance nominale au moins double de la puissance prévue → 1 W."
+			}
+		],
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "1 W",
+					"fr": "1 W"
+				},
+				"rationale": {
+					"en": "Correct: $P = 25/47 \\approx 0.53$ W. A 1 W part gives a safety margin of about 2×.",
+					"fr": "Exact : $P = 25/47 \\approx 0{,}53$ W. Une résistance de 1 W donne une marge d’environ 2×."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "0.25 W",
+					"fr": "0,25 W"
+				},
+				"rationale": {
+					"en": "It would have to dissipate twice its rating: it would overheat.",
+					"fr": "Elle devrait dissiper le double de sa valeur nominale : elle surchaufferait."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "0.5 W",
+					"fr": "0,5 W"
+				},
+				"rationale": {
+					"en": "0.53 W is already above 0.5 W, with no margin at all.",
+					"fr": "0,53 W dépasse déjà 0,5 W, sans aucune marge."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "Any rating: power depends only on the current, not on the resistor",
+					"fr": "N’importe laquelle : la puissance ne dépend que du courant, pas de la résistance"
+				},
+				"rationale": {
+					"en": "The resistor itself turns this power into heat; its rating matters.",
+					"fr": "C’est la résistance elle-même qui transforme cette puissance en chaleur ; sa valeur nominale compte."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch01.power_exam_vi",
+		"version": 1,
+		"type": "numeric",
+		"conceptIds": ["dc.power"],
+		"formulaIds": ["formula.power.vi"],
+		"difficulty": 1,
+		"kind": "independent",
+		"pool": "exam",
+		"prompt": {
+			"en": "A 12 V car fan draws 1.5 A. What power does it use?",
+			"fr": "Un ventilateur de voiture 12 V consomme 1,5 A. Quelle puissance utilise-t-il ?"
+		},
+		"solution": [
+			{
+				"en": "$P = V \\cdot I = 12 \\times 1.5 = 18\\ \\text{W}$",
+				"fr": "$P = V \\cdot I = 12 \\times 1{,}5 = 18\\ \\text{W}$"
+			}
+		],
+		"answer": {
+			"algorithm": "power_vi",
+			"inputs": {
+				"V": {
+					"value": 12,
+					"unit": "V"
+				},
+				"I": {
+					"value": 1.5,
+					"unit": "A"
+				}
+			},
+			"canonicalValue": 18,
+			"canonicalUnit": "W",
+			"acceptedUnits": ["W", "mW"],
+			"absoluteTolerance": 0.000018,
+			"relativeTolerance": 0.01
+		}
+	},
+	{
+		"id": "exercise.ch01.power_exam_i2r",
+		"version": 1,
+		"type": "numeric",
+		"conceptIds": ["dc.power"],
+		"formulaIds": ["formula.power.i2r"],
+		"difficulty": 2,
+		"kind": "independent",
+		"pool": "exam",
+		"prompt": {
+			"en": "A current of 0.1 A flows through a 22 Ω resistor. What power does it dissipate?",
+			"fr": "Un courant de 0,1 A traverse une résistance de 22 Ω. Quelle puissance dissipe-t-elle ?"
+		},
+		"solution": [
+			{
+				"en": "$P = I^2 R = 0.1^2 \\times 22 = 0.01 \\times 22 = 0.22\\ \\text{W}$",
+				"fr": "$P = R I^2 = 22 \\times 0{,}1^2 = 22 \\times 0{,}01 = 0{,}22\\ \\text{W}$"
+			}
+		],
+		"answer": {
+			"algorithm": "power_i2r",
+			"inputs": {
+				"I": {
+					"value": 0.1,
+					"unit": "A"
+				},
+				"R": {
+					"value": 22,
+					"unit": "ohm"
+				}
+			},
+			"canonicalValue": 0.22,
+			"canonicalUnit": "W",
+			"acceptedUnits": ["W", "mW"],
+			"absoluteTolerance": 2.2e-7,
+			"relativeTolerance": 0.01
+		}
+	},
+	{
+		"id": "exercise.ch01.power_exam_v2r",
+		"version": 1,
+		"type": "numeric",
+		"conceptIds": ["dc.power"],
+		"formulaIds": ["formula.power.v2r"],
+		"difficulty": 2,
+		"kind": "independent",
+		"pool": "exam",
+		"prompt": {
+			"en": "A 1 kΩ resistor has 5 V across it. What power does it dissipate? Answer in mW.",
+			"fr": "Une résistance de 1 kΩ a 5 V à ses bornes. Quelle puissance dissipe-t-elle ? Répondez en mW."
+		},
+		"solution": [
+			{
+				"en": "$P = \\frac{V^2}{R} = \\frac{25}{1000} = 0.025\\ \\text{W} = 25\\ \\text{mW}$",
+				"fr": "$P = \\frac{V^2}{R} = \\frac{25}{1000} = 0{,}025\\ \\text{W} = 25\\ \\text{mW}$"
+			}
+		],
+		"answer": {
+			"algorithm": "power_v2r",
+			"inputs": {
+				"V": {
+					"value": 5,
+					"unit": "V"
+				},
+				"R": {
+					"value": 1,
+					"unit": "kohm"
+				}
+			},
+			"canonicalValue": 25,
+			"canonicalUnit": "mW",
+			"acceptedUnits": ["mW", "W"],
+			"absoluteTolerance": 0.000025,
+			"relativeTolerance": 0.01
+		}
+	},
+	{
+		"id": "exercise.ch01.power_exam_led_resistor",
+		"version": 1,
+		"type": "numeric",
+		"conceptIds": ["dc.power"],
+		"formulaIds": ["formula.power.vi"],
+		"difficulty": 3,
+		"kind": "applied",
+		"pool": "exam",
+		"prompt": {
+			"en": "In a USB LED circuit (5 V supply, red LED with $V_f$ = 2 V, 150 Ω resistor) the current is 20 mA. How much power does the **resistor** dissipate, in W?",
+			"fr": "Dans un circuit LED sur USB (alimentation 5 V, LED rouge de $V_f$ = 2 V, résistance de 150 Ω), le courant vaut 20 mA. Quelle puissance la **résistance** dissipe-t-elle, en W ?"
+		},
+		"solution": [
+			{
+				"en": "Voltage across the resistor only: $5 - 2 = 3$ V.",
+				"fr": "Tension aux bornes de la résistance seule : $5 - 2 = 3$ V."
+			},
+			{
+				"en": "$P = V \\cdot I = 3 \\times 0.02 = 0.06\\ \\text{W}$ (60 mW) — fine for a 0.25 W resistor.",
+				"fr": "$P = V \\cdot I = 3 \\times 0{,}02 = 0{,}06\\ \\text{W}$ (60 mW) — sans problème pour une résistance de 0,25 W."
+			},
+			{
+				"en": "Using 5 V instead of 3 V would give 0.1 W: wrong, because the LED takes 2 V.",
+				"fr": "Prendre 5 V au lieu de 3 V donnerait 0,1 W : faux, car la LED prend 2 V."
+			}
+		],
+		"assumptions": {
+			"en": "LED modelled as a fixed 2 V forward voltage.",
+			"fr": "LED modélisée par une tension directe fixe de 2 V."
+		},
+		"answer": {
+			"algorithm": "power_vi",
+			"inputs": {
+				"V": {
+					"value": 3,
+					"unit": "V"
+				},
+				"I": {
+					"value": 20,
+					"unit": "mA"
+				}
+			},
+			"canonicalValue": 0.06,
+			"canonicalUnit": "W",
+			"acceptedUnits": ["W", "mW"],
+			"absoluteTolerance": 6e-8,
+			"relativeTolerance": 0.01
+		}
+	},
+	{
+		"id": "exercise.ch01.power_exam_double_i",
+		"version": 1,
+		"type": "prediction",
+		"conceptIds": ["dc.power"],
+		"formulaIds": [],
+		"difficulty": 2,
+		"kind": "independent",
+		"pool": "exam",
+		"prompt": {
+			"en": "The current through a fixed resistor doubles. Predict the heat power in the resistor.",
+			"fr": "Le courant dans une résistance fixe double. Prédisez la puissance thermique dans la résistance."
+		},
+		"solution": [
+			{
+				"en": "$P = I^2 R$. With $2I$: $P' = 4 I^2 R = 4P$.",
+				"fr": "$P = R I^2$. Avec $2I$ : $P' = 4 R I^2 = 4P$."
+			}
+		],
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "It becomes 4 times larger",
+					"fr": "Elle devient 4 fois plus grande"
+				},
+				"rationale": {
+					"en": "Correct: $P = I^2 R$, so $(2I)^2 = 4I^2$.",
+					"fr": "Exact : $P = R I^2$, donc $(2I)^2 = 4I^2$."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "It doubles",
+					"fr": "Elle double"
+				},
+				"rationale": {
+					"en": "Forgets the square: both V and I double, so P = V·I goes ×4.",
+					"fr": "On oublie le carré : V et I doublent tous deux, donc P = V·I est multipliée par 4."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "It stays the same",
+					"fr": "Elle reste la même"
+				},
+				"rationale": {
+					"en": "More current through the same resistor always means more heat.",
+					"fr": "Plus de courant dans la même résistance, c’est toujours plus de chaleur."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "It halves",
+					"fr": "Elle est divisée par deux"
+				},
+				"rationale": {
+					"en": "Inverted: power rises with current.",
+					"fr": "Inversé : la puissance augmente avec le courant."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch01.power_exam_charger",
+		"version": 1,
+		"type": "numeric",
+		"conceptIds": ["dc.power"],
+		"formulaIds": ["formula.power.vi"],
+		"difficulty": 1,
+		"kind": "applied",
+		"pool": "exam",
+		"prompt": {
+			"en": "A fast phone charger negotiates 9 V at 2 A. What power does it deliver to the phone?",
+			"fr": "Un chargeur rapide de téléphone négocie 9 V sous 2 A. Quelle puissance fournit-il au téléphone ?"
+		},
+		"solution": [
+			{
+				"en": "$P = V \\cdot I = 9 \\times 2 = 18\\ \\text{W}$",
+				"fr": "$P = V \\cdot I = 9 \\times 2 = 18\\ \\text{W}$"
+			}
+		],
+		"answer": {
+			"algorithm": "power_vi",
+			"inputs": {
+				"V": {
+					"value": 9,
+					"unit": "V"
+				},
+				"I": {
+					"value": 2,
+					"unit": "A"
+				}
+			},
+			"canonicalValue": 18,
+			"canonicalUnit": "W",
+			"acceptedUnits": ["W", "mW"],
+			"absoluteTolerance": 0.000018,
+			"relativeTolerance": 0.01
+		}
+	},
+	{
+		"id": "exercise.ch01.energy_basic",
+		"version": 1,
+		"type": "numeric",
+		"conceptIds": ["dc.energy"],
+		"formulaIds": ["formula.energy.pt"],
+		"difficulty": 1,
+		"kind": "guided",
+		"pool": "practice",
+		"prompt": {
+			"en": "A resistor dissipates 2 W for 10 s. How much energy does it turn into heat, in joules?",
+			"fr": "Une résistance dissipe 2 W pendant 10 s. Quelle énergie transforme-t-elle en chaleur, en joules ?"
+		},
+		"hints": [
+			{
+				"en": "$E = P \\cdot t$; W × s = J.",
+				"fr": "$E = P \\cdot t$ ; W × s = J."
+			}
+		],
+		"solution": [
+			{
+				"en": "$E = P \\cdot t = 2 \\times 10 = 20\\ \\text{J}$",
+				"fr": "$E = P \\cdot t = 2 \\times 10 = 20\\ \\text{J}$"
+			}
+		],
+		"answer": {
+			"algorithm": "energy_pt",
+			"inputs": {
+				"P": {
+					"value": 2,
+					"unit": "W"
+				},
+				"t": {
+					"value": 10,
+					"unit": "s"
+				}
+			},
+			"canonicalValue": 20,
+			"canonicalUnit": "J",
+			"acceptedUnits": ["J", "kJ", "mJ"],
+			"absoluteTolerance": 0.00002,
+			"relativeTolerance": 0.01
+		}
+	},
+	{
+		"id": "exercise.ch01.energy_wh",
+		"version": 1,
+		"type": "numeric",
+		"conceptIds": ["dc.energy"],
+		"formulaIds": ["formula.energy.pt"],
+		"difficulty": 2,
+		"kind": "independent",
+		"pool": "practice",
+		"prompt": {
+			"en": "A 10 W device runs for 30 minutes. How much energy does it use, in watt-hours?",
+			"fr": "Un appareil de 10 W fonctionne pendant 30 minutes. Quelle énergie consomme-t-il, en wattheures ?"
+		},
+		"hints": [
+			{
+				"en": "30 min = 0.5 h.",
+				"fr": "30 min = 0,5 h."
+			}
+		],
+		"solution": [
+			{
+				"en": "$t = 0.5$ h.",
+				"fr": "$t = 0{,}5$ h."
+			},
+			{
+				"en": "$E = 10\\ \\text{W} \\times 0.5\\ \\text{h} = 5\\ \\text{Wh}$ (= 18 000 J).",
+				"fr": "$E = 10\\ \\text{W} \\times 0{,}5\\ \\text{h} = 5\\ \\text{Wh}$ (= 18 000 J)."
+			}
+		],
+		"answer": {
+			"algorithm": "energy_pt",
+			"inputs": {
+				"P": {
+					"value": 10,
+					"unit": "W"
+				},
+				"t": {
+					"value": 30,
+					"unit": "min"
+				}
+			},
+			"canonicalValue": 5,
+			"canonicalUnit": "Wh",
+			"acceptedUnits": ["Wh", "J", "kJ"],
+			"absoluteTolerance": 0.000005,
+			"relativeTolerance": 0.01
+		}
+	},
+	{
+		"id": "exercise.ch01.energy_where_it_goes",
+		"version": 1,
+		"type": "multiple_choice",
+		"conceptIds": ["dc.energy"],
+		"formulaIds": [],
+		"difficulty": 1,
+		"kind": "independent",
+		"pool": "practice",
+		"prompt": {
+			"en": "Current flows through a resistor and the resistor gets warm. What happened to the electrical energy?",
+			"fr": "Un courant traverse une résistance et celle-ci tiédit. Qu’est devenue l’énergie électrique ?"
+		},
+		"hints": [
+			{
+				"en": "Why does the resistor get warm?",
+				"fr": "Pourquoi la résistance tiédit-elle ?"
+			}
+		],
+		"solution": [
+			{
+				"en": "The charges lose energy (voltage drop) in the resistor; that energy becomes heat: $E = P \\cdot t$.",
+				"fr": "Les charges perdent de l’énergie (chute de tension) dans la résistance ; cette énergie devient de la chaleur : $E = P \\cdot t$."
+			}
+		],
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "It was converted into heat (thermal energy)",
+					"fr": "Elle a été convertie en chaleur (énergie thermique)"
+				},
+				"rationale": {
+					"en": "Correct: a resistor converts electrical energy into heat; energy is conserved.",
+					"fr": "Exact : une résistance convertit l’énergie électrique en chaleur ; l’énergie se conserve."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "It was destroyed",
+					"fr": "Elle a été détruite"
+				},
+				"rationale": {
+					"en": "Energy is never destroyed, only converted.",
+					"fr": "L’énergie n’est jamais détruite, seulement convertie."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "It was stored as extra charge in the resistor",
+					"fr": "Elle a été stockée sous forme de charge en plus dans la résistance"
+				},
+				"rationale": {
+					"en": "Resistors do not store charge.",
+					"fr": "Les résistances ne stockent pas de charge."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "The current was used up instead",
+					"fr": "C’est plutôt le courant qui a été consommé"
+				},
+				"rationale": {
+					"en": "Current is the same in and out; it is energy that is transferred.",
+					"fr": "Le courant est le même à l’entrée et à la sortie ; c’est l’énergie qui est transférée."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch01.energy_usb_lamp",
+		"version": 1,
+		"type": "numeric",
+		"conceptIds": ["dc.energy"],
+		"formulaIds": ["formula.energy.pt"],
+		"difficulty": 2,
+		"kind": "applied",
+		"pool": "practice",
+		"prompt": {
+			"en": "A 5 W USB lamp is left on for 4 hours while camping. How much energy does it take from the power bank, in Wh?",
+			"fr": "Une lampe USB de 5 W reste allumée 4 heures en camping. Quelle énergie prend-elle à la batterie externe, en Wh ?"
+		},
+		"hints": [
+			{
+				"en": "W × h = Wh.",
+				"fr": "W × h = Wh."
+			}
+		],
+		"solution": [
+			{
+				"en": "$E = P \\cdot t = 5\\ \\text{W} \\times 4\\ \\text{h} = 20\\ \\text{Wh}$",
+				"fr": "$E = P \\cdot t = 5\\ \\text{W} \\times 4\\ \\text{h} = 20\\ \\text{Wh}$"
+			},
+			{
+				"en": "A typical 10 000 mAh power bank stores about 37 Wh, so the lamp uses a bit over half of it.",
+				"fr": "Une batterie externe typique de 10 000 mAh stocke environ 37 Wh : la lampe en utilise donc un peu plus de la moitié."
+			}
+		],
+		"answer": {
+			"algorithm": "energy_pt",
+			"inputs": {
+				"P": {
+					"value": 5,
+					"unit": "W"
+				},
+				"t": {
+					"value": 4,
+					"unit": "h"
+				}
+			},
+			"canonicalValue": 20,
+			"canonicalUnit": "Wh",
+			"acceptedUnits": ["Wh", "J", "kJ"],
+			"absoluteTolerance": 0.00002,
+			"relativeTolerance": 0.01
+		}
+	},
+	{
+		"id": "exercise.ch01.energy_exam_joules",
+		"version": 1,
+		"type": "numeric",
+		"conceptIds": ["dc.energy"],
+		"formulaIds": ["formula.energy.pt"],
+		"difficulty": 1,
+		"kind": "independent",
+		"pool": "exam",
+		"prompt": {
+			"en": "A resistor dissipates 0.5 W for 1 minute. How much heat energy is produced, in joules?",
+			"fr": "Une résistance dissipe 0,5 W pendant 1 minute. Quelle énergie thermique est produite, en joules ?"
+		},
+		"solution": [
+			{
+				"en": "1 min = 60 s.",
+				"fr": "1 min = 60 s."
+			},
+			{
+				"en": "$E = 0.5 \\times 60 = 30\\ \\text{J}$",
+				"fr": "$E = 0{,}5 \\times 60 = 30\\ \\text{J}$"
+			}
+		],
+		"answer": {
+			"algorithm": "energy_pt",
+			"inputs": {
+				"P": {
+					"value": 0.5,
+					"unit": "W"
+				},
+				"t": {
+					"value": 1,
+					"unit": "min"
+				}
+			},
+			"canonicalValue": 30,
+			"canonicalUnit": "J",
+			"acceptedUnits": ["J", "kJ", "mJ"],
+			"absoluteTolerance": 0.00003,
+			"relativeTolerance": 0.01
+		}
+	},
+	{
+		"id": "exercise.ch01.energy_exam_unit",
+		"version": 1,
+		"type": "multiple_choice",
+		"conceptIds": ["dc.energy"],
+		"formulaIds": [],
+		"difficulty": 1,
+		"kind": "independent",
+		"pool": "exam",
+		"prompt": {
+			"en": "Which of these is a unit of **energy**?",
+			"fr": "Laquelle de ces unités est une unité d’**énergie** ?"
+		},
+		"solution": [
+			{
+				"en": "Energy units: J, kJ, Wh. W is power, mAh is charge, V is voltage.",
+				"fr": "Unités d’énergie : J, kJ, Wh. W est une puissance, mAh une charge, V une tension."
+			}
+		],
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "Wh (watt-hour)",
+					"fr": "Wh (wattheure)"
+				},
+				"rationale": {
+					"en": "Correct: power × time = energy; 1 Wh = 3600 J.",
+					"fr": "Exact : puissance × durée = énergie ; 1 Wh = 3600 J."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "W (watt)",
+					"fr": "W (watt)"
+				},
+				"rationale": {
+					"en": "The watt is a unit of power, a rate (J per second).",
+					"fr": "Le watt est une unité de puissance, un débit (J par seconde)."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "mAh (milliampere-hour)",
+					"fr": "mAh (milliampère-heure)"
+				},
+				"rationale": {
+					"en": "mAh is a charge. You need the voltage too to get energy.",
+					"fr": "Les mAh sont une charge. Il faut aussi la tension pour obtenir une énergie."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "V (volt)",
+					"fr": "V (volt)"
+				},
+				"rationale": {
+					"en": "The volt is energy per charge, not energy.",
+					"fr": "Le volt est une énergie par charge, pas une énergie."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch01.energy_exam_resistor_hour",
+		"version": 1,
+		"type": "numeric",
+		"conceptIds": ["dc.energy"],
+		"formulaIds": ["formula.energy.pt"],
+		"difficulty": 2,
+		"kind": "applied",
+		"pool": "exam",
+		"prompt": {
+			"en": "A resistor in a night light dissipates 0.25 W and stays on for 1 hour. How much heat does it release, in joules?",
+			"fr": "La résistance d’une veilleuse dissipe 0,25 W et reste allumée 1 heure. Quelle chaleur libère-t-elle, en joules ?"
+		},
+		"solution": [
+			{
+				"en": "1 h = 3600 s.",
+				"fr": "1 h = 3600 s."
+			},
+			{
+				"en": "$E = 0.25 \\times 3600 = 900\\ \\text{J}$",
+				"fr": "$E = 0{,}25 \\times 3600 = 900\\ \\text{J}$"
+			}
+		],
+		"answer": {
+			"algorithm": "energy_pt",
+			"inputs": {
+				"P": {
+					"value": 0.25,
+					"unit": "W"
+				},
+				"t": {
+					"value": 1,
+					"unit": "h"
+				}
+			},
+			"canonicalValue": 900,
+			"canonicalUnit": "J",
+			"acceptedUnits": ["J", "kJ", "Wh"],
+			"absoluteTolerance": 0.0009,
+			"relativeTolerance": 0.01
+		}
+	},
+	{
+		"id": "exercise.ch01.current_exam_same_everywhere",
+		"version": 1,
+		"conceptIds": ["dc.current"],
+		"formulaIds": [],
+		"difficulty": 2,
+		"kind": "applied",
+		"pool": "exam",
+		"prompt": {
+			"en": "A single loop has a battery and a resistor. One ammeter sits before the resistor, another after it. The first reads 12 mA. What does the second read?",
+			"fr": "Une boucle unique comporte une pile et une résistance. Un ampèremètre est placé avant la résistance, un autre après. Le premier indique 12 mA. Qu’indique le second ?"
+		},
+		"hints": [],
+		"solution": [
+			{
+				"en": "In a single loop the same current flows everywhere: the resistor does not use current up.",
+				"fr": "Dans une boucle unique, le même courant circule partout : la résistance ne consomme pas de courant."
+			}
+		],
+		"type": "multiple_choice",
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "12 mA",
+					"fr": "12 mA"
+				},
+				"rationale": {
+					"en": "Correct: current is not used up.",
+					"fr": "Exact : le courant ne se consomme pas."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "less than 12 mA",
+					"fr": "moins de 12 mA"
+				},
+				"rationale": {
+					"en": "The resistor takes energy, not current.",
+					"fr": "La résistance prend de l’énergie, pas du courant."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "0 mA",
+					"fr": "0 mA"
+				},
+				"rationale": {
+					"en": "Current flows all round the closed loop.",
+					"fr": "Le courant circule dans toute la boucle fermée."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "24 mA",
+					"fr": "24 mA"
+				},
+				"rationale": {
+					"en": "Nothing adds current in a single loop.",
+					"fr": "Rien n’ajoute de courant dans une boucle unique."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch01.voltage_exam_open_switch",
+		"version": 1,
+		"conceptIds": ["dc.voltage"],
+		"formulaIds": [],
+		"difficulty": 2,
+		"kind": "applied",
+		"pool": "exam",
+		"prompt": {
+			"en": "A 9 V battery, an **open** switch and a lamp form one loop. What does a voltmeter read across the open switch?",
+			"fr": "Une pile de 9 V, un interrupteur **ouvert** et une lampe forment une boucle. Qu’indique un voltmètre aux bornes de l’interrupteur ouvert ?"
+		},
+		"hints": [],
+		"solution": [
+			{
+				"en": "No current flows, so the lamp has no voltage across it. The whole 9 V appears across the gap in the open switch.",
+				"fr": "Aucun courant ne circule, donc la lampe n’a aucune tension à ses bornes. Les 9 V se retrouvent entièrement aux bornes de l’interrupteur ouvert."
+			}
+		],
+		"type": "multiple_choice",
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "9 V",
+					"fr": "9 V"
+				},
+				"rationale": {
+					"en": "Correct: with no current, the lamp drops nothing and the gap takes the full battery voltage.",
+					"fr": "Exact : sans courant, la lampe ne prend rien et l’ouverture reçoit toute la tension de la pile."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "0 V",
+					"fr": "0 V"
+				},
+				"rationale": {
+					"en": "No current does not mean no voltage: the battery still pushes.",
+					"fr": "Pas de courant ne veut pas dire pas de tension : la pile pousse toujours."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "4.5 V",
+					"fr": "4,5 V"
+				},
+				"rationale": {
+					"en": "The lamp takes no voltage when no current flows, so nothing is shared.",
+					"fr": "La lampe ne prend aucune tension sans courant, donc rien n’est partagé."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "it cannot be measured",
+					"fr": "on ne peut pas la mesurer"
+				},
+				"rationale": {
+					"en": "A voltmeter measures across any two points, even an open switch.",
+					"fr": "Un voltmètre mesure entre deux points quelconques, même un interrupteur ouvert."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch01.resistance_exam_insulator",
+		"version": 1,
+		"conceptIds": ["dc.resistance"],
+		"formulaIds": [],
+		"difficulty": 2,
+		"kind": "independent",
+		"pool": "exam",
+		"prompt": {
+			"en": "Why are wires made of copper and covered in plastic?",
+			"fr": "Pourquoi les fils sont-ils en cuivre et recouverts de plastique ?"
+		},
+		"hints": [],
+		"solution": [
+			{
+				"en": "Copper has a tiny resistance, so current flows easily inside. Plastic has an enormous resistance, so current cannot leak out through it.",
+				"fr": "Le cuivre a une résistance minuscule : le courant y circule facilement. Le plastique a une résistance énorme : le courant ne peut pas s’en échapper."
+			}
+		],
+		"type": "multiple_choice",
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "copper has a very low resistance; plastic has an enormous resistance",
+					"fr": "le cuivre a une résistance très faible ; le plastique une résistance énorme"
+				},
+				"rationale": {
+					"en": "Correct: conductor inside, insulator outside.",
+					"fr": "Exact : conducteur dedans, isolant dehors."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "copper has a high resistance that limits the current",
+					"fr": "le cuivre a une grande résistance qui limite le courant"
+				},
+				"rationale": {
+					"en": "Copper is chosen precisely because its resistance is tiny.",
+					"fr": "Le cuivre est choisi justement pour sa résistance minuscule."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "the plastic stores charge for the wire",
+					"fr": "le plastique stocke des charges pour le fil"
+				},
+				"rationale": {
+					"en": "The plastic only insulates; it stores nothing.",
+					"fr": "Le plastique isole seulement ; il ne stocke rien."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "both have about the same resistance; plastic is only for colour",
+					"fr": "les deux ont à peu près la même résistance ; le plastique sert juste à la couleur"
+				},
+				"rationale": {
+					"en": "Their resistances differ enormously; that is the whole point.",
+					"fr": "Leurs résistances diffèrent énormément ; c’est tout l’intérêt."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	}
+]

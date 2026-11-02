@@ -1,0 +1,11 @@
+{
+	"packId": "core",
+	"packVersion": "1.0.0",
+	"rulesVersion": "rules-1",
+	"locales": ["en", "fr"],
+	"title": { "en": "CircuitPath core course", "fr": "Cours principal CircuitPath" },
+	"description": {
+		"en": "Electronics from first principles: units, DC circuits, measurement, and beyond.",
+		"fr": "L’électronique depuis les bases : unités, circuits continus, mesure, et plus encore."
+	}
+}

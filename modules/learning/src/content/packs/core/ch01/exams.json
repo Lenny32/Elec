@@ -1,0 +1,61 @@
+[
+	{
+		"id": "exam.ch01",
+		"version": 2,
+		"scope": "chapter",
+		"scopeId": "chapter.01",
+		"title": {
+			"en": "Chapter 01 exam: DC foundations",
+			"fr": "Examen du chapitre 01 : les bases du courant continu"
+		},
+		"passPercent": 80,
+		"forms": [
+			{
+				"id": "A",
+				"itemIds": [
+					"exercise.ch01.charge_exam_basic",
+					"exercise.ch01.current_exam_same_everywhere",
+					"exercise.ch01.voltage_exam_usb",
+					"exercise.ch01.ground_exam_vab",
+					"exercise.ch01.resistance_exam_insulator",
+					"exercise.ch01.ohm_exam_current_kohm",
+					"exercise.ch01.ohm_exam_led_current",
+					"exercise.ch01.power_exam_vi",
+					"exercise.ch01.power_exam_led_resistor",
+					"exercise.ch01.energy_exam_joules"
+				]
+			},
+			{
+				"id": "B",
+				"itemIds": [
+					"exercise.ch01.charge_exam_mah_meaning",
+					"exercise.ch01.current_exam_charger",
+					"exercise.ch01.voltage_exam_open_switch",
+					"exercise.ch01.ground_exam_led_board",
+					"exercise.ch01.resistance_exam_one_ohm",
+					"exercise.ch01.ohm_exam_voltage",
+					"exercise.ch01.ohm_exam_double_v",
+					"exercise.ch01.power_exam_i2r",
+					"exercise.ch01.power_exam_double_i",
+					"exercise.ch01.energy_exam_resistor_hour"
+				]
+			},
+			{
+				"id": "C",
+				"itemIds": [
+					"exercise.ch01.charge_exam_battery_life",
+					"exercise.ch01.current_exam_direction",
+					"exercise.ch01.voltage_exam_where",
+					"exercise.ch01.ground_exam_meaning",
+					"exercise.ch01.resistance_exam_thicker",
+					"exercise.ch01.ohm_exam_resistance",
+					"exercise.ch01.ohm_exam_9v_led",
+					"exercise.ch01.power_exam_v2r",
+					"exercise.ch01.power_exam_charger",
+					"exercise.ch01.energy_exam_unit"
+				]
+			}
+		],
+		"drillItemsPerConcept": 2
+	}
+]

@@ -1,0 +1,3895 @@
+[
+	{
+		"id": "exercise.ch02.series_sum_three",
+		"version": 1,
+		"type": "numeric",
+		"conceptIds": ["resistors.series"],
+		"formulaIds": ["formula.resistors.series"],
+		"difficulty": 1,
+		"kind": "guided",
+		"pool": "practice",
+		"prompt": {
+			"en": "Three resistors, 100 Ω, 220 Ω and 330 Ω, are connected in series. What is the total resistance?",
+			"fr": "Trois résistances de 100 Ω, 220 Ω et 330 Ω sont branchées en série. Quelle est la résistance totale ?"
+		},
+		"hints": [
+			{
+				"en": "In series, resistances simply add up.",
+				"fr": "En série, les résistances s’additionnent tout simplement."
+			},
+			{
+				"en": "$R_\\text{t} = R_1 + R_2 + R_3$",
+				"fr": "$R_\\text{t} = R_1 + R_2 + R_3$"
+			}
+		],
+		"solution": [
+			{
+				"en": "In series the current has only one path, so each resistor adds its opposition: $R_\\text{t} = R_1 + R_2 + R_3$.",
+				"fr": "En série, le courant n’a qu’un seul chemin : chaque résistance ajoute son opposition. $R_\\text{t} = R_1 + R_2 + R_3$."
+			},
+			{
+				"en": "$R_\\text{t} = 100 + 220 + 330 = 650\\ \\Omega$",
+				"fr": "$R_\\text{t} = 100 + 220 + 330 = 650\\ \\Omega$"
+			}
+		],
+		"answer": {
+			"algorithm": "series_resistance",
+			"inputs": {
+				"R1": {
+					"value": 100,
+					"unit": "ohm"
+				},
+				"R2": {
+					"value": 220,
+					"unit": "ohm"
+				},
+				"R3": {
+					"value": 330,
+					"unit": "ohm"
+				}
+			},
+			"canonicalValue": 650,
+			"canonicalUnit": "ohm",
+			"acceptedUnits": ["ohm", "kohm"],
+			"absoluteTolerance": 0.01,
+			"relativeTolerance": 0.01
+		}
+	},
+	{
+		"id": "exercise.ch02.series_string_current",
+		"version": 1,
+		"type": "numeric",
+		"conceptIds": ["resistors.series"],
+		"formulaIds": ["formula.resistors.series"],
+		"difficulty": 2,
+		"kind": "independent",
+		"pool": "practice",
+		"prompt": {
+			"en": "In the circuit shown (9 V battery, R1 = 100 Ω, R2 = 200 Ω, R3 = 150 Ω in series), what current flows through R2?",
+			"fr": "Dans le circuit représenté (pile de 9 V, R1 = 100 Ω, R2 = 200 Ω, R3 = 150 Ω en série), quel courant traverse R2 ?"
+		},
+		"diagramId": "diagram.ch02.series_string",
+		"hints": [
+			{
+				"en": "First find the total resistance of the loop.",
+				"fr": "Commencez par calculer la résistance totale de la boucle."
+			},
+			{
+				"en": "In a series loop the same current flows through every resistor: $I = V / R_\\text{t}$.",
+				"fr": "Dans une boucle série, le même courant traverse chaque résistance : $I = V / R_\\text{t}$."
+			}
+		],
+		"solution": [
+			{
+				"en": "Total resistance: $R_\\text{t} = 100 + 200 + 150 = 450\\ \\Omega$.",
+				"fr": "Résistance totale : $R_\\text{t} = 100 + 200 + 150 = 450\\ \\Omega$."
+			},
+			{
+				"en": "Loop current: $I = \\frac{9}{450} = 0.02\\ \\text{A} = 20\\ \\text{mA}$.",
+				"fr": "Courant de la boucle : $I = \\frac{9}{450} = 0{,}02\\ \\text{A} = 20\\ \\text{mA}$."
+			},
+			{
+				"en": "There is only one path, so R2 carries the same 20 mA as R1 and R3.",
+				"fr": "Il n’y a qu’un seul chemin : R2 est traversée par les mêmes 20 mA que R1 et R3."
+			}
+		],
+		"answer": {
+			"algorithm": "ohm_current",
+			"inputs": {
+				"V": {
+					"value": 9,
+					"unit": "V"
+				},
+				"R": {
+					"value": 450,
+					"unit": "ohm"
+				}
+			},
+			"canonicalValue": 0.02,
+			"canonicalUnit": "A",
+			"acceptedUnits": ["A", "mA"],
+			"absoluteTolerance": 0.000001,
+			"relativeTolerance": 0.01
+		}
+	},
+	{
+		"id": "exercise.ch02.series_add_resistor",
+		"version": 1,
+		"type": "prediction",
+		"conceptIds": ["resistors.series"],
+		"formulaIds": ["formula.resistors.series"],
+		"difficulty": 1,
+		"kind": "independent",
+		"pool": "practice",
+		"prompt": {
+			"en": "A 9 V battery drives two resistors in series. You add a third resistor into the same loop, in series. What happens to the current from the battery?",
+			"fr": "Une pile de 9 V alimente deux résistances en série. Vous ajoutez une troisième résistance dans la même boucle, en série. Que devient le courant fourni par la pile ?"
+		},
+		"hints": [
+			{
+				"en": "Does the total resistance go up or down when you add a series resistor?",
+				"fr": "La résistance totale augmente-t-elle ou diminue-t-elle quand on ajoute une résistance en série ?"
+			}
+		],
+		"solution": [
+			{
+				"en": "Adding a series resistor increases $R_\\text{t}$.",
+				"fr": "Ajouter une résistance en série augmente $R_\\text{t}$."
+			},
+			{
+				"en": "With the same battery voltage, $I = V / R_\\text{t}$ decreases.",
+				"fr": "Avec la même tension de pile, $I = V / R_\\text{t}$ diminue."
+			}
+		],
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "It increases",
+					"fr": "Il augmente"
+				},
+				"rationale": {
+					"en": "This would be true for a parallel branch. In series, the extra resistor adds to the total, so the current falls.",
+					"fr": "Ce serait vrai pour une branche en parallèle. En série, la résistance ajoutée augmente le total, donc le courant baisse."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "It decreases",
+					"fr": "Il diminue"
+				},
+				"rationale": {
+					"en": "Correct: the total resistance becomes larger, and with the same 9 V, $I = V/R_\\text{t}$ becomes smaller.",
+					"fr": "Exact : la résistance totale augmente et, avec les mêmes 9 V, $I = V/R_\\text{t}$ diminue."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "It stays the same",
+					"fr": "Il ne change pas"
+				},
+				"rationale": {
+					"en": "The current depends on the total resistance, and that total has just grown.",
+					"fr": "Le courant dépend de la résistance totale, et ce total vient d’augmenter."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "It flows only through the new resistor",
+					"fr": "Il ne passe que dans la nouvelle résistance"
+				},
+				"rationale": {
+					"en": "In series there is a single path: the same current goes through every part.",
+					"fr": "En série il n’y a qu’un chemin : le même courant traverse chaque composant."
+				}
+			}
+		],
+		"correctOptionId": "b"
+	},
+	{
+		"id": "exercise.ch02.series_kit_substitute",
+		"version": 1,
+		"type": "numeric",
+		"conceptIds": ["resistors.series"],
+		"formulaIds": ["formula.resistors.series"],
+		"difficulty": 2,
+		"kind": "applied",
+		"pool": "practice",
+		"prompt": {
+			"en": "Your LED project needs about 1 kΩ, but your kit only contains 470 Ω and 560 Ω resistors. You put one of each in series. What total resistance do you get?",
+			"fr": "Votre montage à LED demande environ 1 kΩ, mais votre kit ne contient que des résistances de 470 Ω et de 560 Ω. Vous en placez une de chaque en série. Quelle résistance totale obtenez-vous ?"
+		},
+		"hints": [
+			{
+				"en": "Series resistors add.",
+				"fr": "Des résistances en série s’additionnent."
+			}
+		],
+		"solution": [
+			{
+				"en": "$R_\\text{t} = 470 + 560 = 1030\\ \\Omega \\approx 1.03\\ \\text{k}\\Omega$",
+				"fr": "$R_\\text{t} = 470 + 560 = 1030\\ \\Omega \\approx 1{,}03\\ \\text{k}\\Omega$"
+			},
+			{
+				"en": "That is only 3 % above 1 kΩ, which is close enough for an LED resistor.",
+				"fr": "C’est seulement 3 % au-dessus de 1 kΩ, ce qui convient très bien pour une résistance de LED."
+			}
+		],
+		"answer": {
+			"algorithm": "series_resistance",
+			"inputs": {
+				"R1": {
+					"value": 470,
+					"unit": "ohm"
+				},
+				"R2": {
+					"value": 560,
+					"unit": "ohm"
+				}
+			},
+			"canonicalValue": 1030,
+			"canonicalUnit": "ohm",
+			"acceptedUnits": ["ohm", "kohm"],
+			"absoluteTolerance": 0.01,
+			"relativeTolerance": 0.01
+		}
+	},
+	{
+		"id": "exercise.ch02.exam_series_mixed_prefix",
+		"version": 1,
+		"type": "numeric",
+		"conceptIds": ["resistors.series"],
+		"formulaIds": ["formula.resistors.series"],
+		"difficulty": 2,
+		"kind": "independent",
+		"pool": "exam",
+		"prompt": {
+			"en": "Resistors of 1 kΩ, 2.2 kΩ and 680 Ω are connected in series. What is the total resistance?",
+			"fr": "Des résistances de 1 kΩ, 2,2 kΩ et 680 Ω sont branchées en série. Quelle est la résistance totale ?"
+		},
+		"hints": [],
+		"solution": [
+			{
+				"en": "Convert to the same unit first: 1 kΩ = 1000 Ω, 2.2 kΩ = 2200 Ω.",
+				"fr": "Convertir d’abord dans la même unité : 1 kΩ = 1000 Ω, 2,2 kΩ = 2200 Ω."
+			},
+			{
+				"en": "$R_\\text{t} = 1000 + 2200 + 680 = 3880\\ \\Omega = 3.88\\ \\text{k}\\Omega$",
+				"fr": "$R_\\text{t} = 1000 + 2200 + 680 = 3880\\ \\Omega = 3{,}88\\ \\text{k}\\Omega$"
+			}
+		],
+		"answer": {
+			"algorithm": "series_resistance",
+			"inputs": {
+				"R1": {
+					"value": 1,
+					"unit": "kohm"
+				},
+				"R2": {
+					"value": 2.2,
+					"unit": "kohm"
+				},
+				"R3": {
+					"value": 680,
+					"unit": "ohm"
+				}
+			},
+			"canonicalValue": 3880,
+			"canonicalUnit": "ohm",
+			"acceptedUnits": ["ohm", "kohm"],
+			"absoluteTolerance": 0.01,
+			"relativeTolerance": 0.01
+		}
+	},
+	{
+		"id": "exercise.ch02.exam_series_same_current",
+		"version": 1,
+		"type": "multiple_choice",
+		"conceptIds": ["resistors.series"],
+		"formulaIds": [],
+		"difficulty": 1,
+		"kind": "independent",
+		"pool": "exam",
+		"prompt": {
+			"en": "R1, R2 and R3 are in series with a battery. You measure 15 mA through R1. What current flows through R3?",
+			"fr": "R1, R2 et R3 sont en série avec une pile. Vous mesurez 15 mA dans R1. Quel courant traverse R3 ?"
+		},
+		"hints": [],
+		"solution": [
+			{
+				"en": "In series there is a single path for charge, so the current measured anywhere in the loop is the same: 15 mA.",
+				"fr": "En série la charge n’a qu’un chemin : le courant mesuré n’importe où dans la boucle est le même, 15 mA."
+			}
+		],
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "Less than 15 mA, because R1 and R2 “use up” some current",
+					"fr": "Moins de 15 mA, car R1 et R2 « consomment » du courant"
+				},
+				"rationale": {
+					"en": "Resistors do not use up current; they convert energy (voltage drops), but charge is conserved around the loop.",
+					"fr": "Les résistances ne consomment pas de courant : elles transforment de l’énergie (chute de tension), mais la charge se conserve dans la boucle."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "Exactly 15 mA",
+					"fr": "Exactement 15 mA"
+				},
+				"rationale": {
+					"en": "Correct: a series loop has one path, so the current is the same everywhere.",
+					"fr": "Exact : une boucle série n’a qu’un chemin, le courant est le même partout."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "More than 15 mA",
+					"fr": "Plus de 15 mA"
+				},
+				"rationale": {
+					"en": "Current cannot appear from nowhere; with a single path it cannot grow.",
+					"fr": "Le courant ne peut pas apparaître de nulle part ; avec un seul chemin il ne peut pas augmenter."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "It depends on the value of R3",
+					"fr": "Cela dépend de la valeur de R3"
+				},
+				"rationale": {
+					"en": "R3 affects the loop current as a whole, but whatever that current is, it is identical in R1 and R3.",
+					"fr": "R3 influence le courant de toute la boucle, mais quel qu’il soit, il est identique dans R1 et dans R3."
+				}
+			}
+		],
+		"correctOptionId": "b"
+	},
+	{
+		"id": "exercise.ch02.exam_series_current_12v",
+		"version": 1,
+		"type": "numeric",
+		"conceptIds": ["resistors.series"],
+		"formulaIds": ["formula.resistors.series"],
+		"difficulty": 2,
+		"kind": "independent",
+		"pool": "exam",
+		"prompt": {
+			"en": "A 12 V battery is connected to three 1 kΩ resistors in series. What current flows?",
+			"fr": "Une batterie de 12 V est reliée à trois résistances de 1 kΩ en série. Quel courant circule ?"
+		},
+		"hints": [],
+		"solution": [
+			{
+				"en": "$R_\\text{t} = 1 + 1 + 1 = 3\\ \\text{k}\\Omega = 3000\\ \\Omega$",
+				"fr": "$R_\\text{t} = 1 + 1 + 1 = 3\\ \\text{k}\\Omega = 3000\\ \\Omega$"
+			},
+			{
+				"en": "$I = \\frac{12}{3000} = 0.004\\ \\text{A} = 4\\ \\text{mA}$",
+				"fr": "$I = \\frac{12}{3000} = 0{,}004\\ \\text{A} = 4\\ \\text{mA}$"
+			}
+		],
+		"answer": {
+			"algorithm": "ohm_current",
+			"inputs": {
+				"V": {
+					"value": 12,
+					"unit": "V"
+				},
+				"R": {
+					"value": 3,
+					"unit": "kohm"
+				}
+			},
+			"canonicalValue": 0.004,
+			"canonicalUnit": "A",
+			"acceptedUnits": ["A", "mA"],
+			"absoluteTolerance": 0.000001,
+			"relativeTolerance": 0.01
+		}
+	},
+	{
+		"id": "exercise.ch02.exam_series_tune_led",
+		"version": 1,
+		"type": "numeric",
+		"conceptIds": ["resistors.series"],
+		"formulaIds": ["formula.resistors.series"],
+		"difficulty": 1,
+		"kind": "applied",
+		"pool": "exam",
+		"prompt": {
+			"en": "Your LED is too bright with a 1 kΩ resistor. To dim it, you add a 330 Ω resistor in series with the 1 kΩ. What is the new total resistance?",
+			"fr": "Votre LED est trop lumineuse avec une résistance de 1 kΩ. Pour la rendre moins brillante, vous ajoutez une résistance de 330 Ω en série avec celle de 1 kΩ. Quelle est la nouvelle résistance totale ?"
+		},
+		"hints": [],
+		"solution": [
+			{
+				"en": "$R_\\text{t} = 1000 + 330 = 1330\\ \\Omega = 1.33\\ \\text{k}\\Omega$",
+				"fr": "$R_\\text{t} = 1000 + 330 = 1330\\ \\Omega = 1{,}33\\ \\text{k}\\Omega$"
+			},
+			{
+				"en": "A larger series resistance means less current, so the LED is dimmer.",
+				"fr": "Une résistance série plus grande donne moins de courant : la LED éclaire moins."
+			}
+		],
+		"answer": {
+			"algorithm": "series_resistance",
+			"inputs": {
+				"R1": {
+					"value": 1,
+					"unit": "kohm"
+				},
+				"R2": {
+					"value": 330,
+					"unit": "ohm"
+				}
+			},
+			"canonicalValue": 1330,
+			"canonicalUnit": "ohm",
+			"acceptedUnits": ["ohm", "kohm"],
+			"absoluteTolerance": 0.01,
+			"relativeTolerance": 0.01
+		}
+	},
+	{
+		"id": "exercise.ch02.exam_series_largest_voltage",
+		"version": 1,
+		"type": "multiple_choice",
+		"conceptIds": ["resistors.series"],
+		"formulaIds": [],
+		"difficulty": 2,
+		"kind": "independent",
+		"pool": "exam",
+		"prompt": {
+			"en": "A battery drives 100 Ω, 470 Ω and 1 kΩ resistors in series. Which resistor has the largest voltage across it?",
+			"fr": "Une pile alimente des résistances de 100 Ω, 470 Ω et 1 kΩ en série. Aux bornes de laquelle la tension est-elle la plus grande ?"
+		},
+		"hints": [],
+		"solution": [
+			{
+				"en": "All three carry the same current I.",
+				"fr": "Les trois sont traversées par le même courant I."
+			},
+			{
+				"en": "Each voltage is $V = I R$, so the 1 kΩ resistor takes the largest share of the battery voltage.",
+				"fr": "Chaque tension vaut $V = I R$ : la résistance de 1 kΩ prend la plus grande part de la tension de la pile."
+			}
+		],
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "The 100 Ω resistor, because most current goes through it",
+					"fr": "Celle de 100 Ω, car elle reçoit le plus de courant"
+				},
+				"rationale": {
+					"en": "In series every resistor carries the same current; there is no “easier path”.",
+					"fr": "En série chaque résistance est traversée par le même courant ; il n’y a pas de « chemin plus facile »."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "They all have the same voltage",
+					"fr": "Elles ont toutes la même tension"
+				},
+				"rationale": {
+					"en": "Equal voltages are a property of parallel branches, not series parts.",
+					"fr": "Des tensions égales caractérisent les branches en parallèle, pas les composants en série."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "The 1 kΩ resistor",
+					"fr": "Celle de 1 kΩ"
+				},
+				"rationale": {
+					"en": "Correct: same current I in each, so $V = IR$ is largest for the largest R.",
+					"fr": "Exact : même courant I dans chacune, donc $V = IR$ est la plus grande pour la plus grande R."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "The resistor closest to the battery + terminal",
+					"fr": "Celle qui est la plus proche de la borne + de la pile"
+				},
+				"rationale": {
+					"en": "Position in a series loop does not matter; only the resistance value does.",
+					"fr": "La position dans une boucle série n’a aucune importance ; seule la valeur compte."
+				}
+			}
+		],
+		"correctOptionId": "c"
+	},
+	{
+		"id": "exercise.ch02.parallel_two_equal",
+		"version": 1,
+		"type": "numeric",
+		"conceptIds": ["resistors.parallel"],
+		"formulaIds": ["formula.resistors.parallel"],
+		"difficulty": 1,
+		"kind": "guided",
+		"pool": "practice",
+		"prompt": {
+			"en": "Two 100 Ω resistors are connected in parallel. What is their equivalent resistance?",
+			"fr": "Deux résistances de 100 Ω sont branchées en parallèle. Quelle est leur résistance équivalente ?"
+		},
+		"hints": [
+			{
+				"en": "Use $\\frac{1}{R_\\text{t}} = \\frac{1}{R_1} + \\frac{1}{R_2}$, then invert.",
+				"fr": "Utilisez $\\frac{1}{R_\\text{t}} = \\frac{1}{R_1} + \\frac{1}{R_2}$, puis inversez."
+			},
+			{
+				"en": "Two equal resistors in parallel give half of one of them.",
+				"fr": "Deux résistances égales en parallèle donnent la moitié de l’une d’elles."
+			}
+		],
+		"solution": [
+			{
+				"en": "$\\frac{1}{R_\\text{t}} = \\frac{1}{100} + \\frac{1}{100} = \\frac{2}{100}$",
+				"fr": "$\\frac{1}{R_\\text{t}} = \\frac{1}{100} + \\frac{1}{100} = \\frac{2}{100}$"
+			},
+			{
+				"en": "$R_\\text{t} = \\frac{100}{2} = 50\\ \\Omega$ — two paths let twice the current through, so the resistance halves.",
+				"fr": "$R_\\text{t} = \\frac{100}{2} = 50\\ \\Omega$ — deux chemins laissent passer deux fois plus de courant : la résistance est divisée par deux."
+			}
+		],
+		"answer": {
+			"algorithm": "parallel_resistance",
+			"inputs": {
+				"R1": {
+					"value": 100,
+					"unit": "ohm"
+				},
+				"R2": {
+					"value": 100,
+					"unit": "ohm"
+				}
+			},
+			"canonicalValue": 50,
+			"canonicalUnit": "ohm",
+			"acceptedUnits": ["ohm", "kohm"],
+			"absoluteTolerance": 0.01,
+			"relativeTolerance": 0.01
+		}
+	},
+	{
+		"id": "exercise.ch02.parallel_pair_total_current",
+		"version": 1,
+		"type": "numeric",
+		"conceptIds": ["resistors.parallel"],
+		"formulaIds": ["formula.resistors.parallel"],
+		"difficulty": 2,
+		"kind": "independent",
+		"pool": "practice",
+		"prompt": {
+			"en": "In the circuit shown (6 V battery, R1 = 300 Ω and R2 = 600 Ω in parallel), what is the equivalent resistance seen by the battery?",
+			"fr": "Dans le circuit représenté (pile de 6 V, R1 = 300 Ω et R2 = 600 Ω en parallèle), quelle résistance équivalente la pile voit-elle ?"
+		},
+		"diagramId": "diagram.ch02.parallel_pair",
+		"hints": [
+			{
+				"en": "The answer must be smaller than 300 Ω, the smallest branch.",
+				"fr": "Le résultat doit être inférieur à 300 Ω, la plus petite branche."
+			},
+			{
+				"en": "For two resistors: $R_\\text{t} = \\frac{R_1 R_2}{R_1 + R_2}$.",
+				"fr": "Pour deux résistances : $R_\\text{t} = \\frac{R_1 R_2}{R_1 + R_2}$."
+			}
+		],
+		"solution": [
+			{
+				"en": "$R_\\text{t} = \\frac{300 \\times 600}{300 + 600} = \\frac{180\\,000}{900} = 200\\ \\Omega$",
+				"fr": "$R_\\text{t} = \\frac{300 \\times 600}{300 + 600} = \\frac{180\\,000}{900} = 200\\ \\Omega$"
+			},
+			{
+				"en": "Check: 200 Ω < 300 Ω, the smallest branch. ✔",
+				"fr": "Vérification : 200 Ω < 300 Ω, la plus petite branche. ✔"
+			},
+			{
+				"en": "Bonus: $I_1 = 6/300 = 20$ mA, $I_2 = 6/600 = 10$ mA, total $6/200 = 30$ mA.",
+				"fr": "Bonus : $I_1 = 6/300 = 20$ mA, $I_2 = 6/600 = 10$ mA, total $6/200 = 30$ mA."
+			}
+		],
+		"answer": {
+			"algorithm": "parallel_resistance",
+			"inputs": {
+				"R1": {
+					"value": 300,
+					"unit": "ohm"
+				},
+				"R2": {
+					"value": 600,
+					"unit": "ohm"
+				}
+			},
+			"canonicalValue": 200,
+			"canonicalUnit": "ohm",
+			"acceptedUnits": ["ohm", "kohm"],
+			"absoluteTolerance": 0.01,
+			"relativeTolerance": 0.01
+		}
+	},
+	{
+		"id": "exercise.ch02.parallel_big_small",
+		"version": 1,
+		"type": "multiple_choice",
+		"conceptIds": ["resistors.parallel"],
+		"formulaIds": ["formula.resistors.parallel"],
+		"difficulty": 2,
+		"kind": "independent",
+		"pool": "practice",
+		"prompt": {
+			"en": "A 1 kΩ resistor is connected in parallel with a 10 Ω resistor. Without a calculator, what is the equivalent resistance closest to?",
+			"fr": "Une résistance de 1 kΩ est branchée en parallèle avec une résistance de 10 Ω. Sans calculatrice, de quelle valeur la résistance équivalente est-elle la plus proche ?"
+		},
+		"hints": [
+			{
+				"en": "Adding a parallel path always makes the total smaller than the smallest branch.",
+				"fr": "Ajouter un chemin en parallèle rend toujours le total plus petit que la plus petite branche."
+			}
+		],
+		"solution": [
+			{
+				"en": "Rule: a parallel combination is always smaller than its smallest branch.",
+				"fr": "Règle : une association en parallèle est toujours plus petite que sa plus petite branche."
+			},
+			{
+				"en": "The 1 kΩ branch carries very little current compared with the 10 Ω branch, so it barely changes the result: $R_\\text{t} = \\frac{1000 \\times 10}{1010} \\approx 9.9\\ \\Omega$.",
+				"fr": "La branche de 1 kΩ laisse passer très peu de courant comparée à celle de 10 Ω, elle change à peine le résultat : $R_\\text{t} = \\frac{1000 \\times 10}{1010} \\approx 9{,}9\\ \\Omega$."
+			}
+		],
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "1010 Ω",
+					"fr": "1010 Ω"
+				},
+				"rationale": {
+					"en": "That is the series total. Parallel resistances never add.",
+					"fr": "C’est le total en série. En parallèle, les résistances ne s’additionnent pas."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "About 505 Ω (the average)",
+					"fr": "Environ 505 Ω (la moyenne)"
+				},
+				"rationale": {
+					"en": "Averaging is a common guess, but the result must be below the smallest branch (10 Ω).",
+					"fr": "Faire la moyenne est une erreur fréquente : le résultat doit être inférieur à la plus petite branche (10 Ω)."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "Slightly less than 10 Ω (about 9.9 Ω)",
+					"fr": "Un peu moins de 10 Ω (environ 9,9 Ω)"
+				},
+				"rationale": {
+					"en": "Correct: the 1 kΩ branch adds only a small extra path, so the result is just under 10 Ω: $\\frac{1000 \\times 10}{1010} \\approx 9.9\\ \\Omega$.",
+					"fr": "Exact : la branche de 1 kΩ n’ajoute qu’un petit chemin supplémentaire, le résultat est juste sous 10 Ω : $\\frac{1000 \\times 10}{1010} \\approx 9{,}9\\ \\Omega$."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "Somewhere between 10 Ω and 1 kΩ",
+					"fr": "Entre 10 Ω et 1 kΩ"
+				},
+				"rationale": {
+					"en": "A second path can only make it easier for current to flow, so the result is below 10 Ω, not above.",
+					"fr": "Un deuxième chemin ne peut que faciliter le passage du courant : le résultat est sous 10 Ω, pas au-dessus."
+				}
+			}
+		],
+		"correctOptionId": "c"
+	},
+	{
+		"id": "exercise.ch02.parallel_lantern_current",
+		"version": 1,
+		"type": "numeric",
+		"conceptIds": ["resistors.parallel"],
+		"formulaIds": ["formula.resistors.parallel"],
+		"difficulty": 2,
+		"kind": "applied",
+		"pool": "practice",
+		"prompt": {
+			"en": "A camping lantern runs two identical bulbs in parallel from a 6 V battery. Each bulb behaves like a 30 Ω resistor when lit. What total current does the battery supply?",
+			"fr": "Une lanterne de camping alimente deux ampoules identiques en parallèle avec une pile de 6 V. Allumée, chaque ampoule se comporte comme une résistance de 30 Ω. Quel courant total la pile fournit-elle ?"
+		},
+		"hints": [
+			{
+				"en": "Two equal resistors in parallel give half the resistance.",
+				"fr": "Deux résistances égales en parallèle donnent la moitié de la résistance."
+			},
+			{
+				"en": "Then use $I = V / R_\\text{t}$.",
+				"fr": "Utilisez ensuite $I = V / R_\\text{t}$."
+			}
+		],
+		"solution": [
+			{
+				"en": "$R_\\text{t} = \\frac{30}{2} = 15\\ \\Omega$",
+				"fr": "$R_\\text{t} = \\frac{30}{2} = 15\\ \\Omega$"
+			},
+			{
+				"en": "$I = \\frac{6}{15} = 0.4\\ \\text{A}$ (each bulb takes 0.2 A).",
+				"fr": "$I = \\frac{6}{15} = 0{,}4\\ \\text{A}$ (chaque ampoule prend 0,2 A)."
+			}
+		],
+		"assumptions": {
+			"en": "Bulb resistance treated as constant when lit; ideal battery.",
+			"fr": "Résistance des ampoules supposée constante une fois allumées ; pile idéale."
+		},
+		"answer": {
+			"algorithm": "ohm_current",
+			"inputs": {
+				"V": {
+					"value": 6,
+					"unit": "V"
+				},
+				"R": {
+					"value": 15,
+					"unit": "ohm"
+				}
+			},
+			"canonicalValue": 0.4,
+			"canonicalUnit": "A",
+			"acceptedUnits": ["A", "mA"],
+			"absoluteTolerance": 0.000001,
+			"relativeTolerance": 0.01
+		}
+	},
+	{
+		"id": "exercise.ch02.exam_parallel_220_330",
+		"version": 1,
+		"type": "numeric",
+		"conceptIds": ["resistors.parallel"],
+		"formulaIds": ["formula.resistors.parallel"],
+		"difficulty": 2,
+		"kind": "independent",
+		"pool": "exam",
+		"prompt": {
+			"en": "What is the equivalent resistance of 220 Ω and 330 Ω connected in parallel?",
+			"fr": "Quelle est la résistance équivalente de 220 Ω et 330 Ω branchées en parallèle ?"
+		},
+		"hints": [],
+		"solution": [
+			{
+				"en": "$R_\\text{t} = \\frac{220 \\times 330}{220 + 330} = \\frac{72\\,600}{550} = 132\\ \\Omega$",
+				"fr": "$R_\\text{t} = \\frac{220 \\times 330}{220 + 330} = \\frac{72\\,600}{550} = 132\\ \\Omega$"
+			},
+			{
+				"en": "Check: 132 Ω is below 220 Ω, the smallest branch.",
+				"fr": "Vérification : 132 Ω est inférieur à 220 Ω, la plus petite branche."
+			}
+		],
+		"answer": {
+			"algorithm": "parallel_resistance",
+			"inputs": {
+				"R1": {
+					"value": 220,
+					"unit": "ohm"
+				},
+				"R2": {
+					"value": 330,
+					"unit": "ohm"
+				}
+			},
+			"canonicalValue": 132,
+			"canonicalUnit": "ohm",
+			"acceptedUnits": ["ohm", "kohm"],
+			"absoluteTolerance": 0.01,
+			"relativeTolerance": 0.01
+		}
+	},
+	{
+		"id": "exercise.ch02.exam_parallel_three_equal",
+		"version": 1,
+		"type": "numeric",
+		"conceptIds": ["resistors.parallel"],
+		"formulaIds": ["formula.resistors.parallel"],
+		"difficulty": 2,
+		"kind": "independent",
+		"pool": "exam",
+		"prompt": {
+			"en": "Three 1.2 kΩ resistors are connected in parallel. What is the equivalent resistance?",
+			"fr": "Trois résistances de 1,2 kΩ sont branchées en parallèle. Quelle est la résistance équivalente ?"
+		},
+		"hints": [],
+		"solution": [
+			{
+				"en": "$\\frac{1}{R_\\text{t}} = 3 \\times \\frac{1}{1200}$",
+				"fr": "$\\frac{1}{R_\\text{t}} = 3 \\times \\frac{1}{1200}$"
+			},
+			{
+				"en": "$R_\\text{t} = \\frac{1200}{3} = 400\\ \\Omega$ ($n$ identical resistors: $R/n$).",
+				"fr": "$R_\\text{t} = \\frac{1200}{3} = 400\\ \\Omega$ ($n$ résistances identiques : $R/n$)."
+			}
+		],
+		"answer": {
+			"algorithm": "parallel_resistance",
+			"inputs": {
+				"R1": {
+					"value": 1.2,
+					"unit": "kohm"
+				},
+				"R2": {
+					"value": 1.2,
+					"unit": "kohm"
+				},
+				"R3": {
+					"value": 1.2,
+					"unit": "kohm"
+				}
+			},
+			"canonicalValue": 400,
+			"canonicalUnit": "ohm",
+			"acceptedUnits": ["ohm", "kohm"],
+			"absoluteTolerance": 0.01,
+			"relativeTolerance": 0.01
+		}
+	},
+	{
+		"id": "exercise.ch02.exam_parallel_branch_voltage",
+		"version": 1,
+		"type": "multiple_choice",
+		"conceptIds": ["resistors.parallel"],
+		"formulaIds": [],
+		"difficulty": 1,
+		"kind": "independent",
+		"pool": "exam",
+		"prompt": {
+			"en": "A 9 V battery feeds three different resistors connected in parallel. What is the voltage across the smallest resistor?",
+			"fr": "Une pile de 9 V alimente trois résistances différentes branchées en parallèle. Quelle est la tension aux bornes de la plus petite ?"
+		},
+		"hints": [],
+		"solution": [
+			{
+				"en": "Parallel branches all connect between the same two nodes, so they all see the same voltage: the battery’s 9 V.",
+				"fr": "Les branches en parallèle sont toutes reliées entre les deux mêmes nœuds : elles ont toutes la même tension, les 9 V de la pile."
+			}
+		],
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "3 V, a third of the battery voltage",
+					"fr": "3 V, un tiers de la tension de la pile"
+				},
+				"rationale": {
+					"en": "Sharing voltage between parts happens in series, not in parallel.",
+					"fr": "Le partage de la tension se fait en série, pas en parallèle."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "9 V",
+					"fr": "9 V"
+				},
+				"rationale": {
+					"en": "Correct: every parallel branch is connected directly across the battery, so each has the full 9 V.",
+					"fr": "Exact : chaque branche en parallèle est reliée directement aux bornes de la pile, elle reçoit donc les 9 V."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "Less than the others, because it has the least resistance",
+					"fr": "Moins que les autres, car elle a la plus petite résistance"
+				},
+				"rationale": {
+					"en": "The smallest resistor carries the most current, but its voltage is the same as the other branches.",
+					"fr": "La plus petite résistance a le plus grand courant, mais sa tension est la même que celle des autres branches."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "It cannot be found without the resistor values",
+					"fr": "Impossible à dire sans les valeurs"
+				},
+				"rationale": {
+					"en": "Branch voltage does not depend on the values: it is fixed by the battery.",
+					"fr": "La tension d’une branche ne dépend pas des valeurs : elle est imposée par la pile."
+				}
+			}
+		],
+		"correctOptionId": "b"
+	},
+	{
+		"id": "exercise.ch02.exam_parallel_make_500",
+		"version": 1,
+		"type": "multiple_choice",
+		"conceptIds": ["resistors.parallel"],
+		"formulaIds": ["formula.resistors.parallel"],
+		"difficulty": 2,
+		"kind": "applied",
+		"pool": "exam",
+		"prompt": {
+			"en": "Your kit only has 1 kΩ resistors, but you need 500 Ω. Which arrangement gives 500 Ω?",
+			"fr": "Votre kit ne contient que des résistances de 1 kΩ, mais il vous faut 500 Ω. Quel montage donne 500 Ω ?"
+		},
+		"hints": [],
+		"solution": [
+			{
+				"en": "In parallel, $n$ identical resistors give $R/n$.",
+				"fr": "En parallèle, $n$ résistances identiques donnent $R/n$."
+			},
+			{
+				"en": "$1000 / 2 = 500\\ \\Omega$, so two in parallel.",
+				"fr": "$1000 / 2 = 500\\ \\Omega$ : deux en parallèle."
+			}
+		],
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "Two 1 kΩ resistors in series",
+					"fr": "Deux résistances de 1 kΩ en série"
+				},
+				"rationale": {
+					"en": "Series adds: that gives 2 kΩ, the opposite of what you need.",
+					"fr": "En série, on additionne : cela donne 2 kΩ, l’inverse de ce qu’il faut."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "Two 1 kΩ resistors in parallel",
+					"fr": "Deux résistances de 1 kΩ en parallèle"
+				},
+				"rationale": {
+					"en": "Correct: two equal resistors in parallel give half: 1000/2 = 500 Ω.",
+					"fr": "Exact : deux résistances égales en parallèle donnent la moitié : 1000/2 = 500 Ω."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "Three 1 kΩ resistors in parallel",
+					"fr": "Trois résistances de 1 kΩ en parallèle"
+				},
+				"rationale": {
+					"en": "Three in parallel give 1000/3 ≈ 333 Ω, too small.",
+					"fr": "Trois en parallèle donnent 1000/3 ≈ 333 Ω, c’est trop peu."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "It is impossible with only 1 kΩ resistors",
+					"fr": "C’est impossible avec seulement des 1 kΩ"
+				},
+				"rationale": {
+					"en": "Combining resistors in parallel lowers the total, so it is possible.",
+					"fr": "Associer des résistances en parallèle diminue le total : c’est donc possible."
+				}
+			}
+		],
+		"correctOptionId": "b"
+	},
+	{
+		"id": "exercise.ch02.exam_parallel_total_current",
+		"version": 1,
+		"type": "numeric",
+		"conceptIds": ["resistors.parallel"],
+		"formulaIds": ["formula.resistors.parallel"],
+		"difficulty": 3,
+		"kind": "independent",
+		"pool": "exam",
+		"prompt": {
+			"en": "A 9 V battery feeds a 300 Ω resistor and a 600 Ω resistor connected in parallel. What total current does the battery supply?",
+			"fr": "Une pile de 9 V alimente une résistance de 300 Ω et une de 600 Ω branchées en parallèle. Quel courant total la pile fournit-elle ?"
+		},
+		"hints": [],
+		"solution": [
+			{
+				"en": "$R_\\text{t} = \\frac{300 \\times 600}{900} = 200\\ \\Omega$",
+				"fr": "$R_\\text{t} = \\frac{300 \\times 600}{900} = 200\\ \\Omega$"
+			},
+			{
+				"en": "$I = \\frac{9}{200} = 0.045\\ \\text{A} = 45\\ \\text{mA}$",
+				"fr": "$I = \\frac{9}{200} = 0{,}045\\ \\text{A} = 45\\ \\text{mA}$"
+			},
+			{
+				"en": "Check with branch currents: $9/300 = 30$ mA and $9/600 = 15$ mA, total 45 mA. ✔",
+				"fr": "Vérification par branches : $9/300 = 30$ mA et $9/600 = 15$ mA, total 45 mA. ✔"
+			}
+		],
+		"answer": {
+			"algorithm": "ohm_current",
+			"inputs": {
+				"V": {
+					"value": 9,
+					"unit": "V"
+				},
+				"R": {
+					"value": 200,
+					"unit": "ohm"
+				}
+			},
+			"canonicalValue": 0.045,
+			"canonicalUnit": "A",
+			"acceptedUnits": ["A", "mA"],
+			"absoluteTolerance": 0.000001,
+			"relativeTolerance": 0.01
+		}
+	},
+	{
+		"id": "exercise.ch02.open_switch_current",
+		"version": 1,
+		"type": "multiple_choice",
+		"conceptIds": ["circuits.open_short"],
+		"formulaIds": [],
+		"difficulty": 1,
+		"kind": "guided",
+		"pool": "practice",
+		"prompt": {
+			"en": "In the circuit shown, switch S1 is open. What current flows through R1?",
+			"fr": "Dans le circuit représenté, l’interrupteur S1 est ouvert. Quel courant traverse R1 ?"
+		},
+		"diagramId": "diagram.ch02.open_circuit",
+		"hints": [
+			{
+				"en": "Current needs a complete loop from + back to −.",
+				"fr": "Le courant a besoin d’une boucle complète du + jusqu’au −."
+			}
+		],
+		"solution": [
+			{
+				"en": "An open switch has (practically) infinite resistance.",
+				"fr": "Un interrupteur ouvert a une résistance (pratiquement) infinie."
+			},
+			{
+				"en": "The loop is broken, so $I = 0$ everywhere, including in R1.",
+				"fr": "La boucle est coupée : $I = 0$ partout, y compris dans R1."
+			}
+		],
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "9 mA",
+					"fr": "9 mA"
+				},
+				"rationale": {
+					"en": "That is $9\\ \\text{V} / 1\\ \\text{k}\\Omega$, the current when the switch is closed.",
+					"fr": "C’est $9\\ \\text{V} / 1\\ \\text{k}\\Omega$, le courant quand l’interrupteur est fermé."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "0 A",
+					"fr": "0 A"
+				},
+				"rationale": {
+					"en": "Correct: an open switch breaks the only path, so no current can flow anywhere in the loop.",
+					"fr": "Exact : l’interrupteur ouvert coupe le seul chemin, aucun courant ne circule dans la boucle."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "A small current that leaks through the gap",
+					"fr": "Un petit courant qui fuit par l’espace"
+				},
+				"rationale": {
+					"en": "Air in a low-voltage switch is an excellent insulator; treat the open switch as infinite resistance.",
+					"fr": "À basse tension, l’air d’un interrupteur ouvert est un excellent isolant : on le considère comme une résistance infinie."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "Current flows until R1 “fills up”",
+					"fr": "Le courant circule jusqu’à ce que R1 soit « pleine »"
+				},
+				"rationale": {
+					"en": "Resistors do not store charge; without a closed loop there is no steady current at all.",
+					"fr": "Une résistance ne stocke pas de charge ; sans boucle fermée il n’y a aucun courant."
+				}
+			}
+		],
+		"correctOptionId": "b"
+	},
+	{
+		"id": "exercise.ch02.open_switch_voltage",
+		"version": 1,
+		"type": "prediction",
+		"conceptIds": ["circuits.open_short"],
+		"formulaIds": [],
+		"difficulty": 2,
+		"kind": "independent",
+		"pool": "practice",
+		"prompt": {
+			"en": "With S1 open, you put a voltmeter across the switch terminals. What does it read?",
+			"fr": "S1 étant ouvert, vous placez un voltmètre aux bornes de l’interrupteur. Qu’indique-t-il ?"
+		},
+		"diagramId": "diagram.ch02.open_circuit",
+		"hints": [
+			{
+				"en": "What is the voltage across R1 when $I = 0$?",
+				"fr": "Quelle est la tension aux bornes de R1 quand $I = 0$ ?"
+			}
+		],
+		"solution": [
+			{
+				"en": "No current flows, so $V_{R1} = I \\times R_1 = 0$ V.",
+				"fr": "Aucun courant : $V_{R1} = I \\times R_1 = 0$ V."
+			},
+			{
+				"en": "The battery’s 9 V must appear somewhere around the loop: across the open switch.",
+				"fr": "Les 9 V de la pile doivent apparaître quelque part dans la boucle : aux bornes de l’interrupteur ouvert."
+			},
+			{
+				"en": "Rule: an open element in a series loop gets the full supply voltage.",
+				"fr": "Règle : un élément ouvert dans une boucle série reçoit toute la tension d’alimentation."
+			}
+		],
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "0 V, because no current flows",
+					"fr": "0 V, puisqu’aucun courant ne circule"
+				},
+				"rationale": {
+					"en": "Common trap: no current does not mean no voltage. The battery voltage still appears somewhere.",
+					"fr": "Piège classique : pas de courant ne veut pas dire pas de tension. La tension de la pile apparaît bien quelque part."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "4.5 V, half the battery voltage",
+					"fr": "4,5 V, la moitié de la tension de la pile"
+				},
+				"rationale": {
+					"en": "There is no reason for an even split; with no current, R1 drops nothing.",
+					"fr": "Aucune raison de partager en deux : sans courant, R1 ne fait chuter aucune tension."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "9 V, the full battery voltage",
+					"fr": "9 V, toute la tension de la pile"
+				},
+				"rationale": {
+					"en": "Correct: no current means 0 V across R1 ($V = IR = 0$), so the whole 9 V appears across the gap in the switch.",
+					"fr": "Exact : sans courant, R1 a 0 V à ses bornes ($V = IR = 0$), donc les 9 V apparaissent entièrement aux bornes de l’interrupteur ouvert."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "It cannot be measured on an open circuit",
+					"fr": "On ne peut pas mesurer un circuit ouvert"
+				},
+				"rationale": {
+					"en": "A voltmeter needs almost no current, so it measures an open circuit perfectly well.",
+					"fr": "Un voltmètre ne demande presque aucun courant : il mesure très bien un circuit ouvert."
+				}
+			}
+		],
+		"correctOptionId": "c"
+	},
+	{
+		"id": "exercise.ch02.short_jumper_effect",
+		"version": 1,
+		"type": "multiple_choice",
+		"conceptIds": ["circuits.open_short"],
+		"formulaIds": [],
+		"difficulty": 2,
+		"kind": "independent",
+		"pool": "practice",
+		"prompt": {
+			"en": "In the circuit shown, a stray jumper wire shorts R2. Compared with the circuit without the jumper, what changes?",
+			"fr": "Dans le circuit représenté, un fil égaré court-circuite R2. Par rapport au circuit sans ce fil, qu’est-ce qui change ?"
+		},
+		"diagramId": "diagram.ch02.short_circuit",
+		"hints": [
+			{
+				"en": "What is the resistance of a 2 kΩ resistor in parallel with a 0 Ω wire?",
+				"fr": "Que vaut une résistance de 2 kΩ en parallèle avec un fil de 0 Ω ?"
+			}
+		],
+		"solution": [
+			{
+				"en": "Without the jumper: $I = 9 / 3000 = 3$ mA.",
+				"fr": "Sans le fil : $I = 9 / 3000 = 3$ mA."
+			},
+			{
+				"en": "With the jumper, R2 is bypassed: $V_{R2} = 0$ V and $I = 9 / 1000 = 9$ mA.",
+				"fr": "Avec le fil, R2 est contournée : $V_{R2} = 0$ V et $I = 9 / 1000 = 9$ mA."
+			},
+			{
+				"en": "Rule: a short has (almost) 0 V across it and lets current through easily.",
+				"fr": "Règle : un court-circuit a (presque) 0 V à ses bornes et laisse passer facilement le courant."
+			}
+		],
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "The voltage across R2 becomes 0 V and the loop current increases",
+					"fr": "La tension aux bornes de R2 devient 0 V et le courant de la boucle augmente"
+				},
+				"rationale": {
+					"en": "Correct: the wire (≈ 0 Ω) bypasses R2, so only R1 limits the current: 9 mA instead of 3 mA.",
+					"fr": "Exact : le fil (≈ 0 Ω) contourne R2, seule R1 limite le courant : 9 mA au lieu de 3 mA."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "Nothing changes; the wire is in parallel and does nothing",
+					"fr": "Rien ne change ; le fil est en parallèle et ne fait rien"
+				},
+				"rationale": {
+					"en": "A 0 Ω wire in parallel dominates: $R \\parallel 0 = 0$.",
+					"fr": "Un fil de 0 Ω en parallèle l’emporte : $R \\parallel 0 = 0$."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "The current stops, like an open circuit",
+					"fr": "Le courant s’arrête, comme pour un circuit ouvert"
+				},
+				"rationale": {
+					"en": "That would be an open circuit. A short is the opposite: an extra easy path.",
+					"fr": "Ce serait un circuit ouvert. Un court-circuit est l’inverse : un chemin facile en plus."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "R2 gets the full 9 V and heats up",
+					"fr": "R2 reçoit les 9 V et chauffe"
+				},
+				"rationale": {
+					"en": "The jumper forces both ends of R2 to the same node, so R2 has 0 V and carries no current.",
+					"fr": "Le fil impose le même nœud aux deux extrémités de R2 : elle a 0 V à ses bornes et n’est parcourue par aucun courant."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch02.short_keys_pocket",
+		"version": 1,
+		"type": "multiple_choice",
+		"conceptIds": ["circuits.open_short"],
+		"formulaIds": [],
+		"difficulty": 1,
+		"kind": "applied",
+		"pool": "practice",
+		"prompt": {
+			"en": "You carry a spare 9 V battery loose in a pocket with your keys. Why is this a bad idea?",
+			"fr": "Vous transportez une pile de 9 V de rechange en vrac dans une poche, avec vos clés. Pourquoi est-ce une mauvaise idée ?"
+		},
+		"hints": [
+			{
+				"en": "The two terminals of a 9 V battery are very close together.",
+				"fr": "Les deux bornes d’une pile de 9 V sont très proches l’une de l’autre."
+			}
+		],
+		"solution": [
+			{
+				"en": "A key bridging both terminals is a short circuit (≈ 0 Ω).",
+				"fr": "Une clé qui relie les deux bornes est un court-circuit (≈ 0 Ω)."
+			},
+			{
+				"en": "Current is then limited only by the battery’s internal resistance: it can reach amperes and heat the battery dangerously. Store batteries with terminal caps or in their packaging; lithium cells are even more dangerous.",
+				"fr": "Le courant n’est alors limité que par la résistance interne de la pile : il peut atteindre plusieurs ampères et faire dangereusement chauffer la pile. Rangez les piles avec un capuchon ou dans leur emballage ; les éléments au lithium sont encore plus dangereux."
+			}
+		],
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "The keys could make an open circuit and drain the battery",
+					"fr": "Les clés pourraient créer un circuit ouvert et vider la pile"
+				},
+				"rationale": {
+					"en": "An open circuit draws no current, so it cannot drain anything.",
+					"fr": "Un circuit ouvert ne tire aucun courant : il ne peut rien vider."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "Metal keys can touch both terminals and short-circuit the battery: large current, heat, possible burns or fire",
+					"fr": "Des clés métalliques peuvent toucher les deux bornes et court-circuiter la pile : fort courant, chaleur, risque de brûlure ou d’incendie"
+				},
+				"rationale": {
+					"en": "Correct: a key is almost 0 Ω, so only the battery’s small internal resistance limits the current. The battery and keys can get very hot.",
+					"fr": "Exact : une clé fait presque 0 Ω ; seule la petite résistance interne de la pile limite le courant. Pile et clés peuvent devenir brûlantes."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "It is safe: 9 V is too low to cause any harm",
+					"fr": "Aucun risque : 9 V, c’est trop faible pour être dangereux"
+				},
+				"rationale": {
+					"en": "9 V will not shock you, but a short circuit can still produce dangerous heat.",
+					"fr": "9 V ne vous électrocutera pas, mais un court-circuit peut quand même produire une chaleur dangereuse."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "The keys will become magnetised",
+					"fr": "Les clés vont s’aimanter"
+				},
+				"rationale": {
+					"en": "Not the concern here; the hazard is heat from a short-circuit current.",
+					"fr": "Ce n’est pas le problème : le danger vient de la chaleur due au courant de court-circuit."
+				}
+			}
+		],
+		"correctOptionId": "b"
+	},
+	{
+		"id": "exercise.ch02.exam_short_current",
+		"version": 1,
+		"type": "numeric",
+		"conceptIds": ["circuits.open_short"],
+		"formulaIds": [],
+		"difficulty": 2,
+		"kind": "independent",
+		"pool": "exam",
+		"prompt": {
+			"en": "In the circuit shown, R2 (2 kΩ) is shorted by a jumper wire. What current now flows from the 9 V battery?",
+			"fr": "Dans le circuit représenté, R2 (2 kΩ) est court-circuitée par un fil. Quel courant la pile de 9 V fournit-elle maintenant ?"
+		},
+		"diagramId": "diagram.ch02.short_circuit",
+		"hints": [],
+		"solution": [
+			{
+				"en": "The jumper bypasses R2: only R1 = 1 kΩ remains in the loop.",
+				"fr": "Le fil contourne R2 : seule R1 = 1 kΩ reste dans la boucle."
+			},
+			{
+				"en": "$I = \\frac{9}{1000} = 0.009\\ \\text{A} = 9\\ \\text{mA}$ (instead of 3 mA without the short).",
+				"fr": "$I = \\frac{9}{1000} = 0{,}009\\ \\text{A} = 9\\ \\text{mA}$ (au lieu de 3 mA sans le court-circuit)."
+			}
+		],
+		"answer": {
+			"algorithm": "ohm_current",
+			"inputs": {
+				"V": {
+					"value": 9,
+					"unit": "V"
+				},
+				"R": {
+					"value": 1,
+					"unit": "kohm"
+				}
+			},
+			"canonicalValue": 0.009,
+			"canonicalUnit": "A",
+			"acceptedUnits": ["A", "mA"],
+			"absoluteTolerance": 0.000001,
+			"relativeTolerance": 0.01
+		}
+	},
+	{
+		"id": "exercise.ch02.exam_open_resistance",
+		"version": 1,
+		"type": "multiple_choice",
+		"conceptIds": ["circuits.open_short"],
+		"formulaIds": [],
+		"difficulty": 1,
+		"kind": "independent",
+		"pool": "exam",
+		"prompt": {
+			"en": "Which statement correctly describes an ideal open circuit and an ideal short circuit?",
+			"fr": "Quelle affirmation décrit correctement un circuit ouvert idéal et un court-circuit idéal ?"
+		},
+		"hints": [],
+		"solution": [
+			{
+				"en": "Open circuit: a break, $R \\to \\infty$, so $I = 0$ (but there may be voltage across it).",
+				"fr": "Circuit ouvert : une coupure, $R \\to \\infty$, donc $I = 0$ (mais il peut y avoir une tension à ses bornes)."
+			},
+			{
+				"en": "Short circuit: $R \\approx 0$, so $V = IR \\approx 0$ (but large current may flow).",
+				"fr": "Court-circuit : $R \\approx 0$, donc $V = IR \\approx 0$ (mais un fort courant peut circuler)."
+			}
+		],
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "Open: infinite resistance, zero current. Short: zero resistance, zero voltage.",
+					"fr": "Ouvert : résistance infinie, courant nul. Court-circuit : résistance nulle, tension nulle."
+				},
+				"rationale": {
+					"en": "Correct: these are the two extremes of resistance.",
+					"fr": "Exact : ce sont les deux extrêmes de la résistance."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "Open: zero resistance, zero current. Short: infinite resistance.",
+					"fr": "Ouvert : résistance nulle, courant nul. Court-circuit : résistance infinie."
+				},
+				"rationale": {
+					"en": "Swapped: a gap blocks current (infinite R), a wire conducts freely (zero R).",
+					"fr": "Inversé : une coupure bloque le courant (R infinie), un fil conduit librement (R nulle)."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "Both have zero voltage across them",
+					"fr": "Les deux ont une tension nulle à leurs bornes"
+				},
+				"rationale": {
+					"en": "An open circuit can have the full supply voltage across it.",
+					"fr": "Un circuit ouvert peut avoir toute la tension d’alimentation à ses bornes."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "Both stop the current",
+					"fr": "Les deux arrêtent le courant"
+				},
+				"rationale": {
+					"en": "Only the open circuit stops it; a short lets current through very easily.",
+					"fr": "Seul le circuit ouvert l’arrête ; un court-circuit laisse au contraire passer le courant très facilement."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch02.exam_series_led_open",
+		"version": 1,
+		"type": "prediction",
+		"conceptIds": ["circuits.open_short"],
+		"formulaIds": [],
+		"difficulty": 2,
+		"kind": "independent",
+		"pool": "exam",
+		"prompt": {
+			"en": "Five LEDs (each with its own resistor) are wired in one series string. One LED breaks and becomes an open circuit. What do you expect?",
+			"fr": "Cinq LED (chacune avec sa résistance) sont câblées en une seule chaîne série. Une LED casse et devient un circuit ouvert. À quoi vous attendez-vous ?"
+		},
+		"hints": [],
+		"solution": [
+			{
+				"en": "A series string has one path. An open anywhere makes $I = 0$ for every element, so all LEDs go out.",
+				"fr": "Une chaîne série n’a qu’un chemin. Une coupure n’importe où donne $I = 0$ pour tous les éléments : toutes les LED s’éteignent."
+			}
+		],
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "Only the broken LED goes dark",
+					"fr": "Seule la LED cassée s’éteint"
+				},
+				"rationale": {
+					"en": "That would happen with parallel branches. In series, one break interrupts the only path.",
+					"fr": "Ce serait le cas avec des branches en parallèle. En série, une coupure interrompt le seul chemin."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "The other four get brighter",
+					"fr": "Les quatre autres brillent davantage"
+				},
+				"rationale": {
+					"en": "That is what a short would do to the remaining LEDs, not an open.",
+					"fr": "C’est ce que provoquerait un court-circuit, pas une coupure."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "All five LEDs go dark",
+					"fr": "Les cinq LED s’éteignent"
+				},
+				"rationale": {
+					"en": "Correct: the open LED breaks the loop, so the current is zero everywhere.",
+					"fr": "Exact : la LED ouverte coupe la boucle, le courant est nul partout."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "The battery is short-circuited",
+					"fr": "La pile est en court-circuit"
+				},
+				"rationale": {
+					"en": "An open adds infinite resistance; it is the opposite of a short.",
+					"fr": "Une coupure ajoute une résistance infinie : c’est l’inverse d’un court-circuit."
+				}
+			}
+		],
+		"correctOptionId": "c"
+	},
+	{
+		"id": "exercise.ch02.exam_parallel_branch_open",
+		"version": 1,
+		"type": "multiple_choice",
+		"conceptIds": ["circuits.open_short"],
+		"formulaIds": [],
+		"difficulty": 2,
+		"kind": "applied",
+		"pool": "exam",
+		"prompt": {
+			"en": "Two bike lights are wired in parallel to the same 6 V battery. One bulb burns out (its filament breaks open). What happens to the other bulb and to the battery current?",
+			"fr": "Deux feux de vélo sont branchés en parallèle sur la même pile de 6 V. Une ampoule grille (son filament se coupe). Que deviennent l’autre ampoule et le courant de la pile ?"
+		},
+		"hints": [],
+		"solution": [
+			{
+				"en": "The broken branch becomes an open circuit: its current is 0.",
+				"fr": "La branche cassée devient un circuit ouvert : son courant est nul."
+			},
+			{
+				"en": "The other branch is still connected across 6 V, so it behaves exactly as before. The battery now supplies only that branch’s current.",
+				"fr": "L’autre branche est toujours reliée aux 6 V : elle se comporte exactement comme avant. La pile ne fournit plus que le courant de cette branche."
+			}
+		],
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "The other bulb goes out too",
+					"fr": "L’autre ampoule s’éteint aussi"
+				},
+				"rationale": {
+					"en": "That is the series behaviour. In parallel, the other branch still has its own complete path.",
+					"fr": "C’est le comportement en série. En parallèle, l’autre branche garde son propre chemin complet."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "The other bulb shines brighter and the battery current doubles",
+					"fr": "L’autre ampoule brille plus et le courant de la pile double"
+				},
+				"rationale": {
+					"en": "The working branch still sees the same 6 V, so its current does not change.",
+					"fr": "La branche qui fonctionne reçoit toujours 6 V : son courant ne change pas."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "The other bulb stays the same; the battery current drops to that one bulb’s current",
+					"fr": "L’autre ampoule reste identique ; le courant de la pile tombe au courant de cette seule ampoule"
+				},
+				"rationale": {
+					"en": "Correct: each branch is independent and sees 6 V; the total is now one branch current instead of two.",
+					"fr": "Exact : chaque branche est indépendante et reçoit 6 V ; le total ne comprend plus qu’un courant de branche au lieu de deux."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "The battery becomes short-circuited",
+					"fr": "La pile se retrouve en court-circuit"
+				},
+				"rationale": {
+					"en": "A broken filament is an open circuit, not a short.",
+					"fr": "Un filament coupé est un circuit ouvert, pas un court-circuit."
+				}
+			}
+		],
+		"correctOptionId": "c"
+	},
+	{
+		"id": "exercise.ch02.breadboard_row_connections",
+		"version": 1,
+		"type": "multiple_choice",
+		"conceptIds": ["practice.breadboard"],
+		"formulaIds": [],
+		"difficulty": 1,
+		"kind": "guided",
+		"pool": "practice",
+		"prompt": {
+			"en": "On a standard breadboard, numbered rows run across the board and the holes in each row are lettered a–e (left of the centre gap) and f–j (right of the gap). Which holes are connected to hole **12a**?",
+			"fr": "Sur une plaque d’essai standard, les rangées numérotées traversent la plaque et les trous de chaque rangée sont repérés a–e (à gauche de la rainure centrale) et f–j (à droite). Quels trous sont reliés au trou **12a** ?"
+		},
+		"hints": [
+			{
+				"en": "Under each half-row of five holes there is one metal clip.",
+				"fr": "Sous chaque demi-rangée de cinq trous se trouve une seule lame métallique."
+			}
+		],
+		"solution": [
+			{
+				"en": "Each half-row (a–e or f–j) is one metal strip: one electrical node.",
+				"fr": "Chaque demi-rangée (a–e ou f–j) est une seule lame : un seul nœud électrique."
+			},
+			{
+				"en": "So 12a connects to 12b–12e only. The gap isolates 12f–12j.",
+				"fr": "12a est donc relié à 12b–12e seulement. La rainure isole 12f–12j."
+			}
+		],
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "12b, 12c, 12d and 12e",
+					"fr": "12b, 12c, 12d et 12e"
+				},
+				"rationale": {
+					"en": "Correct: the five holes a–e of the same row share one metal clip.",
+					"fr": "Exact : les cinq trous a–e d’une même rangée partagent une même lame métallique."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "12b to 12j (the whole row)",
+					"fr": "De 12b à 12j (toute la rangée)"
+				},
+				"rationale": {
+					"en": "The centre gap separates a–e from f–j; they are two different nodes.",
+					"fr": "La rainure centrale sépare a–e de f–j : ce sont deux nœuds différents."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "11a and 13a (the neighbouring rows)",
+					"fr": "11a et 13a (les rangées voisines)"
+				},
+				"rationale": {
+					"en": "Neighbouring rows are not connected; each row is its own node.",
+					"fr": "Les rangées voisines ne sont pas reliées ; chaque rangée est un nœud distinct."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "All the holes in column a",
+					"fr": "Tous les trous de la colonne a"
+				},
+				"rationale": {
+					"en": "Only the power rails run along the length of the board; column a is not one conductor.",
+					"fr": "Seuls les rails d’alimentation courent dans la longueur ; la colonne a n’est pas un seul conducteur."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch02.breadboard_resistor_same_row",
+		"version": 1,
+		"type": "diagnose",
+		"conceptIds": ["practice.breadboard"],
+		"formulaIds": [],
+		"difficulty": 2,
+		"kind": "independent",
+		"pool": "practice",
+		"prompt": {
+			"en": "A student plugs a resistor into holes 10a and 10e, then wires the rest of the LED circuit. The LED is far too bright. What is wrong?",
+			"fr": "Un élève enfiche une résistance dans les trous 10a et 10e, puis câble le reste du circuit LED. La LED éclaire beaucoup trop. Quel est le problème ?"
+		},
+		"hints": [
+			{
+				"en": "Which holes are connected to 10a inside the board?",
+				"fr": "Quels trous sont reliés à 10a à l’intérieur de la plaque ?"
+			}
+		],
+		"solution": [
+			{
+				"en": "10a and 10e sit on the same metal strip: they are one node.",
+				"fr": "10a et 10e sont sur la même lame : c’est un seul nœud."
+			},
+			{
+				"en": "A part with both legs on one node is shorted. Place each leg in a different row, e.g. 10a and 14a.",
+				"fr": "Un composant dont les deux pattes sont sur un même nœud est court-circuité. Placez chaque patte dans une rangée différente, par exemple 10a et 14a."
+			},
+			{
+				"en": "Safety: an LED without its resistor can burn out quickly.",
+				"fr": "Sécurité : une LED sans sa résistance peut griller rapidement."
+			}
+		],
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "The resistor value is too large",
+					"fr": "La valeur de la résistance est trop grande"
+				},
+				"rationale": {
+					"en": "A too-large resistor would make the LED dimmer, not brighter.",
+					"fr": "Une résistance trop grande rendrait la LED moins lumineuse, pas plus."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "Both resistor legs are in the same connected row, so the resistor is shorted",
+					"fr": "Les deux pattes de la résistance sont dans la même rangée reliée : la résistance est court-circuitée"
+				},
+				"rationale": {
+					"en": "Correct: 10a and 10e are the same node, so current bypasses the resistor through the metal strip and nothing limits the LED current.",
+					"fr": "Exact : 10a et 10e sont le même nœud ; le courant contourne la résistance par la lame métallique et plus rien ne limite le courant de la LED."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "The resistor is in backwards",
+					"fr": "La résistance est montée à l’envers"
+				},
+				"rationale": {
+					"en": "Resistors have no polarity; they work either way round.",
+					"fr": "Une résistance n’a pas de sens : elle fonctionne dans les deux sens."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "The centre gap is blocking the current",
+					"fr": "La rainure centrale bloque le courant"
+				},
+				"rationale": {
+					"en": "Holes a–e are all on one side of the gap; the gap is not involved.",
+					"fr": "Les trous a–e sont tous du même côté de la rainure : elle n’intervient pas ici."
+				}
+			}
+		],
+		"correctOptionId": "b"
+	},
+	{
+		"id": "exercise.ch02.breadboard_build_order",
+		"version": 1,
+		"type": "ordering",
+		"conceptIds": ["practice.breadboard"],
+		"formulaIds": [],
+		"difficulty": 2,
+		"kind": "independent",
+		"pool": "practice",
+		"prompt": {
+			"en": "Put these steps for building a battery–resistor–LED circuit on a breadboard in a safe, sensible order.",
+			"fr": "Remettez dans un ordre sûr et logique ces étapes de montage d’un circuit pile–résistance–LED sur une plaque d’essai."
+		},
+		"hints": [
+			{
+				"en": "Power always goes on last, after checking.",
+				"fr": "L’alimentation se branche toujours en dernier, après vérification."
+			}
+		],
+		"solution": [
+			{
+				"en": "Work unpowered: disconnect the battery first.",
+				"fr": "Travailler hors tension : débrancher d’abord la pile."
+			},
+			{
+				"en": "Place the resistor, then the LED, so each net is one row or one rail.",
+				"fr": "Placer la résistance, puis la LED, pour que chaque nœud soit une rangée ou un rail."
+			},
+			{
+				"en": "Check against the schematic, and only then connect the battery.",
+				"fr": "Vérifier par rapport au schéma, et seulement ensuite brancher la pile."
+			}
+		],
+		"items": [
+			{
+				"id": "i1",
+				"text": {
+					"en": "Make sure the battery is disconnected",
+					"fr": "Vérifier que la pile est débranchée"
+				}
+			},
+			{
+				"id": "i2",
+				"text": {
+					"en": "Plug in the resistor from the + rail to an empty row (e.g. row 10)",
+					"fr": "Enficher la résistance entre le rail + et une rangée libre (par ex. rangée 10)"
+				}
+			},
+			{
+				"id": "i3",
+				"text": {
+					"en": "Plug the LED long leg (anode) into row 10 and the short leg (cathode) into the − rail",
+					"fr": "Enficher la patte longue de la LED (anode) dans la rangée 10 et la patte courte (cathode) dans le rail −"
+				}
+			},
+			{
+				"id": "i4",
+				"text": {
+					"en": "Check every connection against the schematic",
+					"fr": "Vérifier chaque connexion par rapport au schéma"
+				}
+			},
+			{
+				"id": "i5",
+				"text": {
+					"en": "Connect the battery to the rails, red to +, black to −",
+					"fr": "Brancher la pile sur les rails, rouge sur +, noir sur −"
+				}
+			}
+		],
+		"correctOrder": ["i1", "i2", "i3", "i4", "i5"],
+		"displayOrder": ["i3", "i5", "i1", "i4", "i2"]
+	},
+	{
+		"id": "exercise.ch02.breadboard_split_rails",
+		"version": 1,
+		"type": "diagnose",
+		"conceptIds": ["practice.breadboard"],
+		"formulaIds": [],
+		"difficulty": 2,
+		"kind": "applied",
+		"pool": "practice",
+		"prompt": {
+			"en": "On a long breadboard you connect the battery to the power rails at the left end. A circuit built near the right end gets no power at all, although the same circuit works at the left end. What is the most likely cause?",
+			"fr": "Sur une grande plaque d’essai, vous branchez la pile sur les rails d’alimentation à l’extrémité gauche. Un circuit monté près de l’extrémité droite n’est pas alimenté du tout, alors que le même circuit fonctionne à gauche. Quelle est la cause la plus probable ?"
+		},
+		"hints": [
+			{
+				"en": "Look closely at the printed red and blue lines along the rails.",
+				"fr": "Regardez attentivement les lignes rouges et bleues imprimées le long des rails."
+			}
+		],
+		"solution": [
+			{
+				"en": "Same circuit, works on the left, dead on the right: the supply is not reaching the right end.",
+				"fr": "Même circuit, il fonctionne à gauche, rien à droite : l’alimentation n’arrive pas à droite."
+			},
+			{
+				"en": "Long breadboards often have split rails. Check continuity with a multimeter (unpowered) or add jumper wires across the split.",
+				"fr": "Les grandes plaques ont souvent des rails coupés. Vérifiez la continuité au multimètre (hors tension) ou ajoutez des fils de liaison au niveau de la coupure."
+			}
+		],
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "The rails are split in the middle, so the right half of each rail is not connected",
+					"fr": "Les rails sont coupés au milieu : la moitié droite de chaque rail n’est pas reliée"
+				},
+				"rationale": {
+					"en": "Correct: many long breadboards have rails split halfway (often shown by a gap in the printed line). Bridge them with short jumper wires.",
+					"fr": "Exact : beaucoup de grandes plaques ont des rails coupés au milieu (souvent signalé par une interruption de la ligne imprimée). Reliez les deux moitiés avec de petits fils."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "The battery voltage drops along the rail",
+					"fr": "La tension de la pile baisse le long du rail"
+				},
+				"rationale": {
+					"en": "A rail is a metal strip of nearly 0 Ω; it does not lose a noticeable voltage over its length at these currents.",
+					"fr": "Un rail est une lame métallique de presque 0 Ω : à ces courants, il ne perd pas de tension notable sur sa longueur."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "The right end is short-circuited",
+					"fr": "L’extrémité droite est en court-circuit"
+				},
+				"rationale": {
+					"en": "A short would also affect the left circuit and heat the battery; here the right side simply sees nothing.",
+					"fr": "Un court-circuit affecterait aussi le circuit de gauche et ferait chauffer la pile ; ici le côté droit ne reçoit simplement rien."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "Rows on the right side are connected to the left side through the centre gap",
+					"fr": "Les rangées de droite sont reliées à celles de gauche par la rainure centrale"
+				},
+				"rationale": {
+					"en": "The centre gap separates the two halves of each row; it is unrelated to the rails.",
+					"fr": "La rainure centrale sépare les deux moitiés de chaque rangée ; elle n’a rien à voir avec les rails."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch02.exam_breadboard_centre_gap",
+		"version": 1,
+		"type": "multiple_choice",
+		"conceptIds": ["practice.breadboard"],
+		"formulaIds": [],
+		"difficulty": 1,
+		"kind": "independent",
+		"pool": "exam",
+		"prompt": {
+			"en": "What is the main purpose of the groove (centre gap) running down the middle of a breadboard?",
+			"fr": "À quoi sert principalement la rainure centrale qui parcourt le milieu d’une plaque d’essai ?"
+		},
+		"hints": [],
+		"solution": [
+			{
+				"en": "The gap breaks each row into two independent half-rows (a–e and f–j). A chip placed across it has every pin on its own node.",
+				"fr": "La rainure coupe chaque rangée en deux demi-rangées indépendantes (a–e et f–j). Une puce placée à cheval a chaque broche sur son propre nœud."
+			}
+		],
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "It lets a chip (DIP IC) straddle the gap so each of its pins lands in its own separate row",
+					"fr": "Elle permet à une puce (circuit intégré DIP) de l’enjamber pour que chacune de ses broches soit dans une rangée distincte"
+				},
+				"rationale": {
+					"en": "Correct: the gap isolates the left and right half-rows, so opposite pins of the chip are not connected.",
+					"fr": "Exact : la rainure isole les demi-rangées gauche et droite, les broches opposées de la puce ne sont donc pas reliées."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "It carries the positive supply",
+					"fr": "Elle transporte l’alimentation positive"
+				},
+				"rationale": {
+					"en": "The supply is carried by the rails along the edges, not by the gap.",
+					"fr": "L’alimentation passe par les rails sur les bords, pas par la rainure."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "It cools the components",
+					"fr": "Elle refroidit les composants"
+				},
+				"rationale": {
+					"en": "It has no cooling role; it is an electrical separation.",
+					"fr": "Elle n’a aucun rôle de refroidissement : c’est une séparation électrique."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "It connects the left and right halves of each row",
+					"fr": "Elle relie les moitiés gauche et droite de chaque rangée"
+				},
+				"rationale": {
+					"en": "The opposite: it separates them.",
+					"fr": "C’est l’inverse : elle les sépare."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch02.exam_breadboard_led_reversed",
+		"version": 1,
+		"type": "diagnose",
+		"conceptIds": ["practice.breadboard"],
+		"formulaIds": [],
+		"difficulty": 2,
+		"kind": "independent",
+		"pool": "exam",
+		"prompt": {
+			"en": "On the breadboard, the resistor goes from the + rail to row 8. The LED’s **short** leg is in row 8 and its **long** leg is in the − rail. The battery is fine. The LED stays dark. Why?",
+			"fr": "Sur la plaque, la résistance va du rail + à la rangée 8. La patte **courte** de la LED est dans la rangée 8 et sa patte **longue** dans le rail −. La pile est bonne. La LED reste éteinte. Pourquoi ?"
+		},
+		"hints": [],
+		"solution": [
+			{
+				"en": "The LED’s long leg (anode) is on the − rail: it is reverse-biased.",
+				"fr": "La patte longue de la LED (anode) est sur le rail − : elle est polarisée en inverse."
+			},
+			{
+				"en": "Swap the LED legs: long leg in row 8, short leg in the − rail.",
+				"fr": "Inverser la LED : patte longue dans la rangée 8, patte courte dans le rail −."
+			}
+		],
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "The resistor is shorted",
+					"fr": "La résistance est court-circuitée"
+				},
+				"rationale": {
+					"en": "Its legs are on two different nodes (+ rail and row 8), so it is not shorted.",
+					"fr": "Ses pattes sont sur deux nœuds différents (rail + et rangée 8) : elle n’est pas court-circuitée."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "The LED is reversed: its anode (long leg) must face the + side",
+					"fr": "La LED est à l’envers : son anode (patte longue) doit être du côté +"
+				},
+				"rationale": {
+					"en": "Correct: an LED only conducts from anode (long leg) to cathode (short leg). Reversed, it blocks the current.",
+					"fr": "Exact : une LED ne conduit que de l’anode (patte longue) vers la cathode (patte courte). À l’envers, elle bloque le courant."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "Row 8 is not connected to anything",
+					"fr": "La rangée 8 n’est reliée à rien"
+				},
+				"rationale": {
+					"en": "Row 8 connects the resistor and the LED, which is exactly its job.",
+					"fr": "La rangée 8 relie la résistance et la LED : c’est exactement son rôle."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "The − rail cannot be used for LEDs",
+					"fr": "Le rail − ne peut pas servir pour les LED"
+				},
+				"rationale": {
+					"en": "Any part can connect to a rail; the problem is the LED orientation.",
+					"fr": "N’importe quel composant peut être relié à un rail ; le problème est le sens de la LED."
+				}
+			}
+		],
+		"correctOptionId": "b"
+	},
+	{
+		"id": "exercise.ch02.exam_breadboard_series_placement",
+		"version": 1,
+		"type": "multiple_choice",
+		"conceptIds": ["practice.breadboard"],
+		"formulaIds": [],
+		"difficulty": 2,
+		"kind": "applied",
+		"pool": "exam",
+		"prompt": {
+			"en": "You want R1 and R2 **in series** on a breadboard (no jumper wires). Which placement is correct?",
+			"fr": "Vous voulez placer R1 et R2 **en série** sur une plaque d’essai (sans fil de liaison). Quel placement est correct ?"
+		},
+		"hints": [],
+		"solution": [
+			{
+				"en": "Series means one end of R1 meets one end of R2 at a node with nothing else on it.",
+				"fr": "En série, une extrémité de R1 rejoint une extrémité de R2 en un nœud où rien d’autre n’est branché."
+			},
+			{
+				"en": "On a breadboard a node is a half-row: R1 (rows 10–14) and R2 (rows 14–18) share row 14 only.",
+				"fr": "Sur une plaque d’essai, un nœud est une demi-rangée : R1 (rangées 10–14) et R2 (rangées 14–18) ne partagent que la rangée 14."
+			}
+		],
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "R1 from 10a to 14a, R2 from 10b to 14b",
+					"fr": "R1 de 10a à 14a, R2 de 10b à 14b"
+				},
+				"rationale": {
+					"en": "Both resistors join the same two rows (10 and 14): that is parallel, not series.",
+					"fr": "Les deux résistances relient les deux mêmes rangées (10 et 14) : c’est un montage en parallèle, pas en série."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "R1 from 10a to 14a, R2 from 14b to 18b",
+					"fr": "R1 de 10a à 14a, R2 de 14b à 18b"
+				},
+				"rationale": {
+					"en": "Correct: they share only row 14, and nothing else connects there, so the same current flows through R1 then R2.",
+					"fr": "Exact : elles ne partagent que la rangée 14, où rien d’autre n’est branché ; le même courant traverse R1 puis R2."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "R1 from 10a to 10e, R2 from 14a to 14e",
+					"fr": "R1 de 10a à 10e, R2 de 14a à 14e"
+				},
+				"rationale": {
+					"en": "Each resistor has both legs in one row, so both are shorted.",
+					"fr": "Chaque résistance a ses deux pattes dans une même rangée : les deux sont court-circuitées."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "R1 from 10a to 14a, R2 from 16a to 20a",
+					"fr": "R1 de 10a à 14a, R2 de 16a à 20a"
+				},
+				"rationale": {
+					"en": "The resistors share no row, so they are not connected at all.",
+					"fr": "Les résistances ne partagent aucune rangée : elles ne sont pas reliées du tout."
+				}
+			}
+		],
+		"correctOptionId": "b"
+	},
+	{
+		"id": "exercise.ch02.meter_ammeter_series",
+		"version": 1,
+		"type": "multiple_choice",
+		"conceptIds": ["measure.multimeter"],
+		"formulaIds": [],
+		"difficulty": 1,
+		"kind": "guided",
+		"pool": "practice",
+		"prompt": {
+			"en": "The diagram shows an ammeter A1 measuring the current through R1. How is the ammeter connected, and why?",
+			"fr": "Le schéma montre un ampèremètre A1 qui mesure le courant dans R1. Comment est-il branché, et pourquoi ?"
+		},
+		"diagramId": "diagram.ch02.ammeter",
+		"hints": [
+			{
+				"en": "Current is “flow through”; voltage is “difference across”.",
+				"fr": "Le courant « traverse » ; la tension est une « différence entre deux points »."
+			}
+		],
+		"solution": [
+			{
+				"en": "Current is measured through a component, so the ammeter goes in series with it.",
+				"fr": "Le courant se mesure à travers un composant : l’ampèremètre se place en série avec lui."
+			},
+			{
+				"en": "An ideal ammeter has 0 Ω, so inserting it does not change the current.",
+				"fr": "Un ampèremètre idéal fait 0 Ω : l’insérer ne change pas le courant."
+			}
+		],
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "In parallel with R1, so it sees the same voltage",
+					"fr": "En parallèle sur R1, pour voir la même tension"
+				},
+				"rationale": {
+					"en": "Parallel is for voltmeters. An ammeter in parallel would short R1.",
+					"fr": "Le parallèle, c’est pour le voltmètre. Un ampèremètre en parallèle court-circuiterait R1."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "In series, so the whole loop current passes through it",
+					"fr": "En série, pour que tout le courant de la boucle le traverse"
+				},
+				"rationale": {
+					"en": "Correct: to count the charge flowing, the meter must be part of the only path; you open the circuit and insert it.",
+					"fr": "Exact : pour compter la charge qui passe, l’appareil doit faire partie du seul chemin ; on ouvre le circuit et on l’insère."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "Directly across the battery",
+					"fr": "Directement aux bornes de la pile"
+				},
+				"rationale": {
+					"en": "An ammeter is almost 0 Ω: across a battery it is a short circuit and blows the meter fuse.",
+					"fr": "Un ampèremètre fait presque 0 Ω : aux bornes d’une pile, c’est un court-circuit qui fait sauter le fusible."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "It does not matter how it is connected",
+					"fr": "Peu importe le branchement"
+				},
+				"rationale": {
+					"en": "Placement matters: series for current, parallel for voltage.",
+					"fr": "Le branchement compte : en série pour le courant, en parallèle pour la tension."
+				}
+			}
+		],
+		"correctOptionId": "b"
+	},
+	{
+		"id": "exercise.ch02.meter_voltmeter_reading",
+		"version": 1,
+		"type": "numeric",
+		"conceptIds": ["measure.multimeter"],
+		"formulaIds": [],
+		"difficulty": 2,
+		"kind": "independent",
+		"pool": "practice",
+		"prompt": {
+			"en": "In the circuit shown (9 V battery, R1 = 1 kΩ and R2 = 2 kΩ in series), what does the ideal voltmeter V1 across R2 read?",
+			"fr": "Dans le circuit représenté (pile de 9 V, R1 = 1 kΩ et R2 = 2 kΩ en série), qu’indique le voltmètre idéal V1 branché aux bornes de R2 ?"
+		},
+		"diagramId": "diagram.ch02.voltmeter",
+		"hints": [
+			{
+				"en": "Find the loop current first: $I = V / (R_1 + R_2)$.",
+				"fr": "Calculez d’abord le courant de la boucle : $I = V / (R_1 + R_2)$."
+			},
+			{
+				"en": "Then $V_{R2} = I \\times R_2$.",
+				"fr": "Puis $V_{R2} = I \\times R_2$."
+			}
+		],
+		"solution": [
+			{
+				"en": "$I = \\frac{9}{1000 + 2000} = 0.003\\ \\text{A} = 3\\ \\text{mA}$",
+				"fr": "$I = \\frac{9}{1000 + 2000} = 0{,}003\\ \\text{A} = 3\\ \\text{mA}$"
+			},
+			{
+				"en": "$V_{R2} = 0.003 \\times 2000 = 6\\ \\text{V}$",
+				"fr": "$V_{R2} = 0{,}003 \\times 2000 = 6\\ \\text{V}$"
+			},
+			{
+				"en": "An ideal voltmeter draws no current, so it does not change this value.",
+				"fr": "Un voltmètre idéal ne tire aucun courant : il ne modifie pas cette valeur."
+			}
+		],
+		"answer": {
+			"algorithm": "voltage_divider_unloaded",
+			"inputs": {
+				"Vin": {
+					"value": 9,
+					"unit": "V"
+				},
+				"Rtop": {
+					"value": 1,
+					"unit": "kohm"
+				},
+				"Rbottom": {
+					"value": 2,
+					"unit": "kohm"
+				}
+			},
+			"canonicalValue": 6,
+			"canonicalUnit": "V",
+			"acceptedUnits": ["V", "mV"],
+			"absoluteTolerance": 0.0001,
+			"relativeTolerance": 0.01
+		}
+	},
+	{
+		"id": "exercise.ch02.meter_amps_across_battery",
+		"version": 1,
+		"type": "diagnose",
+		"conceptIds": ["measure.multimeter"],
+		"formulaIds": [],
+		"difficulty": 2,
+		"kind": "independent",
+		"pool": "practice",
+		"prompt": {
+			"en": "After measuring an LED current, a student forgets to move the red lead back from the **mA** jack, then touches the probes across a 9 V battery “to check its voltage”. The meter shows nothing and now reads 0 on every current measurement. What happened?",
+			"fr": "Après avoir mesuré le courant d’une LED, un élève oublie de remettre le cordon rouge hors de la borne **mA**, puis pose les pointes aux bornes d’une pile de 9 V « pour vérifier sa tension ». L’appareil n’affiche rien et indique désormais 0 pour toute mesure de courant. Que s’est-il passé ?"
+		},
+		"hints": [
+			{
+				"en": "What is the resistance of a meter set to measure current?",
+				"fr": "Quelle est la résistance d’un appareil réglé pour mesurer un courant ?"
+			}
+		],
+		"solution": [
+			{
+				"en": "In the mA jack the meter is a near-0 Ω path. Across the battery, it short-circuits it.",
+				"fr": "Sur la borne mA, l’appareil est un chemin de presque 0 Ω. Aux bornes de la pile, il la court-circuite."
+			},
+			{
+				"en": "The large current blew the fuse. Rule: never put an ammeter across a source; always return the red lead to the V jack after measuring current.",
+				"fr": "Le fort courant a grillé le fusible. Règle : ne jamais brancher un ampèremètre aux bornes d’une source ; toujours remettre le cordon rouge sur la borne V après une mesure de courant."
+			}
+		],
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "The battery was flat",
+					"fr": "La pile était vide"
+				},
+				"rationale": {
+					"en": "A flat battery would not stop the meter’s current ranges from working afterwards.",
+					"fr": "Une pile vide n’empêcherait pas ensuite les calibres de courant de fonctionner."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "In current mode the meter is nearly 0 Ω, so it short-circuited the battery and blew its internal fuse",
+					"fr": "En mode courant l’appareil fait presque 0 Ω : il a court-circuité la pile et grillé son fusible interne"
+				},
+				"rationale": {
+					"en": "Correct: an ammeter placed across a voltage source is a short circuit. The fuse protected the meter; it must be replaced.",
+					"fr": "Exact : un ampèremètre placé aux bornes d’une source est un court-circuit. Le fusible a protégé l’appareil ; il faut le remplacer."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "Voltage cannot be measured on a 9 V battery",
+					"fr": "On ne peut pas mesurer la tension d’une pile de 9 V"
+				},
+				"rationale": {
+					"en": "Measuring a 9 V battery in voltage mode is perfectly normal.",
+					"fr": "Mesurer une pile de 9 V en mode tension est tout à fait normal."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "The probes were reversed",
+					"fr": "Les pointes étaient inversées"
+				},
+				"rationale": {
+					"en": "Reversed probes only show a minus sign; they do not damage anything.",
+					"fr": "Des pointes inversées affichent seulement un signe moins ; elles n’abîment rien."
+				}
+			}
+		],
+		"correctOptionId": "b"
+	},
+	{
+		"id": "exercise.ch02.meter_measure_led_current",
+		"version": 1,
+		"type": "ordering",
+		"conceptIds": ["measure.multimeter"],
+		"formulaIds": [],
+		"difficulty": 2,
+		"kind": "applied",
+		"pool": "practice",
+		"prompt": {
+			"en": "You want to measure the current in your breadboard LED circuit. Put the steps in order.",
+			"fr": "Vous voulez mesurer le courant dans votre circuit LED sur plaque d’essai. Remettez les étapes dans l’ordre."
+		},
+		"hints": [
+			{
+				"en": "An ammeter must become part of the loop, and you only change wiring with the power off.",
+				"fr": "L’ampèremètre doit faire partie de la boucle, et on ne modifie le câblage que hors tension."
+			}
+		],
+		"solution": [
+			{
+				"en": "Power off, set up the meter for current, then open the loop.",
+				"fr": "Couper l’alimentation, régler l’appareil en courant, puis ouvrir la boucle."
+			},
+			{
+				"en": "Insert the meter in series so all the current flows through it, then power on and read.",
+				"fr": "Insérer l’appareil en série pour que tout le courant le traverse, puis alimenter et lire."
+			},
+			{
+				"en": "Finish by returning the lead to the V jack, so the next voltage measurement does not short anything.",
+				"fr": "Terminer en remettant le cordon sur la borne V pour que la prochaine mesure de tension ne court-circuite rien."
+			}
+		],
+		"items": [
+			{
+				"id": "i1",
+				"text": {
+					"en": "Disconnect the battery",
+					"fr": "Débrancher la pile"
+				}
+			},
+			{
+				"id": "i2",
+				"text": {
+					"en": "Move the red lead to the mA jack and select DC mA",
+					"fr": "Mettre le cordon rouge sur la borne mA et choisir mA continu"
+				}
+			},
+			{
+				"id": "i3",
+				"text": {
+					"en": "Open the loop at one point (e.g. lift the resistor leg out of the + rail)",
+					"fr": "Ouvrir la boucle en un point (par ex. sortir la patte de la résistance du rail +)"
+				}
+			},
+			{
+				"id": "i4",
+				"text": {
+					"en": "Bridge the gap with the meter: red probe on the + side, black probe on the other side",
+					"fr": "Refermer la coupure avec l’appareil : pointe rouge côté +, pointe noire de l’autre côté"
+				}
+			},
+			{
+				"id": "i5",
+				"text": {
+					"en": "Reconnect the battery and read the current",
+					"fr": "Rebrancher la pile et lire le courant"
+				}
+			},
+			{
+				"id": "i6",
+				"text": {
+					"en": "Disconnect, and put the red lead back in the V jack",
+					"fr": "Débrancher, puis remettre le cordon rouge sur la borne V"
+				}
+			}
+		],
+		"correctOrder": ["i1", "i2", "i3", "i4", "i5", "i6"],
+		"displayOrder": ["i3", "i5", "i2", "i6", "i1", "i4"]
+	},
+	{
+		"id": "exercise.ch02.exam_meter_ohms_powered",
+		"version": 1,
+		"type": "multiple_choice",
+		"conceptIds": ["measure.multimeter"],
+		"formulaIds": [],
+		"difficulty": 2,
+		"kind": "independent",
+		"pool": "exam",
+		"prompt": {
+			"en": "Why must you never measure a resistor with the ohmmeter (Ω) setting while the circuit is powered?",
+			"fr": "Pourquoi ne faut-il jamais mesurer une résistance avec le calibre ohmmètre (Ω) pendant que le circuit est alimenté ?"
+		},
+		"hints": [],
+		"solution": [
+			{
+				"en": "An ohmmeter applies a known small current and measures the resulting voltage: $R = V/I$.",
+				"fr": "Un ohmmètre applique un petit courant connu et mesure la tension obtenue : $R = V/I$."
+			},
+			{
+				"en": "Any voltage from the circuit adds to this and gives a meaningless reading (and may damage the meter). Disconnect power first.",
+				"fr": "Une tension provenant du circuit s’y ajoute et donne une mesure absurde (voire endommage l’appareil). Coupez d’abord l’alimentation."
+			}
+		],
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "The resistor changes value when current flows",
+					"fr": "La résistance change de valeur quand le courant passe"
+				},
+				"rationale": {
+					"en": "Not the main reason; even a constant resistor would read wrongly.",
+					"fr": "Ce n’est pas la raison principale : même une résistance constante serait mal mesurée."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "The ohmmeter works by sending its own small current; the circuit’s voltage corrupts the reading and can damage the meter",
+					"fr": "L’ohmmètre fonctionne en injectant son propre petit courant ; la tension du circuit fausse la mesure et peut endommager l’appareil"
+				},
+				"rationale": {
+					"en": "Correct: measure resistance unpowered, and ideally with one leg lifted out of the circuit so other parts are not in parallel.",
+					"fr": "Exact : mesurez une résistance hors tension, et idéalement avec une patte sortie du circuit pour qu’aucun autre composant ne soit en parallèle."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "Resistance can only be measured in series",
+					"fr": "Une résistance ne se mesure qu’en série"
+				},
+				"rationale": {
+					"en": "The ohmmeter connects across the part, but only with power off.",
+					"fr": "L’ohmmètre se branche aux bornes du composant, mais uniquement hors tension."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "It is fine as long as the voltage is below 12 V",
+					"fr": "Aucun problème tant que la tension reste sous 12 V"
+				},
+				"rationale": {
+					"en": "Any external voltage disturbs an ohmmeter, whatever its level.",
+					"fr": "Toute tension extérieure perturbe un ohmmètre, quel que soit son niveau."
+				}
+			}
+		],
+		"correctOptionId": "b"
+	},
+	{
+		"id": "exercise.ch02.exam_meter_ammeter_reading",
+		"version": 1,
+		"type": "numeric",
+		"conceptIds": ["measure.multimeter"],
+		"formulaIds": [],
+		"difficulty": 1,
+		"kind": "independent",
+		"pool": "exam",
+		"prompt": {
+			"en": "What does the ideal ammeter A1 read in the circuit shown (6 V battery, R1 = 300 Ω)?",
+			"fr": "Qu’indique l’ampèremètre idéal A1 dans le circuit représenté (pile de 6 V, R1 = 300 Ω) ?"
+		},
+		"diagramId": "diagram.ch02.ammeter",
+		"hints": [],
+		"solution": [
+			{
+				"en": "An ideal ammeter has 0 Ω, so the loop resistance is just R1.",
+				"fr": "Un ampèremètre idéal fait 0 Ω : la résistance de la boucle est seulement R1."
+			},
+			{
+				"en": "$I = \\frac{6}{300} = 0.02\\ \\text{A} = 20\\ \\text{mA}$",
+				"fr": "$I = \\frac{6}{300} = 0{,}02\\ \\text{A} = 20\\ \\text{mA}$"
+			}
+		],
+		"answer": {
+			"algorithm": "ohm_current",
+			"inputs": {
+				"V": {
+					"value": 6,
+					"unit": "V"
+				},
+				"R": {
+					"value": 300,
+					"unit": "ohm"
+				}
+			},
+			"canonicalValue": 0.02,
+			"canonicalUnit": "A",
+			"acceptedUnits": ["A", "mA"],
+			"absoluteTolerance": 0.000001,
+			"relativeTolerance": 0.01
+		}
+	},
+	{
+		"id": "exercise.ch02.exam_meter_voltmeter_in_series",
+		"version": 1,
+		"type": "prediction",
+		"conceptIds": ["measure.multimeter"],
+		"formulaIds": [],
+		"difficulty": 3,
+		"kind": "independent",
+		"pool": "exam",
+		"prompt": {
+			"en": "By mistake, a voltmeter is inserted **in series** in a 9 V battery + 470 Ω resistor + LED loop (instead of across a part). What happens?",
+			"fr": "Par erreur, un voltmètre est inséré **en série** dans une boucle pile de 9 V + résistance de 470 Ω + LED (au lieu d’être placé aux bornes d’un composant). Que se passe-t-il ?"
+		},
+		"hints": [],
+		"solution": [
+			{
+				"en": "A voltmeter has a very high resistance (typically 10 MΩ).",
+				"fr": "Un voltmètre a une résistance très élevée (typiquement 10 MΩ)."
+			},
+			{
+				"en": "In series it behaves like an open circuit: the current falls to almost 0, and like any open element it gets almost the full 9 V.",
+				"fr": "En série il se comporte comme un circuit ouvert : le courant tombe presque à 0 et, comme tout élément ouvert, il reçoit presque les 9 V."
+			}
+		],
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "The meter is destroyed by the current",
+					"fr": "L’appareil est détruit par le courant"
+				},
+				"rationale": {
+					"en": "A voltmeter’s very high resistance lets almost no current through, so nothing is damaged.",
+					"fr": "La résistance très élevée du voltmètre ne laisse passer presque aucun courant : rien n’est abîmé."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "It reads the LED current correctly",
+					"fr": "Il indique correctement le courant de la LED"
+				},
+				"rationale": {
+					"en": "A voltmeter measures voltage, not current, and it blocks the current here.",
+					"fr": "Un voltmètre mesure une tension, pas un courant, et ici il bloque le courant."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "The LED goes (almost) dark and the meter reads close to 9 V",
+					"fr": "La LED s’éteint (presque) et l’appareil indique près de 9 V"
+				},
+				"rationale": {
+					"en": "Correct: its megohm resistance acts almost like an open circuit, so almost the whole battery voltage appears across the meter.",
+					"fr": "Exact : sa résistance de plusieurs mégohms agit presque comme un circuit ouvert, presque toute la tension de la pile apparaît à ses bornes."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "The LED gets brighter",
+					"fr": "La LED brille davantage"
+				},
+				"rationale": {
+					"en": "Adding a huge resistance in series reduces the current.",
+					"fr": "Ajouter une énorme résistance en série réduit le courant."
+				}
+			}
+		],
+		"correctOptionId": "c"
+	},
+	{
+		"id": "exercise.ch02.exam_meter_negative_reading",
+		"version": 1,
+		"type": "diagnose",
+		"conceptIds": ["measure.multimeter"],
+		"formulaIds": [],
+		"difficulty": 1,
+		"kind": "applied",
+		"pool": "exam",
+		"prompt": {
+			"en": "You check a 9 V battery with your multimeter on DC volts. The display shows **−9.12 V**. What does this mean?",
+			"fr": "Vous contrôlez une pile de 9 V avec votre multimètre en tension continue. L’écran affiche **−9,12 V**. Qu’est-ce que cela signifie ?"
+		},
+		"hints": [],
+		"solution": [
+			{
+				"en": "A multimeter displays the voltage of the red probe relative to the black (COM) probe. A minus sign just means the probes are swapped; the magnitude, 9.12 V, is the battery voltage.",
+				"fr": "Un multimètre affiche la tension de la pointe rouge par rapport à la pointe noire (COM). Le signe moins indique seulement que les pointes sont inversées ; la valeur, 9,12 V, est bien celle de la pile."
+			}
+		],
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "The battery is faulty and produces negative voltage",
+					"fr": "La pile est défectueuse et produit une tension négative"
+				},
+				"rationale": {
+					"en": "A battery cannot reverse itself; the sign comes from how the probes are placed.",
+					"fr": "Une pile ne s’inverse pas toute seule : le signe vient de la position des pointes."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "The probes are reversed: red is on −, black on +. The battery is fine (9.12 V)",
+					"fr": "Les pointes sont inversées : rouge sur −, noir sur +. La pile est bonne (9,12 V)"
+				},
+				"rationale": {
+					"en": "Correct: the meter shows V(red) − V(black). Swap the probes for a positive reading; no harm done.",
+					"fr": "Exact : l’appareil affiche V(rouge) − V(noir). Inversez les pointes pour une valeur positive ; aucun dégât."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "The meter is in current mode",
+					"fr": "L’appareil est en mode courant"
+				},
+				"rationale": {
+					"en": "In current mode across a battery you would blow the fuse, not read about 9 V.",
+					"fr": "En mode courant aux bornes d’une pile, on grillerait le fusible, on ne lirait pas environ 9 V."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "The battery is being short-circuited",
+					"fr": "La pile est en court-circuit"
+				},
+				"rationale": {
+					"en": "A voltmeter draws almost no current; it cannot short the battery.",
+					"fr": "Un voltmètre ne tire presque aucun courant : il ne peut pas court-circuiter la pile."
+				}
+			}
+		],
+		"correctOptionId": "b"
+	},
+	{
+		"id": "exercise.ch02.exam_meter_ideal_resistances",
+		"version": 1,
+		"type": "multiple_choice",
+		"conceptIds": ["measure.multimeter"],
+		"formulaIds": [],
+		"difficulty": 2,
+		"kind": "independent",
+		"pool": "exam",
+		"prompt": {
+			"en": "To disturb the circuit as little as possible, what internal resistance should an ideal voltmeter and an ideal ammeter have?",
+			"fr": "Pour perturber le circuit le moins possible, quelle résistance interne devraient avoir un voltmètre idéal et un ampèremètre idéal ?"
+		},
+		"hints": [],
+		"solution": [
+			{
+				"en": "Voltmeter in parallel: any current it draws is stolen from the circuit, so ideally $R \\to \\infty$ (real meters: about 10 MΩ).",
+				"fr": "Voltmètre en parallèle : tout courant qu’il tire est pris au circuit, donc idéalement $R \\to \\infty$ (appareils réels : environ 10 MΩ)."
+			},
+			{
+				"en": "Ammeter in series: any resistance adds to the loop, so ideally $R = 0$ (real meters: a few ohms or less).",
+				"fr": "Ampèremètre en série : sa résistance s’ajoute à la boucle, donc idéalement $R = 0$ (appareils réels : quelques ohms ou moins)."
+			}
+		],
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "Voltmeter: infinite. Ammeter: zero.",
+					"fr": "Voltmètre : infinie. Ampèremètre : nulle."
+				},
+				"rationale": {
+					"en": "Correct: the voltmeter (in parallel) should draw no current; the ammeter (in series) should drop no voltage.",
+					"fr": "Exact : le voltmètre (en parallèle) ne doit tirer aucun courant ; l’ampèremètre (en série) ne doit faire chuter aucune tension."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "Voltmeter: zero. Ammeter: infinite.",
+					"fr": "Voltmètre : nulle. Ampèremètre : infinie."
+				},
+				"rationale": {
+					"en": "Swapped: a 0 Ω voltmeter would short the part; an infinite-Ω ammeter would open the loop.",
+					"fr": "Inversé : un voltmètre de 0 Ω court-circuiterait le composant ; un ampèremètre de résistance infinie couperait la boucle."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "Both zero",
+					"fr": "Les deux nulles"
+				},
+				"rationale": {
+					"en": "A zero-ohm voltmeter across a part would short it.",
+					"fr": "Un voltmètre de zéro ohm aux bornes d’un composant le court-circuiterait."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "Both equal to the resistor being measured",
+					"fr": "Les deux égales à la résistance mesurée"
+				},
+				"rationale": {
+					"en": "That would change the circuit a lot; the ideal is an extreme value, not a matched one.",
+					"fr": "Cela modifierait beaucoup le circuit ; l’idéal est une valeur extrême, pas une valeur égale."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch02.errors_tolerance_range",
+		"version": 1,
+		"type": "multiple_choice",
+		"conceptIds": ["measure.errors"],
+		"formulaIds": [],
+		"difficulty": 1,
+		"kind": "guided",
+		"pool": "practice",
+		"prompt": {
+			"en": "A resistor is marked 1 kΩ ±5 % (gold band). Which range can its real value lie in?",
+			"fr": "Une résistance est marquée 1 kΩ ±5 % (anneau or). Dans quel intervalle peut se trouver sa valeur réelle ?"
+		},
+		"hints": [
+			{
+				"en": "Compute 5 % of 1000 Ω.",
+				"fr": "Calculez 5 % de 1000 Ω."
+			}
+		],
+		"solution": [
+			{
+				"en": "$5\\,\\% \\times 1000\\ \\Omega = 0.05 \\times 1000 = 50\\ \\Omega$",
+				"fr": "$5\\,\\% \\times 1000\\ \\Omega = 0{,}05 \\times 1000 = 50\\ \\Omega$"
+			},
+			{
+				"en": "Range: $1000 - 50 = 950\\ \\Omega$ to $1000 + 50 = 1050\\ \\Omega$.",
+				"fr": "Intervalle : de $1000 - 50 = 950\\ \\Omega$ à $1000 + 50 = 1050\\ \\Omega$."
+			}
+		],
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "995 Ω to 1005 Ω",
+					"fr": "De 995 Ω à 1005 Ω"
+				},
+				"rationale": {
+					"en": "That is ±5 Ω, i.e. ±0.5 %. 5 % of 1000 Ω is 50 Ω.",
+					"fr": "C’est ±5 Ω, soit ±0,5 %. 5 % de 1000 Ω font 50 Ω."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "950 Ω to 1050 Ω",
+					"fr": "De 950 Ω à 1050 Ω"
+				},
+				"rationale": {
+					"en": "Correct: 5 % of 1000 Ω = 50 Ω, so 1000 ± 50 Ω.",
+					"fr": "Exact : 5 % de 1000 Ω = 50 Ω, donc 1000 ± 50 Ω."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "500 Ω to 1500 Ω",
+					"fr": "De 500 Ω à 1500 Ω"
+				},
+				"rationale": {
+					"en": "That would be ±50 %, ten times too wide.",
+					"fr": "Ce serait ±50 %, dix fois trop large."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "Exactly 1000 Ω",
+					"fr": "Exactement 1000 Ω"
+				},
+				"rationale": {
+					"en": "Real resistors are never exact; the tolerance tells you how far off they may be.",
+					"fr": "Une vraie résistance n’est jamais exacte ; la tolérance indique l’écart possible."
+				}
+			}
+		],
+		"correctOptionId": "b"
+	},
+	{
+		"id": "exercise.ch02.errors_resolution",
+		"version": 1,
+		"type": "multiple_choice",
+		"conceptIds": ["measure.errors"],
+		"formulaIds": [],
+		"difficulty": 1,
+		"kind": "independent",
+		"pool": "practice",
+		"prompt": {
+			"en": "Your multimeter on the 20 V range shows **4.97**. What is the resolution of this reading?",
+			"fr": "Votre multimètre sur le calibre 20 V affiche **4,97**. Quelle est la résolution de cette mesure ?"
+		},
+		"hints": [
+			{
+				"en": "Resolution is the value of one step of the last digit.",
+				"fr": "La résolution est la valeur d’un pas du dernier chiffre."
+			}
+		],
+		"solution": [
+			{
+				"en": "Resolution = smallest change the display can show = one unit of the last digit = 0.01 V.",
+				"fr": "Résolution = plus petite variation affichable = une unité du dernier chiffre = 0,01 V."
+			},
+			{
+				"en": "Resolution is not the same as accuracy: the true value may still differ by more than 0.01 V (see the meter’s accuracy specification).",
+				"fr": "La résolution n’est pas la précision : la vraie valeur peut différer de plus de 0,01 V (voir la précision indiquée par le fabricant)."
+			}
+		],
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "0.01 V",
+					"fr": "0,01 V"
+				},
+				"rationale": {
+					"en": "Correct: the last digit shown is hundredths of a volt, the smallest step the display can show.",
+					"fr": "Exact : le dernier chiffre affiché correspond aux centièmes de volt, le plus petit pas que l’écran peut montrer."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "0.1 V",
+					"fr": "0,1 V"
+				},
+				"rationale": {
+					"en": "The display shows one more digit, so it resolves 0.01 V.",
+					"fr": "L’écran affiche un chiffre de plus : il résout 0,01 V."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "20 V",
+					"fr": "20 V"
+				},
+				"rationale": {
+					"en": "20 V is the range (the maximum it can display), not the resolution.",
+					"fr": "20 V est le calibre (la valeur maximale affichable), pas la résolution."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "4.97 V",
+					"fr": "4,97 V"
+				},
+				"rationale": {
+					"en": "That is the reading itself, not the smallest step.",
+					"fr": "C’est la mesure elle-même, pas le plus petit pas."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch02.errors_meter_loading_1m",
+		"version": 1,
+		"type": "numeric",
+		"conceptIds": ["measure.errors"],
+		"formulaIds": ["formula.resistors.parallel"],
+		"difficulty": 3,
+		"kind": "independent",
+		"pool": "practice",
+		"prompt": {
+			"en": "A voltmeter with 10 MΩ input resistance is connected across a 1 MΩ resistor. What resistance does that part of the circuit now have (resistor and meter together)? Give your answer in kΩ.",
+			"fr": "Un voltmètre de résistance d’entrée 10 MΩ est branché aux bornes d’une résistance de 1 MΩ. Quelle résistance cette partie du circuit présente-t-elle maintenant (résistance et voltmètre ensemble) ? Donnez la réponse en kΩ."
+		},
+		"hints": [
+			{
+				"en": "The voltmeter is in parallel with the resistor.",
+				"fr": "Le voltmètre est en parallèle avec la résistance."
+			},
+			{
+				"en": "$R_\\text{t} = \\frac{R_1 R_2}{R_1 + R_2}$",
+				"fr": "$R_\\text{t} = \\frac{R_1 R_2}{R_1 + R_2}$"
+			}
+		],
+		"solution": [
+			{
+				"en": "Meter and resistor are in parallel: $R_\\text{t} = \\frac{1 \\times 10}{1 + 10}\\ \\text{M}\\Omega = 0.909\\ \\text{M}\\Omega \\approx 909\\ \\text{k}\\Omega$.",
+				"fr": "Voltmètre et résistance sont en parallèle : $R_\\text{t} = \\frac{1 \\times 10}{1 + 10}\\ \\text{M}\\Omega = 0{,}909\\ \\text{M}\\Omega \\approx 909\\ \\text{k}\\Omega$."
+			},
+			{
+				"en": "About 9 % lower than the resistor alone: connecting the meter changes the circuit it measures (meter loading).",
+				"fr": "Environ 9 % de moins que la résistance seule : brancher l’appareil modifie le circuit mesuré (effet de charge)."
+			}
+		],
+		"answer": {
+			"algorithm": "parallel_resistance",
+			"inputs": {
+				"R1": {
+					"value": 1,
+					"unit": "Mohm"
+				},
+				"R2": {
+					"value": 10,
+					"unit": "Mohm"
+				}
+			},
+			"canonicalValue": 909090.9090909091,
+			"canonicalUnit": "ohm",
+			"acceptedUnits": ["ohm", "kohm", "Mohm"],
+			"absoluteTolerance": 0.01,
+			"relativeTolerance": 0.01
+		}
+	},
+	{
+		"id": "exercise.ch02.errors_divider_reads_low",
+		"version": 1,
+		"type": "multiple_choice",
+		"conceptIds": ["measure.errors"],
+		"formulaIds": [],
+		"difficulty": 3,
+		"kind": "applied",
+		"pool": "practice",
+		"prompt": {
+			"en": "You build a divider from two 1 MΩ resistors on a 9 V battery, so you expect 4.5 V at the middle. Your 10 MΩ multimeter reads **4.29 V**. Resistors and battery are fine. What is the best explanation?",
+			"fr": "Vous montez un pont diviseur avec deux résistances de 1 MΩ sur une pile de 9 V : vous attendez 4,5 V au point milieu. Votre multimètre de 10 MΩ indique **4,29 V**. Les résistances et la pile sont bonnes. Quelle est la meilleure explication ?"
+		},
+		"hints": [
+			{
+				"en": "The meter itself is a 10 MΩ resistor connected in parallel with what it measures.",
+				"fr": "L’appareil est lui-même une résistance de 10 MΩ branchée en parallèle sur ce qu’il mesure."
+			}
+		],
+		"solution": [
+			{
+				"en": "Lower resistor with meter: $1\\ \\text{M}\\Omega \\parallel 10\\ \\text{M}\\Omega \\approx 0.909\\ \\text{M}\\Omega$.",
+				"fr": "Résistance du bas avec l’appareil : $1\\ \\text{M}\\Omega \\parallel 10\\ \\text{M}\\Omega \\approx 0{,}909\\ \\text{M}\\Omega$."
+			},
+			{
+				"en": "New middle voltage: $9 \\times \\frac{0.909}{1 + 0.909} \\approx 4.29$ V.",
+				"fr": "Nouvelle tension au milieu : $9 \\times \\frac{0{,}909}{1 + 0{,}909} \\approx 4{,}29$ V."
+			},
+			{
+				"en": "Loading matters when the circuit resistance is not much smaller than the meter’s (keep it below about 1 % of 10 MΩ, i.e. 100 kΩ).",
+				"fr": "L’effet de charge compte quand la résistance du circuit n’est pas très petite devant celle de l’appareil (restez sous environ 1 % de 10 MΩ, soit 100 kΩ)."
+			}
+		],
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "The meter’s resolution is too poor",
+					"fr": "La résolution de l’appareil est insuffisante"
+				},
+				"rationale": {
+					"en": "The meter displays 0.01 V steps; a 0.21 V gap is far larger than its resolution.",
+					"fr": "L’appareil affiche des pas de 0,01 V ; un écart de 0,21 V est bien plus grand que sa résolution."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "Meter loading: the 10 MΩ meter in parallel with the lower 1 MΩ lowers it to about 909 kΩ, pulling the voltage down",
+					"fr": "Effet de charge : le voltmètre de 10 MΩ en parallèle sur la résistance du bas la réduit à environ 909 kΩ, ce qui fait baisser la tension"
+				},
+				"rationale": {
+					"en": "Correct: with 1 MΩ on top and 909 kΩ below, $9 \\times \\frac{909}{1909} \\approx 4.29$ V — exactly the reading.",
+					"fr": "Exact : avec 1 MΩ en haut et 909 kΩ en bas, $9 \\times \\frac{909}{1909} \\approx 4{,}29$ V — exactement la mesure."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "The resistors must be outside their tolerance",
+					"fr": "Les résistances sont forcément hors tolérance"
+				},
+				"rationale": {
+					"en": "The prompt says they are fine, and the loading calculation explains the exact value.",
+					"fr": "L’énoncé dit qu’elles sont bonnes, et le calcul d’effet de charge explique la valeur exacte."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "The probes are reversed",
+					"fr": "Les pointes sont inversées"
+				},
+				"rationale": {
+					"en": "Reversed probes give a minus sign, not a smaller value.",
+					"fr": "Des pointes inversées donnent un signe moins, pas une valeur plus faible."
+				}
+			}
+		],
+		"correctOptionId": "b"
+	},
+	{
+		"id": "exercise.ch02.exam_errors_within_tolerance",
+		"version": 1,
+		"type": "multiple_choice",
+		"conceptIds": ["measure.errors"],
+		"formulaIds": [],
+		"difficulty": 2,
+		"kind": "independent",
+		"pool": "exam",
+		"prompt": {
+			"en": "You measure a resistor marked 220 Ω ±5 % and read 228 Ω. What can you conclude?",
+			"fr": "Vous mesurez une résistance marquée 220 Ω ±5 % et lisez 228 Ω. Que pouvez-vous conclure ?"
+		},
+		"hints": [],
+		"solution": [
+			{
+				"en": "$0.05 \\times 220 = 11\\ \\Omega$, so the range is 209 Ω to 231 Ω.",
+				"fr": "$0{,}05 \\times 220 = 11\\ \\Omega$, l’intervalle va donc de 209 Ω à 231 Ω."
+			},
+			{
+				"en": "228 Ω lies inside, so the resistor is within specification.",
+				"fr": "228 Ω est à l’intérieur : la résistance est conforme."
+			}
+		],
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "It is faulty: 228 Ω is not 220 Ω",
+					"fr": "Elle est défectueuse : 228 Ω, ce n’est pas 220 Ω"
+				},
+				"rationale": {
+					"en": "A tolerance exists precisely because real values differ from the marking.",
+					"fr": "La tolérance existe justement parce que les valeurs réelles diffèrent du marquage."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "It is within tolerance: the allowed range is 209 Ω to 231 Ω",
+					"fr": "Elle est dans sa tolérance : l’intervalle permis va de 209 Ω à 231 Ω"
+				},
+				"rationale": {
+					"en": "Correct: 5 % of 220 Ω = 11 Ω, so 209–231 Ω, and 228 Ω is inside.",
+					"fr": "Exact : 5 % de 220 Ω = 11 Ω, donc 209–231 Ω, et 228 Ω est dedans."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "It is out of tolerance because it is above 225 Ω",
+					"fr": "Elle est hors tolérance car elle dépasse 225 Ω"
+				},
+				"rationale": {
+					"en": "225 Ω would be +5 Ω, not +5 %. 5 % of 220 is 11 Ω.",
+					"fr": "225 Ω correspondrait à +5 Ω, pas à +5 %. 5 % de 220 font 11 Ω."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "The meter must be wrong",
+					"fr": "Le multimètre se trompe forcément"
+				},
+				"rationale": {
+					"en": "There is no need to blame the meter: the value fits the resistor’s tolerance.",
+					"fr": "Inutile d’accuser l’appareil : la valeur correspond à la tolérance de la résistance."
+				}
+			}
+		],
+		"correctOptionId": "b"
+	},
+	{
+		"id": "exercise.ch02.exam_errors_loading_4m7",
+		"version": 1,
+		"type": "numeric",
+		"conceptIds": ["measure.errors"],
+		"formulaIds": ["formula.resistors.parallel"],
+		"difficulty": 3,
+		"kind": "independent",
+		"pool": "exam",
+		"prompt": {
+			"en": "A 10 MΩ voltmeter is connected across a 4.7 MΩ resistor. What is the combined resistance of resistor and meter? Give your answer in MΩ.",
+			"fr": "Un voltmètre de 10 MΩ est branché aux bornes d’une résistance de 4,7 MΩ. Quelle est la résistance de l’ensemble résistance + voltmètre ? Donnez la réponse en MΩ."
+		},
+		"hints": [],
+		"solution": [
+			{
+				"en": "Meter and resistor are in parallel: $R_\\text{t} = \\frac{4.7 \\times 10}{4.7 + 10} = \\frac{47}{14.7} \\approx 3.20\\ \\text{M}\\Omega$.",
+				"fr": "Voltmètre et résistance sont en parallèle : $R_\\text{t} = \\frac{4{,}7 \\times 10}{4{,}7 + 10} = \\frac{47}{14{,}7} \\approx 3{,}20\\ \\text{M}\\Omega$."
+			},
+			{
+				"en": "That is about 32 % lower than 4.7 MΩ: measuring such a high-resistance circuit with a 10 MΩ meter gives misleading voltages.",
+				"fr": "C’est environ 32 % de moins que 4,7 MΩ : mesurer un circuit de si forte résistance avec un appareil de 10 MΩ donne des tensions trompeuses."
+			}
+		],
+		"answer": {
+			"algorithm": "parallel_resistance",
+			"inputs": {
+				"R1": {
+					"value": 4.7,
+					"unit": "Mohm"
+				},
+				"R2": {
+					"value": 10,
+					"unit": "Mohm"
+				}
+			},
+			"canonicalValue": 3197278.911564626,
+			"canonicalUnit": "ohm",
+			"acceptedUnits": ["ohm", "kohm", "Mohm"],
+			"absoluteTolerance": 0.01,
+			"relativeTolerance": 0.01
+		}
+	},
+	{
+		"id": "exercise.ch02.exam_errors_range_choice",
+		"version": 1,
+		"type": "multiple_choice",
+		"conceptIds": ["measure.errors"],
+		"formulaIds": [],
+		"difficulty": 2,
+		"kind": "applied",
+		"pool": "exam",
+		"prompt": {
+			"en": "You measure an LED current of about 15 mA. On the 10 A range your meter shows **0.01**. What should you do to get a more useful reading?",
+			"fr": "Vous mesurez le courant d’une LED, environ 15 mA. Sur le calibre 10 A, votre appareil affiche **0,01**. Que faire pour obtenir une mesure plus utile ?"
+		},
+		"hints": [],
+		"solution": [
+			{
+				"en": "Choose the smallest range that is still larger than the value you expect.",
+				"fr": "Choisissez le plus petit calibre qui reste supérieur à la valeur attendue."
+			},
+			{
+				"en": "For about 15 mA, the 200 mA range resolves 0.1 mA instead of 10 mA on the 10 A range.",
+				"fr": "Pour environ 15 mA, le calibre 200 mA résout 0,1 mA, contre 10 mA sur le calibre 10 A."
+			}
+		],
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "Nothing: 0.01 A is already exact",
+					"fr": "Rien : 0,01 A est déjà exact"
+				},
+				"rationale": {
+					"en": "With 0.01 A steps, anything from 5 to 15 mA could show 0.01: the resolution is far too coarse.",
+					"fr": "Avec des pas de 0,01 A, tout courant de 5 à 15 mA peut afficher 0,01 : la résolution est bien trop grossière."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "Switch to a voltage range",
+					"fr": "Passer sur un calibre de tension"
+				},
+				"rationale": {
+					"en": "A voltage range does not measure current.",
+					"fr": "Un calibre de tension ne mesure pas un courant."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "Power off, move to the mA jack and a range such as 200 mA, then measure again",
+					"fr": "Couper l’alimentation, passer sur la borne mA et un calibre comme 200 mA, puis remesurer"
+				},
+				"rationale": {
+					"en": "Correct: a smaller range that still covers 15 mA gives a finer resolution (e.g. 0.1 mA).",
+					"fr": "Exact : un calibre plus petit qui couvre encore 15 mA donne une résolution plus fine (par ex. 0,1 mA)."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "Use the 2 mA range for maximum resolution",
+					"fr": "Utiliser le calibre 2 mA pour une résolution maximale"
+				},
+				"rationale": {
+					"en": "15 mA exceeds 2 mA: the meter would show overload (and could blow its fuse).",
+					"fr": "15 mA dépasse 2 mA : l’appareil afficherait un dépassement (et pourrait griller son fusible)."
+				}
+			}
+		],
+		"correctOptionId": "c"
+	},
+	{
+		"id": "exercise.ch02.trouble_method_order",
+		"version": 1,
+		"type": "ordering",
+		"conceptIds": ["practice.troubleshooting"],
+		"formulaIds": [],
+		"difficulty": 1,
+		"kind": "guided",
+		"pool": "practice",
+		"prompt": {
+			"en": "Your LED circuit does not work. Put these troubleshooting steps in a systematic order.",
+			"fr": "Votre circuit LED ne fonctionne pas. Remettez ces étapes de dépannage dans un ordre méthodique."
+		},
+		"hints": [
+			{
+				"en": "Start with the simplest, most likely causes, and change only one thing at a time.",
+				"fr": "Commencez par les causes les plus simples et les plus probables, et ne changez qu’une chose à la fois."
+			}
+		],
+		"solution": [
+			{
+				"en": "Observe first, then check the power source (the most common fault).",
+				"fr": "Observer d’abord, puis vérifier la source d’énergie (la panne la plus fréquente)."
+			},
+			{
+				"en": "Next check the wiring visually, then measure voltages and compare with what you expect.",
+				"fr": "Ensuite vérifier visuellement le câblage, puis mesurer les tensions et comparer avec les valeurs attendues."
+			},
+			{
+				"en": "Fix one thing at a time and retest, so you know what solved the problem.",
+				"fr": "Corriger une chose à la fois et retester, pour savoir ce qui a résolu le problème."
+			}
+		],
+		"items": [
+			{
+				"id": "i1",
+				"text": {
+					"en": "Describe the symptom precisely (dark? dim? hot part?)",
+					"fr": "Décrire précisément le symptôme (éteinte ? faible ? composant chaud ?)"
+				}
+			},
+			{
+				"id": "i2",
+				"text": {
+					"en": "Check the supply: measure the battery voltage",
+					"fr": "Vérifier l’alimentation : mesurer la tension de la pile"
+				}
+			},
+			{
+				"id": "i3",
+				"text": {
+					"en": "Compare the wiring with the schematic, net by net",
+					"fr": "Comparer le câblage avec le schéma, nœud par nœud"
+				}
+			},
+			{
+				"id": "i4",
+				"text": {
+					"en": "Measure the voltage across each part and compare with the expected values",
+					"fr": "Mesurer la tension aux bornes de chaque composant et comparer avec les valeurs attendues"
+				}
+			},
+			{
+				"id": "i5",
+				"text": {
+					"en": "Fix one thing, then test again",
+					"fr": "Corriger une seule chose, puis tester à nouveau"
+				}
+			}
+		],
+		"correctOrder": ["i1", "i2", "i3", "i4", "i5"],
+		"displayOrder": ["i4", "i1", "i5", "i3", "i2"]
+	},
+	{
+		"id": "exercise.ch02.trouble_led_open",
+		"version": 1,
+		"type": "diagnose",
+		"conceptIds": ["practice.troubleshooting"],
+		"formulaIds": [],
+		"difficulty": 2,
+		"kind": "independent",
+		"pool": "practice",
+		"prompt": {
+			"en": "The LED in the circuit shown stays dark. You measure **0 V across R1** and **9 V across the LED**. What is the most likely fault?",
+			"fr": "La LED du circuit représenté reste éteinte. Vous mesurez **0 V aux bornes de R1** et **9 V aux bornes de la LED**. Quelle est la panne la plus probable ?"
+		},
+		"diagramId": "diagram.ch02.fault_led",
+		"hints": [
+			{
+				"en": "0 V across a resistor means… what current?",
+				"fr": "0 V aux bornes d’une résistance signifie… quel courant ?"
+			},
+			{
+				"en": "In a series loop with no current, the full supply voltage appears across the open element.",
+				"fr": "Dans une boucle série sans courant, toute la tension apparaît aux bornes de l’élément ouvert."
+			}
+		],
+		"solution": [
+			{
+				"en": "$V_{R1} = I R_1 = 0$, so $I = 0$: the loop is open somewhere.",
+				"fr": "$V_{R1} = I R_1 = 0$, donc $I = 0$ : la boucle est ouverte quelque part."
+			},
+			{
+				"en": "The 9 V appears across the LED, so the LED is the open element: it is broken or reversed. Check its orientation (long leg to the + side) first.",
+				"fr": "Les 9 V apparaissent aux bornes de la LED : c’est elle l’élément ouvert, cassée ou à l’envers. Vérifiez d’abord son sens (patte longue côté +)."
+			}
+		],
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "R1 is open (broken)",
+					"fr": "R1 est coupée"
+				},
+				"rationale": {
+					"en": "An open R1 would take the full 9 V itself, with 0 V across the LED: the opposite readings.",
+					"fr": "Une R1 coupée recevrait elle-même les 9 V, avec 0 V sur la LED : c’est l’inverse des mesures."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "The battery is flat",
+					"fr": "La pile est vide"
+				},
+				"rationale": {
+					"en": "A flat battery could not put 9 V across the LED.",
+					"fr": "Une pile vide ne pourrait pas mettre 9 V aux bornes de la LED."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "The LED is shorted",
+					"fr": "La LED est en court-circuit"
+				},
+				"rationale": {
+					"en": "A shorted LED would show about 0 V across it, not 9 V.",
+					"fr": "Une LED en court-circuit aurait environ 0 V à ses bornes, pas 9 V."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "The LED is open or inserted backwards, so no current flows",
+					"fr": "La LED est coupée ou montée à l’envers : aucun courant ne circule"
+				},
+				"rationale": {
+					"en": "Correct: 0 V across R1 means $I = 0$; the whole 9 V appears across the element that blocks the loop — the LED.",
+					"fr": "Exact : 0 V aux bornes de R1 signifie $I = 0$ ; les 9 V apparaissent entièrement aux bornes de l’élément qui bloque la boucle — la LED."
+				}
+			}
+		],
+		"correctOptionId": "d"
+	},
+	{
+		"id": "exercise.ch02.trouble_led_shorted",
+		"version": 1,
+		"type": "diagnose",
+		"conceptIds": ["practice.troubleshooting"],
+		"formulaIds": [],
+		"difficulty": 2,
+		"kind": "independent",
+		"pool": "practice",
+		"prompt": {
+			"en": "In a 9 V battery + 470 Ω resistor + LED circuit, the LED stays dark. You measure **9 V across the resistor** and **0 V across the LED**. The resistor feels slightly warm. What is the fault?",
+			"fr": "Dans un circuit pile de 9 V + résistance de 470 Ω + LED, la LED reste éteinte. Vous mesurez **9 V aux bornes de la résistance** et **0 V aux bornes de la LED**. La résistance est légèrement tiède. Quelle est la panne ?"
+		},
+		"hints": [
+			{
+				"en": "Which part has (almost) no voltage across it while current flows?",
+				"fr": "Quel composant n’a (presque) aucune tension à ses bornes alors que le courant circule ?"
+			}
+		],
+		"solution": [
+			{
+				"en": "9 V across R1 means current flows: $I = 9/470 \\approx 19$ mA, so the loop is closed.",
+				"fr": "9 V aux bornes de R1 signifie qu’un courant circule : $I = 9/470 \\approx 19$ mA, la boucle est fermée."
+			},
+			{
+				"en": "0 V across the LED while current flows: the LED is bypassed by a short (often both legs in one breadboard row or a stray wire).",
+				"fr": "0 V aux bornes de la LED alors que le courant passe : la LED est contournée par un court-circuit (souvent ses deux pattes dans une même rangée ou un fil égaré)."
+			}
+		],
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "The LED is shorted, for example both its legs are in the same breadboard row",
+					"fr": "La LED est court-circuitée, par exemple ses deux pattes sont dans la même rangée de la plaque"
+				},
+				"rationale": {
+					"en": "Correct: 0 V across the LED with current flowing (9 V on R1 → about 19 mA) is the signature of a short.",
+					"fr": "Exact : 0 V aux bornes de la LED alors qu’un courant circule (9 V sur R1 → environ 19 mA), c’est la signature d’un court-circuit."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "The LED is open",
+					"fr": "La LED est coupée"
+				},
+				"rationale": {
+					"en": "An open LED would have the full 9 V across it and 0 V on the resistor.",
+					"fr": "Une LED coupée aurait les 9 V à ses bornes et 0 V sur la résistance."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "The resistor is open",
+					"fr": "La résistance est coupée"
+				},
+				"rationale": {
+					"en": "An open resistor carries no current, so it could not get warm.",
+					"fr": "Une résistance coupée ne laisse passer aucun courant, elle ne pourrait pas chauffer."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "The battery is flat",
+					"fr": "La pile est vide"
+				},
+				"rationale": {
+					"en": "The resistor has the full 9 V across it, so the battery is fine.",
+					"fr": "La résistance a les 9 V à ses bornes : la pile va bien."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch02.trouble_torch_switch",
+		"version": 1,
+		"type": "diagnose",
+		"conceptIds": ["practice.troubleshooting"],
+		"formulaIds": [],
+		"difficulty": 2,
+		"kind": "applied",
+		"pool": "practice",
+		"prompt": {
+			"en": "A torch (flashlight) with two 1.5 V cells does not light. The cells read 1.5 V each and the bulb is fine. With the torch switched **on**, you measure **3 V across the switch**. What is wrong?",
+			"fr": "Une lampe de poche à deux piles de 1,5 V ne s’allume pas. Les piles indiquent 1,5 V chacune et l’ampoule est bonne. Lampe **allumée**, vous mesurez **3 V aux bornes de l’interrupteur**. Quel est le problème ?"
+		},
+		"hints": [
+			{
+				"en": "In a series loop, which element gets the full supply voltage when no current flows?",
+				"fr": "Dans une boucle série, quel élément reçoit toute la tension quand aucun courant ne circule ?"
+			}
+		],
+		"solution": [
+			{
+				"en": "A closed switch should have ≈ 0 V across it. Here it has the full 3 V.",
+				"fr": "Un interrupteur fermé devrait avoir ≈ 0 V à ses bornes. Ici il a les 3 V."
+			},
+			{
+				"en": "The full supply voltage across one element means that element is open. Clean or replace the switch.",
+				"fr": "Toute la tension aux bornes d’un élément signifie qu’il est ouvert. Nettoyez ou remplacez l’interrupteur."
+			}
+		],
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "The switch is fine: 3 V across a closed switch is normal",
+					"fr": "L’interrupteur va bien : 3 V aux bornes d’un interrupteur fermé, c’est normal"
+				},
+				"rationale": {
+					"en": "A good closed switch is almost 0 Ω, so it should show almost 0 V.",
+					"fr": "Un interrupteur fermé en bon état fait presque 0 Ω : il devrait afficher presque 0 V."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "The switch stays open inside (dirty or broken contact)",
+					"fr": "L’interrupteur reste ouvert à l’intérieur (contact sale ou cassé)"
+				},
+				"rationale": {
+					"en": "Correct: the full supply voltage across the switch shows it is the open element in the loop.",
+					"fr": "Exact : toute la tension d’alimentation aux bornes de l’interrupteur montre que c’est lui l’élément ouvert de la boucle."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "The switch is short-circuited",
+					"fr": "L’interrupteur est en court-circuit"
+				},
+				"rationale": {
+					"en": "A shorted switch would read 0 V and the torch would stay on.",
+					"fr": "Un interrupteur en court-circuit indiquerait 0 V et la lampe resterait allumée."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "The cells are inserted the wrong way",
+					"fr": "Les piles sont montées à l’envers"
+				},
+				"rationale": {
+					"en": "Both cells together give 3 V across the switch, so they are adding up correctly.",
+					"fr": "Les deux piles donnent ensemble 3 V aux bornes de l’interrupteur : elles s’additionnent correctement."
+				}
+			}
+		],
+		"correctOptionId": "b"
+	},
+	{
+		"id": "exercise.ch02.exam_trouble_battery_clip",
+		"version": 1,
+		"type": "diagnose",
+		"conceptIds": ["practice.troubleshooting"],
+		"formulaIds": [],
+		"difficulty": 2,
+		"kind": "independent",
+		"pool": "exam",
+		"prompt": {
+			"en": "A circuit powered from a 9 V battery through a snap-on clip is dead. Measured directly on the battery terminals: 9.2 V. Measured at the ends of the clip leads where they enter the breadboard: 0 V. What is the fault?",
+			"fr": "Un circuit alimenté par une pile de 9 V via un connecteur à pression ne fonctionne pas. Mesure directe sur les bornes de la pile : 9,2 V. Mesure au bout des fils du connecteur, là où ils entrent dans la plaque : 0 V. Quelle est la panne ?"
+		},
+		"hints": [],
+		"solution": [
+			{
+				"en": "Follow the voltage from the source: present at the battery (9.2 V), absent at the end of the leads (0 V).",
+				"fr": "Suivre la tension depuis la source : présente sur la pile (9,2 V), absente au bout des fils (0 V)."
+			},
+			{
+				"en": "The fault is between those two points: a broken clip lead (open circuit).",
+				"fr": "La panne est entre ces deux points : un fil du connecteur coupé (circuit ouvert)."
+			}
+		],
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "The battery is flat",
+					"fr": "La pile est vide"
+				},
+				"rationale": {
+					"en": "The battery itself reads 9.2 V, so it is fine.",
+					"fr": "La pile elle-même indique 9,2 V : elle est bonne."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "A clip lead is broken (open) between the battery and the breadboard",
+					"fr": "Un fil du connecteur est coupé entre la pile et la plaque"
+				},
+				"rationale": {
+					"en": "Correct: voltage present at one end of the leads but not the other means an open in the leads or clip.",
+					"fr": "Exact : une tension présente à un bout des fils et absente à l’autre indique une coupure dans les fils ou le connecteur."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "The circuit is short-circuited",
+					"fr": "Le circuit est en court-circuit"
+				},
+				"rationale": {
+					"en": "A short would pull the battery voltage down and heat things; here the battery still reads 9.2 V and nothing is warm.",
+					"fr": "Un court-circuit ferait chuter la tension de la pile et chauffer ; ici la pile indique toujours 9,2 V."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "The meter is in the wrong mode",
+					"fr": "L’appareil est sur le mauvais mode"
+				},
+				"rationale": {
+					"en": "The same mode read 9.2 V on the battery a moment ago.",
+					"fr": "Le même mode indiquait 9,2 V sur la pile juste avant."
+				}
+			}
+		],
+		"correctOptionId": "b"
+	},
+	{
+		"id": "exercise.ch02.exam_trouble_wrong_resistor",
+		"version": 1,
+		"type": "diagnose",
+		"conceptIds": ["practice.troubleshooting"],
+		"formulaIds": [],
+		"difficulty": 2,
+		"kind": "applied",
+		"pool": "exam",
+		"prompt": {
+			"en": "Your 9 V LED circuit should use a 470 Ω resistor (about 15 mA). The LED lights, but very dimly. With power off and the resistor lifted out, it measures **47 kΩ**. What happened?",
+			"fr": "Votre circuit LED en 9 V devrait utiliser une résistance de 470 Ω (environ 15 mA). La LED s’allume, mais très faiblement. Hors tension et résistance sortie du circuit, vous mesurez **47 kΩ**. Que s’est-il passé ?"
+		},
+		"hints": [],
+		"solution": [
+			{
+				"en": "Measured 47 kΩ vs expected 470 Ω: a factor of 100.",
+				"fr": "Mesuré 47 kΩ contre 470 Ω attendus : un facteur 100."
+			},
+			{
+				"en": "With $I \\approx 7\\ \\text{V} / 47\\,000\\ \\Omega \\approx 0.15$ mA, the LED is very dim. Replace with the correct 470 Ω (yellow-violet-brown).",
+				"fr": "Avec $I \\approx 7\\ \\text{V} / 47\\,000\\ \\Omega \\approx 0{,}15$ mA, la LED éclaire très faiblement. Remplacer par la bonne 470 Ω (jaune-violet-marron)."
+			}
+		],
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "The wrong resistor was fitted (e.g. yellow-violet-orange instead of yellow-violet-brown): 100 times too large, so about 100 times less current",
+					"fr": "La mauvaise résistance a été placée (par ex. jaune-violet-orange au lieu de jaune-violet-marron) : 100 fois trop grande, donc environ 100 fois moins de courant"
+				},
+				"rationale": {
+					"en": "Correct: one wrong multiplier band changes the value by a factor of 10 per step; the current drops to about 0.15 mA.",
+					"fr": "Exact : une erreur sur l’anneau multiplicateur change la valeur d’un facteur 10 par cran ; le courant tombe à environ 0,15 mA."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "The resistor is within its 5 % tolerance",
+					"fr": "La résistance est dans sa tolérance de 5 %"
+				},
+				"rationale": {
+					"en": "47 kΩ is 100 times 470 Ω, far outside ±5 %.",
+					"fr": "47 kΩ, c’est 100 fois 470 Ω, très loin de ±5 %."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "The resistor is shorted",
+					"fr": "La résistance est en court-circuit"
+				},
+				"rationale": {
+					"en": "A short would read about 0 Ω and make the LED brighter.",
+					"fr": "Un court-circuit indiquerait environ 0 Ω et rendrait la LED plus brillante."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "Meter loading has changed the reading",
+					"fr": "L’effet de charge a faussé la mesure"
+				},
+				"rationale": {
+					"en": "Loading affects voltage readings in high-resistance circuits; this is a resistance measurement of an isolated part.",
+					"fr": "L’effet de charge concerne les mesures de tension dans des circuits très résistifs ; ici c’est la mesure d’un composant isolé."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch02.exam_trouble_voltage_first",
+		"version": 1,
+		"type": "multiple_choice",
+		"conceptIds": ["practice.troubleshooting"],
+		"formulaIds": [],
+		"difficulty": 2,
+		"kind": "independent",
+		"pool": "exam",
+		"prompt": {
+			"en": "When troubleshooting a powered circuit, why do technicians usually measure voltages before currents?",
+			"fr": "Lors du dépannage d’un circuit alimenté, pourquoi les techniciens mesurent-ils généralement les tensions avant les courants ?"
+		},
+		"hints": [],
+		"solution": [
+			{
+				"en": "A voltmeter goes in parallel: no wiring change, no risk of creating a short (if the lead is in the V jack).",
+				"fr": "Un voltmètre se branche en parallèle : aucun recâblage, aucun risque de court-circuit (si le cordon est sur la borne V)."
+			},
+			{
+				"en": "Voltage patterns already locate most faults: full supply voltage across an open part, about 0 V across a shorted one.",
+				"fr": "Les tensions suffisent à localiser la plupart des pannes : toute la tension aux bornes d’un élément ouvert, environ 0 V aux bornes d’un élément en court-circuit."
+			}
+		],
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "Voltage readings are always more accurate",
+					"fr": "Les mesures de tension sont toujours plus précises"
+				},
+				"rationale": {
+					"en": "Accuracy is similar; the real reason is practical.",
+					"fr": "La précision est comparable ; la vraie raison est pratique."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "Voltage is measured by touching probes across parts without changing the circuit; current needs the loop to be opened",
+					"fr": "La tension se mesure en posant les pointes aux bornes des composants sans modifier le circuit ; le courant oblige à ouvrir la boucle"
+				},
+				"rationale": {
+					"en": "Correct: voltage checks are quick and non-invasive, and they reveal opens (full voltage) and shorts (0 V).",
+					"fr": "Exact : les mesures de tension sont rapides et non invasives, et elles révèlent les coupures (toute la tension) et les courts-circuits (0 V)."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "Current cannot be measured on a breadboard",
+					"fr": "On ne peut pas mesurer un courant sur une plaque d’essai"
+				},
+				"rationale": {
+					"en": "You can, by opening the loop and inserting the meter in series.",
+					"fr": "On peut, en ouvrant la boucle et en insérant l’appareil en série."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "Measuring current is forbidden below 12 V",
+					"fr": "Mesurer un courant est interdit sous 12 V"
+				},
+				"rationale": {
+					"en": "There is no such rule.",
+					"fr": "Cette règle n’existe pas."
+				}
+			}
+		],
+		"correctOptionId": "b"
+	},
+	{
+		"id": "exercise.ch02.exam_trouble_series_open",
+		"version": 1,
+		"type": "diagnose",
+		"conceptIds": ["practice.troubleshooting"],
+		"formulaIds": [],
+		"difficulty": 2,
+		"kind": "independent",
+		"pool": "exam",
+		"prompt": {
+			"en": "In the series circuit shown (9 V), you measure: **R1: 0 V, R2: 9 V, R3: 0 V**. What is the fault?",
+			"fr": "Dans le circuit série représenté (9 V), vous mesurez : **R1 : 0 V, R2 : 9 V, R3 : 0 V**. Quelle est la panne ?"
+		},
+		"diagramId": "diagram.ch02.series_string",
+		"hints": [],
+		"solution": [
+			{
+				"en": "Normal values would be 2 V, 4 V and 3 V.",
+				"fr": "Les valeurs normales seraient 2 V, 4 V et 3 V."
+			},
+			{
+				"en": "0 V across R1 and R3 means $I = 0$; the whole 9 V across R2 identifies it as the open element.",
+				"fr": "0 V aux bornes de R1 et R3 signifie $I = 0$ ; les 9 V aux bornes de R2 la désignent comme l’élément ouvert."
+			}
+		],
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "R1 is open",
+					"fr": "R1 est coupée"
+				},
+				"rationale": {
+					"en": "An open R1 would take the full 9 V itself, and R2 would show 0 V.",
+					"fr": "Une R1 coupée recevrait elle-même les 9 V, et R2 indiquerait 0 V."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "R2 is shorted",
+					"fr": "R2 est en court-circuit"
+				},
+				"rationale": {
+					"en": "A shorted R2 would show about 0 V, not 9 V.",
+					"fr": "Une R2 en court-circuit indiquerait environ 0 V, pas 9 V."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "R2 is open",
+					"fr": "R2 est coupée"
+				},
+				"rationale": {
+					"en": "Correct: 0 V on R1 and R3 means no current; the full 9 V appears across the open element, R2.",
+					"fr": "Exact : 0 V sur R1 et R3 signifie aucun courant ; les 9 V apparaissent aux bornes de l’élément ouvert, R2."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "The battery is flat",
+					"fr": "La pile est vide"
+				},
+				"rationale": {
+					"en": "R2 shows 9 V, so the battery is delivering its voltage.",
+					"fr": "R2 indique 9 V : la pile fournit bien sa tension."
+				}
+			}
+		],
+		"correctOptionId": "c"
+	},
+	{
+		"id": "exercise.ch02.exam_trouble_parallel_bulb",
+		"version": 1,
+		"type": "diagnose",
+		"conceptIds": ["practice.troubleshooting"],
+		"formulaIds": [],
+		"difficulty": 2,
+		"kind": "applied",
+		"pool": "exam",
+		"prompt": {
+			"en": "A toy has two identical 6 V bulbs in parallel on a 6 V battery pack. One bulb is lit normally; the other is dark. Across the dark bulb you measure **6 V**. What is the most likely fault?",
+			"fr": "Un jouet a deux ampoules identiques de 6 V en parallèle sur un bloc de piles de 6 V. Une ampoule est allumée normalement, l’autre est éteinte. Aux bornes de l’ampoule éteinte, vous mesurez **6 V**. Quelle est la panne la plus probable ?"
+		},
+		"hints": [],
+		"solution": [
+			{
+				"en": "6 V across the dark bulb: voltage reaches it, so the wiring up to it is fine.",
+				"fr": "6 V aux bornes de l’ampoule éteinte : la tension arrive, le câblage jusqu’à elle est bon."
+			},
+			{
+				"en": "Voltage but no light means no current through the bulb: it is open (broken filament or bad contact). Replace or reseat it.",
+				"fr": "De la tension mais pas de lumière : aucun courant ne la traverse, elle est ouverte (filament coupé ou mauvais contact). La remplacer ou la remettre en place."
+			}
+		],
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "The battery pack is flat",
+					"fr": "Le bloc de piles est vide"
+				},
+				"rationale": {
+					"en": "The other bulb is lit normally and 6 V is present, so the supply is fine.",
+					"fr": "L’autre ampoule est allumée normalement et 6 V sont présents : l’alimentation va bien."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "The dark bulb is shorted",
+					"fr": "L’ampoule éteinte est en court-circuit"
+				},
+				"rationale": {
+					"en": "A short across a parallel branch would short the battery: ~0 V everywhere and the other bulb would go out too.",
+					"fr": "Un court-circuit sur une branche en parallèle court-circuiterait la pile : ~0 V partout et l’autre ampoule s’éteindrait aussi."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "The dark bulb’s filament is broken (open) or it makes no contact in its holder",
+					"fr": "Le filament de l’ampoule éteinte est coupé (ouvert) ou elle ne fait pas contact dans sa douille"
+				},
+				"rationale": {
+					"en": "Correct: it has the full 6 V across it but does not light, so no current passes through it.",
+					"fr": "Exact : elle a bien 6 V à ses bornes mais ne s’allume pas, donc aucun courant ne la traverse."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "The wire to the dark bulb is broken before the bulb",
+					"fr": "Le fil allant vers l’ampoule éteinte est coupé avant l’ampoule"
+				},
+				"rationale": {
+					"en": "Then you would measure 0 V across the bulb, not 6 V.",
+					"fr": "On mesurerait alors 0 V aux bornes de l’ampoule, pas 6 V."
+				}
+			}
+		],
+		"correctOptionId": "c"
+	}
+]

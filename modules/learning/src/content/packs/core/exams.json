@@ -1,0 +1,76 @@
+[
+	{
+		"id": "exam.module.a",
+		"version": 3,
+		"scope": "module",
+		"scopeId": "module.a",
+		"title": {
+			"en": "Module 1 exam — Foundations",
+			"fr": "Examen du module 1 — Fondations"
+		},
+		"passPercent": 80,
+		"forms": [
+			{
+				"id": "A",
+				"itemIds": [
+					"exercise.ch00.si_base.exam_powerbank",
+					"exercise.ch00.sym.exam_junction_dot",
+					"exercise.ch00.loop.exam_one_terminal",
+					"exercise.ch00.rearr.exam_ohm_r",
+					"exercise.ch00.rearr.exam_powerbank_time",
+					"exercise.ch01.charge_exam_mah_meaning",
+					"exercise.ch01.current_exam_charger",
+					"exercise.ch01.voltage_exam_open_switch",
+					"exercise.ch01.ground_exam_led_board",
+					"exercise.ch01.resistance_exam_one_ohm",
+					"exercise.ch02.exam_series_same_current",
+					"exercise.ch02.exam_parallel_three_equal",
+					"exercise.ch02.exam_parallel_branch_voltage",
+					"exercise.ch02.exam_open_resistance",
+					"exercise.ch02.exam_breadboard_led_reversed"
+				]
+			},
+			{
+				"id": "B",
+				"itemIds": [
+					"exercise.ch00.si_base.exam_meter_reading",
+					"exercise.ch00.sym.exam_led_direction",
+					"exercise.ch00.loop.exam_torch_open",
+					"exercise.ch00.safety.exam_fix_led",
+					"exercise.ch00.safety.exam_test_cell",
+					"exercise.ch01.ohm_exam_resistance",
+					"exercise.ch01.ohm_exam_9v_led",
+					"exercise.ch01.power_exam_v2r",
+					"exercise.ch01.power_exam_charger",
+					"exercise.ch01.energy_exam_unit",
+					"exercise.ch02.exam_breadboard_series_placement",
+					"exercise.ch02.exam_meter_ideal_resistances",
+					"exercise.ch02.exam_errors_range_choice",
+					"exercise.ch02.exam_trouble_series_open",
+					"exercise.ch02.exam_trouble_parallel_bulb"
+				]
+			},
+			{
+				"id": "C",
+				"itemIds": [
+					"exercise.ch00.si_base.exam_match",
+					"exercise.ch00.sym.exam_ground",
+					"exercise.ch00.loop.exam_switch_position",
+					"exercise.ch00.rearr.exam_power",
+					"exercise.ch00.rearr.exam_led_part",
+					"exercise.ch01.charge_exam_basic",
+					"exercise.ch01.current_exam_same_everywhere",
+					"exercise.ch01.voltage_exam_usb",
+					"exercise.ch01.ground_exam_vab",
+					"exercise.ch01.resistance_exam_insulator",
+					"exercise.ch02.exam_series_mixed_prefix",
+					"exercise.ch02.exam_series_tune_led",
+					"exercise.ch02.exam_parallel_220_330",
+					"exercise.ch02.exam_parallel_make_500",
+					"exercise.ch02.exam_short_current"
+				]
+			}
+		],
+		"drillItemsPerConcept": 1
+	}
+]

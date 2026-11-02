@@ -1,0 +1,93 @@
+[
+	{
+		"id": "resistors.series",
+		"chapterId": "chapter.02",
+		"name": {
+			"en": "Series resistors",
+			"fr": "Résistances en série"
+		},
+		"summary": {
+			"en": "Series resistances add; the same current flows through each.",
+			"fr": "Les résistances en série s’additionnent ; le même courant les traverse."
+		},
+		"prerequisites": []
+	},
+	{
+		"id": "resistors.parallel",
+		"chapterId": "chapter.02",
+		"name": {
+			"en": "Parallel resistors",
+			"fr": "Résistances en parallèle"
+		},
+		"summary": {
+			"en": "Parallel branches share the same voltage; 1/R = Σ 1/Rᵢ.",
+			"fr": "Les branches en parallèle ont la même tension ; 1/R = Σ 1/Rᵢ."
+		},
+		"prerequisites": []
+	},
+	{
+		"id": "circuits.open_short",
+		"chapterId": "chapter.02",
+		"name": {
+			"en": "Open and short circuits",
+			"fr": "Circuit ouvert et court-circuit"
+		},
+		"summary": {
+			"en": "An open circuit carries no current; a short has (almost) no voltage across it.",
+			"fr": "Un circuit ouvert ne laisse passer aucun courant ; un court-circuit n’a (presque) aucune tension à ses bornes."
+		},
+		"prerequisites": []
+	},
+	{
+		"id": "practice.breadboard",
+		"chapterId": "chapter.02",
+		"name": {
+			"en": "Breadboards",
+			"fr": "Plaques d’essai"
+		},
+		"summary": {
+			"en": "How breadboard rows and rails are connected internally.",
+			"fr": "Comment les rangées et les rails d’une plaque d’essai sont reliés."
+		},
+		"prerequisites": []
+	},
+	{
+		"id": "measure.multimeter",
+		"chapterId": "chapter.02",
+		"name": {
+			"en": "Using a multimeter",
+			"fr": "Utiliser un multimètre"
+		},
+		"summary": {
+			"en": "Measure voltage in parallel, current in series, resistance unpowered.",
+			"fr": "Mesurer la tension en parallèle, le courant en série, la résistance hors tension."
+		},
+		"prerequisites": []
+	},
+	{
+		"id": "measure.errors",
+		"chapterId": "chapter.02",
+		"name": {
+			"en": "Measurement errors",
+			"fr": "Erreurs de mesure"
+		},
+		"summary": {
+			"en": "Tolerance, resolution and meter loading limit accuracy.",
+			"fr": "Tolérance, résolution et effet de charge limitent la précision."
+		},
+		"prerequisites": ["measure.multimeter"]
+	},
+	{
+		"id": "practice.troubleshooting",
+		"chapterId": "chapter.02",
+		"name": {
+			"en": "Troubleshooting",
+			"fr": "Dépannage"
+		},
+		"summary": {
+			"en": "Find faults systematically by comparing expected and measured values.",
+			"fr": "Trouver une panne méthodiquement en comparant valeurs attendues et mesurées."
+		},
+		"prerequisites": ["measure.multimeter", "circuits.open_short"]
+	}
+]

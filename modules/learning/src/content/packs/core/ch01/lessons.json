@@ -1,0 +1,749 @@
+[
+	{
+		"id": "lesson.01.01.charge_current",
+		"version": 1,
+		"chapterId": "chapter.01",
+		"number": "01.01",
+		"title": {
+			"en": "Charge and current",
+			"fr": "Charge et courant"
+		},
+		"objectives": [
+			{
+				"en": "Describe current as the flow rate of charge and state the conventional direction.",
+				"fr": "Décrire le courant comme un débit de charge et donner son sens conventionnel."
+			},
+			{
+				"en": "Use Q = I·t, including battery capacities in mAh.",
+				"fr": "Utiliser Q = I·t, y compris pour des capacités de batterie en mAh."
+			}
+		],
+		"conceptsTaught": ["dc.charge", "dc.current"],
+		"formulasUsed": ["formula.charge.it"],
+		"estimatedMinutes": 10,
+		"safetyClass": "none",
+		"cards": [
+			{
+				"id": "c1",
+				"type": "explain",
+				"title": {
+					"en": "Charge",
+					"fr": "La charge"
+				},
+				"text": {
+					"en": "Everything is made of atoms, and atoms contain tiny electric **charges**: negative electrons and positive protons. In a metal wire, some electrons are free to move.\n\nCharge is measured in **coulombs (C)**. One coulomb is a huge number of electrons — about 6 billion billion.",
+					"fr": "Toute la matière est faite d’atomes, qui contiennent de minuscules **charges** électriques : des électrons négatifs et des protons positifs. Dans un fil métallique, certains électrons peuvent se déplacer librement.\n\nLa charge se mesure en **coulombs (C)**. Un coulomb représente un nombre énorme d’électrons — environ 6 milliards de milliards."
+				}
+			},
+			{
+				"id": "c2",
+				"type": "explain",
+				"title": {
+					"en": "Current is a flow of charge",
+					"fr": "Le courant est un débit de charge"
+				},
+				"text": {
+					"en": "**Current** is how much charge passes a point each second: $I = \\frac{Q}{t}$, measured in **amperes (A)**. 1 A = 1 C per second. Small currents use milliamperes: 1 mA = 0.001 A.\n\n- Current only flows around a **closed loop**.\n- By convention, current leaves the battery’s **+** terminal, goes through the circuit and comes back to the **−** terminal. (Electrons actually drift the other way — that is fine, the convention still works.)\n- Current is **not used up**: what goes out of the battery comes back.",
+					"fr": "Le **courant** est la quantité de charge qui passe en un point chaque seconde : $I = \\frac{Q}{t}$, mesuré en **ampères (A)**. 1 A = 1 C par seconde. Pour les petits courants, on utilise le milliampère : 1 mA = 0,001 A.\n\n- Le courant ne circule que dans une **boucle fermée**.\n- Par convention, le courant sort par la borne **+** de la pile, traverse le circuit et revient par la borne **−**. (Les électrons, eux, se déplacent en sens inverse — ce n’est pas grave, la convention reste valable.)\n- Le courant **ne s’use pas** : ce qui sort de la pile y revient."
+				}
+			},
+			{
+				"id": "c3",
+				"type": "diagram",
+				"diagramId": "diagram.ch01.ammeter_loop",
+				"caption": {
+					"en": "Two ammeters, one before and one after the resistor, show the same 15 mA: current is not used up.",
+					"fr": "Deux ampèremètres, l’un avant et l’autre après la résistance, indiquent les mêmes 15 mA : le courant ne s’use pas."
+				}
+			},
+			{
+				"id": "c4",
+				"type": "formula",
+				"formulaId": "formula.charge.it"
+			},
+			{
+				"id": "c5",
+				"type": "worked_example",
+				"title": {
+					"en": "How long will a battery last?",
+					"fr": "Combien de temps tiendra une batterie ?"
+				},
+				"steps": [
+					{
+						"en": "A rechargeable battery is rated 2000 mAh. It powers a gadget drawing 100 mA.",
+						"fr": "Une batterie rechargeable est notée 2000 mAh. Elle alimente un gadget qui consomme 100 mA."
+					},
+					{
+						"en": "mAh is a charge: 2000 mAh is the charge that 2000 mA delivers in 1 h.",
+						"fr": "Les mAh sont une charge : 2000 mAh, c’est la charge que 2000 mA délivrent en 1 h."
+					},
+					{
+						"en": "Rearrange $Q = I \\cdot t$: $t = \\frac{Q}{I} = \\frac{2000\\ \\text{mAh}}{100\\ \\text{mA}} = 20\\ \\text{h}$.",
+						"fr": "On réarrange $Q = I \\cdot t$ : $t = \\frac{Q}{I} = \\frac{2000\\ \\text{mAh}}{100\\ \\text{mA}} = 20\\ \\text{h}$."
+					},
+					{
+						"en": "In coulombs: $2000 \\times 3.6 = 7200\\ \\text{C}$.",
+						"fr": "En coulombs : $2000 \\times 3{,}6 = 7200\\ \\text{C}$."
+					}
+				]
+			},
+			{
+				"id": "c6",
+				"type": "exercise",
+				"exerciseId": "exercise.ch01.charge_basic"
+			},
+			{
+				"id": "c7",
+				"type": "exercise",
+				"exerciseId": "exercise.ch01.current_definition"
+			},
+			{
+				"id": "c8",
+				"type": "exercise",
+				"exerciseId": "exercise.ch01.current_not_used_up"
+			},
+			{
+				"id": "c9",
+				"type": "summary",
+				"points": [
+					{
+						"en": "Charge Q is in coulombs (C); battery capacity in mAh is also a charge (1 mAh = 3.6 C).",
+						"fr": "La charge Q se mesure en coulombs (C) ; la capacité en mAh est aussi une charge (1 mAh = 3,6 C)."
+					},
+					{
+						"en": "Current I is charge per second, in amperes: $Q = I \\cdot t$.",
+						"fr": "Le courant I est une charge par seconde, en ampères : $Q = I \\cdot t$."
+					},
+					{
+						"en": "Conventional current flows from + to − outside the battery, and is the same all around a single loop.",
+						"fr": "Le courant conventionnel va du + vers le − à l’extérieur de la pile, et il est le même tout le long d’une boucle unique."
+					}
+				]
+			}
+		],
+		"references": []
+	},
+	{
+		"id": "lesson.01.02.voltage",
+		"version": 1,
+		"chapterId": "chapter.01",
+		"number": "01.02",
+		"title": {
+			"en": "Voltage",
+			"fr": "La tension"
+		},
+		"objectives": [
+			{
+				"en": "Explain voltage as energy per charge between two points.",
+				"fr": "Expliquer la tension comme une énergie par charge entre deux points."
+			},
+			{
+				"en": "Connect a voltmeter across a component.",
+				"fr": "Brancher un voltmètre aux bornes d’un composant."
+			}
+		],
+		"conceptsTaught": ["dc.voltage"],
+		"formulasUsed": [],
+		"estimatedMinutes": 8,
+		"safetyClass": "none",
+		"cards": [
+			{
+				"id": "c1",
+				"type": "explain",
+				"title": {
+					"en": "Energy per charge",
+					"fr": "Une énergie par charge"
+				},
+				"text": {
+					"en": "A battery gives energy to the charges that pass through it. **Voltage** tells you how much energy each coulomb gets: 1 volt = 1 joule per coulomb.\n\nA 9 V battery gives 9 J to every coulomb. The charges then hand that energy over to the parts of the circuit (a lamp lights, a resistor warms up).",
+					"fr": "Une pile donne de l’énergie aux charges qui la traversent. La **tension** indique combien d’énergie reçoit chaque coulomb : 1 volt = 1 joule par coulomb.\n\nUne pile de 9 V donne 9 J à chaque coulomb. Les charges cèdent ensuite cette énergie aux composants du circuit (une lampe s’allume, une résistance chauffe)."
+				}
+			},
+			{
+				"id": "c2",
+				"type": "explain",
+				"title": {
+					"en": "Always between two points",
+					"fr": "Toujours entre deux points"
+				},
+				"text": {
+					"en": "Voltage is a **difference**: it compares two points. “The voltage across R1” means between its two ends. A single point on its own has no voltage.\n\n- Across a battery or a component: there is a voltage.\n- Between two points of the same plain wire: ≈0 V.\n\nIn French textbooks voltage is often written **U** (« tension »), but the symbol V is used everywhere in electronics.",
+					"fr": "La tension est une **différence** : elle compare deux points. « La tension aux bornes de R1 » se mesure entre ses deux extrémités. Un point seul n’a pas de tension.\n\n- Aux bornes d’une pile ou d’un composant : il y a une tension.\n- Entre deux points d’un même fil : ≈0 V.\n\nDans les manuels français, la tension est souvent notée **U**, mais le symbole V est utilisé partout en électronique."
+				}
+			},
+			{
+				"id": "c3",
+				"type": "diagram",
+				"diagramId": "diagram.ch01.voltmeter_across_r",
+				"caption": {
+					"en": "A voltmeter is connected across R1, one probe on each end. It reads the 9 V that the resistor receives.",
+					"fr": "Un voltmètre est branché aux bornes de R1, une pointe à chaque extrémité. Il indique les 9 V que reçoit la résistance."
+				}
+			},
+			{
+				"id": "c4",
+				"type": "worked_example",
+				"title": {
+					"en": "Cells in series",
+					"fr": "Des piles en série"
+				},
+				"steps": [
+					{
+						"en": "A torch holds two 1.5 V cells placed + to −, one after the other.",
+						"fr": "Une lampe de poche contient deux piles de 1,5 V placées + contre −, l’une après l’autre."
+					},
+					{
+						"en": "Each coulomb passes through both cells and gains 1.5 J in each: 3 J in total.",
+						"fr": "Chaque coulomb traverse les deux piles et gagne 1,5 J dans chacune : 3 J au total."
+					},
+					{
+						"en": "So the torch gets 1.5 V + 1.5 V = 3 V. If one cell were reversed, they would cancel: 0 V.",
+						"fr": "La lampe reçoit donc 1,5 V + 1,5 V = 3 V. Si l’une des piles était retournée, elles s’annuleraient : 0 V."
+					}
+				]
+			},
+			{
+				"id": "c5",
+				"type": "exercise",
+				"exerciseId": "exercise.ch01.voltage_definition"
+			},
+			{
+				"id": "c6",
+				"type": "exercise",
+				"exerciseId": "exercise.ch01.voltage_meter_connection"
+			},
+			{
+				"id": "c7",
+				"type": "safety",
+				"text": {
+					"en": "Never connect a wire, a coin or keys directly between a battery’s two terminals: this is a **short circuit**. The battery and wire can get very hot, and lithium cells can catch fire. Keep 9 V batteries away from loose coins in pockets.",
+					"fr": "Ne reliez jamais directement les deux bornes d’une pile avec un fil, une pièce ou des clés : c’est un **court-circuit**. La pile et le fil peuvent devenir très chauds, et les piles au lithium peuvent prendre feu. Ne mettez pas une pile de 9 V dans une poche avec des pièces."
+				}
+			},
+			{
+				"id": "c8",
+				"type": "summary",
+				"points": [
+					{
+						"en": "Voltage = energy per charge, in volts: 1 V = 1 J/C.",
+						"fr": "Tension = énergie par charge, en volts : 1 V = 1 J/C."
+					},
+					{
+						"en": "A voltage is always measured between two points, with the voltmeter across (in parallel with) the part.",
+						"fr": "Une tension se mesure toujours entre deux points, voltmètre branché aux bornes (en parallèle) du composant."
+					},
+					{
+						"en": "Cells in series, same direction: voltages add.",
+						"fr": "Piles en série, dans le même sens : les tensions s’additionnent."
+					}
+				]
+			}
+		],
+		"references": []
+	},
+	{
+		"id": "lesson.01.03.ground_reference",
+		"version": 1,
+		"chapterId": "chapter.01",
+		"number": "01.03",
+		"title": {
+			"en": "Ground and reference",
+			"fr": "Masse et référence"
+		},
+		"objectives": [
+			{
+				"en": "Explain ground as the chosen 0 V reference node.",
+				"fr": "Expliquer la masse comme le nœud de référence 0 V choisi."
+			},
+			{
+				"en": "Compute a voltage between two nodes from their voltages to ground.",
+				"fr": "Calculer la tension entre deux nœuds à partir de leurs tensions par rapport à la masse."
+			}
+		],
+		"conceptsTaught": ["dc.ground_reference"],
+		"formulasUsed": [],
+		"estimatedMinutes": 9,
+		"safetyClass": "none",
+		"cards": [
+			{
+				"id": "c1",
+				"type": "explain",
+				"title": {
+					"en": "Picking a zero",
+					"fr": "Choisir un zéro"
+				},
+				"text": {
+					"en": "Since voltage compares two points, it is handy to pick **one** point and call it 0 V. That point is the **ground** (or “GND”, « masse » in French), drawn with the ⏚ symbol. It is usually the battery’s − terminal.\n\nAfter that, “the voltage at node B” simply means “the voltage between B and ground”.",
+					"fr": "Puisqu’une tension compare deux points, il est pratique d’en choisir **un** et de l’appeler 0 V. Ce point est la **masse** (« GND » en anglais), dessinée avec le symbole ⏚. C’est en général la borne − de la pile.\n\nEnsuite, « la tension au nœud B » veut simplement dire « la tension entre B et la masse »."
+				}
+			},
+			{
+				"id": "c2",
+				"type": "diagram",
+				"diagramId": "diagram.ch01.ground_nodes",
+				"caption": {
+					"en": "Node voltages measured from ground: A = 9 V, B = 4.5 V, ground = 0 V.",
+					"fr": "Tensions des nœuds mesurées depuis la masse : A = 9 V, B = 4,5 V, masse = 0 V."
+				}
+			},
+			{
+				"id": "c3",
+				"type": "explain",
+				"title": {
+					"en": "Voltage between two nodes",
+					"fr": "Tension entre deux nœuds"
+				},
+				"text": {
+					"en": "If you know two node voltages, subtract: $V_{AB} = V_A - V_B$.\n\nIn the diagram, $V_{AB} = 9 - 4.5 = 4.5$ V across R1, and $V_B = 4.5$ V across R2.\n\nGround is a **reference**, not a sink: current does not disappear into it. It flows back to the battery through the ground wire. In a battery circuit, ground does not need any connection to the earth.",
+					"fr": "Si l’on connaît deux tensions de nœuds, on soustrait : $V_{AB} = V_A - V_B$.\n\nSur le schéma, $V_{AB} = 9 - 4{,}5 = 4{,}5$ V aux bornes de R1, et $V_B = 4{,}5$ V aux bornes de R2.\n\nLa masse est une **référence**, pas un puits : le courant n’y disparaît pas. Il revient à la pile par le fil de masse. Dans un circuit à pile, la masse n’a besoin d’aucune liaison avec la terre."
+				}
+			},
+			{
+				"id": "c4",
+				"type": "worked_example",
+				"title": {
+					"en": "Moving the reference",
+					"fr": "Déplacer la référence"
+				},
+				"steps": [
+					{
+						"en": "Same circuit, but now ground is put at node B instead of the battery’s − terminal.",
+						"fr": "Même circuit, mais on place maintenant la masse au nœud B au lieu de la borne − de la pile."
+					},
+					{
+						"en": "Differences do not change: A is still 4.5 V above B, and − is still 4.5 V below B.",
+						"fr": "Les différences ne changent pas : A est toujours 4,5 V au-dessus de B, et le − toujours 4,5 V en dessous de B."
+					},
+					{
+						"en": "New labels: A = +4.5 V, B = 0 V, battery − = −4.5 V. The current and the physics are exactly the same.",
+						"fr": "Nouvelles étiquettes : A = +4,5 V, B = 0 V, − de la pile = −4,5 V. Le courant et la physique restent exactement les mêmes."
+					}
+				]
+			},
+			{
+				"id": "c5",
+				"type": "exercise",
+				"exerciseId": "exercise.ch01.ground_definition"
+			},
+			{
+				"id": "c6",
+				"type": "exercise",
+				"exerciseId": "exercise.ch01.ground_node_voltage"
+			},
+			{
+				"id": "c7",
+				"type": "exercise",
+				"exerciseId": "exercise.ch01.ground_move_reference"
+			},
+			{
+				"id": "c8",
+				"type": "summary",
+				"points": [
+					{
+						"en": "Ground (GND, ⏚) is the node we choose as 0 V.",
+						"fr": "La masse (GND, ⏚) est le nœud choisi comme 0 V."
+					},
+					{
+						"en": "A node voltage is measured from ground; between two nodes: $V_{AB} = V_A - V_B$.",
+						"fr": "La tension d’un nœud se mesure depuis la masse ; entre deux nœuds : $V_{AB} = V_A - V_B$."
+					},
+					{
+						"en": "Moving the reference changes the labels, never the currents or voltage differences.",
+						"fr": "Déplacer la référence change les étiquettes, jamais les courants ni les différences de tension."
+					}
+				]
+			}
+		],
+		"references": []
+	},
+	{
+		"id": "lesson.01.04.resistance",
+		"version": 2,
+		"chapterId": "chapter.01",
+		"number": "01.04",
+		"title": {
+			"en": "Resistance",
+			"fr": "La résistance"
+		},
+		"objectives": [
+			{
+				"en": "Describe resistance as opposition to current, in ohms.",
+				"fr": "Décrire la résistance comme l’opposition au courant, en ohms."
+			},
+			{
+				"en": "Read resistor markings and predict how length and thickness change resistance.",
+				"fr": "Lire le marquage des résistances et prédire l’effet de la longueur et de l’épaisseur sur la résistance."
+			}
+		],
+		"conceptsTaught": ["dc.resistance"],
+		"formulasUsed": [],
+		"estimatedMinutes": 8,
+		"safetyClass": "none",
+		"cards": [
+			{
+				"id": "c1",
+				"type": "explain",
+				"title": {
+					"en": "Opposing the current",
+					"fr": "S’opposer au courant"
+				},
+				"text": {
+					"en": "**Resistance** says how hard it is for current to flow through something. It is measured in **ohms (Ω)**. With the same voltage, a bigger resistance lets through a smaller current.\n\n- Copper wires: tiny resistance (good conductors).\n- Plastic, air, glass: enormous resistance (insulators).\n- **Resistors**: parts made to have a precise resistance, such as 330 Ω or 4.7 kΩ, to control current.",
+					"fr": "La **résistance** indique à quel point le courant a du mal à traverser quelque chose. Elle se mesure en **ohms (Ω)**. Sous la même tension, une résistance plus grande laisse passer un courant plus faible.\n\n- Fils de cuivre : résistance minuscule (bons conducteurs).\n- Plastique, air, verre : résistance énorme (isolants).\n- **Résistances** (le composant) : conçues pour avoir une valeur précise, comme 330 Ω ou 4,7 kΩ, afin de contrôler le courant."
+				}
+			},
+			{
+				"id": "c2",
+				"type": "explain",
+				"title": {
+					"en": "What sets a wire’s resistance",
+					"fr": "Ce qui fixe la résistance d’un fil"
+				},
+				"text": {
+					"en": "For a wire of a given material:\n\n- **Longer** → more resistance (twice the length, twice the resistance).\n- **Thicker** → less resistance (twice the cross-section area, half the resistance).\n- Temperature matters too: metals resist more when hot.",
+					"fr": "Pour un fil d’un matériau donné :\n\n- **Plus long** → plus de résistance (longueur doublée, résistance doublée).\n- **Plus épais** → moins de résistance (section doublée, résistance divisée par deux).\n- La température compte aussi : les métaux résistent davantage quand ils sont chauds."
+				}
+			},
+			{
+				"id": "c3",
+				"type": "diagram",
+				"diagramId": "diagram.ch01.single_resistor",
+				"caption": {
+					"en": "A 330 Ω resistor R1 limits the current a 5 V battery can push round the loop.",
+					"fr": "Une résistance R1 de 330 Ω limite le courant que la pile de 5 V peut faire circuler dans la boucle."
+				}
+			},
+			{
+				"id": "c4",
+				"type": "explain",
+				"title": {
+					"en": "Reading resistor markings",
+					"fr": "Lire le marquage des résistances"
+				},
+				"text": {
+					"en": "On parts and in parts lists, the prefix letter often replaces the decimal point: **4K7** = 4.7 kΩ, **1M** = 1 MΩ, **R47** = 0.47 Ω. It avoids a tiny decimal point getting lost in print.",
+					"fr": "Sur les composants et dans les nomenclatures, la lettre du préfixe remplace souvent la virgule : **4K7** = 4,7 kΩ, **1M** = 1 MΩ, **R47** = 0,47 Ω. Cela évite qu’une petite virgule se perde à l’impression."
+				}
+			},
+			{
+				"id": "c5",
+				"type": "exercise",
+				"exerciseId": "exercise.ch01.resistance_definition"
+			},
+			{
+				"id": "c7",
+				"type": "exercise",
+				"exerciseId": "exercise.ch01.resistance_long_thin"
+			},
+			{
+				"id": "c8",
+				"type": "summary",
+				"points": [
+					{
+						"en": "Resistance R opposes current; unit: ohm (Ω), with kΩ and MΩ for larger values.",
+						"fr": "La résistance R s’oppose au courant ; unité : l’ohm (Ω), avec kΩ et MΩ pour les grandes valeurs."
+					},
+					{
+						"en": "Longer or thinner wire → more resistance; shorter or thicker → less.",
+						"fr": "Fil plus long ou plus fin → plus de résistance ; plus court ou plus épais → moins."
+					},
+					{
+						"en": "A resistor does not use up current; it sets how much flows for a given voltage.",
+						"fr": "Une résistance ne consomme pas de courant ; elle fixe combien en passe pour une tension donnée."
+					}
+				]
+			}
+		],
+		"references": []
+	},
+	{
+		"id": "lesson.01.05.ohms_law",
+		"version": 2,
+		"chapterId": "chapter.01",
+		"number": "01.05",
+		"title": {
+			"en": "Ohm’s law",
+			"fr": "La loi d’Ohm"
+		},
+		"objectives": [
+			{
+				"en": "Compute current from voltage and resistance, and convert A to mA.",
+				"fr": "Calculer un courant à partir de la tension et de la résistance, et convertir des A en mA."
+			},
+			{
+				"en": "Rearrange V = I·R to find V or R.",
+				"fr": "Réarranger V = R·I pour trouver V ou R."
+			},
+			{
+				"en": "Size a safe LED series resistor, knowing an LED is not ohmic.",
+				"fr": "Dimensionner une résistance série sûre pour une LED, en sachant qu’une LED n’est pas ohmique."
+			}
+		],
+		"conceptsTaught": ["dc.ohms_law"],
+		"formulasUsed": [
+			"formula.ohm.current",
+			"formula.ohm.voltage",
+			"formula.ohm.resistance",
+			"formula.led.resistor"
+		],
+		"estimatedMinutes": 14,
+		"safetyClass": "low_voltage_simulated",
+		"cards": [
+			{
+				"id": "c1",
+				"type": "explain",
+				"title": {
+					"en": "Voltage pushes, resistance limits",
+					"fr": "La tension pousse, la résistance limite"
+				},
+				"text": {
+					"en": "Current increases with voltage and decreases with resistance. For a resistor this relation is exact: **Ohm’s law**, $V = I \\cdot R$, or $I = \\frac{V}{R}$.",
+					"fr": "Le courant augmente avec la tension et diminue avec la résistance. Pour une résistance, cette relation est exacte : c’est la **loi d’Ohm**, $V = R \\cdot I$ (souvent écrite $U = R \\cdot I$ en France), ou $I = \\frac{V}{R}$."
+				}
+			},
+			{
+				"id": "c2",
+				"type": "diagram",
+				"diagramId": "diagram.ch01.single_resistor",
+				"caption": {
+					"en": "A 5 V battery across a 330 Ω resistor. The current I is the same all around the loop.",
+					"fr": "Une pile de 5 V aux bornes d’une résistance de 330 Ω. Le courant I est le même tout le long de la boucle."
+				}
+			},
+			{
+				"id": "c3",
+				"type": "formula",
+				"formulaId": "formula.ohm.current"
+			},
+			{
+				"id": "c4",
+				"type": "worked_example",
+				"title": {
+					"en": "5 V across 330 Ω",
+					"fr": "5 V aux bornes de 330 Ω"
+				},
+				"steps": [
+					{
+						"en": "$I = \\frac{V}{R} = \\frac{5\\ \\text{V}}{330\\ \\Omega}$",
+						"fr": "$I = \\frac{V}{R} = \\frac{5\\ \\text{V}}{330\\ \\Omega}$"
+					},
+					{
+						"en": "$I \\approx 0.01515\\ \\text{A}$",
+						"fr": "$I \\approx 0{,}01515\\ \\text{A}$"
+					},
+					{
+						"en": "Multiply by 1000 to get milliamperes: $I \\approx 15.15\\ \\text{mA}$.",
+						"fr": "Multipliez par 1000 pour obtenir des milliampères : $I \\approx 15{,}15\\ \\text{mA}$."
+					}
+				]
+			},
+			{
+				"id": "c5",
+				"type": "parameter_lab",
+				"labId": "lab.ch01.ohms_law"
+			},
+			{
+				"id": "c6",
+				"type": "exercise",
+				"exerciseId": "exercise.ch01.ohm_9v_300ohm"
+			},
+			{
+				"id": "c7",
+				"type": "explain",
+				"title": {
+					"en": "Three forms of one law",
+					"fr": "Trois formes d’une même loi"
+				},
+				"text": {
+					"en": "The same law, rearranged:\n\n- $V = I \\cdot R$ — find the voltage across a resistor.\n- $I = \\frac{V}{R}$ — find the current.\n- $R = \\frac{V}{I}$ — find an unknown resistance from two meter readings.\n\nAlways convert to base units (V, A, Ω) first: 25 mA is 0.025 A, 4.7 kΩ is 4700 Ω.",
+					"fr": "La même loi, réarrangée :\n\n- $V = R \\cdot I$ — trouver la tension aux bornes d’une résistance.\n- $I = \\frac{V}{R}$ — trouver le courant.\n- $R = \\frac{V}{I}$ — trouver une résistance inconnue à partir de deux mesures.\n\nConvertissez toujours d’abord en unités de base (V, A, Ω) : 25 mA font 0,025 A, 4,7 kΩ font 4700 Ω."
+				}
+			},
+			{
+				"id": "c8",
+				"type": "exercise",
+				"exerciseId": "exercise.ch01.ohm_voltage_from_current"
+			},
+			{
+				"id": "c9",
+				"type": "explain",
+				"title": {
+					"en": "When Ohm’s law does not apply: LEDs",
+					"fr": "Quand la loi d’Ohm ne s’applique pas : les LED"
+				},
+				"text": {
+					"en": "An LED is **not ohmic**: below its forward voltage $V_f$ (≈2 V for red) almost no current flows; just above it, the current shoots up. So an LED must always have a **series resistor**. The LED keeps about $V_f$; the resistor takes the rest, $V_s - V_f$, and Ohm’s law on the resistor sets the current.\n\nExample: 3 V battery, red LED, 100 Ω → $I = \\frac{3 - 2}{100} = 0.01$ A = 10 mA.",
+					"fr": "Une LED **n’est pas ohmique** : en dessous de sa tension directe $V_f$ (≈2 V pour une rouge), presque aucun courant ne passe ; juste au-dessus, le courant s’envole. Une LED a donc toujours besoin d’une **résistance série**. La LED garde environ $V_f$ ; la résistance prend le reste, $V_s - V_f$, et la loi d’Ohm appliquée à la résistance fixe le courant.\n\nExemple : pile de 3 V, LED rouge, 100 Ω → $I = \\frac{3 - 2}{100} = 0{,}01$ A = 10 mA."
+				}
+			},
+			{
+				"id": "c10",
+				"type": "formula",
+				"formulaId": "formula.led.resistor"
+			},
+			{
+				"id": "c11",
+				"type": "parameter_lab",
+				"labId": "lab.ch01.led_resistor"
+			},
+			{
+				"id": "c12",
+				"type": "summary",
+				"points": [
+					{
+						"en": "Ohm’s law: $V = I \\cdot R$, $I = V/R$, $R = V/I$ — for ohmic parts only.",
+						"fr": "Loi d’Ohm : $V = R \\cdot I$, $I = V/R$, $R = V/I$ — pour les composants ohmiques seulement."
+					},
+					{
+						"en": "An LED is non-ohmic: size its series resistor with $R = (V_s - V_f)/I$ and never connect it without one.",
+						"fr": "Une LED n’est pas ohmique : dimensionnez sa résistance série avec $R = (V_s - V_f)/I$ et ne la branchez jamais sans."
+					}
+				]
+			}
+		],
+		"references": ["G. S. Ohm, Die galvanische Kette, mathematisch bearbeitet (1827)"]
+	},
+	{
+		"id": "lesson.01.06.power_heating",
+		"version": 1,
+		"chapterId": "chapter.01",
+		"number": "01.06",
+		"title": {
+			"en": "Power and heating",
+			"fr": "Puissance et échauffement"
+		},
+		"objectives": [
+			{
+				"en": "Compute power with P = V·I, I²R and V²/R, and check a resistor’s power rating.",
+				"fr": "Calculer une puissance avec P = V·I, R·I² et V²/R, et vérifier la puissance nominale d’une résistance."
+			},
+			{
+				"en": "Compute energy with E = P·t in J and Wh.",
+				"fr": "Calculer une énergie avec E = P·t, en J et en Wh."
+			}
+		],
+		"conceptsTaught": ["dc.power", "dc.energy"],
+		"formulasUsed": [
+			"formula.power.vi",
+			"formula.power.i2r",
+			"formula.power.v2r",
+			"formula.energy.pt"
+		],
+		"estimatedMinutes": 12,
+		"safetyClass": "low_voltage_simulated",
+		"cards": [
+			{
+				"id": "c1",
+				"type": "explain",
+				"title": {
+					"en": "Power: how fast energy is transferred",
+					"fr": "La puissance : la vitesse du transfert d’énergie"
+				},
+				"text": {
+					"en": "**Power** is energy per second, in **watts** (1 W = 1 J/s). Voltage is joules per coulomb and current is coulombs per second, so multiplying them gives joules per second: $P = V \\cdot I$.\n\nFor a resistor, Ohm’s law gives two more handy forms: $P = I^2 R$ and $P = \\frac{V^2}{R}$. In a resistor, all this power becomes **heat**.",
+					"fr": "La **puissance** est une énergie par seconde, en **watts** (1 W = 1 J/s). La tension est en joules par coulomb et le courant en coulombs par seconde : leur produit donne des joules par seconde, $P = V \\cdot I$.\n\nPour une résistance, la loi d’Ohm donne deux autres formes pratiques : $P = R I^2$ et $P = \\frac{V^2}{R}$. Dans une résistance, toute cette puissance devient de la **chaleur**."
+				}
+			},
+			{
+				"id": "c2",
+				"type": "formula",
+				"formulaId": "formula.power.vi"
+			},
+			{
+				"id": "c3",
+				"type": "diagram",
+				"diagramId": "diagram.ch01.power_heating",
+				"caption": {
+					"en": "A 100 Ω resistor straight across 9 V dissipates 0.81 W — over three times the rating of a common 0.25 W resistor.",
+					"fr": "Une résistance de 100 Ω branchée directement sur 9 V dissipe 0,81 W — plus de trois fois la puissance d’une résistance courante de 0,25 W."
+				}
+			},
+			{
+				"id": "c4",
+				"type": "formula",
+				"formulaId": "formula.power.v2r"
+			},
+			{
+				"id": "c5",
+				"type": "worked_example",
+				"title": {
+					"en": "Will the resistor survive?",
+					"fr": "La résistance va-t-elle tenir ?"
+				},
+				"steps": [
+					{
+						"en": "Most hobby resistors are rated **0.25 W**. Choose a rating at least twice the expected power.",
+						"fr": "La plupart des résistances d’amateur supportent **0,25 W**. Choisissez une puissance nominale au moins double de la puissance prévue."
+					},
+					{
+						"en": "LED resistor: 3 V across 150 Ω at 20 mA → $P = 3 \\times 0.02 = 0.06$ W. Fine.",
+						"fr": "Résistance de LED : 3 V aux bornes de 150 Ω à 20 mA → $P = 3 \\times 0{,}02 = 0{,}06$ W. Aucun problème."
+					},
+					{
+						"en": "100 Ω across 9 V → $P = \\frac{81}{100} = 0.81$ W. A 0.25 W resistor would overheat: use a bigger resistance or a 2 W part.",
+						"fr": "100 Ω sous 9 V → $P = \\frac{81}{100} = 0{,}81$ W. Une résistance de 0,25 W surchaufferait : prenez une valeur plus grande ou un modèle de 2 W."
+					}
+				]
+			},
+			{
+				"id": "c6",
+				"type": "exercise",
+				"exerciseId": "exercise.ch01.power_vi_basic"
+			},
+			{
+				"id": "c7",
+				"type": "exercise",
+				"exerciseId": "exercise.ch01.power_i2r_led_resistor"
+			},
+			{
+				"id": "c8",
+				"type": "explain",
+				"title": {
+					"en": "Energy: power over time",
+					"fr": "L’énergie : la puissance dans la durée"
+				},
+				"text": {
+					"en": "Power is a rate; **energy** is the total amount: $E = P \\cdot t$. Watts × seconds = joules; watts × hours = **watt-hours** (1 Wh = 3600 J).\n\nDo not confuse: W is power, Wh and J are energy, mAh is charge.",
+					"fr": "La puissance est un débit ; l’**énergie** est la quantité totale : $E = P \\cdot t$. Watts × secondes = joules ; watts × heures = **wattheures** (1 Wh = 3600 J).\n\nNe confondez pas : W est une puissance, Wh et J sont des énergies, mAh est une charge."
+				}
+			},
+			{
+				"id": "c9",
+				"type": "formula",
+				"formulaId": "formula.energy.pt"
+			},
+			{
+				"id": "c10",
+				"type": "exercise",
+				"exerciseId": "exercise.ch01.energy_basic"
+			},
+			{
+				"id": "c11",
+				"type": "safety",
+				"text": {
+					"en": "Resistors that dissipate too much power get **hot enough to burn your fingers** and can smoke. Do not touch a resistor in a powered circuit, keep projects at 9 V or less (batteries or USB 5 V), and never charge or short lithium cells outside a proper charger.",
+					"fr": "Une résistance qui dissipe trop de puissance peut devenir **assez chaude pour brûler les doigts** et fumer. Ne touchez pas une résistance sous tension, limitez vos montages à 9 V (piles ou USB 5 V), et ne chargez ni ne court-circuitez jamais un accumulateur lithium hors d’un chargeur adapté."
+				}
+			},
+			{
+				"id": "c12",
+				"type": "summary",
+				"points": [
+					{
+						"en": "$P = V \\cdot I = I^2 R = V^2 / R$, in watts.",
+						"fr": "$P = V \\cdot I = R I^2 = V^2 / R$, en watts."
+					},
+					{
+						"en": "Check resistor power against its rating (often 0.25 W), with a 2× margin.",
+						"fr": "Comparez la puissance d’une résistance à sa valeur nominale (souvent 0,25 W), avec une marge de 2×."
+					},
+					{
+						"en": "$E = P \\cdot t$: joules or watt-hours; in a resistor the energy becomes heat.",
+						"fr": "$E = P \\cdot t$ : joules ou wattheures ; dans une résistance, l’énergie devient de la chaleur."
+					}
+				]
+			}
+		],
+		"references": []
+	}
+]

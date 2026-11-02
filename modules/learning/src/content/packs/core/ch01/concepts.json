@@ -1,0 +1,106 @@
+[
+	{
+		"id": "dc.charge",
+		"chapterId": "chapter.01",
+		"name": {
+			"en": "Electric charge",
+			"fr": "Charge électrique"
+		},
+		"summary": {
+			"en": "Charge is measured in coulombs; moving charge is current (Q = I·t).",
+			"fr": "La charge se mesure en coulombs ; une charge en mouvement est un courant (Q = I·t)."
+		},
+		"prerequisites": []
+	},
+	{
+		"id": "dc.current",
+		"chapterId": "chapter.01",
+		"name": {
+			"en": "Electric current",
+			"fr": "Courant électrique"
+		},
+		"summary": {
+			"en": "Current is the rate of charge flow, measured in amperes.",
+			"fr": "Le courant est le débit de charge, mesuré en ampères."
+		},
+		"prerequisites": ["dc.charge"]
+	},
+	{
+		"id": "dc.voltage",
+		"chapterId": "chapter.01",
+		"name": {
+			"en": "Voltage",
+			"fr": "Tension"
+		},
+		"summary": {
+			"en": "Voltage is the energy difference per charge between two points, in volts.",
+			"fr": "La tension est la différence d’énergie par charge entre deux points, en volts."
+		},
+		"prerequisites": []
+	},
+	{
+		"id": "dc.ground_reference",
+		"chapterId": "chapter.01",
+		"name": {
+			"en": "Ground and reference",
+			"fr": "Masse et référence"
+		},
+		"summary": {
+			"en": "Voltages are measured between two points; ground is the chosen 0 V reference.",
+			"fr": "Une tension se mesure entre deux points ; la masse est la référence 0 V choisie."
+		},
+		"prerequisites": ["dc.voltage"]
+	},
+	{
+		"id": "dc.resistance",
+		"chapterId": "chapter.01",
+		"name": {
+			"en": "Resistance",
+			"fr": "Résistance"
+		},
+		"summary": {
+			"en": "Resistance opposes current and is measured in ohms.",
+			"fr": "La résistance s’oppose au courant et se mesure en ohms."
+		},
+		"prerequisites": []
+	},
+	{
+		"id": "dc.ohms_law",
+		"chapterId": "chapter.01",
+		"name": {
+			"en": "Ohm’s law",
+			"fr": "Loi d’Ohm"
+		},
+		"summary": {
+			"en": "For an ohmic resistor, V = I·R.",
+			"fr": "Pour une résistance ohmique, U = R·I."
+		},
+		"prerequisites": ["dc.current", "dc.voltage", "dc.resistance"]
+	},
+	{
+		"id": "dc.power",
+		"chapterId": "chapter.01",
+		"name": {
+			"en": "Electrical power",
+			"fr": "Puissance électrique"
+		},
+		"summary": {
+			"en": "Power is the rate of energy transfer: P = V·I = I²R = V²/R.",
+			"fr": "La puissance est le débit d’énergie : P = U·I = R·I² = U²/R."
+		},
+		"prerequisites": ["dc.ohms_law"]
+	},
+	{
+		"id": "dc.energy",
+		"chapterId": "chapter.01",
+		"name": {
+			"en": "Energy and heating",
+			"fr": "Énergie et échauffement"
+		},
+		"summary": {
+			"en": "Energy is power over time (E = P·t); resistors turn it into heat.",
+			"fr": "L’énergie est la puissance pendant une durée (E = P·t) ; les résistances la transforment en chaleur."
+		},
+		"prerequisites": ["dc.power"]
+	}
+]

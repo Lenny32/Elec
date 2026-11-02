@@ -1,0 +1,451 @@
+[
+	{
+		"id": "lesson.00.01.units_prefixes",
+		"version": 2,
+		"chapterId": "chapter.00",
+		"number": "00.01",
+		"title": {
+			"en": "Units and symbols",
+			"fr": "Unités et symboles"
+		},
+		"objectives": [
+			{
+				"en": "Name the unit and symbol of current, voltage, resistance, power and time",
+				"fr": "Nommer l’unité et le symbole de l’intensité, de la tension, de la résistance, de la puissance et du temps"
+			}
+		],
+		"conceptsTaught": ["units.si_base"],
+		"formulasUsed": [],
+		"estimatedMinutes": 5,
+		"safetyClass": "none",
+		"cards": [
+			{
+				"id": "c1",
+				"type": "explain",
+				"title": {
+					"en": "Every number needs a unit",
+					"fr": "Chaque nombre a besoin d’une unité"
+				},
+				"text": {
+					"en": "“5” means nothing on its own: 5 volts, 5 amperes and 5 ohms are completely different things. In electronics you will meet five units again and again:\n\n- **current** — ampere, **A**\n- **voltage** — volt, **V**\n- **resistance** — ohm, **Ω**\n- **power** — watt, **W**\n- **time** — second, **s**\n\nSymbols are case-sensitive: units named after a person (Ampère, Volta, Ohm, Watt) take a capital letter.",
+					"fr": "« 5 » ne veut rien dire tout seul : 5 volts, 5 ampères et 5 ohms sont des choses totalement différentes. En électronique, vous rencontrerez sans cesse cinq unités :\n\n- **intensité du courant** — ampère, **A**\n- **tension** — volt, **V** (les manuels français la notent souvent **U**)\n- **résistance** — ohm, **Ω**\n- **puissance** — watt, **W**\n- **temps** — seconde, **s**\n\nLes symboles sont sensibles à la casse : les unités qui portent le nom d’un savant (Ampère, Volta, Ohm, Watt) prennent une majuscule."
+				}
+			},
+			{
+				"id": "c2",
+				"type": "exercise",
+				"exerciseId": "exercise.ch00.si_base.current_unit"
+			},
+			{
+				"id": "c8",
+				"type": "exercise",
+				"exerciseId": "exercise.ch00.si_base.symbol_case"
+			},
+			{
+				"id": "c3",
+				"type": "exercise",
+				"exerciseId": "exercise.ch00.si_base.charger_label"
+			},
+			{
+				"id": "c9",
+				"type": "summary",
+				"points": [
+					{
+						"en": "Always write a unit: A (current), V (voltage), Ω (resistance), W (power), s (time).",
+						"fr": "Écrivez toujours l’unité : A (intensité), V (tension), Ω (résistance), W (puissance), s (temps)."
+					}
+				]
+			}
+		],
+		"references": ["BIPM, The International System of Units (SI Brochure), 9th edition, 2019"]
+	},
+	{
+		"id": "lesson.00.02.rearranging",
+		"version": 1,
+		"chapterId": "chapter.00",
+		"number": "00.02",
+		"title": {
+			"en": "Rearranging formulas",
+			"fr": "Transformer une formule"
+		},
+		"objectives": [
+			{
+				"en": "Isolate any variable in a = b·c",
+				"fr": "Isoler n’importe quelle variable dans a = b·c"
+			},
+			{
+				"en": "Isolate any variable in a = b/c",
+				"fr": "Isoler n’importe quelle variable dans a = b/c"
+			},
+			{
+				"en": "Check a rearrangement with simple numbers",
+				"fr": "Vérifier une transformation avec des nombres simples"
+			}
+		],
+		"conceptsTaught": ["math.rearranging"],
+		"formulasUsed": [],
+		"estimatedMinutes": 10,
+		"safetyClass": "none",
+		"cards": [
+			{
+				"id": "c1",
+				"type": "explain",
+				"title": {
+					"en": "A formula is a balance",
+					"fr": "Une formule est une balance"
+				},
+				"text": {
+					"en": "An equation is like a balance: both sides are equal. You may do **anything** to one side as long as you do **exactly the same** to the other side.\n\nTo get a letter alone, undo what is done to it:\n\n- “× c” is undone by “÷ c”\n- “÷ c” is undone by “× c”\n\nYou will use this constantly: most electronics formulas have the shape $a = b \\cdot c$ or $a = \\frac{b}{c}$.",
+					"fr": "Une équation est comme une balance : les deux côtés sont égaux. On peut faire **n’importe quoi** d’un côté, à condition de faire **exactement la même chose** de l’autre.\n\nPour isoler une lettre, on défait ce qu’on lui a fait :\n\n- « × c » se défait par « ÷ c »\n- « ÷ c » se défait par « × c »\n\nVous vous en servirez sans arrêt : la plupart des formules d’électronique ont la forme $a = b \\cdot c$ ou $a = \\frac{b}{c}$."
+				}
+			},
+			{
+				"id": "c2",
+				"type": "worked_example",
+				"title": {
+					"en": "Isolate b in a = b·c",
+					"fr": "Isoler b dans a = b·c"
+				},
+				"steps": [
+					{
+						"en": "b is multiplied by c. To undo, divide **both** sides by c: $\\frac{a}{c} = \\frac{b \\cdot c}{c}$.",
+						"fr": "b est multiplié par c. Pour défaire, on divise **les deux** membres par c : $\\frac{a}{c} = \\frac{b \\cdot c}{c}$."
+					},
+					{
+						"en": "On the right, c ÷ c = 1, so $b = \\frac{a}{c}$ (only if c ≠ 0).",
+						"fr": "À droite, c ÷ c = 1, donc $b = \\frac{a}{c}$ (seulement si c ≠ 0)."
+					},
+					{
+						"en": "Check with numbers: 6 = 3 × 2 → b = 6 ÷ 2 = 3 ✓.",
+						"fr": "Vérification : 6 = 3 × 2 → b = 6 ÷ 2 = 3 ✓."
+					}
+				]
+			},
+			{
+				"id": "c3",
+				"type": "exercise",
+				"exerciseId": "exercise.ch00.rearr.product"
+			},
+			{
+				"id": "c4",
+				"type": "worked_example",
+				"title": {
+					"en": "Isolate c in a = b/c",
+					"fr": "Isoler c dans a = b/c"
+				},
+				"steps": [
+					{
+						"en": "c is in the denominator. Multiply both sides by c: $a \\cdot c = b$.",
+						"fr": "c est au dénominateur. On multiplie les deux membres par c : $a \\cdot c = b$."
+					},
+					{
+						"en": "Now c is multiplied by a. Divide both sides by a: $c = \\frac{b}{a}$ (a ≠ 0).",
+						"fr": "Maintenant c est multiplié par a. On divise par a : $c = \\frac{b}{a}$ (a ≠ 0)."
+					},
+					{
+						"en": "Check: 3 = 6 ÷ 2 → c = 6 ÷ 3 = 2 ✓. And for b: multiply by c, $b = a \\cdot c$ → 3 × 2 = 6 ✓.",
+						"fr": "Vérification : 3 = 6 ÷ 2 → c = 6 ÷ 3 = 2 ✓. Et pour b : on multiplie par c, $b = a \\cdot c$ → 3 × 2 = 6 ✓."
+					}
+				]
+			},
+			{
+				"id": "c5",
+				"type": "exercise",
+				"exerciseId": "exercise.ch00.rearr.quotient_denominator"
+			},
+			{
+				"id": "c6",
+				"type": "explain",
+				"title": {
+					"en": "With real quantities",
+					"fr": "Avec de vraies grandeurs"
+				},
+				"text": {
+					"en": "Electronics formulas work exactly the same way. In chapter 1 you will meet $V = I \\cdot R$ (voltage = current × resistance). It has the shape a = b·c, so:\n\n- $I = \\frac{V}{R}$\n- $R = \\frac{V}{I}$\n\nTwo habits save you from most mistakes: **convert prefixes first** (20 mA → 0.02 A), and **check with easy numbers** that your rearranged formula gives back the original.",
+					"fr": "Les formules d’électronique fonctionnent exactement pareil. Au chapitre 1, vous verrez $V = I \\cdot R$ (tension = intensité × résistance ; souvent écrite $U = R \\cdot I$ en France). Elle a la forme a = b·c, donc :\n\n- $I = \\frac{V}{R}$\n- $R = \\frac{V}{I}$\n\nDeux habitudes évitent la plupart des erreurs : **convertir les préfixes d’abord** (20 mA → 0,02 A) et **vérifier avec des nombres simples** que la formule transformée redonne bien l’originale."
+				}
+			},
+			{
+				"id": "c7",
+				"type": "exercise",
+				"exerciseId": "exercise.ch00.rearr.find_r"
+			},
+			{
+				"id": "c8",
+				"type": "exercise",
+				"exerciseId": "exercise.ch00.rearr.charger_current"
+			},
+			{
+				"id": "c9",
+				"type": "summary",
+				"points": [
+					{
+						"en": "Do the same operation on both sides.",
+						"fr": "Faites la même opération des deux côtés."
+					},
+					{
+						"en": "From a = b·c: b = a/c and c = a/b. From a = b/c: b = a·c and c = b/a.",
+						"fr": "De a = b·c : b = a/c et c = a/b. De a = b/c : b = a·c et c = b/a."
+					},
+					{
+						"en": "You can never divide by zero; check every result with simple numbers.",
+						"fr": "On ne divise jamais par zéro ; vérifiez chaque résultat avec des nombres simples."
+					}
+				]
+			}
+		],
+		"references": []
+	},
+	{
+		"id": "lesson.00.04.reading_diagrams",
+		"version": 1,
+		"chapterId": "chapter.00",
+		"number": "00.03",
+		"title": {
+			"en": "Reading a schematic",
+			"fr": "Lire un schéma électrique"
+		},
+		"objectives": [
+			{
+				"en": "Recognise the battery, switch, resistor, LED, lamp and ground symbols",
+				"fr": "Reconnaître les symboles de pile, interrupteur, résistance, LED, lampe et masse"
+			},
+			{
+				"en": "Tell a junction dot from a simple crossing",
+				"fr": "Distinguer un point de jonction d’un simple croisement"
+			},
+			{
+				"en": "Decide whether a loop is closed and current can flow",
+				"fr": "Dire si une boucle est fermée et si le courant peut circuler"
+			}
+		],
+		"conceptsTaught": ["diagrams.symbols", "diagrams.closed_loop"],
+		"formulasUsed": [],
+		"estimatedMinutes": 14,
+		"safetyClass": "low_voltage_simulated",
+		"cards": [
+			{
+				"id": "c1",
+				"type": "explain",
+				"title": {
+					"en": "A schematic is a map, not a photo",
+					"fr": "Un schéma est une carte, pas une photo"
+				},
+				"text": {
+					"en": "A schematic shows **what is connected to what**, not what the parts look like or where they sit. Each part has a symbol and a label: a letter for its type and a number.\n\n- **B** battery: long line = +, short line = −\n- **S** switch: a blade that is open (gap) or closed\n- **R** resistor: rectangle or zigzag\n- **D** LED: triangle pointing at a bar, with arrows for light\n- **L** lamp: circle with a cross (IEC) or with a filament loop (ANSI)\n- **ground**: a stack of lines, the common 0 V reference",
+					"fr": "Un schéma montre **ce qui est relié à quoi**, pas l’aspect des composants ni leur place réelle. Chaque composant a un symbole et un repère : une lettre pour son type et un numéro.\n\n- **B** pile : trait long = +, trait court = −\n- **S** interrupteur : une lame ouverte (espace) ou fermée\n- **R** résistance : rectangle ou zigzag\n- **D** LED : triangle pointé vers une barre, avec des flèches pour la lumière\n- **L** lampe : cercle avec une croix (IEC) ou avec une boucle de filament (ANSI)\n- **masse** : des traits empilés, la référence commune 0 V"
+				}
+			},
+			{
+				"id": "c2",
+				"type": "diagram",
+				"diagramId": "diagram.ch00.symbol_circuit",
+				"caption": {
+					"en": "B1 battery, S1 switch, R1 resistor, D1 LED and the ground symbol G. The two wires going to G are connected to each other.",
+					"fr": "B1 pile, S1 interrupteur, R1 résistance, D1 LED et symbole de masse G. Les deux fils qui vont à G sont reliés entre eux."
+				}
+			},
+			{
+				"id": "c3",
+				"type": "exercise",
+				"exerciseId": "exercise.ch00.sym.led"
+			},
+			{
+				"id": "c4",
+				"type": "exercise",
+				"exerciseId": "exercise.ch00.sym.battery_plus"
+			},
+			{
+				"id": "c5",
+				"type": "explain",
+				"title": {
+					"en": "Dots join, crossings do not",
+					"fr": "Les points relient, les croisements non"
+				},
+				"text": {
+					"en": "When wires meet, look for a **dot**. A dot is a junction: all the wires touching it are connected. Two lines that simply **cross** without a dot are two separate wires passing over each other.",
+					"fr": "Quand des fils se rencontrent, cherchez un **point**. Un point est une jonction : tous les fils qui y arrivent sont reliés. Deux traits qui se **croisent** simplement, sans point, sont deux fils séparés qui passent l’un au-dessus de l’autre."
+				}
+			},
+			{
+				"id": "c6",
+				"type": "diagram",
+				"diagramId": "diagram.ch00.junction_crossing",
+				"caption": {
+					"en": "Dots connect R1 to B1’s wires. The wire from lamp L1 crosses them without dots: B2 and L1 form a separate circuit.",
+					"fr": "Des points relient R1 aux fils de B1. Le fil de la lampe L1 les croise sans point : B2 et L1 forment un circuit séparé."
+				}
+			},
+			{
+				"id": "c7",
+				"type": "explain",
+				"title": {
+					"en": "Current needs a closed loop",
+					"fr": "Le courant a besoin d’une boucle fermée"
+				},
+				"text": {
+					"en": "Current flows only around a **complete path**: out of the + terminal, through the parts, and back into the − terminal. Break the path anywhere — an open switch, a loose wire, a dead contact — and the current stops **everywhere** in that loop at once. It does not pile up at the gap.",
+					"fr": "Le courant ne circule que dans un **chemin complet** : il sort par la borne +, traverse les composants et revient par la borne −. Coupez le chemin n’importe où — interrupteur ouvert, fil débranché, mauvais contact — et le courant s’arrête **partout** dans cette boucle en même temps. Il ne s’accumule pas au niveau de la coupure."
+				}
+			},
+			{
+				"id": "c8",
+				"type": "parameter_lab",
+				"labId": "lab.ch00.closed_loop"
+			},
+			{
+				"id": "c9",
+				"type": "exercise",
+				"exerciseId": "exercise.ch00.loop.open_switch"
+			},
+			{
+				"id": "c10",
+				"type": "exercise",
+				"exerciseId": "exercise.ch00.loop.crossing"
+			},
+			{
+				"id": "c12",
+				"type": "diagram",
+				"diagramId": "diagram.ch00.torch",
+				"caption": {
+					"en": "A real torch: two 1.5 V cells, switch S1 and lamp L1 in one closed loop. Trace it from B1 + back to B2 −.",
+					"fr": "Une vraie lampe de poche : deux piles de 1,5 V, l’interrupteur S1 et la lampe L1 dans une seule boucle fermée. Suivez-la de B1 + jusqu’à B2 −."
+				}
+			},
+			{
+				"id": "c11",
+				"type": "summary",
+				"points": [
+					{
+						"en": "Read labels: B battery, S switch, R resistor, D diode/LED, L lamp.",
+						"fr": "Lisez les repères : B pile, S interrupteur, R résistance, D diode/LED, L lampe."
+					},
+					{
+						"en": "A dot means connected; a plain crossing means not connected.",
+						"fr": "Un point signifie relié ; un simple croisement signifie non relié."
+					},
+					{
+						"en": "No closed loop, no current — anywhere in that loop.",
+						"fr": "Pas de boucle fermée, pas de courant — nulle part dans cette boucle."
+					}
+				]
+			}
+		],
+		"references": ["IEC 60617, Graphical symbols for diagrams"]
+	},
+	{
+		"id": "lesson.00.05.safety",
+		"version": 1,
+		"chapterId": "chapter.00",
+		"number": "00.04",
+		"title": {
+			"en": "Electrical safety at low voltage",
+			"fr": "Sécurité électrique en basse tension"
+		},
+		"objectives": [
+			{
+				"en": "Choose a safe low-voltage power source and never use mains",
+				"fr": "Choisir une source basse tension sûre et ne jamais utiliser le secteur"
+			},
+			{
+				"en": "Recognise short circuits, LEDs without resistor and reversed polarized parts",
+				"fr": "Reconnaître un court-circuit, une LED sans résistance et un composant polarisé à l’envers"
+			},
+			{
+				"en": "Know what to do with hot parts and damaged lithium cells",
+				"fr": "Savoir quoi faire face à un composant chaud ou une batterie lithium abîmée"
+			}
+		],
+		"conceptsTaught": ["safety.low_voltage"],
+		"formulasUsed": [],
+		"estimatedMinutes": 10,
+		"safetyClass": "low_voltage_simulated",
+		"cards": [
+			{
+				"id": "c1",
+				"type": "safety",
+				"text": {
+					"en": "**Rule 1: never mains.** Everything in this course uses batteries or USB at **12 V or less**. Mains (230 V / 120 V) can kill, and so can things plugged into it, such as old microwave transformers.",
+					"fr": "**Règle n° 1 : jamais le secteur.** Tout ce cours utilise des piles ou l’USB à **12 V maximum**. Le secteur (230 V / 120 V) peut tuer, tout comme ce qui y est branché, par exemple les transformateurs de vieux micro-ondes."
+				}
+			},
+			{
+				"id": "c2",
+				"type": "exercise",
+				"exerciseId": "exercise.ch00.safety.source"
+			},
+			{
+				"id": "c3",
+				"type": "explain",
+				"title": {
+					"en": "Short circuits",
+					"fr": "Le court-circuit"
+				},
+				"text": {
+					"en": "A **short circuit** is a path from + to − with almost nothing in it to limit the current. Even a small battery then pushes a large current, and the wire and the battery get hot — sometimes hot enough to burn you or start a fire.\n\nClassic causes: a wire or a coin across the terminals, a switch wired across the battery, a 9 V battery loose in a pocket with keys.",
+					"fr": "Un **court-circuit** est un chemin du + au − où presque rien ne limite le courant. Même une petite pile fait alors passer un courant important, et le fil et la pile chauffent — parfois assez pour brûler ou mettre le feu.\n\nCauses classiques : un fil ou une pièce entre les bornes, un interrupteur branché aux bornes de la pile, une pile de 9 V en vrac dans une poche avec des clés."
+				}
+			},
+			{
+				"id": "c4",
+				"type": "diagram",
+				"diagramId": "diagram.ch00.short_risk",
+				"caption": {
+					"en": "S1 is wired directly across the battery. Pressing it would short-circuit B1.",
+					"fr": "S1 est branché directement aux bornes de la pile. L’actionner court-circuiterait B1."
+				}
+			},
+			{
+				"id": "c5",
+				"type": "exercise",
+				"exerciseId": "exercise.ch00.safety.short_switch"
+			},
+			{
+				"id": "c6",
+				"type": "diagram",
+				"diagramId": "diagram.ch00.led_no_resistor",
+				"caption": {
+					"en": "An LED straight on a 9 V battery: nothing limits the current. Never do this — always add a series resistor.",
+					"fr": "Une LED directement sur une pile de 9 V : rien ne limite le courant. Ne faites jamais cela — ajoutez toujours une résistance en série."
+				}
+			},
+			{
+				"id": "c7",
+				"type": "exercise",
+				"exerciseId": "exercise.ch00.safety.led_direct"
+			},
+			{
+				"id": "c8",
+				"type": "safety",
+				"text": {
+					"en": "- **Polarized parts** (LEDs, electrolytic capacitors, batteries) have a + and a −: check before connecting.\n- **Resistors get hot** when they dissipate too much power. If something smells hot, disconnect the power first, then let it cool.\n- **Lithium cells** that are swollen, dented or hot must not be used, charged or pierced: recycle them.",
+					"fr": "- Les **composants polarisés** (LED, condensateurs électrolytiques, piles) ont un + et un − : vérifiez avant de brancher.\n- Les **résistances chauffent** si elles dissipent trop de puissance. Si quelque chose sent le chaud, coupez d’abord l’alimentation, puis laissez refroidir.\n- Une **batterie lithium** gonflée, cabossée ou chaude ne doit être ni utilisée, ni chargée, ni percée : recyclez-la."
+				}
+			},
+			{
+				"id": "c9",
+				"type": "exercise",
+				"exerciseId": "exercise.ch00.safety.swollen_cell"
+			},
+			{
+				"id": "c10",
+				"type": "summary",
+				"points": [
+					{
+						"en": "Batteries or USB, 12 V or less. Never mains.",
+						"fr": "Piles ou USB, 12 V maximum. Jamais le secteur."
+					},
+					{
+						"en": "Never connect + directly to −; an LED always needs a series resistor.",
+						"fr": "Ne reliez jamais directement le + au − ; une LED a toujours besoin d’une résistance en série."
+					},
+					{
+						"en": "Respect polarity, power off when something gets hot, recycle damaged lithium cells.",
+						"fr": "Respectez la polarité, coupez l’alimentation si quelque chose chauffe, recyclez les batteries lithium abîmées."
+					}
+				]
+			}
+		],
+		"references": []
+	}
+]

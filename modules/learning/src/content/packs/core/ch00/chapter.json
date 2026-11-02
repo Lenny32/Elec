@@ -1,0 +1,117 @@
+{
+	"id": "chapter.00",
+	"number": "00",
+	"moduleId": "module.a",
+	"title": {
+		"en": "Before electricity",
+		"fr": "Avant l’électricité"
+	},
+	"summary": {
+		"en": "Units, rearranging formulas, reading schematics and staying safe with low voltage.",
+		"fr": "Unités, transformation de formules, lecture de schémas et sécurité en basse tension."
+	},
+	"status": "authored",
+	"goals": [
+		{
+			"en": "Name the unit and symbol of current, voltage, resistance, power and time",
+			"fr": "Nommer l’unité et le symbole du courant, de la tension, de la résistance, de la puissance et du temps"
+		},
+		{
+			"en": "Isolate one variable in a formula such as a = b·c or a = b/c",
+			"fr": "Isoler une variable dans une formule du type a = b·c ou a = b/c"
+		},
+		{
+			"en": "Interpret a labelled schematic and decide whether a loop is closed",
+			"fr": "Interpréter un schéma annoté et dire si une boucle est fermée"
+		},
+		{
+			"en": "Apply the basic safety rules of low-voltage electronics",
+			"fr": "Appliquer les règles de sécurité de base de l’électronique basse tension"
+		}
+	],
+	"prerequisites": [],
+	"topics": [
+		{
+			"en": "Units and symbols",
+			"fr": "Unités et symboles"
+		},
+		{
+			"en": "Arithmetic and rearranging",
+			"fr": "Calcul et transformation de formules"
+		},
+		{
+			"en": "Reading diagrams",
+			"fr": "Lire un schéma"
+		},
+		{
+			"en": "Electrical safety",
+			"fr": "Sécurité électrique"
+		}
+	],
+	"lessonIds": [
+		"lesson.00.01.units_prefixes",
+		"lesson.00.02.rearranging",
+		"lesson.00.04.reading_diagrams",
+		"lesson.00.05.safety"
+	],
+	"labIds": ["lab.ch00.closed_loop"],
+	"examId": "exam.ch00",
+	"safetyNotes": [
+		{
+			"en": "Only use batteries or USB supplies of 12 V or less. Never experiment with mains (230 V / 120 V).",
+			"fr": "Utilisez uniquement des piles ou une alimentation USB de 12 V maximum. Ne faites jamais d’expérience sur le secteur (230 V / 120 V)."
+		},
+		{
+			"en": "Never connect a wire directly across a battery: the short circuit makes the wire and battery hot.",
+			"fr": "Ne reliez jamais directement les deux bornes d’une pile par un fil : le court-circuit fait chauffer le fil et la pile."
+		},
+		{
+			"en": "An LED always needs a series resistor, and polarized parts must be connected the right way round.",
+			"fr": "Une LED a toujours besoin d’une résistance en série, et les composants polarisés doivent être branchés dans le bon sens."
+		},
+		{
+			"en": "Resistors can get hot. Do not handle lithium cells that are swollen, damaged or hot.",
+			"fr": "Les résistances peuvent chauffer. Ne manipulez pas une batterie lithium gonflée, abîmée ou chaude."
+		}
+	],
+	"miniProject": {
+		"title": {
+			"en": "Read and redraw a torch schematic",
+			"fr": "Lire et redessiner le schéma d’une lampe de poche"
+		},
+		"description": {
+			"en": "A torch (flashlight) is the simplest useful circuit: cells, a switch and a bulb in one closed loop. You will read its schematic, trace the loop and redraw it neatly by hand.",
+			"fr": "Une lampe de poche est le plus simple des circuits utiles : des piles, un interrupteur et une ampoule dans une seule boucle fermée. Vous allez lire son schéma, suivre la boucle et le redessiner proprement à la main."
+		},
+		"steps": [
+			{
+				"en": "Open the torch schematic (two 1.5 V cells, switch S1, lamp L1). Name every symbol and its label.",
+				"fr": "Ouvrez le schéma de la lampe de poche (deux piles de 1,5 V, interrupteur S1, lampe L1). Nommez chaque symbole et son repère."
+			},
+			{
+				"en": "With your finger, trace the loop from the + terminal of B1 through S1 and L1 back to the − terminal of B2.",
+				"fr": "Avec le doigt, suivez la boucle depuis la borne + de B1, à travers S1 et L1, jusqu’à la borne − de B2."
+			},
+			{
+				"en": "Redraw the schematic on paper with straight horizontal and vertical wires. Mark + and − on each cell.",
+				"fr": "Redessinez le schéma sur papier avec des fils droits, horizontaux et verticaux. Indiquez + et − sur chaque pile."
+			},
+			{
+				"en": "Write the total battery voltage next to the cells (1.5 V + 1.5 V = 3 V) and explain in one sentence what the switch does to the loop.",
+				"fr": "Écrivez la tension totale à côté des piles (1,5 V + 1,5 V = 3 V) et expliquez en une phrase ce que l’interrupteur fait à la boucle."
+			},
+			{
+				"en": "Optional, with an adult: open a real battery torch (never a mains-powered one), find each part of your drawing, then close it again.",
+				"fr": "Facultatif, avec un adulte : ouvrez une vraie lampe de poche à piles (jamais un appareil branché sur le secteur), retrouvez chaque élément de votre dessin, puis refermez-la."
+			}
+		],
+		"simulationFallback": {
+			"en": "No torch at hand? Use the closed-loop lab: set the voltage to 3 V, toggle the switch and check that current flows only when the loop is closed. Then redraw the torch schematic from the lesson diagram.",
+			"fr": "Pas de lampe de poche ? Utilisez le labo « boucle fermée » : réglez la tension sur 3 V, actionnez l’interrupteur et vérifiez que le courant ne circule que lorsque la boucle est fermée. Redessinez ensuite le schéma de la lampe à partir du schéma de la leçon."
+		}
+	},
+	"practicalOutcome": {
+		"en": "Interpret a labelled schematic",
+		"fr": "Interpréter un schéma annoté"
+	}
+}

@@ -1,0 +1,131 @@
+{
+	"id": "chapter.01",
+	"number": "01",
+	"moduleId": "module.a",
+	"title": {
+		"en": "DC foundations",
+		"fr": "Les bases du courant continu"
+	},
+	"summary": {
+		"en": "Charge, current, voltage, ground, resistance, Ohm’s law, power and energy — the core ideas behind every battery circuit.",
+		"fr": "Charge, courant, tension, masse, résistance, loi d’Ohm, puissance et énergie — les idées de base derrière tout circuit à pile."
+	},
+	"status": "authored",
+	"goals": [
+		{
+			"en": "Explain current, voltage and resistance and how they relate.",
+			"fr": "Expliquer le courant, la tension et la résistance, et leurs liens."
+		},
+		{
+			"en": "Measure voltages relative to a chosen ground reference.",
+			"fr": "Mesurer des tensions par rapport à une masse de référence choisie."
+		},
+		{
+			"en": "Apply Ohm’s law and the power formulas to simple DC circuits.",
+			"fr": "Appliquer la loi d’Ohm et les formules de puissance à des circuits continus simples."
+		},
+		{
+			"en": "Calculate a safe series resistor for an LED.",
+			"fr": "Calculer une résistance série sûre pour une LED."
+		}
+	],
+	"prerequisites": ["units.si_base", "math.rearranging", "diagrams.closed_loop"],
+	"topics": [
+		{
+			"en": "01.01 Charge and current (Q = I·t, mAh)",
+			"fr": "01.01 Charge et courant (Q = I·t, mAh)"
+		},
+		{
+			"en": "01.02 Voltage",
+			"fr": "01.02 La tension"
+		},
+		{
+			"en": "01.03 Ground and reference",
+			"fr": "01.03 Masse et référence"
+		},
+		{
+			"en": "01.04 Resistance",
+			"fr": "01.04 La résistance"
+		},
+		{
+			"en": "01.05 Ohm’s law (V = I·R) and LED resistors",
+			"fr": "01.05 La loi d’Ohm (U = R·I) et les résistances de LED"
+		},
+		{
+			"en": "01.06 Power and heating (P = VI = I²R = V²/R, E = P·t)",
+			"fr": "01.06 Puissance et échauffement (P = UI = RI² = U²/R, E = P·t)"
+		}
+	],
+	"lessonIds": [
+		"lesson.01.01.charge_current",
+		"lesson.01.02.voltage",
+		"lesson.01.03.ground_reference",
+		"lesson.01.04.resistance",
+		"lesson.01.05.ohms_law",
+		"lesson.01.06.power_heating"
+	],
+	"labIds": ["lab.ch01.ohms_law", "lab.ch01.led_resistor"],
+	"examId": "exam.ch01",
+	"safetyNotes": [
+		{
+			"en": "Use only batteries up to 9 V or USB 5 V. Never experiment with mains (230 V / 120 V).",
+			"fr": "N’utilisez que des piles jusqu’à 9 V ou l’USB 5 V. N’expérimentez jamais sur le secteur (230 V / 120 V)."
+		},
+		{
+			"en": "Never short a battery’s terminals: wires and batteries get hot, lithium cells can catch fire.",
+			"fr": "Ne court-circuitez jamais les bornes d’une pile : fils et piles chauffent, les accumulateurs lithium peuvent prendre feu."
+		},
+		{
+			"en": "Always put a resistor in series with an LED.",
+			"fr": "Mettez toujours une résistance en série avec une LED."
+		},
+		{
+			"en": "Resistors working near their power rating get hot: do not touch them while powered.",
+			"fr": "Les résistances proches de leur puissance nominale chauffent : ne les touchez pas sous tension."
+		}
+	],
+	"miniProject": {
+		"title": {
+			"en": "Light an LED safely",
+			"fr": "Allumer une LED sans danger"
+		},
+		"description": {
+			"en": "Choose a resistor that lets a red LED glow brightly at no more than 20 mA from a 5 V USB supply or a 9 V battery, check the resistor’s power, then confirm your design.",
+			"fr": "Choisissez une résistance qui permet à une LED rouge de bien briller à 20 mA maximum, sur une alimentation USB 5 V ou une pile de 9 V, vérifiez la puissance de la résistance, puis validez votre montage."
+		},
+		"steps": [
+			{
+				"en": "Note the supply voltage Vs (5 V or 9 V) and the LED forward voltage Vf (about 2 V for red; check the datasheet if you have one).",
+				"fr": "Notez la tension d’alimentation Vs (5 V ou 9 V) et la tension directe de la LED Vf (environ 2 V pour une rouge ; vérifiez la fiche technique si vous l’avez)."
+			},
+			{
+				"en": "Pick a target current, for example 15 mA, and compute $R = \\frac{V_s - V_f}{I}$.",
+				"fr": "Choisissez un courant cible, par exemple 15 mA, et calculez $R = \\frac{V_s - V_f}{I}$."
+			},
+			{
+				"en": "Round up to the next standard value (e.g. 200 Ω → 220 Ω) and recompute the real current.",
+				"fr": "Arrondissez à la valeur normalisée supérieure (par ex. 200 Ω → 220 Ω) et recalculez le courant réel."
+			},
+			{
+				"en": "Check the resistor power $P = (V_s - V_f) \\cdot I$ against its 0.25 W rating.",
+				"fr": "Vérifiez la puissance de la résistance $P = (V_s - V_f) \\cdot I$ par rapport à ses 0,25 W."
+			},
+			{
+				"en": "Build it on a breadboard with the battery disconnected: + → resistor → LED anode (long leg) → LED cathode (flat side) → −. Connect the battery last.",
+				"fr": "Montez-le sur une plaque d’essai, pile débranchée : + → résistance → anode de la LED (patte longue) → cathode (côté plat) → −. Branchez la pile en dernier."
+			},
+			{
+				"en": "If the LED does not light, disconnect and check its direction; never remove the resistor to “test”.",
+				"fr": "Si la LED ne s’allume pas, débranchez et vérifiez son sens ; ne retirez jamais la résistance « pour tester »."
+			}
+		],
+		"simulationFallback": {
+			"en": "No parts at hand? Use the “Safe LED resistor” lab: set Vs and Vf, enter your computed R, and check that the LED current stays at or below 20 mA with no resistor-power warning. Then try R = 0 to see why the resistor is essential.",
+			"fr": "Pas de composants sous la main ? Utilisez le labo « Résistance de LED sans danger » : réglez Vs et Vf, entrez la valeur R calculée et vérifiez que le courant de la LED reste à 20 mA ou moins, sans alerte de puissance. Essayez ensuite R = 0 pour voir pourquoi la résistance est indispensable."
+		}
+	},
+	"practicalOutcome": {
+		"en": "Calculate a safe LED resistor.",
+		"fr": "Calculer une résistance de LED sans danger."
+	}
+}

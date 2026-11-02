@@ -1,0 +1,930 @@
+[
+	{
+		"id": "formula.charge.it",
+		"version": 1,
+		"name": {
+			"en": "Charge from current and time",
+			"fr": "Charge à partir du courant et de la durée"
+		},
+		"symbolic": "Q = I * t",
+		"latex": "Q = I \\cdot t",
+		"output": {
+			"symbol": "Q",
+			"name": {
+				"en": "Charge",
+				"fr": "Charge"
+			},
+			"unit": "C"
+		},
+		"inputs": [
+			{
+				"symbol": "I",
+				"name": {
+					"en": "Current",
+					"fr": "Courant"
+				},
+				"unit": "A"
+			},
+			{
+				"symbol": "t",
+				"name": {
+					"en": "Time",
+					"fr": "Durée"
+				},
+				"unit": "s"
+			}
+		],
+		"algorithm": "charge_it",
+		"constraints": [
+			{
+				"en": "t ≥ 0",
+				"fr": "t ≥ 0"
+			},
+			{
+				"en": "I is constant over the whole duration t (otherwise use the average current).",
+				"fr": "I est constant pendant toute la durée t (sinon, utilisez le courant moyen)."
+			}
+		],
+		"assumptions": [
+			{
+				"en": "Steady (DC) current.",
+				"fr": "Courant continu constant."
+			}
+		],
+		"rearrangements": ["I = \\frac{Q}{t} \\quad (t > 0)", "t = \\frac{Q}{I} \\quad (I > 0)"],
+		"explanation": {
+			"en": "Current is how much charge passes per second. Multiply the current by the time it flows to get the total charge that passed. 1 A for 1 s moves 1 coulomb (1 C). Battery capacity in **mAh** is also a charge: 1 mAh = 1 mA flowing for 1 hour = 3.6 C.",
+			"fr": "Le courant, c’est la quantité de charge qui passe chaque seconde. En multipliant le courant par la durée, on obtient la charge totale qui est passée. 1 A pendant 1 s déplace 1 coulomb (1 C). La capacité d’une batterie en **mAh** est aussi une charge : 1 mAh = 1 mA pendant 1 heure = 3,6 C."
+		},
+		"derivation": {
+			"en": "By definition current is charge per time, $I = \\frac{Q}{t}$. Multiplying both sides by $t$ gives $Q = I \\cdot t$.",
+			"fr": "Par définition, le courant est une charge par unité de temps : $I = \\frac{Q}{t}$. En multipliant les deux membres par $t$, on obtient $Q = I \\cdot t$."
+		},
+		"workedExample": {
+			"inputs": {
+				"I": {
+					"value": 200,
+					"unit": "mA"
+				},
+				"t": {
+					"value": 3,
+					"unit": "h"
+				}
+			},
+			"result": 600,
+			"unit": "mAh",
+			"steps": [
+				{
+					"en": "A torch draws 200 mA for 3 h. How much charge leaves the battery?",
+					"fr": "Une lampe de poche consomme 200 mA pendant 3 h. Quelle charge quitte la batterie ?"
+				},
+				{
+					"en": "$Q = I \\cdot t = 200\\ \\text{mA} \\times 3\\ \\text{h} = 600\\ \\text{mAh}$",
+					"fr": "$Q = I \\cdot t = 200\\ \\text{mA} \\times 3\\ \\text{h} = 600\\ \\text{mAh}$"
+				},
+				{
+					"en": "In coulombs: $0.2\\ \\text{A} \\times 10\\,800\\ \\text{s} = 2160\\ \\text{C}$.",
+					"fr": "En coulombs : $0{,}2\\ \\text{A} \\times 10\\,800\\ \\text{s} = 2160\\ \\text{C}$."
+				}
+			]
+		},
+		"commonMistakes": [
+			{
+				"en": "Mixing units: multiplying mA by minutes and calling the result coulombs. Convert to A and s first (or keep mA·h = mAh).",
+				"fr": "Mélanger les unités : multiplier des mA par des minutes et appeler le résultat des coulombs. Convertissez d’abord en A et en s (ou gardez mA·h = mAh)."
+			},
+			{
+				"en": "Thinking mAh is a current. mAh is a **charge** (current × time); mA is the current.",
+				"fr": "Croire que les mAh sont un courant. Les mAh sont une **charge** (courant × durée) ; les mA sont le courant."
+			}
+		],
+		"conceptIds": ["dc.charge", "dc.current"]
+	},
+	{
+		"id": "formula.ohm.current",
+		"version": 1,
+		"name": {
+			"en": "Ohm’s law (current)",
+			"fr": "Loi d’Ohm (courant)"
+		},
+		"symbolic": "I = V / R",
+		"latex": "I = \\frac{V}{R}",
+		"output": {
+			"symbol": "I",
+			"name": {
+				"en": "Current",
+				"fr": "Courant"
+			},
+			"unit": "A"
+		},
+		"inputs": [
+			{
+				"symbol": "V",
+				"name": {
+					"en": "Voltage",
+					"fr": "Tension"
+				},
+				"unit": "V"
+			},
+			{
+				"symbol": "R",
+				"name": {
+					"en": "Resistance",
+					"fr": "Résistance"
+				},
+				"unit": "ohm"
+			}
+		],
+		"algorithm": "ohm_current",
+		"constraints": [
+			{
+				"en": "R > 0 (R = 0 would be a short circuit).",
+				"fr": "R > 0 (R = 0 serait un court-circuit)."
+			},
+			{
+				"en": "Only for ohmic components (constant R).",
+				"fr": "Seulement pour les composants ohmiques (R constante)."
+			}
+		],
+		"assumptions": [
+			{
+				"en": "The component is **ohmic**: its resistance stays constant whatever the current (true for resistors and wires at constant temperature).",
+				"fr": "Le composant est **ohmique** : sa résistance reste constante quel que soit le courant (vrai pour les résistances et les fils à température constante)."
+			},
+			{
+				"en": "Steady DC: values do not change over time.",
+				"fr": "Régime continu établi : les valeurs ne varient pas dans le temps."
+			}
+		],
+		"rearrangements": ["V = I \\cdot R", "R = \\frac{V}{I} \\quad (I \\neq 0)"],
+		"explanation": {
+			"en": "The current through a resistor grows with the voltage across it and shrinks as the resistance grows. Double V → double I. Double R → half I.",
+			"fr": "Le courant dans une résistance augmente avec la tension à ses bornes et diminue quand la résistance augmente. V doublée → I doublé. R doublée → I divisé par deux. (Les manuels français écrivent souvent $U = R \\cdot I$, avec U pour la tension.)"
+		},
+		"derivation": {
+			"en": "Georg Ohm (1827) measured that, for a metal wire at constant temperature, the voltage across it is proportional to the current: $V = R \\cdot I$, with R the constant of proportionality. Dividing both sides by R gives $I = \\frac{V}{R}$.",
+			"fr": "Georg Ohm (1827) a mesuré que, pour un fil métallique à température constante, la tension à ses bornes est proportionnelle au courant : $V = R \\cdot I$, R étant le coefficient de proportionnalité. En divisant les deux membres par R, on obtient $I = \\frac{V}{R}$."
+		},
+		"workedExample": {
+			"inputs": {
+				"V": {
+					"value": 9,
+					"unit": "V"
+				},
+				"R": {
+					"value": 300,
+					"unit": "ohm"
+				}
+			},
+			"result": 0.03,
+			"unit": "A",
+			"steps": [
+				{
+					"en": "A 9 V supply is applied across a 300 Ω resistor.",
+					"fr": "Une alimentation de 9 V est appliquée aux bornes d’une résistance de 300 Ω."
+				},
+				{
+					"en": "$I = \\frac{V}{R} = \\frac{9\\ \\text{V}}{300\\ \\Omega}$",
+					"fr": "$I = \\frac{V}{R} = \\frac{9\\ \\text{V}}{300\\ \\Omega}$"
+				},
+				{
+					"en": "$I = 0.03\\ \\text{A} = 30\\ \\text{mA}$",
+					"fr": "$I = 0{,}03\\ \\text{A} = 30\\ \\text{mA}$"
+				}
+			]
+		},
+		"commonMistakes": [
+			{
+				"en": "Forgetting the prefix: using 4.7 instead of 4700 for 4.7 kΩ gives a current 1000 times too big.",
+				"fr": "Oublier le préfixe : utiliser 4,7 au lieu de 4700 pour 4,7 kΩ donne un courant 1000 fois trop grand."
+			},
+			{
+				"en": "Inverting the fraction: $R / V$ is not a current.",
+				"fr": "Inverser la fraction : $R / V$ n’est pas un courant."
+			},
+			{
+				"en": "Using the battery voltage when the question asks about a part that only gets part of it. Use the voltage **across** that part.",
+				"fr": "Utiliser la tension de la pile alors que la question porte sur un composant qui n’en reçoit qu’une partie. Utilisez la tension **aux bornes** de ce composant."
+			}
+		],
+		"counterexample": {
+			"en": "An LED is **not ohmic**. A red LED passes almost no current at 1.5 V, about 1 mA at 1.8 V and about 20 mA at 2.0 V: a tiny voltage change makes a huge current change, so the ratio V/I is not constant. Never compute an LED current as V divided by an \"LED resistance\": treat the LED as a fixed forward voltage $V_f$ and let a series resistor set the current with $R = \\frac{V_s - V_f}{I}$.",
+			"fr": "Une LED **n’est pas ohmique**. Une LED rouge ne laisse passer presque aucun courant à 1,5 V, environ 1 mA à 1,8 V et environ 20 mA à 2,0 V : une toute petite variation de tension change énormément le courant, donc le rapport V/I n’est pas constant. Ne calculez jamais le courant d’une LED comme V divisé par une « résistance de la LED » : modélisez la LED par une tension directe fixe $V_f$ et laissez une résistance série fixer le courant avec $R = \\frac{V_s - V_f}{I}$."
+		},
+		"conceptIds": ["dc.ohms_law"]
+	},
+	{
+		"id": "formula.ohm.voltage",
+		"version": 1,
+		"name": {
+			"en": "Ohm’s law (voltage)",
+			"fr": "Loi d’Ohm (tension)"
+		},
+		"symbolic": "V = I * R",
+		"latex": "V = I \\cdot R",
+		"output": {
+			"symbol": "V",
+			"name": {
+				"en": "Voltage",
+				"fr": "Tension"
+			},
+			"unit": "V"
+		},
+		"inputs": [
+			{
+				"symbol": "I",
+				"name": {
+					"en": "Current",
+					"fr": "Courant"
+				},
+				"unit": "A"
+			},
+			{
+				"symbol": "R",
+				"name": {
+					"en": "Resistance",
+					"fr": "Résistance"
+				},
+				"unit": "ohm"
+			}
+		],
+		"algorithm": "ohm_voltage",
+		"constraints": [
+			{
+				"en": "R ≥ 0",
+				"fr": "R ≥ 0"
+			},
+			{
+				"en": "Only for ohmic components (constant R).",
+				"fr": "Seulement pour les composants ohmiques (R constante)."
+			}
+		],
+		"assumptions": [
+			{
+				"en": "The component is **ohmic**: its resistance stays constant whatever the current (true for resistors and wires at constant temperature).",
+				"fr": "Le composant est **ohmique** : sa résistance reste constante quel que soit le courant (vrai pour les résistances et les fils à température constante)."
+			},
+			{
+				"en": "Steady DC: values do not change over time.",
+				"fr": "Régime continu établi : les valeurs ne varient pas dans le temps."
+			}
+		],
+		"rearrangements": ["I = \\frac{V}{R} \\quad (R > 0)", "R = \\frac{V}{I} \\quad (I \\neq 0)"],
+		"explanation": {
+			"en": "If you know the current through a resistor, its resistance tells you the voltage across it (the \"voltage drop\").",
+			"fr": "Si l’on connaît le courant dans une résistance, sa valeur donne la tension à ses bornes (la « chute de tension »). En France on écrit souvent $U = R \\cdot I$."
+		},
+		"workedExample": {
+			"inputs": {
+				"I": {
+					"value": 20,
+					"unit": "mA"
+				},
+				"R": {
+					"value": 150,
+					"unit": "ohm"
+				}
+			},
+			"result": 3,
+			"unit": "V",
+			"steps": [
+				{
+					"en": "20 mA flows through a 150 Ω resistor. Convert: 20 mA = 0.02 A.",
+					"fr": "20 mA traversent une résistance de 150 Ω. Conversion : 20 mA = 0,02 A."
+				},
+				{
+					"en": "$V = I \\cdot R = 0.02\\ \\text{A} \\times 150\\ \\Omega = 3\\ \\text{V}$",
+					"fr": "$V = I \\cdot R = 0{,}02\\ \\text{A} \\times 150\\ \\Omega = 3\\ \\text{V}$"
+				}
+			]
+		},
+		"commonMistakes": [
+			{
+				"en": "Multiplying 20 (mA) by 150 and answering 3000 V: convert mA to A first.",
+				"fr": "Multiplier 20 (mA) par 150 et répondre 3000 V : convertissez d’abord les mA en A."
+			}
+		],
+		"counterexample": {
+			"en": "An LED is **not ohmic**. A red LED passes almost no current at 1.5 V, about 1 mA at 1.8 V and about 20 mA at 2.0 V: a tiny voltage change makes a huge current change, so the ratio V/I is not constant. Never compute an LED current as V divided by an \"LED resistance\": treat the LED as a fixed forward voltage $V_f$ and let a series resistor set the current with $R = \\frac{V_s - V_f}{I}$.",
+			"fr": "Une LED **n’est pas ohmique**. Une LED rouge ne laisse passer presque aucun courant à 1,5 V, environ 1 mA à 1,8 V et environ 20 mA à 2,0 V : une toute petite variation de tension change énormément le courant, donc le rapport V/I n’est pas constant. Ne calculez jamais le courant d’une LED comme V divisé par une « résistance de la LED » : modélisez la LED par une tension directe fixe $V_f$ et laissez une résistance série fixer le courant avec $R = \\frac{V_s - V_f}{I}$."
+		},
+		"conceptIds": ["dc.ohms_law"]
+	},
+	{
+		"id": "formula.ohm.resistance",
+		"version": 1,
+		"name": {
+			"en": "Ohm’s law (resistance)",
+			"fr": "Loi d’Ohm (résistance)"
+		},
+		"symbolic": "R = V / I",
+		"latex": "R = \\frac{V}{I}",
+		"output": {
+			"symbol": "R",
+			"name": {
+				"en": "Resistance",
+				"fr": "Résistance"
+			},
+			"unit": "ohm"
+		},
+		"inputs": [
+			{
+				"symbol": "V",
+				"name": {
+					"en": "Voltage",
+					"fr": "Tension"
+				},
+				"unit": "V"
+			},
+			{
+				"symbol": "I",
+				"name": {
+					"en": "Current",
+					"fr": "Courant"
+				},
+				"unit": "A"
+			}
+		],
+		"algorithm": "ohm_resistance",
+		"constraints": [
+			{
+				"en": "I ≠ 0 (no current tells you nothing about R).",
+				"fr": "I ≠ 0 (sans courant, on ne peut rien dire de R)."
+			},
+			{
+				"en": "Only for ohmic components (constant R).",
+				"fr": "Seulement pour les composants ohmiques (R constante)."
+			}
+		],
+		"assumptions": [
+			{
+				"en": "The component is **ohmic**: its resistance stays constant whatever the current (true for resistors and wires at constant temperature).",
+				"fr": "Le composant est **ohmique** : sa résistance reste constante quel que soit le courant (vrai pour les résistances et les fils à température constante)."
+			},
+			{
+				"en": "Steady DC: values do not change over time.",
+				"fr": "Régime continu établi : les valeurs ne varient pas dans le temps."
+			}
+		],
+		"rearrangements": ["V = I \\cdot R", "I = \\frac{V}{R} \\quad (R > 0)"],
+		"explanation": {
+			"en": "Measure the voltage across a part and the current through it, and divide: you get its resistance. This is how you find an unknown resistor from two meter readings.",
+			"fr": "Mesurez la tension aux bornes d’un composant et le courant qui le traverse, puis divisez : vous obtenez sa résistance. C’est ainsi qu’on trouve une résistance inconnue à partir de deux mesures."
+		},
+		"workedExample": {
+			"inputs": {
+				"V": {
+					"value": 6,
+					"unit": "V"
+				},
+				"I": {
+					"value": 2,
+					"unit": "mA"
+				}
+			},
+			"result": 3,
+			"unit": "kohm",
+			"steps": [
+				{
+					"en": "A resistor has 6 V across it and 2 mA through it. 2 mA = 0.002 A.",
+					"fr": "Une résistance a 6 V à ses bornes et 2 mA la traversent. 2 mA = 0,002 A."
+				},
+				{
+					"en": "$R = \\frac{V}{I} = \\frac{6}{0.002} = 3000\\ \\Omega = 3\\ \\text{k}\\Omega$",
+					"fr": "$R = \\frac{V}{I} = \\frac{6}{0{,}002} = 3000\\ \\Omega = 3\\ \\text{k}\\Omega$"
+				}
+			]
+		},
+		"commonMistakes": [
+			{
+				"en": "Dividing by 2 (mA) instead of 0.002 (A): the answer comes out 1000 times too small (3 Ω).",
+				"fr": "Diviser par 2 (mA) au lieu de 0,002 (A) : le résultat est 1000 fois trop petit (3 Ω)."
+			},
+			{
+				"en": "Computing $I/V$ instead of $V/I$.",
+				"fr": "Calculer $I/V$ au lieu de $V/I$."
+			}
+		],
+		"counterexample": {
+			"en": "An LED is **not ohmic**. A red LED passes almost no current at 1.5 V, about 1 mA at 1.8 V and about 20 mA at 2.0 V: a tiny voltage change makes a huge current change, so the ratio V/I is not constant. Never compute an LED current as V divided by an \"LED resistance\": treat the LED as a fixed forward voltage $V_f$ and let a series resistor set the current with $R = \\frac{V_s - V_f}{I}$.",
+			"fr": "Une LED **n’est pas ohmique**. Une LED rouge ne laisse passer presque aucun courant à 1,5 V, environ 1 mA à 1,8 V et environ 20 mA à 2,0 V : une toute petite variation de tension change énormément le courant, donc le rapport V/I n’est pas constant. Ne calculez jamais le courant d’une LED comme V divisé par une « résistance de la LED » : modélisez la LED par une tension directe fixe $V_f$ et laissez une résistance série fixer le courant avec $R = \\frac{V_s - V_f}{I}$."
+		},
+		"conceptIds": ["dc.ohms_law", "dc.resistance"]
+	},
+	{
+		"id": "formula.power.vi",
+		"version": 1,
+		"name": {
+			"en": "Power from voltage and current",
+			"fr": "Puissance à partir de la tension et du courant"
+		},
+		"symbolic": "P = V * I",
+		"latex": "P = V \\cdot I",
+		"output": {
+			"symbol": "P",
+			"name": {
+				"en": "Power",
+				"fr": "Puissance"
+			},
+			"unit": "W"
+		},
+		"inputs": [
+			{
+				"symbol": "V",
+				"name": {
+					"en": "Voltage",
+					"fr": "Tension"
+				},
+				"unit": "V"
+			},
+			{
+				"symbol": "I",
+				"name": {
+					"en": "Current",
+					"fr": "Courant"
+				},
+				"unit": "A"
+			}
+		],
+		"algorithm": "power_vi",
+		"constraints": [
+			{
+				"en": "V is the voltage across the same part that I flows through.",
+				"fr": "V est la tension aux bornes du composant même que traverse I."
+			}
+		],
+		"assumptions": [
+			{
+				"en": "Steady DC values.",
+				"fr": "Valeurs continues constantes."
+			}
+		],
+		"rearrangements": [
+			"I = \\frac{P}{V} \\quad (V \\neq 0)",
+			"V = \\frac{P}{I} \\quad (I \\neq 0)"
+		],
+		"explanation": {
+			"en": "Voltage is energy per coulomb; current is coulombs per second. Multiply them and you get energy per second: power, in watts (1 W = 1 J/s). This works for **any** component, ohmic or not.",
+			"fr": "La tension est une énergie par coulomb ; le courant, des coulombs par seconde. Leur produit donne une énergie par seconde : la puissance, en watts (1 W = 1 J/s). Cela vaut pour **tout** composant, ohmique ou non."
+		},
+		"derivation": {
+			"en": "$P = \\frac{\\text{J}}{\\text{s}} = \\frac{\\text{J}}{\\text{C}} \\cdot \\frac{\\text{C}}{\\text{s}} = V \\cdot I$",
+			"fr": "$P = \\frac{\\text{J}}{\\text{s}} = \\frac{\\text{J}}{\\text{C}} \\cdot \\frac{\\text{C}}{\\text{s}} = V \\cdot I$"
+		},
+		"workedExample": {
+			"inputs": {
+				"V": {
+					"value": 5,
+					"unit": "V"
+				},
+				"I": {
+					"value": 0.5,
+					"unit": "A"
+				}
+			},
+			"result": 2.5,
+			"unit": "W",
+			"steps": [
+				{
+					"en": "A USB port supplies 5 V and 0.5 A to a phone.",
+					"fr": "Un port USB fournit 5 V et 0,5 A à un téléphone."
+				},
+				{
+					"en": "$P = V \\cdot I = 5\\ \\text{V} \\times 0.5\\ \\text{A} = 2.5\\ \\text{W}$",
+					"fr": "$P = V \\cdot I = 5\\ \\text{V} \\times 0{,}5\\ \\text{A} = 2{,}5\\ \\text{W}$"
+				}
+			]
+		},
+		"commonMistakes": [
+			{
+				"en": "Using the supply voltage for a part that only has part of it across it.",
+				"fr": "Utiliser la tension d’alimentation pour un composant qui n’en reçoit qu’une partie."
+			},
+			{
+				"en": "Forgetting to convert mA to A (answer 1000 times too big).",
+				"fr": "Oublier de convertir les mA en A (résultat 1000 fois trop grand)."
+			}
+		],
+		"conceptIds": ["dc.power"]
+	},
+	{
+		"id": "formula.power.i2r",
+		"version": 1,
+		"name": {
+			"en": "Power in a resistor from current",
+			"fr": "Puissance dans une résistance à partir du courant"
+		},
+		"symbolic": "P = I^2 * R",
+		"latex": "P = I^2 \\cdot R",
+		"output": {
+			"symbol": "P",
+			"name": {
+				"en": "Power",
+				"fr": "Puissance"
+			},
+			"unit": "W"
+		},
+		"inputs": [
+			{
+				"symbol": "I",
+				"name": {
+					"en": "Current",
+					"fr": "Courant"
+				},
+				"unit": "A"
+			},
+			{
+				"symbol": "R",
+				"name": {
+					"en": "Resistance",
+					"fr": "Résistance"
+				},
+				"unit": "ohm"
+			}
+		],
+		"algorithm": "power_i2r",
+		"constraints": [
+			{
+				"en": "R ≥ 0",
+				"fr": "R ≥ 0"
+			},
+			{
+				"en": "Only for ohmic components (uses V = I·R).",
+				"fr": "Seulement pour les composants ohmiques (utilise V = R·I)."
+			}
+		],
+		"assumptions": [
+			{
+				"en": "The component is **ohmic**: its resistance stays constant whatever the current (true for resistors and wires at constant temperature).",
+				"fr": "Le composant est **ohmique** : sa résistance reste constante quel que soit le courant (vrai pour les résistances et les fils à température constante)."
+			},
+			{
+				"en": "Steady DC: values do not change over time.",
+				"fr": "Régime continu établi : les valeurs ne varient pas dans le temps."
+			}
+		],
+		"rearrangements": ["I = \\sqrt{\\frac{P}{R}}", "R = \\frac{P}{I^2} \\quad (I \\neq 0)"],
+		"explanation": {
+			"en": "Useful when you know the current through a resistor. Because the current is squared, doubling the current makes **four times** the heat.",
+			"fr": "Pratique quand on connaît le courant dans une résistance. Comme le courant est au carré, doubler le courant produit **quatre fois** plus de chaleur."
+		},
+		"derivation": {
+			"en": "Substitute $V = I \\cdot R$ into $P = V \\cdot I$: $P = (I R) \\cdot I = I^2 R$.",
+			"fr": "On remplace $V = R \\cdot I$ dans $P = V \\cdot I$ : $P = (R I) \\cdot I = R I^2$."
+		},
+		"workedExample": {
+			"inputs": {
+				"I": {
+					"value": 20,
+					"unit": "mA"
+				},
+				"R": {
+					"value": 150,
+					"unit": "ohm"
+				}
+			},
+			"result": 60,
+			"unit": "mW",
+			"steps": [
+				{
+					"en": "20 mA = 0.02 A flows through 150 Ω.",
+					"fr": "20 mA = 0,02 A traversent 150 Ω."
+				},
+				{
+					"en": "$P = I^2 R = (0.02)^2 \\times 150 = 0.0004 \\times 150 = 0.06\\ \\text{W} = 60\\ \\text{mW}$",
+					"fr": "$P = R I^2 = 150 \\times (0{,}02)^2 = 150 \\times 0{,}0004 = 0{,}06\\ \\text{W} = 60\\ \\text{mW}$"
+				}
+			]
+		},
+		"commonMistakes": [
+			{
+				"en": "Forgetting to square the current.",
+				"fr": "Oublier d’élever le courant au carré."
+			},
+			{
+				"en": "Squaring 20 (mA) instead of 0.02 (A): the result is a million times too big.",
+				"fr": "Élever 20 (mA) au carré au lieu de 0,02 (A) : le résultat est un million de fois trop grand."
+			}
+		],
+		"conceptIds": ["dc.power"]
+	},
+	{
+		"id": "formula.power.v2r",
+		"version": 1,
+		"name": {
+			"en": "Power in a resistor from voltage",
+			"fr": "Puissance dans une résistance à partir de la tension"
+		},
+		"symbolic": "P = V^2 / R",
+		"latex": "P = \\frac{V^2}{R}",
+		"output": {
+			"symbol": "P",
+			"name": {
+				"en": "Power",
+				"fr": "Puissance"
+			},
+			"unit": "W"
+		},
+		"inputs": [
+			{
+				"symbol": "V",
+				"name": {
+					"en": "Voltage",
+					"fr": "Tension"
+				},
+				"unit": "V"
+			},
+			{
+				"symbol": "R",
+				"name": {
+					"en": "Resistance",
+					"fr": "Résistance"
+				},
+				"unit": "ohm"
+			}
+		],
+		"algorithm": "power_v2r",
+		"constraints": [
+			{
+				"en": "R > 0",
+				"fr": "R > 0"
+			},
+			{
+				"en": "Only for ohmic components (uses V = I·R).",
+				"fr": "Seulement pour les composants ohmiques (utilise V = R·I)."
+			}
+		],
+		"assumptions": [
+			{
+				"en": "The component is **ohmic**: its resistance stays constant whatever the current (true for resistors and wires at constant temperature).",
+				"fr": "Le composant est **ohmique** : sa résistance reste constante quel que soit le courant (vrai pour les résistances et les fils à température constante)."
+			},
+			{
+				"en": "Steady DC: values do not change over time.",
+				"fr": "Régime continu établi : les valeurs ne varient pas dans le temps."
+			}
+		],
+		"rearrangements": ["V = \\sqrt{P \\cdot R}", "R = \\frac{V^2}{P} \\quad (P > 0)"],
+		"explanation": {
+			"en": "Useful when you know the voltage across a resistor. A **smaller** resistor on the same voltage gets **hotter**, because it lets more current through.",
+			"fr": "Pratique quand on connaît la tension aux bornes d’une résistance. Sous la même tension, une résistance **plus petite** chauffe **davantage**, car elle laisse passer plus de courant."
+		},
+		"derivation": {
+			"en": "Substitute $I = \\frac{V}{R}$ into $P = V \\cdot I$: $P = V \\cdot \\frac{V}{R} = \\frac{V^2}{R}$.",
+			"fr": "On remplace $I = \\frac{V}{R}$ dans $P = V \\cdot I$ : $P = V \\cdot \\frac{V}{R} = \\frac{V^2}{R}$."
+		},
+		"workedExample": {
+			"inputs": {
+				"V": {
+					"value": 9,
+					"unit": "V"
+				},
+				"R": {
+					"value": 100,
+					"unit": "ohm"
+				}
+			},
+			"result": 0.81,
+			"unit": "W",
+			"steps": [
+				{
+					"en": "A 100 Ω resistor is connected straight across a 9 V battery.",
+					"fr": "Une résistance de 100 Ω est branchée directement sur une pile de 9 V."
+				},
+				{
+					"en": "$P = \\frac{V^2}{R} = \\frac{81}{100} = 0.81\\ \\text{W}$",
+					"fr": "$P = \\frac{V^2}{R} = \\frac{81}{100} = 0{,}81\\ \\text{W}$"
+				},
+				{
+					"en": "A common resistor is rated 0.25 W: 0.81 W is more than three times too much. It would overheat.",
+					"fr": "Une résistance courante supporte 0,25 W : 0,81 W, c’est plus de trois fois trop. Elle surchaufferait."
+				}
+			]
+		},
+		"commonMistakes": [
+			{
+				"en": "Forgetting to square the voltage ($9/100$ instead of $81/100$).",
+				"fr": "Oublier d’élever la tension au carré ($9/100$ au lieu de $81/100$)."
+			},
+			{
+				"en": "Thinking a bigger resistor always gets hotter. On a fixed voltage, it is the opposite.",
+				"fr": "Croire qu’une résistance plus grande chauffe toujours plus. Sous une tension fixe, c’est l’inverse."
+			}
+		],
+		"conceptIds": ["dc.power"]
+	},
+	{
+		"id": "formula.energy.pt",
+		"version": 1,
+		"name": {
+			"en": "Energy from power and time",
+			"fr": "Énergie à partir de la puissance et de la durée"
+		},
+		"symbolic": "E = P * t",
+		"latex": "E = P \\cdot t",
+		"output": {
+			"symbol": "E",
+			"name": {
+				"en": "Energy",
+				"fr": "Énergie"
+			},
+			"unit": "J"
+		},
+		"inputs": [
+			{
+				"symbol": "P",
+				"name": {
+					"en": "Power",
+					"fr": "Puissance"
+				},
+				"unit": "W"
+			},
+			{
+				"symbol": "t",
+				"name": {
+					"en": "Time",
+					"fr": "Durée"
+				},
+				"unit": "s"
+			}
+		],
+		"algorithm": "energy_pt",
+		"constraints": [
+			{
+				"en": "t ≥ 0",
+				"fr": "t ≥ 0"
+			},
+			{
+				"en": "P constant over t (otherwise use the average power).",
+				"fr": "P constante pendant t (sinon, utilisez la puissance moyenne)."
+			}
+		],
+		"assumptions": [
+			{
+				"en": "Steady power.",
+				"fr": "Puissance constante."
+			}
+		],
+		"rearrangements": ["P = \\frac{E}{t} \\quad (t > 0)", "t = \\frac{E}{P} \\quad (P > 0)"],
+		"explanation": {
+			"en": "Power is how fast energy is transferred; energy is the total amount. Watts × seconds = joules; watts × hours = watt-hours (1 Wh = 3600 J). In a resistor, all that energy becomes heat.",
+			"fr": "La puissance indique à quelle vitesse l’énergie est transférée ; l’énergie est la quantité totale. Watts × secondes = joules ; watts × heures = wattheures (1 Wh = 3600 J). Dans une résistance, toute cette énergie devient de la chaleur."
+		},
+		"workedExample": {
+			"inputs": {
+				"P": {
+					"value": 5,
+					"unit": "W"
+				},
+				"t": {
+					"value": 2,
+					"unit": "h"
+				}
+			},
+			"result": 10,
+			"unit": "Wh",
+			"steps": [
+				{
+					"en": "A 5 W USB lamp runs for 2 hours.",
+					"fr": "Une lampe USB de 5 W fonctionne pendant 2 heures."
+				},
+				{
+					"en": "$E = P \\cdot t = 5\\ \\text{W} \\times 2\\ \\text{h} = 10\\ \\text{Wh}$",
+					"fr": "$E = P \\cdot t = 5\\ \\text{W} \\times 2\\ \\text{h} = 10\\ \\text{Wh}$"
+				},
+				{
+					"en": "In joules: $10 \\times 3600 = 36\\,000\\ \\text{J}$.",
+					"fr": "En joules : $10 \\times 3600 = 36\\,000\\ \\text{J}$."
+				}
+			]
+		},
+		"commonMistakes": [
+			{
+				"en": "Confusing power (W, a rate) with energy (J or Wh, an amount).",
+				"fr": "Confondre la puissance (W, un débit) et l’énergie (J ou Wh, une quantité)."
+			},
+			{
+				"en": "Multiplying W by minutes and calling it joules: convert time to seconds first.",
+				"fr": "Multiplier des W par des minutes et appeler cela des joules : convertissez d’abord la durée en secondes."
+			}
+		],
+		"conceptIds": ["dc.energy"]
+	},
+	{
+		"id": "formula.led.resistor",
+		"version": 1,
+		"name": {
+			"en": "LED series resistor",
+			"fr": "Résistance série d’une LED"
+		},
+		"symbolic": "R = (Vs - Vf) / I",
+		"latex": "R = \\frac{V_s - V_f}{I}",
+		"output": {
+			"symbol": "R",
+			"name": {
+				"en": "Resistance",
+				"fr": "Résistance"
+			},
+			"unit": "ohm"
+		},
+		"inputs": [
+			{
+				"symbol": "Vs",
+				"name": {
+					"en": "Supply voltage",
+					"fr": "Tension d’alimentation"
+				},
+				"unit": "V"
+			},
+			{
+				"symbol": "Vf",
+				"name": {
+					"en": "LED forward voltage",
+					"fr": "Tension directe de la LED"
+				},
+				"unit": "V"
+			},
+			{
+				"symbol": "I",
+				"name": {
+					"en": "Desired LED current",
+					"fr": "Courant voulu dans la LED"
+				},
+				"unit": "A"
+			}
+		],
+		"algorithm": "led_resistor",
+		"constraints": [
+			{
+				"en": "Vs > Vf (otherwise the LED does not light).",
+				"fr": "Vs > Vf (sinon la LED ne s’allume pas)."
+			},
+			{
+				"en": "I > 0 and below the LED’s maximum (often 20 mA).",
+				"fr": "I > 0 et inférieur au maximum de la LED (souvent 20 mA)."
+			}
+		],
+		"assumptions": [
+			{
+				"en": "The LED is modelled as a fixed forward voltage Vf (about 2 V for red, about 3 V for blue/white).",
+				"fr": "La LED est modélisée par une tension directe fixe Vf (environ 2 V pour une rouge, environ 3 V pour une bleue/blanche)."
+			},
+			{
+				"en": "The resistor is ohmic; the battery’s internal resistance is ignored.",
+				"fr": "La résistance est ohmique ; la résistance interne de la pile est négligée."
+			}
+		],
+		"rearrangements": ["I = \\frac{V_s - V_f}{R} \\quad (R > 0)"],
+		"explanation": {
+			"en": "The LED takes about $V_f$; the rest of the supply voltage, $V_s - V_f$, is across the resistor. Ohm’s law on **the resistor only** gives the resistance needed for the chosen current. Round up to the next standard value to stay safe.",
+			"fr": "La LED prend environ $V_f$ ; le reste de la tension, $V_s - V_f$, se retrouve aux bornes de la résistance. La loi d’Ohm appliquée **à la résistance seule** donne la valeur nécessaire pour le courant choisi. Arrondissez à la valeur normalisée supérieure pour rester prudent."
+		},
+		"workedExample": {
+			"inputs": {
+				"Vs": {
+					"value": 5,
+					"unit": "V"
+				},
+				"Vf": {
+					"value": 2,
+					"unit": "V"
+				},
+				"I": {
+					"value": 20,
+					"unit": "mA"
+				}
+			},
+			"result": 150,
+			"unit": "ohm",
+			"steps": [
+				{
+					"en": "USB 5 V, red LED ($V_f \\approx 2$ V), target 20 mA = 0.02 A.",
+					"fr": "USB 5 V, LED rouge ($V_f \\approx 2$ V), objectif 20 mA = 0,02 A."
+				},
+				{
+					"en": "Voltage across the resistor: $5 - 2 = 3$ V.",
+					"fr": "Tension aux bornes de la résistance : $5 - 2 = 3$ V."
+				},
+				{
+					"en": "$R = \\frac{3}{0.02} = 150\\ \\Omega$",
+					"fr": "$R = \\frac{3}{0{,}02} = 150\\ \\Omega$"
+				}
+			]
+		},
+		"commonMistakes": [
+			{
+				"en": "Using $V_s / I$ (forgetting to subtract $V_f$): the LED gets less current than planned — safe but dim. Worse is the opposite error of omitting the resistor.",
+				"fr": "Calculer $V_s / I$ (en oubliant de soustraire $V_f$) : la LED reçoit moins de courant que prévu — sans danger mais faible. L’erreur inverse, oublier la résistance, est bien pire."
+			},
+			{
+				"en": "Dividing by 20 instead of 0.02: 0.15 Ω would destroy the LED.",
+				"fr": "Diviser par 20 au lieu de 0,02 : 0,15 Ω détruirait la LED."
+			}
+		],
+		"counterexample": {
+			"en": "An LED is **not ohmic**. A red LED passes almost no current at 1.5 V, about 1 mA at 1.8 V and about 20 mA at 2.0 V: a tiny voltage change makes a huge current change, so the ratio V/I is not constant. Never compute an LED current as V divided by an \"LED resistance\": treat the LED as a fixed forward voltage $V_f$ and let a series resistor set the current with $R = \\frac{V_s - V_f}{I}$.",
+			"fr": "Une LED **n’est pas ohmique**. Une LED rouge ne laisse passer presque aucun courant à 1,5 V, environ 1 mA à 1,8 V et environ 20 mA à 2,0 V : une toute petite variation de tension change énormément le courant, donc le rapport V/I n’est pas constant. Ne calculez jamais le courant d’une LED comme V divisé par une « résistance de la LED » : modélisez la LED par une tension directe fixe $V_f$ et laissez une résistance série fixer le courant avec $R = \\frac{V_s - V_f}{I}$."
+		},
+		"conceptIds": ["dc.ohms_law"]
+	}
+]

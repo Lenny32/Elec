@@ -1,0 +1,1294 @@
+[
+	{
+		"id": "diagram.ch02.series_string",
+		"version": 1,
+		"title": {
+			"en": "Three resistors in series",
+			"fr": "Trois résistances en série"
+		},
+		"alt": {
+			"en": "A 9 V battery B1 drives a single loop. From the battery + terminal the wire goes through R1 (100 Ω), then R2 (200 Ω), then R3 (150 Ω), and returns to the battery − terminal. There are no branches: the same current I flows through every part.",
+			"fr": "Une pile B1 de 9 V alimente une boucle unique. Depuis la borne + de la pile, le fil traverse R1 (100 Ω), puis R2 (200 Ω), puis R3 (150 Ω), et revient à la borne − de la pile. Il n’y a aucune dérivation : le même courant I traverse chaque composant."
+		},
+		"viewBox": [400, 220],
+		"components": [
+			{
+				"id": "B1",
+				"type": "battery",
+				"x": 50,
+				"y": 110,
+				"rotation": 90,
+				"label": "B1",
+				"value": {
+					"value": 9,
+					"unit": "V"
+				},
+				"pins": {
+					"a": "vplus",
+					"b": "gnd"
+				}
+			},
+			{
+				"id": "R1",
+				"type": "resistor",
+				"x": 130,
+				"y": 40,
+				"rotation": 0,
+				"label": "R1",
+				"value": {
+					"value": 100,
+					"unit": "ohm"
+				},
+				"pins": {
+					"a": "vplus",
+					"b": "n1"
+				}
+			},
+			{
+				"id": "R2",
+				"type": "resistor",
+				"x": 240,
+				"y": 40,
+				"rotation": 0,
+				"label": "R2",
+				"value": {
+					"value": 200,
+					"unit": "ohm"
+				},
+				"pins": {
+					"a": "n1",
+					"b": "n2"
+				}
+			},
+			{
+				"id": "R3",
+				"type": "resistor",
+				"x": 350,
+				"y": 110,
+				"rotation": 90,
+				"label": "R3",
+				"value": {
+					"value": 150,
+					"unit": "ohm"
+				},
+				"pins": {
+					"a": "n2",
+					"b": "gnd"
+				}
+			}
+		],
+		"wires": [
+			{
+				"net": "vplus",
+				"points": [
+					[50, 80],
+					[50, 40],
+					[100, 40]
+				]
+			},
+			{
+				"net": "n1",
+				"points": [
+					[160, 40],
+					[210, 40]
+				]
+			},
+			{
+				"net": "n2",
+				"points": [
+					[270, 40],
+					[350, 40],
+					[350, 80]
+				]
+			},
+			{
+				"net": "gnd",
+				"points": [
+					[350, 140],
+					[350, 180],
+					[50, 180],
+					[50, 140]
+				]
+			}
+		],
+		"junctions": [],
+		"annotations": [
+			{
+				"kind": "current_arrow",
+				"x": 310,
+				"y": 40,
+				"direction": "right",
+				"label": {
+					"en": "I",
+					"fr": "I"
+				}
+			},
+			{
+				"kind": "current_arrow",
+				"x": 200,
+				"y": 180,
+				"direction": "left",
+				"label": {
+					"en": "I",
+					"fr": "I"
+				}
+			}
+		]
+	},
+	{
+		"id": "diagram.ch02.lab_series",
+		"version": 1,
+		"title": {
+			"en": "Series lab circuit",
+			"fr": "Circuit du labo série"
+		},
+		"alt": {
+			"en": "An adjustable battery V drives a single loop through three resistors R1, R2 and R3 connected one after the other, back to the battery − terminal. The same current flows through all three. Values follow the lab sliders.",
+			"fr": "Une pile réglable V alimente une boucle unique qui traverse trois résistances R1, R2 et R3 placées l’une après l’autre, puis revient à la borne − de la pile. Le même courant traverse les trois. Les valeurs suivent les curseurs du labo."
+		},
+		"viewBox": [400, 220],
+		"components": [
+			{
+				"id": "B1",
+				"type": "battery",
+				"x": 50,
+				"y": 110,
+				"rotation": 90,
+				"label": "B1",
+				"value": {
+					"param": "V"
+				},
+				"pins": {
+					"a": "vplus",
+					"b": "gnd"
+				}
+			},
+			{
+				"id": "R1",
+				"type": "resistor",
+				"x": 130,
+				"y": 40,
+				"rotation": 0,
+				"label": "R1",
+				"value": {
+					"param": "R1"
+				},
+				"pins": {
+					"a": "vplus",
+					"b": "n1"
+				}
+			},
+			{
+				"id": "R2",
+				"type": "resistor",
+				"x": 240,
+				"y": 40,
+				"rotation": 0,
+				"label": "R2",
+				"value": {
+					"param": "R2"
+				},
+				"pins": {
+					"a": "n1",
+					"b": "n2"
+				}
+			},
+			{
+				"id": "R3",
+				"type": "resistor",
+				"x": 350,
+				"y": 110,
+				"rotation": 90,
+				"label": "R3",
+				"value": {
+					"param": "R3"
+				},
+				"pins": {
+					"a": "n2",
+					"b": "gnd"
+				}
+			}
+		],
+		"wires": [
+			{
+				"net": "vplus",
+				"points": [
+					[50, 80],
+					[50, 40],
+					[100, 40]
+				]
+			},
+			{
+				"net": "n1",
+				"points": [
+					[160, 40],
+					[210, 40]
+				]
+			},
+			{
+				"net": "n2",
+				"points": [
+					[270, 40],
+					[350, 40],
+					[350, 80]
+				]
+			},
+			{
+				"net": "gnd",
+				"points": [
+					[350, 140],
+					[350, 180],
+					[50, 180],
+					[50, 140]
+				]
+			}
+		],
+		"junctions": [],
+		"annotations": [
+			{
+				"kind": "current_arrow",
+				"x": 310,
+				"y": 40,
+				"direction": "right",
+				"label": {
+					"en": "I",
+					"fr": "I"
+				}
+			},
+			{
+				"kind": "current_arrow",
+				"x": 200,
+				"y": 180,
+				"direction": "left",
+				"label": {
+					"en": "I",
+					"fr": "I"
+				}
+			}
+		]
+	},
+	{
+		"id": "diagram.ch02.parallel_pair",
+		"version": 1,
+		"title": {
+			"en": "Two resistors in parallel",
+			"fr": "Deux résistances en parallèle"
+		},
+		"alt": {
+			"en": "A 6 V battery B1. Its + terminal connects to a top wire; its − terminal to a bottom wire. Resistor R1 (300 Ω) and resistor R2 (600 Ω) each connect between the top wire and the bottom wire, as two side-by-side branches. Junction dots mark where the branches join the top and bottom wires. The battery current I splits into I₁ through R1 and I₂ through R2.",
+			"fr": "Une pile B1 de 6 V. Sa borne + est reliée à un fil du haut, sa borne − à un fil du bas. La résistance R1 (300 Ω) et la résistance R2 (600 Ω) sont chacune branchées entre le fil du haut et le fil du bas, comme deux branches côte à côte. Des points de jonction marquent l’endroit où les branches rejoignent les fils. Le courant I de la pile se partage en I₁ dans R1 et I₂ dans R2."
+		},
+		"viewBox": [380, 220],
+		"components": [
+			{
+				"id": "B1",
+				"type": "battery",
+				"x": 50,
+				"y": 110,
+				"rotation": 90,
+				"label": "B1",
+				"value": {
+					"value": 6,
+					"unit": "V"
+				},
+				"pins": {
+					"a": "vplus",
+					"b": "gnd"
+				}
+			},
+			{
+				"id": "R1",
+				"type": "resistor",
+				"x": 180,
+				"y": 110,
+				"rotation": 90,
+				"label": "R1",
+				"value": {
+					"value": 300,
+					"unit": "ohm"
+				},
+				"pins": {
+					"a": "vplus",
+					"b": "gnd"
+				}
+			},
+			{
+				"id": "R2",
+				"type": "resistor",
+				"x": 290,
+				"y": 110,
+				"rotation": 90,
+				"label": "R2",
+				"value": {
+					"value": 600,
+					"unit": "ohm"
+				},
+				"pins": {
+					"a": "vplus",
+					"b": "gnd"
+				}
+			}
+		],
+		"wires": [
+			{
+				"net": "vplus",
+				"points": [
+					[50, 80],
+					[50, 40],
+					[290, 40],
+					[290, 80]
+				]
+			},
+			{
+				"net": "vplus",
+				"points": [
+					[180, 40],
+					[180, 80]
+				]
+			},
+			{
+				"net": "gnd",
+				"points": [
+					[50, 140],
+					[50, 180],
+					[290, 180],
+					[290, 140]
+				]
+			},
+			{
+				"net": "gnd",
+				"points": [
+					[180, 180],
+					[180, 140]
+				]
+			}
+		],
+		"junctions": [
+			[180, 40],
+			[180, 180]
+		],
+		"annotations": [
+			{
+				"kind": "current_arrow",
+				"x": 115,
+				"y": 40,
+				"direction": "right",
+				"label": {
+					"en": "I",
+					"fr": "I"
+				}
+			},
+			{
+				"kind": "current_arrow",
+				"x": 180,
+				"y": 60,
+				"direction": "down",
+				"label": {
+					"en": "I₁",
+					"fr": "I₁"
+				}
+			},
+			{
+				"kind": "current_arrow",
+				"x": 290,
+				"y": 60,
+				"direction": "down",
+				"label": {
+					"en": "I₂",
+					"fr": "I₂"
+				}
+			}
+		]
+	},
+	{
+		"id": "diagram.ch02.lab_parallel",
+		"version": 1,
+		"title": {
+			"en": "Parallel lab circuit",
+			"fr": "Circuit du labo parallèle"
+		},
+		"alt": {
+			"en": "An adjustable battery V with two resistors R1 and R2, each connected directly between the battery + wire and the battery − wire (two parallel branches, joined by junction dots). Both branches have the full battery voltage across them. Values follow the lab sliders.",
+			"fr": "Une pile réglable V et deux résistances R1 et R2, chacune branchée directement entre le fil + et le fil − de la pile (deux branches en parallèle, reliées par des points de jonction). Chaque branche reçoit toute la tension de la pile. Les valeurs suivent les curseurs du labo."
+		},
+		"viewBox": [380, 220],
+		"components": [
+			{
+				"id": "B1",
+				"type": "battery",
+				"x": 50,
+				"y": 110,
+				"rotation": 90,
+				"label": "B1",
+				"value": {
+					"param": "V"
+				},
+				"pins": {
+					"a": "vplus",
+					"b": "gnd"
+				}
+			},
+			{
+				"id": "R1",
+				"type": "resistor",
+				"x": 180,
+				"y": 110,
+				"rotation": 90,
+				"label": "R1",
+				"value": {
+					"param": "R1"
+				},
+				"pins": {
+					"a": "vplus",
+					"b": "gnd"
+				}
+			},
+			{
+				"id": "R2",
+				"type": "resistor",
+				"x": 290,
+				"y": 110,
+				"rotation": 90,
+				"label": "R2",
+				"value": {
+					"param": "R2"
+				},
+				"pins": {
+					"a": "vplus",
+					"b": "gnd"
+				}
+			}
+		],
+		"wires": [
+			{
+				"net": "vplus",
+				"points": [
+					[50, 80],
+					[50, 40],
+					[290, 40],
+					[290, 80]
+				]
+			},
+			{
+				"net": "vplus",
+				"points": [
+					[180, 40],
+					[180, 80]
+				]
+			},
+			{
+				"net": "gnd",
+				"points": [
+					[50, 140],
+					[50, 180],
+					[290, 180],
+					[290, 140]
+				]
+			},
+			{
+				"net": "gnd",
+				"points": [
+					[180, 180],
+					[180, 140]
+				]
+			}
+		],
+		"junctions": [
+			[180, 40],
+			[180, 180]
+		],
+		"annotations": [
+			{
+				"kind": "current_arrow",
+				"x": 115,
+				"y": 40,
+				"direction": "right",
+				"label": {
+					"en": "I",
+					"fr": "I"
+				}
+			},
+			{
+				"kind": "current_arrow",
+				"x": 180,
+				"y": 60,
+				"direction": "down",
+				"label": {
+					"en": "I₁",
+					"fr": "I₁"
+				}
+			},
+			{
+				"kind": "current_arrow",
+				"x": 290,
+				"y": 60,
+				"direction": "down",
+				"label": {
+					"en": "I₂",
+					"fr": "I₂"
+				}
+			}
+		]
+	},
+	{
+		"id": "diagram.ch02.voltmeter",
+		"version": 1,
+		"title": {
+			"en": "Voltmeter across a resistor",
+			"fr": "Voltmètre aux bornes d’une résistance"
+		},
+		"alt": {
+			"en": "A 9 V battery B1 drives R1 (1 kΩ) and R2 (2 kΩ) in series. A voltmeter V1 is connected in parallel with R2: its + probe touches the node between R1 and R2, its − probe touches the bottom end of R2 (the battery − side). Junction dots show where the voltmeter leads join the circuit. The voltmeter does not break the loop.",
+			"fr": "Une pile B1 de 9 V alimente R1 (1 kΩ) et R2 (2 kΩ) en série. Un voltmètre V1 est branché en parallèle sur R2 : sa pointe + touche le nœud entre R1 et R2, sa pointe − touche l’extrémité basse de R2 (côté − de la pile). Des points de jonction montrent où les fils du voltmètre rejoignent le circuit. Le voltmètre ne coupe pas la boucle."
+		},
+		"viewBox": [400, 240],
+		"components": [
+			{
+				"id": "B1",
+				"type": "battery",
+				"x": 50,
+				"y": 120,
+				"rotation": 90,
+				"label": "B1",
+				"value": {
+					"value": 9,
+					"unit": "V"
+				},
+				"pins": {
+					"a": "vplus",
+					"b": "gnd"
+				}
+			},
+			{
+				"id": "R1",
+				"type": "resistor",
+				"x": 150,
+				"y": 50,
+				"rotation": 0,
+				"label": "R1",
+				"value": {
+					"value": 1,
+					"unit": "kohm"
+				},
+				"pins": {
+					"a": "vplus",
+					"b": "n1"
+				}
+			},
+			{
+				"id": "R2",
+				"type": "resistor",
+				"x": 240,
+				"y": 120,
+				"rotation": 90,
+				"label": "R2",
+				"value": {
+					"value": 2,
+					"unit": "kohm"
+				},
+				"pins": {
+					"a": "n1",
+					"b": "gnd"
+				}
+			},
+			{
+				"id": "V1",
+				"type": "meter_v",
+				"x": 330,
+				"y": 120,
+				"rotation": 90,
+				"label": "V1",
+				"pins": {
+					"a": "n1",
+					"b": "gnd"
+				}
+			}
+		],
+		"wires": [
+			{
+				"net": "vplus",
+				"points": [
+					[50, 90],
+					[50, 50],
+					[120, 50]
+				]
+			},
+			{
+				"net": "n1",
+				"points": [
+					[180, 50],
+					[240, 50],
+					[240, 90]
+				]
+			},
+			{
+				"net": "n1",
+				"points": [
+					[240, 50],
+					[330, 50],
+					[330, 90]
+				]
+			},
+			{
+				"net": "gnd",
+				"points": [
+					[240, 150],
+					[240, 190],
+					[50, 190],
+					[50, 150]
+				]
+			},
+			{
+				"net": "gnd",
+				"points": [
+					[330, 150],
+					[330, 190],
+					[240, 190]
+				]
+			}
+		],
+		"junctions": [
+			[240, 50],
+			[240, 190]
+		],
+		"annotations": []
+	},
+	{
+		"id": "diagram.ch02.ammeter",
+		"version": 1,
+		"title": {
+			"en": "Ammeter in series",
+			"fr": "Ampèremètre en série"
+		},
+		"alt": {
+			"en": "A 6 V battery B1, an ammeter A1 and a resistor R1 (300 Ω) form a single loop. The ammeter sits in the top wire between the battery + terminal and R1, so the whole loop current must pass through it. The ammeter + terminal faces the battery + side.",
+			"fr": "Une pile B1 de 6 V, un ampèremètre A1 et une résistance R1 (300 Ω) forment une boucle unique. L’ampèremètre est placé dans le fil du haut, entre la borne + de la pile et R1 : tout le courant de la boucle doit le traverser. La borne + de l’ampèremètre est du côté + de la pile."
+		},
+		"viewBox": [360, 200],
+		"components": [
+			{
+				"id": "B1",
+				"type": "battery",
+				"x": 50,
+				"y": 100,
+				"rotation": 90,
+				"label": "B1",
+				"value": {
+					"value": 6,
+					"unit": "V"
+				},
+				"pins": {
+					"a": "vplus",
+					"b": "gnd"
+				}
+			},
+			{
+				"id": "A1",
+				"type": "meter_a",
+				"x": 150,
+				"y": 40,
+				"rotation": 0,
+				"label": "A1",
+				"pins": {
+					"a": "vplus",
+					"b": "n1"
+				}
+			},
+			{
+				"id": "R1",
+				"type": "resistor",
+				"x": 300,
+				"y": 100,
+				"rotation": 90,
+				"label": "R1",
+				"value": {
+					"value": 300,
+					"unit": "ohm"
+				},
+				"pins": {
+					"a": "n1",
+					"b": "gnd"
+				}
+			}
+		],
+		"wires": [
+			{
+				"net": "vplus",
+				"points": [
+					[50, 70],
+					[50, 40],
+					[120, 40]
+				]
+			},
+			{
+				"net": "n1",
+				"points": [
+					[180, 40],
+					[300, 40],
+					[300, 70]
+				]
+			},
+			{
+				"net": "gnd",
+				"points": [
+					[300, 130],
+					[300, 160],
+					[50, 160],
+					[50, 130]
+				]
+			}
+		],
+		"junctions": [],
+		"annotations": [
+			{
+				"kind": "current_arrow",
+				"x": 240,
+				"y": 40,
+				"direction": "right",
+				"label": {
+					"en": "I",
+					"fr": "I"
+				}
+			}
+		]
+	},
+	{
+		"id": "diagram.ch02.open_circuit",
+		"version": 1,
+		"title": {
+			"en": "Open circuit: switch open",
+			"fr": "Circuit ouvert : interrupteur ouvert"
+		},
+		"alt": {
+			"en": "A 9 V battery B1, a switch S1 and a resistor R1 (1 kΩ) form a loop. The switch S1, in the top wire between the battery + terminal and R1, is drawn OPEN: the loop is broken, so no current can flow.",
+			"fr": "Une pile B1 de 9 V, un interrupteur S1 et une résistance R1 (1 kΩ) forment une boucle. L’interrupteur S1, dans le fil du haut entre la borne + de la pile et R1, est dessiné OUVERT : la boucle est coupée, aucun courant ne peut circuler."
+		},
+		"viewBox": [360, 200],
+		"components": [
+			{
+				"id": "B1",
+				"type": "battery",
+				"x": 50,
+				"y": 100,
+				"rotation": 90,
+				"label": "B1",
+				"value": {
+					"value": 9,
+					"unit": "V"
+				},
+				"pins": {
+					"a": "vplus",
+					"b": "gnd"
+				}
+			},
+			{
+				"id": "S1",
+				"type": "switch",
+				"x": 150,
+				"y": 40,
+				"rotation": 0,
+				"label": "S1",
+				"closed": false,
+				"pins": {
+					"a": "vplus",
+					"b": "n1"
+				}
+			},
+			{
+				"id": "R1",
+				"type": "resistor",
+				"x": 300,
+				"y": 100,
+				"rotation": 90,
+				"label": "R1",
+				"value": {
+					"value": 1,
+					"unit": "kohm"
+				},
+				"pins": {
+					"a": "n1",
+					"b": "gnd"
+				}
+			}
+		],
+		"wires": [
+			{
+				"net": "vplus",
+				"points": [
+					[50, 70],
+					[50, 40],
+					[120, 40]
+				]
+			},
+			{
+				"net": "n1",
+				"points": [
+					[180, 40],
+					[300, 40],
+					[300, 70]
+				]
+			},
+			{
+				"net": "gnd",
+				"points": [
+					[300, 130],
+					[300, 160],
+					[50, 160],
+					[50, 130]
+				]
+			}
+		],
+		"junctions": [],
+		"annotations": []
+	},
+	{
+		"id": "diagram.ch02.lab_switch",
+		"version": 1,
+		"title": {
+			"en": "Switch lab circuit",
+			"fr": "Circuit du labo interrupteur"
+		},
+		"alt": {
+			"en": "An adjustable battery V, a switch S1 and a resistor R form a single loop; the switch sits in the top wire between the battery + terminal and R. The lab control opens or closes the switch; the drawing shows it open. When it is open the loop is broken.",
+			"fr": "Une pile réglable V, un interrupteur S1 et une résistance R forment une boucle unique ; l’interrupteur est dans le fil du haut, entre la borne + de la pile et R. La commande du labo ouvre ou ferme l’interrupteur ; le dessin le montre ouvert. Ouvert, il coupe la boucle."
+		},
+		"viewBox": [360, 200],
+		"components": [
+			{
+				"id": "B1",
+				"type": "battery",
+				"x": 50,
+				"y": 100,
+				"rotation": 90,
+				"label": "B1",
+				"value": {
+					"param": "V"
+				},
+				"pins": {
+					"a": "vplus",
+					"b": "gnd"
+				}
+			},
+			{
+				"id": "S1",
+				"type": "switch",
+				"x": 150,
+				"y": 40,
+				"rotation": 0,
+				"label": "S1",
+				"closed": false,
+				"pins": {
+					"a": "vplus",
+					"b": "n1"
+				}
+			},
+			{
+				"id": "R1",
+				"type": "resistor",
+				"x": 300,
+				"y": 100,
+				"rotation": 90,
+				"label": "R",
+				"value": {
+					"param": "R"
+				},
+				"pins": {
+					"a": "n1",
+					"b": "gnd"
+				}
+			}
+		],
+		"wires": [
+			{
+				"net": "vplus",
+				"points": [
+					[50, 70],
+					[50, 40],
+					[120, 40]
+				]
+			},
+			{
+				"net": "n1",
+				"points": [
+					[180, 40],
+					[300, 40],
+					[300, 70]
+				]
+			},
+			{
+				"net": "gnd",
+				"points": [
+					[300, 130],
+					[300, 160],
+					[50, 160],
+					[50, 130]
+				]
+			}
+		],
+		"junctions": [],
+		"annotations": []
+	},
+	{
+		"id": "diagram.ch02.short_circuit",
+		"version": 1,
+		"title": {
+			"en": "Resistor shorted by a jumper wire",
+			"fr": "Résistance court-circuitée par un fil"
+		},
+		"alt": {
+			"en": "A 9 V battery B1 drives R1 (1 kΩ) and R2 (2 kΩ) in series. A stray jumper wire runs from the top end of R2 around to the bottom end of R2, connecting both ends of R2 together (junction dots at both ends). R2 is shorted: current bypasses it through the wire, and only R1 limits the current.",
+			"fr": "Une pile B1 de 9 V alimente R1 (1 kΩ) et R2 (2 kΩ) en série. Un fil de liaison égaré relie l’extrémité haute de R2 à son extrémité basse (points de jonction aux deux bouts). R2 est court-circuitée : le courant la contourne par le fil, et seule R1 limite le courant."
+		},
+		"viewBox": [380, 220],
+		"components": [
+			{
+				"id": "B1",
+				"type": "battery",
+				"x": 50,
+				"y": 110,
+				"rotation": 90,
+				"label": "B1",
+				"value": {
+					"value": 9,
+					"unit": "V"
+				},
+				"pins": {
+					"a": "vplus",
+					"b": "gnd"
+				}
+			},
+			{
+				"id": "R1",
+				"type": "resistor",
+				"x": 150,
+				"y": 40,
+				"rotation": 0,
+				"label": "R1",
+				"value": {
+					"value": 1,
+					"unit": "kohm"
+				},
+				"pins": {
+					"a": "vplus",
+					"b": "gnd"
+				}
+			},
+			{
+				"id": "R2",
+				"type": "resistor",
+				"x": 240,
+				"y": 110,
+				"rotation": 90,
+				"label": "R2",
+				"value": {
+					"value": 2,
+					"unit": "kohm"
+				},
+				"pins": {
+					"a": "gnd",
+					"b": "gnd"
+				}
+			}
+		],
+		"wires": [
+			{
+				"net": "vplus",
+				"points": [
+					[50, 80],
+					[50, 40],
+					[120, 40]
+				]
+			},
+			{
+				"net": "gnd",
+				"points": [
+					[180, 40],
+					[240, 40],
+					[240, 80]
+				]
+			},
+			{
+				"net": "gnd",
+				"points": [
+					[240, 140],
+					[240, 180],
+					[50, 180],
+					[50, 140]
+				]
+			},
+			{
+				"net": "gnd",
+				"points": [
+					[240, 40],
+					[320, 40],
+					[320, 180],
+					[240, 180]
+				]
+			}
+		],
+		"junctions": [
+			[240, 40],
+			[240, 180]
+		],
+		"annotations": [
+			{
+				"kind": "text",
+				"x": 280,
+				"y": 205,
+				"text": {
+					"en": "Jumper wire = short",
+					"fr": "Fil de liaison = court-circuit"
+				}
+			}
+		]
+	},
+	{
+		"id": "diagram.ch02.led_measure",
+		"version": 1,
+		"title": {
+			"en": "Measuring a battery LED circuit",
+			"fr": "Mesurer un circuit pile-LED"
+		},
+		"alt": {
+			"en": "A 9 V battery B1, an ammeter A1, a resistor R1 (470 Ω) and a red LED D1 form a single loop: battery + → A1 → R1 → LED anode; LED cathode → battery −. The ammeter is in series, so it reads the loop current. A voltmeter V1 is connected in parallel with the LED (+ probe at the anode, − probe at the cathode), with junction dots where its leads join.",
+			"fr": "Une pile B1 de 9 V, un ampèremètre A1, une résistance R1 (470 Ω) et une LED rouge D1 forment une boucle unique : + de la pile → A1 → R1 → anode de la LED ; cathode de la LED → − de la pile. L’ampèremètre est en série : il mesure le courant de la boucle. Un voltmètre V1 est branché en parallèle sur la LED (pointe + sur l’anode, pointe − sur la cathode), avec des points de jonction là où ses fils se raccordent."
+		},
+		"viewBox": [420, 240],
+		"components": [
+			{
+				"id": "B1",
+				"type": "battery",
+				"x": 50,
+				"y": 120,
+				"rotation": 90,
+				"label": "B1",
+				"value": {
+					"value": 9,
+					"unit": "V"
+				},
+				"pins": {
+					"a": "vplus",
+					"b": "gnd"
+				}
+			},
+			{
+				"id": "A1",
+				"type": "meter_a",
+				"x": 130,
+				"y": 50,
+				"rotation": 0,
+				"label": "A1",
+				"pins": {
+					"a": "vplus",
+					"b": "n1"
+				}
+			},
+			{
+				"id": "R1",
+				"type": "resistor",
+				"x": 230,
+				"y": 50,
+				"rotation": 0,
+				"label": "R1",
+				"value": {
+					"value": 470,
+					"unit": "ohm"
+				},
+				"pins": {
+					"a": "n1",
+					"b": "n2"
+				}
+			},
+			{
+				"id": "D1",
+				"type": "led",
+				"x": 300,
+				"y": 120,
+				"rotation": 90,
+				"label": "D1",
+				"pins": {
+					"a": "n2",
+					"b": "gnd"
+				}
+			},
+			{
+				"id": "V1",
+				"type": "meter_v",
+				"x": 380,
+				"y": 120,
+				"rotation": 90,
+				"label": "V1",
+				"pins": {
+					"a": "n2",
+					"b": "gnd"
+				}
+			}
+		],
+		"wires": [
+			{
+				"net": "vplus",
+				"points": [
+					[50, 90],
+					[50, 50],
+					[100, 50]
+				]
+			},
+			{
+				"net": "n1",
+				"points": [
+					[160, 50],
+					[200, 50]
+				]
+			},
+			{
+				"net": "n2",
+				"points": [
+					[260, 50],
+					[300, 50],
+					[300, 90]
+				]
+			},
+			{
+				"net": "n2",
+				"points": [
+					[300, 50],
+					[380, 50],
+					[380, 90]
+				]
+			},
+			{
+				"net": "gnd",
+				"points": [
+					[300, 150],
+					[300, 190],
+					[50, 190],
+					[50, 150]
+				]
+			},
+			{
+				"net": "gnd",
+				"points": [
+					[380, 150],
+					[380, 190],
+					[300, 190]
+				]
+			}
+		],
+		"junctions": [
+			[300, 50],
+			[300, 190]
+		],
+		"annotations": []
+	},
+	{
+		"id": "diagram.ch02.fault_led",
+		"version": 1,
+		"title": {
+			"en": "Faulty LED circuit with measurements",
+			"fr": "Circuit LED en panne, avec mesures"
+		},
+		"alt": {
+			"en": "A 9 V battery B1, a resistor R1 (470 Ω) and an LED D1 (anode towards R1) form a single loop. The LED does not light. Measured values are marked: 0 V across R1 and 9 V across the LED.",
+			"fr": "Une pile B1 de 9 V, une résistance R1 (470 Ω) et une LED D1 (anode du côté de R1) forment une boucle unique. La LED ne s’allume pas. Les valeurs mesurées sont indiquées : 0 V aux bornes de R1 et 9 V aux bornes de la LED."
+		},
+		"viewBox": [400, 220],
+		"components": [
+			{
+				"id": "B1",
+				"type": "battery",
+				"x": 50,
+				"y": 110,
+				"rotation": 90,
+				"label": "B1",
+				"value": {
+					"value": 9,
+					"unit": "V"
+				},
+				"pins": {
+					"a": "vplus",
+					"b": "gnd"
+				}
+			},
+			{
+				"id": "R1",
+				"type": "resistor",
+				"x": 150,
+				"y": 40,
+				"rotation": 0,
+				"label": "R1",
+				"value": {
+					"value": 470,
+					"unit": "ohm"
+				},
+				"pins": {
+					"a": "vplus",
+					"b": "n1"
+				}
+			},
+			{
+				"id": "D1",
+				"type": "led",
+				"x": 300,
+				"y": 110,
+				"rotation": 90,
+				"label": "D1",
+				"pins": {
+					"a": "n1",
+					"b": "gnd"
+				}
+			}
+		],
+		"wires": [
+			{
+				"net": "vplus",
+				"points": [
+					[50, 80],
+					[50, 40],
+					[120, 40]
+				]
+			},
+			{
+				"net": "n1",
+				"points": [
+					[180, 40],
+					[300, 40],
+					[300, 80]
+				]
+			},
+			{
+				"net": "gnd",
+				"points": [
+					[300, 140],
+					[300, 180],
+					[50, 180],
+					[50, 140]
+				]
+			}
+		],
+		"junctions": [],
+		"annotations": [
+			{
+				"kind": "voltage_marker",
+				"x1": 120,
+				"y1": 70,
+				"x2": 180,
+				"y2": 70,
+				"label": {
+					"en": "0 V",
+					"fr": "0 V"
+				}
+			},
+			{
+				"kind": "voltage_marker",
+				"x1": 350,
+				"y1": 80,
+				"x2": 350,
+				"y2": 140,
+				"label": {
+					"en": "9 V",
+					"fr": "9 V"
+				}
+			}
+		]
+	}
+]

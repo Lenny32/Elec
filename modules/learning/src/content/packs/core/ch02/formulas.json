@@ -1,0 +1,236 @@
+[
+	{
+		"id": "formula.resistors.series",
+		"version": 1,
+		"name": {
+			"en": "Resistors in series",
+			"fr": "Résistances en série"
+		},
+		"symbolic": "Rt = R1 + R2",
+		"latex": "R_\\text{t} = R_1 + R_2 + \\dots",
+		"output": {
+			"symbol": "Rt",
+			"name": {
+				"en": "Total resistance",
+				"fr": "Résistance totale"
+			},
+			"unit": "ohm"
+		},
+		"inputs": [
+			{
+				"symbol": "R1",
+				"name": {
+					"en": "First resistance",
+					"fr": "Première résistance"
+				},
+				"unit": "ohm"
+			},
+			{
+				"symbol": "R2",
+				"name": {
+					"en": "Second resistance",
+					"fr": "Deuxième résistance"
+				},
+				"unit": "ohm"
+			}
+		],
+		"algorithm": "series_resistance",
+		"constraints": [
+			{
+				"en": "Each resistance > 0 Ω",
+				"fr": "Chaque résistance > 0 Ω"
+			},
+			{
+				"en": "The parts are truly in series: one path, nothing else connected at the nodes between them",
+				"fr": "Les composants sont vraiment en série : un seul chemin, rien d’autre de branché aux nœuds qui les relient"
+			}
+		],
+		"assumptions": [
+			{
+				"en": "Connecting wires have 0 Ω",
+				"fr": "Les fils de liaison font 0 Ω"
+			},
+			{
+				"en": "Ohmic resistors (constant resistance)",
+				"fr": "Résistances ohmiques (valeur constante)"
+			}
+		],
+		"rearrangements": [
+			"R_2 = R_\\text{t} - R_1",
+			"R_\\text{t} = \\sum_i R_i",
+			"R_\\text{t} = n R \\ (n \\text{ identical})"
+		],
+		"explanation": {
+			"en": "In series, the current has only one path, so it must push through every resistor in turn. Each resistor adds its own opposition, so the total is the sum. The total is always **larger** than the largest resistor. Works for any number of resistors.",
+			"fr": "En série, le courant n’a qu’un chemin : il doit traverser chaque résistance l’une après l’autre. Chaque résistance ajoute sa propre opposition, le total est donc la somme. Le total est toujours **plus grand** que la plus grande résistance. Valable pour n’importe quel nombre de résistances."
+		},
+		"derivation": {
+			"en": "The same current $I$ flows through each resistor. The battery voltage is shared: $V = I R_1 + I R_2 = I (R_1 + R_2)$. A single resistor that gives the same $V$ for the same $I$ must therefore be $R_\\text{t} = R_1 + R_2$.",
+			"fr": "Le même courant $I$ traverse chaque résistance. La tension de la pile se partage : $V = I R_1 + I R_2 = I (R_1 + R_2)$. Une résistance unique qui donne la même $V$ pour le même $I$ vaut donc $R_\\text{t} = R_1 + R_2$."
+		},
+		"workedExample": {
+			"inputs": {
+				"R1": {
+					"value": 100,
+					"unit": "ohm"
+				},
+				"R2": {
+					"value": 220,
+					"unit": "ohm"
+				}
+			},
+			"result": 320,
+			"unit": "ohm",
+			"steps": [
+				{
+					"en": "$R_\\text{t} = R_1 + R_2$",
+					"fr": "$R_\\text{t} = R_1 + R_2$"
+				},
+				{
+					"en": "$R_\\text{t} = 100 + 220 = 320\\ \\Omega$",
+					"fr": "$R_\\text{t} = 100 + 220 = 320\\ \\Omega$"
+				}
+			]
+		},
+		"commonMistakes": [
+			{
+				"en": "Adding values with different prefixes: 1 kΩ + 220 Ω is 1220 Ω, not 221 Ω. Convert first.",
+				"fr": "Additionner des valeurs à préfixes différents : 1 kΩ + 220 Ω font 1220 Ω, pas 221 Ω. Convertir d’abord."
+			},
+			{
+				"en": "Using this formula for parallel branches (parallel resistors do not add).",
+				"fr": "Utiliser cette formule pour des branches en parallèle (les résistances en parallèle ne s’additionnent pas)."
+			},
+			{
+				"en": "Thinking the current is “used up” along the string: it is the same in every series part.",
+				"fr": "Croire que le courant « s’use » le long de la chaîne : il est le même dans chaque composant en série."
+			}
+		],
+		"counterexample": {
+			"en": "If a third wire or part connects at the node between R1 and R2, they are no longer in series: the current through R1 is no longer the same as through R2, and simply adding them is wrong.",
+			"fr": "Si un troisième fil ou composant est branché au nœud entre R1 et R2, elles ne sont plus en série : le courant dans R1 n’est plus le même que dans R2, et les additionner est faux."
+		},
+		"conceptIds": ["resistors.series"]
+	},
+	{
+		"id": "formula.resistors.parallel",
+		"version": 1,
+		"name": {
+			"en": "Resistors in parallel",
+			"fr": "Résistances en parallèle"
+		},
+		"symbolic": "Rt = 1 / (1/R1 + 1/R2)",
+		"latex": "\\frac{1}{R_\\text{t}} = \\frac{1}{R_1} + \\frac{1}{R_2} + \\dots",
+		"output": {
+			"symbol": "Rt",
+			"name": {
+				"en": "Equivalent resistance",
+				"fr": "Résistance équivalente"
+			},
+			"unit": "ohm"
+		},
+		"inputs": [
+			{
+				"symbol": "R1",
+				"name": {
+					"en": "First branch resistance",
+					"fr": "Résistance de la première branche"
+				},
+				"unit": "ohm"
+			},
+			{
+				"symbol": "R2",
+				"name": {
+					"en": "Second branch resistance",
+					"fr": "Résistance de la deuxième branche"
+				},
+				"unit": "ohm"
+			}
+		],
+		"algorithm": "parallel_resistance",
+		"constraints": [
+			{
+				"en": "Each resistance > 0 Ω (a 0 Ω branch is a short: the total becomes 0 Ω)",
+				"fr": "Chaque résistance > 0 Ω (une branche de 0 Ω est un court-circuit : le total devient 0 Ω)"
+			},
+			{
+				"en": "All branches connect between the same two nodes",
+				"fr": "Toutes les branches sont reliées entre les deux mêmes nœuds"
+			}
+		],
+		"assumptions": [
+			{
+				"en": "Connecting wires have 0 Ω",
+				"fr": "Les fils de liaison font 0 Ω"
+			},
+			{
+				"en": "Ohmic resistors (constant resistance)",
+				"fr": "Résistances ohmiques (valeur constante)"
+			}
+		],
+		"rearrangements": [
+			"R_\\text{t} = \\frac{R_1 R_2}{R_1 + R_2}",
+			"R_\\text{t} = \\frac{R}{n} \\ (n \\text{ identical})",
+			"R_2 = \\frac{R_1 R_\\text{t}}{R_1 - R_\\text{t}} \\ (R_1 > R_\\text{t})"
+		],
+		"explanation": {
+			"en": "In parallel, every branch has the same voltage, and each branch adds an extra path for current. More paths means more total current for the same voltage, so the equivalent resistance goes **down**. It is always **smaller than the smallest branch**. For two resistors, use “product over sum”.",
+			"fr": "En parallèle (on dit aussi « en dérivation »), chaque branche a la même tension et chaque branche ajoute un chemin pour le courant. Plus de chemins donne plus de courant total pour la même tension : la résistance équivalente **diminue**. Elle est toujours **plus petite que la plus petite branche**. Pour deux résistances, utilisez « produit sur somme »."
+		},
+		"derivation": {
+			"en": "Each branch sees the same voltage $V$, so $I_1 = V/R_1$ and $I_2 = V/R_2$. The battery supplies $I = I_1 + I_2 = V\\left(\\frac{1}{R_1} + \\frac{1}{R_2}\\right)$. The single equivalent resistor satisfies $I = V/R_\\text{t}$, hence $\\frac{1}{R_\\text{t}} = \\frac{1}{R_1} + \\frac{1}{R_2}$.",
+			"fr": "Chaque branche a la même tension $V$, donc $I_1 = V/R_1$ et $I_2 = V/R_2$. La pile fournit $I = I_1 + I_2 = V\\left(\\frac{1}{R_1} + \\frac{1}{R_2}\\right)$. La résistance équivalente vérifie $I = V/R_\\text{t}$, d’où $\\frac{1}{R_\\text{t}} = \\frac{1}{R_1} + \\frac{1}{R_2}$."
+		},
+		"workedExample": {
+			"inputs": {
+				"R1": {
+					"value": 1,
+					"unit": "kohm"
+				},
+				"R2": {
+					"value": 1.5,
+					"unit": "kohm"
+				}
+			},
+			"result": 600,
+			"unit": "ohm",
+			"steps": [
+				{
+					"en": "Product over sum: $R_\\text{t} = \\frac{R_1 R_2}{R_1 + R_2}$",
+					"fr": "Produit sur somme : $R_\\text{t} = \\frac{R_1 R_2}{R_1 + R_2}$"
+				},
+				{
+					"en": "$R_\\text{t} = \\frac{1000 \\times 1500}{1000 + 1500} = \\frac{1\\,500\\,000}{2500} = 600\\ \\Omega$",
+					"fr": "$R_\\text{t} = \\frac{1000 \\times 1500}{1000 + 1500} = \\frac{1\\,500\\,000}{2500} = 600\\ \\Omega$"
+				},
+				{
+					"en": "Check: 600 Ω is smaller than 1 kΩ, the smallest branch. ✔",
+					"fr": "Vérification : 600 Ω est plus petit que 1 kΩ, la plus petite branche. ✔"
+				}
+			]
+		},
+		"commonMistakes": [
+			{
+				"en": "Adding the resistances as if they were in series.",
+				"fr": "Additionner les résistances comme si elles étaient en série."
+			},
+			{
+				"en": "Forgetting the final inversion: $\\frac{1}{R_1} + \\frac{1}{R_2}$ is $\\frac{1}{R_\\text{t}}$, not $R_\\text{t}$.",
+				"fr": "Oublier l’inversion finale : $\\frac{1}{R_1} + \\frac{1}{R_2}$ vaut $\\frac{1}{R_\\text{t}}$, pas $R_\\text{t}$."
+			},
+			{
+				"en": "Getting a result larger than the smallest branch (for example by averaging). That is always wrong.",
+				"fr": "Obtenir un résultat plus grand que la plus petite branche (par exemple en faisant une moyenne). C’est toujours faux."
+			},
+			{
+				"en": "Applying “product over sum” to three resistors at once; it only works for two at a time.",
+				"fr": "Appliquer « produit sur somme » à trois résistances d’un coup ; cela ne marche que deux par deux."
+			}
+		],
+		"counterexample": {
+			"en": "Two resistors that share only one node (one end each) are not in parallel; they may be in series or part of a bigger network.",
+			"fr": "Deux résistances qui ne partagent qu’un seul nœud (une extrémité chacune) ne sont pas en parallèle ; elles peuvent être en série ou faire partie d’un réseau plus grand."
+		},
+		"conceptIds": ["resistors.parallel"]
+	}
+]

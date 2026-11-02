@@ -1,0 +1,222 @@
+[
+	{
+		"id": "lab.ch02.series",
+		"version": 1,
+		"title": {
+			"en": "Series resistors lab",
+			"fr": "Labo : résistances en série"
+		},
+		"intro": {
+			"en": "Change the battery voltage and the three resistors. Watch the total resistance, the single loop current, and the voltage across each resistor. The readings are what an ideal ammeter in the loop and an ideal voltmeter across each resistor would show. Set R3 to 0 Ω to replace it with a plain wire.",
+			"fr": "Modifiez la tension de la pile et les trois résistances. Observez la résistance totale, le courant unique de la boucle et la tension aux bornes de chaque résistance. Les valeurs affichées sont celles que donneraient un ampèremètre idéal dans la boucle et un voltmètre idéal aux bornes de chaque résistance. Réglez R3 sur 0 Ω pour la remplacer par un simple fil."
+		},
+		"diagramId": "diagram.ch02.lab_series",
+		"model": "series",
+		"params": [
+			{
+				"key": "V",
+				"label": {
+					"en": "Battery voltage",
+					"fr": "Tension de la pile"
+				},
+				"unit": "V",
+				"min": 0,
+				"max": 12,
+				"step": 0.5,
+				"default": 9
+			},
+			{
+				"key": "R1",
+				"label": {
+					"en": "R1",
+					"fr": "R1"
+				},
+				"unit": "ohm",
+				"min": 10,
+				"max": 10000,
+				"step": 10,
+				"default": 100
+			},
+			{
+				"key": "R2",
+				"label": {
+					"en": "R2",
+					"fr": "R2"
+				},
+				"unit": "ohm",
+				"min": 10,
+				"max": 10000,
+				"step": 10,
+				"default": 200
+			},
+			{
+				"key": "R3",
+				"label": {
+					"en": "R3 (0 = wire)",
+					"fr": "R3 (0 = fil)"
+				},
+				"unit": "ohm",
+				"min": 0,
+				"max": 10000,
+				"step": 10,
+				"default": 150
+			}
+		],
+		"constants": {},
+		"assumptions": [
+			{
+				"en": "Ideal battery: its voltage does not drop when current flows (no internal resistance).",
+				"fr": "Pile idéale : sa tension ne baisse pas quand le courant circule (pas de résistance interne)."
+			},
+			{
+				"en": "Connecting wires have 0 Ω; resistor values are exact (no tolerance).",
+				"fr": "Les fils de liaison font 0 Ω ; les valeurs des résistances sont exactes (pas de tolérance)."
+			},
+			{
+				"en": "Ideal meters: they do not disturb the circuit.",
+				"fr": "Appareils de mesure idéaux : ils ne perturbent pas le circuit."
+			}
+		],
+		"safety": [
+			{
+				"en": "Real resistors have a power rating (often 0.25 W). Keep real experiments at 9 V or less and check $P = I^2 R$.",
+				"fr": "Les vraies résistances ont une puissance nominale (souvent 0,25 W). Pour de vraies expériences, restez à 9 V maximum et vérifiez $P = I^2 R$."
+			}
+		]
+	},
+	{
+		"id": "lab.ch02.parallel",
+		"version": 1,
+		"title": {
+			"en": "Parallel resistors lab",
+			"fr": "Labo : résistances en parallèle"
+		},
+		"intro": {
+			"en": "Change the battery voltage and the two branch resistors. Notice that the equivalent resistance is always smaller than the smallest branch, and that each branch current depends only on its own resistor.",
+			"fr": "Modifiez la tension de la pile et les deux résistances des branches. Remarquez que la résistance équivalente est toujours plus petite que la plus petite des branches, et que le courant de chaque branche ne dépend que de sa propre résistance."
+		},
+		"diagramId": "diagram.ch02.lab_parallel",
+		"model": "parallel",
+		"params": [
+			{
+				"key": "V",
+				"label": {
+					"en": "Battery voltage",
+					"fr": "Tension de la pile"
+				},
+				"unit": "V",
+				"min": 0,
+				"max": 12,
+				"step": 0.5,
+				"default": 6
+			},
+			{
+				"key": "R1",
+				"label": {
+					"en": "R1",
+					"fr": "R1"
+				},
+				"unit": "ohm",
+				"min": 10,
+				"max": 10000,
+				"step": 10,
+				"default": 300
+			},
+			{
+				"key": "R2",
+				"label": {
+					"en": "R2",
+					"fr": "R2"
+				},
+				"unit": "ohm",
+				"min": 10,
+				"max": 10000,
+				"step": 10,
+				"default": 600
+			}
+		],
+		"constants": {},
+		"assumptions": [
+			{
+				"en": "Ideal battery: same voltage whatever current is drawn.",
+				"fr": "Pile idéale : même tension quel que soit le courant demandé."
+			},
+			{
+				"en": "Wires have 0 Ω, so both branches see exactly the battery voltage.",
+				"fr": "Les fils font 0 Ω : les deux branches reçoivent exactement la tension de la pile."
+			}
+		],
+		"safety": [
+			{
+				"en": "Each extra parallel branch draws more current from the battery. Small resistances in parallel can overheat resistors and drain a real battery quickly.",
+				"fr": "Chaque branche ajoutée en parallèle tire plus de courant de la pile. De petites résistances en parallèle peuvent faire chauffer les résistances et vider rapidement une vraie pile."
+			}
+		]
+	},
+	{
+		"id": "lab.ch02.open_switch",
+		"version": 1,
+		"title": {
+			"en": "Open and closed switch lab",
+			"fr": "Labo : interrupteur ouvert ou fermé"
+		},
+		"intro": {
+			"en": "Open and close the switch (0 = open, 1 = closed). With the switch open the loop is broken: the current is zero whatever the voltage or resistance.",
+			"fr": "Ouvrez et fermez l’interrupteur (0 = ouvert, 1 = fermé). Interrupteur ouvert, la boucle est coupée : le courant est nul, quelles que soient la tension et la résistance."
+		},
+		"diagramId": "diagram.ch02.lab_switch",
+		"model": "switched",
+		"params": [
+			{
+				"key": "V",
+				"label": {
+					"en": "Battery voltage",
+					"fr": "Tension de la pile"
+				},
+				"unit": "V",
+				"min": 0,
+				"max": 12,
+				"step": 0.5,
+				"default": 9
+			},
+			{
+				"key": "R",
+				"label": {
+					"en": "Resistance",
+					"fr": "Résistance"
+				},
+				"unit": "ohm",
+				"min": 100,
+				"max": 10000,
+				"step": 10,
+				"default": 1000
+			},
+			{
+				"key": "closed",
+				"label": {
+					"en": "Switch (0 = open, 1 = closed)",
+					"fr": "Interrupteur (0 = ouvert, 1 = fermé)"
+				},
+				"unit": "one",
+				"min": 0,
+				"max": 1,
+				"step": 1,
+				"default": 0
+			}
+		],
+		"constants": {
+			"Prating": 0.25
+		},
+		"assumptions": [
+			{
+				"en": "Ideal switch: 0 Ω when closed, infinite resistance when open.",
+				"fr": "Interrupteur idéal : 0 Ω fermé, résistance infinie ouvert."
+			},
+			{
+				"en": "Ideal battery and wires; 0.25 W resistor.",
+				"fr": "Pile et fils idéaux ; résistance de 0,25 W."
+			}
+		],
+		"safety": []
+	}
+]

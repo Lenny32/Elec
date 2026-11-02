@@ -1,0 +1,137 @@
+[
+	{
+		"id": "lab.ch01.ohms_law",
+		"version": 1,
+		"title": {
+			"en": "Ohm’s law explorer",
+			"fr": "Explorateur de la loi d’Ohm"
+		},
+		"intro": {
+			"en": "Move the sliders and watch the current. Try to predict first: what happens to I when you double V? When you double R? Then check the power in the resistor — a small resistor on a big voltage gets hot.",
+			"fr": "Déplacez les curseurs et observez le courant. Essayez d’abord de prédire : que devient I si vous doublez V ? Si vous doublez R ? Regardez ensuite la puissance dans la résistance — une petite résistance sous une grande tension chauffe."
+		},
+		"diagramId": "diagram.ch01.ohms_lab",
+		"model": "ohm",
+		"params": [
+			{
+				"key": "V",
+				"label": {
+					"en": "Supply voltage V",
+					"fr": "Tension d’alimentation V"
+				},
+				"unit": "V",
+				"min": 0,
+				"max": 12,
+				"step": 0.5,
+				"default": 5
+			},
+			{
+				"key": "R",
+				"label": {
+					"en": "Resistance R",
+					"fr": "Résistance R"
+				},
+				"unit": "ohm",
+				"min": 10,
+				"max": 10000,
+				"step": 10,
+				"default": 330
+			}
+		],
+		"constants": {
+			"Prating": 0.25
+		},
+		"assumptions": [
+			{
+				"en": "Ideal source: the voltage stays the same whatever the current.",
+				"fr": "Source idéale : la tension reste la même quel que soit le courant."
+			},
+			{
+				"en": "Ideal wires (0 Ω) and an ohmic resistor rated 0.25 W.",
+				"fr": "Fils idéaux (0 Ω) et résistance ohmique de 0,25 W."
+			}
+		],
+		"safety": [
+			{
+				"en": "This is a simulation. On a real bench, a small resistor across a battery can get hot enough to burn you.",
+				"fr": "Ceci est une simulation. En vrai, une petite résistance branchée sur une pile peut chauffer au point de brûler."
+			}
+		]
+	},
+	{
+		"id": "lab.ch01.led_resistor",
+		"version": 1,
+		"title": {
+			"en": "Safe LED resistor",
+			"fr": "Résistance de LED sans danger"
+		},
+		"intro": {
+			"en": "Find a resistor that keeps the LED at or below 20 mA. Start with the default: 3 V battery, red LED (Vf = 2 V), 100 Ω gives 10 mA. Then try R = 0 to see why the resistor is essential, and raise Vf to 3 V to see a blue LED fail to light from 3 V.",
+			"fr": "Trouvez une résistance qui maintient la LED à 20 mA ou moins. Partez des valeurs par défaut : pile de 3 V, LED rouge (Vf = 2 V), 100 Ω donnent 10 mA. Essayez ensuite R = 0 pour comprendre pourquoi la résistance est indispensable, puis montez Vf à 3 V pour voir une LED bleue rester éteinte sous 3 V."
+		},
+		"diagramId": "diagram.ch01.led_lab",
+		"model": "led_series",
+		"params": [
+			{
+				"key": "Vs",
+				"label": {
+					"en": "Supply voltage Vs",
+					"fr": "Tension d’alimentation Vs"
+				},
+				"unit": "V",
+				"min": 0,
+				"max": 12,
+				"step": 0.5,
+				"default": 3
+			},
+			{
+				"key": "Vf",
+				"label": {
+					"en": "LED forward voltage Vf",
+					"fr": "Tension directe de la LED Vf"
+				},
+				"unit": "V",
+				"min": 1.6,
+				"max": 3.4,
+				"step": 0.1,
+				"default": 2
+			},
+			{
+				"key": "R",
+				"label": {
+					"en": "Series resistance R",
+					"fr": "Résistance série R"
+				},
+				"unit": "ohm",
+				"min": 0,
+				"max": 2000,
+				"step": 10,
+				"default": 100
+			}
+		],
+		"constants": {
+			"Imax": 0.02,
+			"Prating": 0.25
+		},
+		"assumptions": [
+			{
+				"en": "The LED is modelled as a fixed forward voltage Vf: no current below Vf, and exactly Vf across it when lit.",
+				"fr": "La LED est modélisée par une tension directe fixe Vf : aucun courant en dessous de Vf, et exactement Vf à ses bornes quand elle est allumée."
+			},
+			{
+				"en": "Ideal source and wires; the resistor is rated 0.25 W; the LED’s safe maximum is 20 mA.",
+				"fr": "Source et fils idéaux ; la résistance supporte 0,25 W ; le maximum sûr de la LED est 20 mA."
+			}
+		],
+		"safety": [
+			{
+				"en": "Never connect an LED directly to a battery without a resistor: it can burn out instantly.",
+				"fr": "Ne branchez jamais une LED directement sur une pile sans résistance : elle peut griller instantanément."
+			},
+			{
+				"en": "Real builds: stay at or below 9 V batteries or USB 5 V, and never short the battery terminals.",
+				"fr": "Montages réels : restez à 9 V maximum (pile) ou 5 V (USB), et ne court-circuitez jamais les bornes de la pile."
+			}
+		]
+	}
+]

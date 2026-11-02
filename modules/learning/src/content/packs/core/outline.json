@@ -1,0 +1,1844 @@
+[
+	{
+		"id": "chapter.03",
+		"number": "03",
+		"moduleId": "module.b",
+		"title": {
+			"en": "Resistor networks",
+			"fr": "Réseaux de résistances"
+		},
+		"summary": {
+			"en": "Tolerances, voltage dividers, pull-ups and loading.",
+			"fr": "Tolérances, ponts diviseurs, résistances de tirage et effets de charge."
+		},
+		"status": "outline",
+		"goals": [
+			{
+				"en": "Select a pull-up resistor and a voltage divider",
+				"fr": "Choisir une résistance de tirage et un pont diviseur"
+			}
+		],
+		"prerequisites": ["resistors.series", "resistors.parallel", "measure.multimeter"],
+		"topics": [
+			{
+				"en": "Tolerances",
+				"fr": "Tolérances"
+			},
+			{
+				"en": "Voltage dividers",
+				"fr": "Ponts diviseurs"
+			},
+			{
+				"en": "Pull-up and pull-down",
+				"fr": "Résistances de tirage"
+			},
+			{
+				"en": "Load effects",
+				"fr": "Effets de charge"
+			},
+			{
+				"en": "Current sensing",
+				"fr": "Mesure de courant"
+			},
+			{
+				"en": "Resistivity and wire sizing (R = ρ·ℓ/S)",
+				"fr": "Résistivité et section des conducteurs (R = ρ·ℓ/S)"
+			},
+			{
+				"en": "Temperature and resistance (R = R₀(1 + αθ))",
+				"fr": "Influence de la température (R = R₀(1 + αθ))"
+			},
+			{
+				"en": "Voltage drop in a supply line",
+				"fr": "Chute de tension en ligne"
+			},
+			{
+				"en": "Rheostat and potentiometer wiring",
+				"fr": "Montages rhéostatique et potentiométrique"
+			},
+			{
+				"en": "Choosing an adjustable resistor (range, maximum current)",
+				"fr": "Choix d’un résistor réglable (plage, courant maximal)"
+			}
+		],
+		"lessonIds": [],
+		"labIds": [],
+		"safetyNotes": [],
+		"practicalOutcome": {
+			"en": "Select a pull-up resistor and a voltage divider",
+			"fr": "Choisir une résistance de tirage et un pont diviseur"
+		}
+	},
+	{
+		"id": "chapter.04",
+		"number": "04",
+		"moduleId": "module.b",
+		"title": {
+			"en": "Kirchhoff’s laws",
+			"fr": "Lois de Kirchhoff"
+		},
+		"summary": {
+			"en": "Current and voltage laws for any DC network.",
+			"fr": "Lois des nœuds et des mailles pour tout réseau continu."
+		},
+		"status": "outline",
+		"goals": [
+			{
+				"en": "Solve a small DC network",
+				"fr": "Résoudre un petit réseau continu"
+			}
+		],
+		"prerequisites": [],
+		"topics": [
+			{
+				"en": "Kirchhoff’s current law",
+				"fr": "Loi des nœuds"
+			},
+			{
+				"en": "Kirchhoff’s voltage law",
+				"fr": "Loi des mailles"
+			},
+			{
+				"en": "Multi-loop circuits",
+				"fr": "Circuits à plusieurs mailles"
+			},
+			{
+				"en": "Loading",
+				"fr": "Effets de charge"
+			},
+			{
+				"en": "Nodal reasoning",
+				"fr": "Analyse nodale"
+			},
+			{
+				"en": "Real generator: EMF and internal resistance (U = E − r·I)",
+				"fr": "Générateur réel : f.é.m. et résistance interne (U = E − r·I)"
+			},
+			{
+				"en": "Active receiver: back-EMF (U = E′ + r′·I)",
+				"fr": "Récepteur actif : f.c.é.m. (U = E′ + r′·I)"
+			},
+			{
+				"en": "Series and parallel generators",
+				"fr": "Association de générateurs"
+			},
+			{
+				"en": "Single-loop circuits (Pouillet’s law)",
+				"fr": "Circuits à une maille (loi de Pouillet)"
+			},
+			{
+				"en": "Power balance and efficiency",
+				"fr": "Bilan des puissances et rendement"
+			}
+		],
+		"lessonIds": [],
+		"labIds": [],
+		"safetyNotes": [],
+		"practicalOutcome": {
+			"en": "Solve a small DC network",
+			"fr": "Résoudre un petit réseau continu"
+		}
+	},
+	{
+		"id": "chapter.05",
+		"number": "05",
+		"moduleId": "module.c",
+		"title": {
+			"en": "Capacitors",
+			"fr": "Condensateurs"
+		},
+		"summary": {
+			"en": "Storing charge, RC timing, decoupling and filtering.",
+			"fr": "Stocker des charges, constante RC, découplage et filtrage."
+		},
+		"status": "outline",
+		"goals": [
+			{
+				"en": "Build an RC delay and decouple a supply",
+				"fr": "Réaliser un retard RC et découpler une alimentation"
+			}
+		],
+		"prerequisites": [],
+		"topics": [
+			{
+				"en": "Capacitance",
+				"fr": "Capacité"
+			},
+			{
+				"en": "Charge",
+				"fr": "Charge"
+			},
+			{
+				"en": "Polarity",
+				"fr": "Polarité"
+			},
+			{
+				"en": "RC timing",
+				"fr": "Temporisation RC"
+			},
+			{
+				"en": "Decoupling",
+				"fr": "Découplage"
+			},
+			{
+				"en": "Filtering",
+				"fr": "Filtrage"
+			},
+			{
+				"en": "Parallel-plate capacitor",
+				"fr": "Condensateur plan"
+			},
+			{
+				"en": "Capacitors in series and in parallel",
+				"fr": "Association de condensateurs"
+			},
+			{
+				"en": "Stored energy (W = ½·C·U²)",
+				"fr": "Énergie stockée (W = ½·C·U²)"
+			},
+			{
+				"en": "Rated voltage and breakdown",
+				"fr": "Tension de service et claquage"
+			}
+		],
+		"lessonIds": [],
+		"labIds": [],
+		"safetyNotes": [],
+		"practicalOutcome": {
+			"en": "Build an RC delay and decouple a supply",
+			"fr": "Réaliser un retard RC et découpler une alimentation"
+		}
+	},
+	{
+		"id": "chapter.06",
+		"number": "06",
+		"moduleId": "module.c",
+		"title": {
+			"en": "Diodes",
+			"fr": "Diodes"
+		},
+		"summary": {
+			"en": "PN junctions, LEDs, protection and rectification.",
+			"fr": "Jonctions PN, LED, protection et redressement."
+		},
+		"status": "outline",
+		"goals": [
+			{
+				"en": "Protect a basic DC load",
+				"fr": "Protéger une charge continue simple"
+			}
+		],
+		"prerequisites": [],
+		"topics": [
+			{
+				"en": "PN diode",
+				"fr": "Diode PN"
+			},
+			{
+				"en": "Forward drop",
+				"fr": "Tension de seuil"
+			},
+			{
+				"en": "LED sizing",
+				"fr": "Dimensionnement des LED"
+			},
+			{
+				"en": "Reverse polarity",
+				"fr": "Protection contre l’inversion"
+			},
+			{
+				"en": "Inductive spikes",
+				"fr": "Surtensions inductives"
+			},
+			{
+				"en": "Rectification",
+				"fr": "Redressement"
+			},
+			{
+				"en": "Half-wave rectification",
+				"fr": "Redressement simple alternance"
+			},
+			{
+				"en": "Full-wave bridge rectifier (PD2)",
+				"fr": "Redressement double alternance, pont de Graetz (PD2)"
+			},
+			{
+				"en": "Zener diode and voltage stabilisation",
+				"fr": "Diode Zener et stabilisation"
+			}
+		],
+		"lessonIds": [],
+		"labIds": [],
+		"safetyNotes": [],
+		"practicalOutcome": {
+			"en": "Protect a basic DC load",
+			"fr": "Protéger une charge continue simple"
+		}
+	},
+	{
+		"id": "chapter.07",
+		"number": "07",
+		"moduleId": "module.c",
+		"title": {
+			"en": "Transistors and switches",
+			"fr": "Transistors et commutation"
+		},
+		"summary": {
+			"en": "BJTs and MOSFETs as switches.",
+			"fr": "Transistors bipolaires et MOSFET utilisés en interrupteurs."
+		},
+		"status": "outline",
+		"goals": [
+			{
+				"en": "Switch an LED or DC motor safely",
+				"fr": "Commander une LED ou un moteur en sécurité"
+			}
+		],
+		"prerequisites": [],
+		"topics": [
+			{
+				"en": "BJT concept",
+				"fr": "Principe du bipolaire"
+			},
+			{
+				"en": "MOSFET",
+				"fr": "MOSFET"
+			},
+			{
+				"en": "Gate and base drive",
+				"fr": "Commande de grille et de base"
+			},
+			{
+				"en": "Low-side switch",
+				"fr": "Interrupteur côté masse"
+			},
+			{
+				"en": "Flyback",
+				"fr": "Diode de roue libre"
+			},
+			{
+				"en": "Thermal limits",
+				"fr": "Limites thermiques"
+			}
+		],
+		"lessonIds": [],
+		"labIds": [],
+		"safetyNotes": [],
+		"practicalOutcome": {
+			"en": "Switch an LED or DC motor safely",
+			"fr": "Commander une LED ou un moteur en sécurité"
+		}
+	},
+	{
+		"id": "chapter.08",
+		"number": "08",
+		"moduleId": "module.c",
+		"title": {
+			"en": "Inductors",
+			"fr": "Bobines"
+		},
+		"summary": {
+			"en": "Magnetic fields, inductance and energy.",
+			"fr": "Champs magnétiques, inductance et énergie."
+		},
+		"status": "outline",
+		"goals": [
+			{
+				"en": "Explain coil and relay switching",
+				"fr": "Expliquer la commutation d’une bobine et d’un relais"
+			}
+		],
+		"prerequisites": [],
+		"topics": [
+			{
+				"en": "Magnetic fields",
+				"fr": "Champs magnétiques"
+			},
+			{
+				"en": "Inductance",
+				"fr": "Inductance"
+			},
+			{
+				"en": "Time response",
+				"fr": "Réponse temporelle"
+			},
+			{
+				"en": "Energy",
+				"fr": "Énergie"
+			},
+			{
+				"en": "Flyback",
+				"fr": "Surtension de coupure"
+			},
+			{
+				"en": "Magnets and field lines",
+				"fr": "Aimants et lignes de champ"
+			},
+			{
+				"en": "Laplace force (F = B·I·ℓ)",
+				"fr": "Force de Laplace (F = B·I·ℓ)"
+			},
+			{
+				"en": "Electromagnetic induction and Lenz’s law",
+				"fr": "Induction électromagnétique et loi de Lenz"
+			},
+			{
+				"en": "Electromagnets and relays",
+				"fr": "Électroaimants et relais"
+			}
+		],
+		"lessonIds": [],
+		"labIds": [],
+		"safetyNotes": [],
+		"practicalOutcome": {
+			"en": "Explain coil and relay switching",
+			"fr": "Expliquer la commutation d’une bobine et d’un relais"
+		}
+	},
+	{
+		"id": "chapter.09",
+		"number": "09",
+		"moduleId": "module.d",
+		"title": {
+			"en": "Signals and AC",
+			"fr": "Signaux et courant alternatif"
+		},
+		"summary": {
+			"en": "Frequency, RMS, phase and reactance.",
+			"fr": "Fréquence, valeur efficace, phase et réactance."
+		},
+		"status": "outline",
+		"goals": [
+			{
+				"en": "Select a basic RC filter",
+				"fr": "Choisir un filtre RC simple"
+			}
+		],
+		"prerequisites": [],
+		"topics": [
+			{
+				"en": "Frequency and period",
+				"fr": "Fréquence et période"
+			},
+			{
+				"en": "Sine signals",
+				"fr": "Signaux sinusoïdaux"
+			},
+			{
+				"en": "RMS",
+				"fr": "Valeur efficace"
+			},
+			{
+				"en": "Phase",
+				"fr": "Phase"
+			},
+			{
+				"en": "Reactance",
+				"fr": "Réactance"
+			},
+			{
+				"en": "Filtering",
+				"fr": "Filtrage"
+			},
+			{
+				"en": "Variable, unidirectional and periodic currents",
+				"fr": "Courants variables, unidirectionnels et périodiques"
+			},
+			{
+				"en": "Average value",
+				"fr": "Valeur moyenne"
+			},
+			{
+				"en": "Phasor (Fresnel) diagrams",
+				"fr": "Représentation de Fresnel"
+			},
+			{
+				"en": "Adding sinusoidal quantities",
+				"fr": "Somme de grandeurs sinusoïdales"
+			},
+			{
+				"en": "Impedance",
+				"fr": "Impédance"
+			}
+		],
+		"lessonIds": [],
+		"labIds": [],
+		"safetyNotes": [],
+		"practicalOutcome": {
+			"en": "Select a basic RC filter",
+			"fr": "Choisir un filtre RC simple"
+		}
+	},
+	{
+		"id": "chapter.10",
+		"number": "10",
+		"moduleId": "module.d",
+		"title": {
+			"en": "ICs and power",
+			"fr": "Circuits intégrés et alimentation"
+		},
+		"summary": {
+			"en": "Datasheets, regulators, efficiency and heat.",
+			"fr": "Fiches techniques, régulateurs, rendement et chaleur."
+		},
+		"status": "outline",
+		"goals": [
+			{
+				"en": "Choose a 3.3 V supply from 5 V",
+				"fr": "Choisir une alimentation 3,3 V à partir de 5 V"
+			}
+		],
+		"prerequisites": [],
+		"topics": [
+			{
+				"en": "Datasheets and pinouts",
+				"fr": "Fiches techniques et brochages"
+			},
+			{
+				"en": "Absolute maximum ratings",
+				"fr": "Valeurs maximales absolues"
+			},
+			{
+				"en": "Decoupling",
+				"fr": "Découplage"
+			},
+			{
+				"en": "LDO regulators",
+				"fr": "Régulateurs LDO"
+			},
+			{
+				"en": "Efficiency",
+				"fr": "Rendement"
+			},
+			{
+				"en": "Thermal design",
+				"fr": "Conception thermique"
+			},
+			{
+				"en": "Smoothing capacitor and ripple",
+				"fr": "Filtrage par condensateur et ondulation"
+			},
+			{
+				"en": "Joule heating and temperature rise (W = m·c·Δθ)",
+				"fr": "Effet Joule et échauffement (W = m·c·Δθ)"
+			},
+			{
+				"en": "Fuses and overcurrent protection",
+				"fr": "Fusibles et protection contre les surintensités"
+			}
+		],
+		"lessonIds": [],
+		"labIds": [],
+		"safetyNotes": [],
+		"practicalOutcome": {
+			"en": "Choose a 3.3 V supply from 5 V",
+			"fr": "Choisir une alimentation 3,3 V à partir de 5 V"
+		}
+	},
+	{
+		"id": "chapter.11",
+		"number": "11",
+		"moduleId": "module.d",
+		"title": {
+			"en": "Timing and analog",
+			"fr": "Temporisation et analogique"
+		},
+		"summary": {
+			"en": "Comparators, op-amps and the 555 timer.",
+			"fr": "Comparateurs, amplificateurs opérationnels et le temporisateur 555."
+		},
+		"status": "outline",
+		"goals": [
+			{
+				"en": "Design an LED blinker",
+				"fr": "Concevoir un clignotant à LED"
+			}
+		],
+		"prerequisites": [],
+		"topics": [
+			{
+				"en": "Comparators",
+				"fr": "Comparateurs"
+			},
+			{
+				"en": "Op-amp basics",
+				"fr": "Bases de l’ampli-op"
+			},
+			{
+				"en": "Feedback",
+				"fr": "Contre-réaction"
+			},
+			{
+				"en": "555 timer",
+				"fr": "Temporisateur 555"
+			},
+			{
+				"en": "Sensor interfaces",
+				"fr": "Interfaces capteurs"
+			}
+		],
+		"lessonIds": [],
+		"labIds": [],
+		"safetyNotes": [],
+		"practicalOutcome": {
+			"en": "Design an LED blinker",
+			"fr": "Concevoir un clignotant à LED"
+		}
+	},
+	{
+		"id": "chapter.12",
+		"number": "12",
+		"moduleId": "module.e",
+		"title": {
+			"en": "Digital logic",
+			"fr": "Logique numérique"
+		},
+		"summary": {
+			"en": "Binary, gates, truth tables and logic levels.",
+			"fr": "Binaire, portes, tables de vérité et niveaux logiques."
+		},
+		"status": "outline",
+		"goals": [
+			{
+				"en": "Build a logic-controlled LED",
+				"fr": "Réaliser une LED commandée par logique"
+			}
+		],
+		"prerequisites": [],
+		"topics": [
+			{
+				"en": "Binary",
+				"fr": "Binaire"
+			},
+			{
+				"en": "Gates",
+				"fr": "Portes logiques"
+			},
+			{
+				"en": "Truth tables",
+				"fr": "Tables de vérité"
+			},
+			{
+				"en": "Clock and debounce",
+				"fr": "Horloge et anti-rebond"
+			},
+			{
+				"en": "Logic levels",
+				"fr": "Niveaux logiques"
+			}
+		],
+		"lessonIds": [],
+		"labIds": [],
+		"safetyNotes": [],
+		"practicalOutcome": {
+			"en": "Build a logic-controlled LED",
+			"fr": "Réaliser une LED commandée par logique"
+		}
+	},
+	{
+		"id": "chapter.13",
+		"number": "13",
+		"moduleId": "module.e",
+		"title": {
+			"en": "Microcontrollers",
+			"fr": "Microcontrôleurs"
+		},
+		"summary": {
+			"en": "GPIO, ADC, PWM and serial buses.",
+			"fr": "GPIO, CAN, MLI et bus série."
+		},
+		"status": "outline",
+		"goals": [
+			{
+				"en": "Build a microcontroller LED/sensor controller",
+				"fr": "Réaliser un contrôleur LED/capteur à microcontrôleur"
+			}
+		],
+		"prerequisites": [],
+		"topics": [
+			{
+				"en": "GPIO",
+				"fr": "GPIO"
+			},
+			{
+				"en": "Pull resistors",
+				"fr": "Résistances de tirage"
+			},
+			{
+				"en": "ADC",
+				"fr": "Convertisseur analogique-numérique"
+			},
+			{
+				"en": "PWM",
+				"fr": "Modulation de largeur d’impulsion"
+			},
+			{
+				"en": "UART, I²C, SPI",
+				"fr": "UART, I²C, SPI"
+			}
+		],
+		"lessonIds": [],
+		"labIds": [],
+		"safetyNotes": [],
+		"practicalOutcome": {
+			"en": "Build a microcontroller LED/sensor controller",
+			"fr": "Réaliser un contrôleur LED/capteur à microcontrôleur"
+		}
+	},
+	{
+		"id": "chapter.14",
+		"number": "14",
+		"moduleId": "module.e",
+		"title": {
+			"en": "PCB design",
+			"fr": "Conception de circuits imprimés"
+		},
+		"summary": {
+			"en": "From schematic to a manufacturable board.",
+			"fr": "Du schéma à une carte fabricable."
+		},
+		"status": "outline",
+		"goals": [
+			{
+				"en": "Lay out a basic low-voltage board",
+				"fr": "Router une carte basse tension simple"
+			}
+		],
+		"prerequisites": [],
+		"topics": [
+			{
+				"en": "Schematic vs PCB",
+				"fr": "Schéma et circuit imprimé"
+			},
+			{
+				"en": "Footprints",
+				"fr": "Empreintes"
+			},
+			{
+				"en": "Nets",
+				"fr": "Équipotentielles"
+			},
+			{
+				"en": "Return paths",
+				"fr": "Chemins de retour"
+			},
+			{
+				"en": "Decoupling placement",
+				"fr": "Placement du découplage"
+			},
+			{
+				"en": "Design rule check",
+				"fr": "Vérification des règles"
+			},
+			{
+				"en": "Bill of materials",
+				"fr": "Nomenclature"
+			}
+		],
+		"lessonIds": [],
+		"labIds": [],
+		"safetyNotes": [],
+		"practicalOutcome": {
+			"en": "Lay out a basic low-voltage board",
+			"fr": "Router une carte basse tension simple"
+		}
+	},
+	{
+		"id": "chapter.15",
+		"number": "15",
+		"moduleId": "module.e",
+		"title": {
+			"en": "Engineering capstone",
+			"fr": "Projet d’ingénierie final"
+		},
+		"summary": {
+			"en": "Requirements to a tested, documented PCB.",
+			"fr": "Du cahier des charges à une carte testée et documentée."
+		},
+		"status": "outline",
+		"goals": [
+			{
+				"en": "Design, test and document an LED-controller PCB",
+				"fr": "Concevoir, tester et documenter une carte de contrôle de LED"
+			}
+		],
+		"prerequisites": [],
+		"topics": [
+			{
+				"en": "Requirements",
+				"fr": "Cahier des charges"
+			},
+			{
+				"en": "Power budget",
+				"fr": "Bilan de puissance"
+			},
+			{
+				"en": "Schematic",
+				"fr": "Schéma"
+			},
+			{
+				"en": "Simulation",
+				"fr": "Simulation"
+			},
+			{
+				"en": "Testing",
+				"fr": "Tests"
+			},
+			{
+				"en": "PCB review and documentation",
+				"fr": "Revue et documentation"
+			}
+		],
+		"lessonIds": [],
+		"labIds": [],
+		"safetyNotes": [],
+		"practicalOutcome": {
+			"en": "Design, test and document an LED-controller PCB",
+			"fr": "Concevoir, tester et documenter une carte de contrôle de LED"
+		}
+	},
+	{
+		"id": "chapter.16",
+		"number": "16",
+		"moduleId": "module.f",
+		"title": {
+			"en": "Electrical hazards and electric shock",
+			"fr": "Le risque électrique"
+		},
+		"summary": {
+			"en": "How current harms the body, direct and indirect contact, and the voltage ranges that set the rules.",
+			"fr": "Effets du courant sur le corps humain, contacts directs et indirects, et domaines de tension."
+		},
+		"status": "outline",
+		"goals": [
+			{
+				"en": "Assess the shock risk of a situation and name the matching protection",
+				"fr": "Évaluer le risque d’électrisation d’une situation et identifier la protection adaptée"
+			}
+		],
+		"prerequisites": ["safety.low_voltage", "dc.ohms_law"],
+		"topics": [
+			{
+				"en": "Electric shock and electrocution",
+				"fr": "Électrisation et électrocution"
+			},
+			{
+				"en": "Effects of current on the body (time–current zones)",
+				"fr": "Effets physiopathologiques du courant (zones temps-courant)"
+			},
+			{
+				"en": "Body impedance and touch voltage",
+				"fr": "Impédance du corps humain et tension de contact"
+			},
+			{
+				"en": "Direct and indirect contact",
+				"fr": "Contacts directs et contacts indirects"
+			},
+			{
+				"en": "Voltage ranges (TBT, BT, HTA, HTB)",
+				"fr": "Domaines de tension (TBT, BT, HTA, HTB)"
+			},
+			{
+				"en": "Protection by insulation, enclosures and extra-low voltage (SELV, PELV)",
+				"fr": "Protection par isolation, enveloppes et très basse tension (TBTS, TBTP)"
+			},
+			{
+				"en": "Equipment classes (0, I, II, III) and IP codes",
+				"fr": "Classes de matériel (0, I, II, III) et indices de protection IP"
+			}
+		],
+		"lessonIds": [],
+		"labIds": [],
+		"safetyNotes": [
+			{
+				"en": "Mains voltage can kill: this chapter is theory only. Never open or touch a mains circuit to “check” an effect.",
+				"fr": "La tension du réseau peut tuer : ce chapitre est purement théorique. N’ouvrez ni ne touchez jamais un circuit secteur pour « vérifier » un effet."
+			},
+			{
+				"en": "A few tens of milliamperes through the body can trigger ventricular fibrillation.",
+				"fr": "Quelques dizaines de milliampères traversant le corps peuvent provoquer une fibrillation ventriculaire."
+			}
+		],
+		"practicalOutcome": {
+			"en": "Assess the shock risk of a situation and name the matching protection",
+			"fr": "Évaluer le risque d’électrisation d’une situation et identifier la protection adaptée"
+		}
+	},
+	{
+		"id": "chapter.17",
+		"number": "17",
+		"moduleId": "module.f",
+		"title": {
+			"en": "Earthing systems and protective devices",
+			"fr": "Schémas de liaison à la terre et protections"
+		},
+		"summary": {
+			"en": "Protective earth, equipotential bonding, TT, TN and IT systems, and the devices that clear faults.",
+			"fr": "Conducteur de protection, liaisons équipotentielles, schémas TT, TN et IT, et appareils de coupure des défauts."
+		},
+		"status": "outline",
+		"goals": [
+			{
+				"en": "Choose the protective devices of a circuit for a given earthing system",
+				"fr": "Choisir les appareils de protection d’un circuit selon le schéma de liaison à la terre"
+			}
+		],
+		"prerequisites": [],
+		"topics": [
+			{
+				"en": "Protective earth conductor and earth electrode",
+				"fr": "Conducteur de protection (PE) et prise de terre"
+			},
+			{
+				"en": "Main and supplementary equipotential bonding",
+				"fr": "Liaisons équipotentielles principale et supplémentaire"
+			},
+			{
+				"en": "Earthing systems TT, TN and IT",
+				"fr": "Schémas de liaison à la terre TT, TN et IT"
+			},
+			{
+				"en": "Fault current and touch voltage in a TT system",
+				"fr": "Courant de défaut et tension de contact en schéma TT"
+			},
+			{
+				"en": "Fuses and circuit breakers (overload, short circuit)",
+				"fr": "Fusibles et disjoncteurs (surcharges, courts-circuits)"
+			},
+			{
+				"en": "Discrimination between protective devices",
+				"fr": "Sélectivité des protections"
+			},
+			{
+				"en": "Residual-current devices (30 mA RCD)",
+				"fr": "Dispositifs différentiels résiduels (différentiel 30 mA)"
+			}
+		],
+		"lessonIds": [],
+		"labIds": [],
+		"safetyNotes": [
+			{
+				"en": "Earth resistance and fault-loop measurements are made by qualified staff with dedicated testers; here they are studied through typical values and simulation.",
+				"fr": "Les mesures de résistance de terre et de boucle de défaut sont réalisées par du personnel habilité avec des appareils dédiés ; ici, on les étudie à partir de valeurs types et en simulation."
+			},
+			{
+				"en": "Never remove or bypass a protective earth conductor or an RCD, even temporarily.",
+				"fr": "Ne retirez ni ne shuntez jamais un conducteur de protection ou un dispositif différentiel, même temporairement."
+			},
+			{
+				"en": "A 30 mA RCD reduces the risk but does not protect against a contact between phase and neutral.",
+				"fr": "Un différentiel 30 mA réduit le risque mais ne protège pas d’un contact entre phase et neutre."
+			}
+		],
+		"practicalOutcome": {
+			"en": "Choose the protective devices of a circuit for a given earthing system",
+			"fr": "Choisir les appareils de protection d’un circuit selon le schéma de liaison à la terre"
+		}
+	},
+	{
+		"id": "chapter.18",
+		"number": "18",
+		"moduleId": "module.f",
+		"title": {
+			"en": "Domestic installations",
+			"fr": "L’installation électrique domestique"
+		},
+		"summary": {
+			"en": "From the supply point to the outlets: circuits, cable sizing, installation diagrams and NF C 15-100 basics.",
+			"fr": "Du point de livraison aux prises : circuits, sections des conducteurs, schémas d’installation et bases de la NF C 15-100."
+		},
+		"status": "outline",
+		"goals": [
+			{
+				"en": "Read the diagrams of a dwelling and check its circuits against NF C 15-100",
+				"fr": "Lire les schémas d’un logement et vérifier ses circuits au regard de la NF C 15-100"
+			}
+		],
+		"prerequisites": [],
+		"topics": [
+			{
+				"en": "Supply point, meter and main circuit breaker",
+				"fr": "Point de livraison, compteur et disjoncteur de branchement"
+			},
+			{
+				"en": "Distribution board and dedicated circuits",
+				"fr": "Tableau de répartition et circuits spécialisés"
+			},
+			{
+				"en": "Lighting circuits (single switch, two-way switching, impulse relay)",
+				"fr": "Circuits d’éclairage (simple allumage, va-et-vient, télérupteur)"
+			},
+			{
+				"en": "Cable cross-section and breaker rating (1.5 mm² / 16 A, 2.5 mm² / 20 A)",
+				"fr": "Section des conducteurs et calibre des disjoncteurs (1,5 mm² / 16 A, 2,5 mm² / 20 A)"
+			},
+			{
+				"en": "Installation diagrams: architectural, single-line and multi-wire",
+				"fr": "Schémas architectural, unifilaire et multifilaire"
+			},
+			{
+				"en": "NF C 15-100 basics (bathroom zones, outlets per circuit)",
+				"fr": "Bases de la NF C 15-100 (volumes de la salle d’eau, nombre de prises par circuit)"
+			}
+		],
+		"lessonIds": [],
+		"labIds": [],
+		"safetyNotes": [
+			{
+				"en": "Wiring practice uses extra-low voltage or de-energised training boards, under supervision. Never work on a live domestic installation.",
+				"fr": "Les travaux pratiques de câblage se font en TBT ou sur platine hors tension, sous la surveillance d’un formateur. N’intervenez jamais sur une installation domestique sous tension."
+			},
+			{
+				"en": "Any work on a real installation must comply with NF C 15-100 and be done or checked by a qualified electrician.",
+				"fr": "Toute intervention sur une installation réelle doit respecter la NF C 15-100 et être réalisée ou contrôlée par un électricien qualifié."
+			}
+		],
+		"practicalOutcome": {
+			"en": "Read the diagrams of a dwelling and check its circuits against NF C 15-100",
+			"fr": "Lire les schémas d’un logement et vérifier ses circuits au regard de la NF C 15-100"
+		}
+	},
+	{
+		"id": "chapter.19",
+		"number": "19",
+		"moduleId": "module.f",
+		"title": {
+			"en": "Working safely",
+			"fr": "Travailler en sécurité"
+		},
+		"summary": {
+			"en": "Isolating, locking out and proving dead before work, PPE and the principles of electrical authorisation.",
+			"fr": "Séparer, condamner et vérifier l’absence de tension avant d’intervenir, EPI et principes de l’habilitation électrique."
+		},
+		"status": "outline",
+		"goals": [
+			{
+				"en": "Put the lock-out steps for a circuit in the right order",
+				"fr": "Ordonner les étapes de la consignation d’un circuit"
+			}
+		],
+		"prerequisites": [],
+		"topics": [
+			{
+				"en": "Risk analysis before work",
+				"fr": "Analyse des risques avant intervention"
+			},
+			{
+				"en": "Isolation, locking and lock-out (consignation)",
+				"fr": "Séparation, condamnation et consignation"
+			},
+			{
+				"en": "Voltage-absence test (VAT)",
+				"fr": "Vérification d’absence de tension (VAT)"
+			},
+			{
+				"en": "Earthing and short-circuiting",
+				"fr": "Mise à la terre et en court-circuit"
+			},
+			{
+				"en": "Personal protective equipment (PPE)",
+				"fr": "Équipements de protection individuelle (EPI)"
+			},
+			{
+				"en": "Principles of electrical authorisation (NF C 18-510)",
+				"fr": "Principes de l’habilitation électrique (NF C 18-510)"
+			},
+			{
+				"en": "What to do after an electrical accident",
+				"fr": "Conduite à tenir en cas d’accident d’origine électrique"
+			}
+		],
+		"lessonIds": [],
+		"labIds": [],
+		"safetyNotes": [
+			{
+				"en": "Lock-out and the voltage-absence test are taught here as procedures; carrying them out on a real installation requires an electrical authorisation and supervised training.",
+				"fr": "La consignation et la VAT sont abordées ici comme des procédures ; les réaliser sur une installation réelle exige une habilitation électrique et une formation encadrée."
+			},
+			{
+				"en": "Check the voltage tester on a known live source before and after each test.",
+				"fr": "Vérifiez le bon fonctionnement du VAT sur une source connue avant et après chaque vérification."
+			},
+			{
+				"en": "After an accident, cut the power before touching the casualty, then call emergency services (15, 18 or 112).",
+				"fr": "En cas d’accident, coupez le courant avant de toucher la victime, puis alertez les secours (15, 18 ou 112)."
+			}
+		],
+		"practicalOutcome": {
+			"en": "Put the lock-out steps for a circuit in the right order",
+			"fr": "Ordonner les étapes de la consignation d’un circuit"
+		}
+	},
+	{
+		"id": "chapter.20",
+		"number": "20",
+		"moduleId": "module.g",
+		"title": {
+			"en": "The oscilloscope",
+			"fr": "L’oscilloscope"
+		},
+		"summary": {
+			"en": "Displaying a signal against time: settings, triggering, two-channel readings and safe probing.",
+			"fr": "Visualiser un signal en fonction du temps : réglages, déclenchement, mesures sur deux voies et sondes en sécurité."
+		},
+		"status": "outline",
+		"goals": [
+			{
+				"en": "Set up an oscilloscope to display two signals and measure their period, amplitude and phase shift",
+				"fr": "Régler un oscilloscope pour visualiser deux signaux et mesurer leur période, leur amplitude et leur déphasage"
+			}
+		],
+		"prerequisites": ["measure.multimeter"],
+		"topics": [
+			{
+				"en": "Vertical sensitivity (V/div) and time base (s/div)",
+				"fr": "Calibre vertical (V/div) et base de temps (s/div)"
+			},
+			{
+				"en": "Triggering: source, level and slope",
+				"fr": "Déclenchement : source, niveau et front"
+			},
+			{
+				"en": "DC and AC coupling",
+				"fr": "Couplage DC et couplage AC"
+			},
+			{
+				"en": "Reading period, frequency, amplitude and peak-to-peak value",
+				"fr": "Lecture de la période, de la fréquence, de l’amplitude et de la valeur crête à crête"
+			},
+			{
+				"en": "Two channels and measuring a phase shift",
+				"fr": "Utilisation des deux voies et mesure d’un déphasage"
+			},
+			{
+				"en": "Probes (×1 and ×10) and probe compensation",
+				"fr": "Sondes (×1 et ×10) et compensation des sondes"
+			},
+			{
+				"en": "Earth-referenced inputs and differential probes",
+				"fr": "Masse reliée à la terre et sondes différentielles"
+			}
+		],
+		"lessonIds": [],
+		"labIds": [],
+		"safetyNotes": [
+			{
+				"en": "The ground clip of a standard probe is connected to earth through the oscilloscope: clipping it onto a mains-side point creates a short circuit. Use a differential probe for any measurement on mains equipment.",
+				"fr": "La pince de masse d’une sonde classique est reliée à la terre par l’oscilloscope : la placer sur un point côté réseau provoque un court-circuit. Utilisez une sonde différentielle pour toute mesure sur un équipement relié au secteur."
+			},
+			{
+				"en": "Never disconnect the oscilloscope’s earth or use an isolating adapter to “float” it: its metal parts could then become live.",
+				"fr": "Ne supprimez jamais la terre de l’oscilloscope et ne le faites pas « flotter » avec un adaptateur : ses parties métalliques pourraient alors être portées à la tension du réseau."
+			}
+		],
+		"practicalOutcome": {
+			"en": "Set up an oscilloscope to display two signals and measure their period, amplitude and phase shift",
+			"fr": "Régler un oscilloscope pour visualiser deux signaux et mesurer leur période, leur amplitude et leur déphasage"
+		}
+	},
+	{
+		"id": "chapter.21",
+		"number": "21",
+		"moduleId": "module.g",
+		"title": {
+			"en": "Instruments and measurement methods",
+			"fr": "Appareils et méthodes de mesure"
+		},
+		"summary": {
+			"en": "Instrument types and what they read on AC, accuracy class and calibre, uncertainty, connection methods and the test report.",
+			"fr": "Types d’appareils et ce qu’ils indiquent en alternatif, classe et calibre, incertitude, méthodes de branchement et compte rendu d’essai."
+		},
+		"status": "outline",
+		"goals": [
+			{
+				"en": "Choose an instrument and a connection for a measurement, then state the result with its uncertainty in a test report",
+				"fr": "Choisir un appareil et un montage pour une mesure, puis exprimer le résultat avec son incertitude dans un compte rendu d’essai"
+			}
+		],
+		"prerequisites": ["measure.errors"],
+		"topics": [
+			{
+				"en": "Magnetoelectric, ferromagnetic and true-RMS instruments",
+				"fr": "Appareils magnétoélectriques, ferromagnétiques et à valeur efficace vraie (TRMS)"
+			},
+			{
+				"en": "Average and RMS readings on AC and non-sinusoidal signals",
+				"fr": "Valeur moyenne et valeur efficace mesurées en alternatif et en régime non sinusoïdal"
+			},
+			{
+				"en": "Accuracy class and calibre of an instrument",
+				"fr": "Classe de précision et calibre d’un appareil"
+			},
+			{
+				"en": "Absolute and relative uncertainty of a measurement",
+				"fr": "Incertitudes absolue et relative d’une mesure"
+			},
+			{
+				"en": "Ammeter–voltmeter method: voltmeter upstream or downstream",
+				"fr": "Méthode voltampèremétrique : montage amont et montage aval"
+			},
+			{
+				"en": "Measurement categories (CAT II, III, IV)",
+				"fr": "Catégories de mesure (CAT II, III, IV)"
+			},
+			{
+				"en": "Writing a test report",
+				"fr": "Rédiger un compte rendu d’essai"
+			}
+		],
+		"lessonIds": [],
+		"labIds": [],
+		"safetyNotes": [
+			{
+				"en": "Check that the instrument and its leads are rated for the measurement category and voltage of the circuit before connecting them.",
+				"fr": "Vérifiez que l’appareil et ses cordons sont adaptés à la catégorie de mesure et à la tension du circuit avant de les brancher."
+			}
+		],
+		"practicalOutcome": {
+			"en": "Choose an instrument and a connection for a measurement, then state the result with its uncertainty in a test report",
+			"fr": "Choisir un appareil et un montage pour une mesure, puis exprimer le résultat avec son incertitude dans un compte rendu d’essai"
+		}
+	},
+	{
+		"id": "chapter.22",
+		"number": "22",
+		"moduleId": "module.g",
+		"title": {
+			"en": "Power measurement and installation testing",
+			"fr": "Mesure des puissances et vérification des installations"
+		},
+		"summary": {
+			"en": "Clamp meters, wattmeters and power analysers, and the tests that prove an installation is safe: insulation, earth and RCD.",
+			"fr": "Pince ampèremétrique, wattmètre et analyseur de réseau, et les essais qui garantissent la sécurité d’une installation : isolement, terre et différentiel."
+		},
+		"status": "outline",
+		"goals": [
+			{
+				"en": "Plan the measurements and tests that check a single-phase installation and record them in a test report",
+				"fr": "Préparer les mesures et les essais de vérification d’une installation monophasée et les consigner dans un compte rendu"
+			}
+		],
+		"prerequisites": [],
+		"topics": [
+			{
+				"en": "Clamp meter: measuring current without opening the circuit",
+				"fr": "Pince ampèremétrique : mesurer un courant sans ouvrir le circuit"
+			},
+			{
+				"en": "Connecting a wattmeter in single-phase",
+				"fr": "Branchement d’un wattmètre en monophasé"
+			},
+			{
+				"en": "Measuring active power and power factor in single-phase",
+				"fr": "Mesure de la puissance active et du facteur de puissance en monophasé"
+			},
+			{
+				"en": "Power analyser: power, energy and harmonics",
+				"fr": "Analyseur de réseau : puissances, énergie et harmoniques"
+			},
+			{
+				"en": "Insulation resistance test (megohmmeter)",
+				"fr": "Mesure de la résistance d’isolement au mégohmmètre"
+			},
+			{
+				"en": "Earth electrode resistance test",
+				"fr": "Mesure de la résistance de la prise de terre"
+			},
+			{
+				"en": "Testing residual-current devices (RCD tester)",
+				"fr": "Contrôle des dispositifs différentiels (contrôleur de DDR)"
+			}
+		],
+		"lessonIds": [],
+		"labIds": [],
+		"safetyNotes": [
+			{
+				"en": "Installation tests are carried out by qualified staff with dedicated testers; here they are studied through procedures, typical values and simulation.",
+				"fr": "Les essais d’installation sont réalisés par du personnel habilité avec des appareils dédiés ; ici, on les étudie à partir des procédures, de valeurs types et en simulation."
+			},
+			{
+				"en": "An insulation test applies 250 to 1000 V DC: the circuit must be locked out, and electronic equipment disconnected, before the test.",
+				"fr": "Une mesure d’isolement applique 250 à 1000 V en continu : le circuit doit être consigné et les appareils électroniques débranchés avant l’essai."
+			},
+			{
+				"en": "Clamp a single conductor: around a cable holding both phase and neutral, the meter reads almost zero.",
+				"fr": "Enserrez un seul conducteur : autour d’un câble contenant la phase et le neutre, la pince indique presque zéro."
+			}
+		],
+		"practicalOutcome": {
+			"en": "Plan the measurements and tests that check a single-phase installation and record them in a test report",
+			"fr": "Préparer les mesures et les essais de vérification d’une installation monophasée et les consigner dans un compte rendu"
+		}
+	},
+	{
+		"id": "chapter.23",
+		"number": "23",
+		"moduleId": "module.h",
+		"title": {
+			"en": "AC circuits and power",
+			"fr": "Circuits et puissances en alternatif"
+		},
+		"summary": {
+			"en": "R, L and C under sinusoidal voltage, active, reactive and apparent power, power factor.",
+			"fr": "R, L et C en régime sinusoïdal, puissances active, réactive et apparente, facteur de puissance."
+		},
+		"status": "outline",
+		"goals": [
+			{
+				"en": "Size a capacitor bank to correct a power factor",
+				"fr": "Dimensionner une batterie de condensateurs pour relever un facteur de puissance"
+			}
+		],
+		"prerequisites": [],
+		"topics": [
+			{
+				"en": "R, L and C under sinusoidal voltage",
+				"fr": "Récepteurs R, L et C en régime sinusoïdal"
+			},
+			{
+				"en": "Series RLC circuit",
+				"fr": "Dipôles R, L, C série"
+			},
+			{
+				"en": "Receivers in parallel",
+				"fr": "Récepteurs en dérivation"
+			},
+			{
+				"en": "Active, reactive and apparent power (P, Q, S)",
+				"fr": "Puissances active, réactive et apparente (P, Q, S)"
+			},
+			{
+				"en": "Boucherot’s theorem",
+				"fr": "Théorème de Boucherot"
+			},
+			{
+				"en": "Power factor (cos φ)",
+				"fr": "Facteur de puissance (cos φ)"
+			},
+			{
+				"en": "Power factor correction",
+				"fr": "Relèvement du facteur de puissance"
+			}
+		],
+		"lessonIds": [],
+		"labIds": [],
+		"safetyNotes": [],
+		"practicalOutcome": {
+			"en": "Size a capacitor bank to correct a power factor",
+			"fr": "Dimensionner une batterie de condensateurs pour relever un facteur de puissance"
+		}
+	},
+	{
+		"id": "chapter.24",
+		"number": "24",
+		"moduleId": "module.h",
+		"title": {
+			"en": "Three-phase systems",
+			"fr": "Le triphasé"
+		},
+		"summary": {
+			"en": "The three-phase supply network, star and delta connections and three-phase power.",
+			"fr": "Le réseau triphasé, les couplages étoile et triangle et les puissances en triphasé."
+		},
+		"status": "outline",
+		"goals": [
+			{
+				"en": "Choose the star or delta connection of a load and compute its power",
+				"fr": "Choisir le couplage étoile ou triangle d’un récepteur et calculer sa puissance"
+			}
+		],
+		"prerequisites": [],
+		"topics": [
+			{
+				"en": "The three-phase network",
+				"fr": "Le réseau triphasé"
+			},
+			{
+				"en": "Line and phase voltages (U = √3·V)",
+				"fr": "Tensions simples et composées (U = √3·V)"
+			},
+			{
+				"en": "Star connection and neutral",
+				"fr": "Montage étoile et rôle du neutre"
+			},
+			{
+				"en": "Delta connection",
+				"fr": "Montage triangle"
+			},
+			{
+				"en": "Three-phase power (P = √3·U·I·cos φ)",
+				"fr": "Puissances en triphasé (P = √3·U·I·cos φ)"
+			},
+			{
+				"en": "Measuring three-phase power",
+				"fr": "Mesure des puissances en triphasé"
+			}
+		],
+		"lessonIds": [],
+		"labIds": [],
+		"safetyNotes": [],
+		"practicalOutcome": {
+			"en": "Choose the star or delta connection of a load and compute its power",
+			"fr": "Choisir le couplage étoile ou triangle d’un récepteur et calculer sa puissance"
+		}
+	},
+	{
+		"id": "chapter.25",
+		"number": "25",
+		"moduleId": "module.h",
+		"title": {
+			"en": "Alternators",
+			"fr": "Alternateurs"
+		},
+		"summary": {
+			"en": "From magnets to rotating machines: induction and the three-phase synchronous generator.",
+			"fr": "De l’aimant aux machines tournantes : induction et alternateur synchrone triphasé."
+		},
+		"status": "outline",
+		"goals": [
+			{
+				"en": "Relate the speed, pole pairs and frequency of an alternator",
+				"fr": "Relier vitesse, nombre de paires de pôles et fréquence d’un alternateur"
+			}
+		],
+		"prerequisites": [],
+		"topics": [
+			{
+				"en": "From magnets to electrical machines",
+				"fr": "De l’aimant aux machines électriques"
+			},
+			{
+				"en": "Induced EMF in a rotating machine",
+				"fr": "F.é.m. induite dans une machine tournante"
+			},
+			{
+				"en": "Three-phase synchronous generator",
+				"fr": "Alternateur synchrone triphasé"
+			},
+			{
+				"en": "Frequency and speed (f = p·n)",
+				"fr": "Fréquence et vitesse (f = p·n)"
+			},
+			{
+				"en": "Stand-alone alternator under load",
+				"fr": "Alternateur isolé en charge"
+			}
+		],
+		"lessonIds": [],
+		"labIds": [],
+		"safetyNotes": [],
+		"practicalOutcome": {
+			"en": "Relate the speed, pole pairs and frequency of an alternator",
+			"fr": "Relier vitesse, nombre de paires de pôles et fréquence d’un alternateur"
+		}
+	},
+	{
+		"id": "chapter.26",
+		"number": "26",
+		"moduleId": "module.h",
+		"title": {
+			"en": "Transformers",
+			"fr": "Transformateurs"
+		},
+		"summary": {
+			"en": "Changing AC voltage: single-phase and three-phase transformers, losses and efficiency.",
+			"fr": "Adapter une tension alternative : transformateurs monophasés et triphasés, pertes et rendement."
+		},
+		"status": "outline",
+		"goals": [
+			{
+				"en": "Choose a transformer for a load and check its efficiency",
+				"fr": "Choisir un transformateur pour une charge et vérifier son rendement"
+			}
+		],
+		"prerequisites": [],
+		"topics": [
+			{
+				"en": "Single-phase transformer and turns ratio",
+				"fr": "Transformateur monophasé et rapport de transformation"
+			},
+			{
+				"en": "No-load and on-load operation",
+				"fr": "Fonctionnement à vide et en charge"
+			},
+			{
+				"en": "Iron and copper losses",
+				"fr": "Pertes fer et pertes cuivre"
+			},
+			{
+				"en": "Power balance and efficiency",
+				"fr": "Bilan des puissances et rendement"
+			},
+			{
+				"en": "Three-phase transformer",
+				"fr": "Transformateur triphasé"
+			},
+			{
+				"en": "Special transformers (isolation, safety, autotransformer)",
+				"fr": "Transformateurs particuliers (isolement, sécurité, autotransformateur)"
+			}
+		],
+		"lessonIds": [],
+		"labIds": [],
+		"safetyNotes": [],
+		"practicalOutcome": {
+			"en": "Choose a transformer for a load and check its efficiency",
+			"fr": "Choisir un transformateur pour une charge et vérifier son rendement"
+		}
+	},
+	{
+		"id": "chapter.27",
+		"number": "27",
+		"moduleId": "module.h",
+		"title": {
+			"en": "Three-phase induction motors",
+			"fr": "Moteurs asynchrones triphasés"
+		},
+		"summary": {
+			"en": "Rotating field, slip, torque and power, and how to start an induction motor.",
+			"fr": "Champ tournant, glissement, couple et puissance, et démarrage du moteur asynchrone."
+		},
+		"status": "outline",
+		"goals": [
+			{
+				"en": "Read a motor nameplate and pick a starting method",
+				"fr": "Lire une plaque signalétique et choisir un mode de démarrage"
+			}
+		],
+		"prerequisites": [],
+		"topics": [
+			{
+				"en": "Rotating magnetic field",
+				"fr": "Champ tournant"
+			},
+			{
+				"en": "Synchronous speed and slip",
+				"fr": "Vitesse de synchronisme et glissement"
+			},
+			{
+				"en": "Torque and mechanical power",
+				"fr": "Couple et puissance mécanique"
+			},
+			{
+				"en": "Power balance and efficiency",
+				"fr": "Bilan des puissances et rendement"
+			},
+			{
+				"en": "Nameplate and motor connection",
+				"fr": "Plaque signalétique et couplage"
+			},
+			{
+				"en": "Starting methods (direct, star–delta)",
+				"fr": "Démarrage (direct, étoile-triangle)"
+			}
+		],
+		"lessonIds": [],
+		"labIds": [],
+		"safetyNotes": [],
+		"practicalOutcome": {
+			"en": "Read a motor nameplate and pick a starting method",
+			"fr": "Lire une plaque signalétique et choisir un mode de démarrage"
+		}
+	},
+	{
+		"id": "chapter.28",
+		"number": "28",
+		"moduleId": "module.h",
+		"title": {
+			"en": "DC motors",
+			"fr": "Moteurs à courant continu"
+		},
+		"summary": {
+			"en": "Electromagnetic force, the separately excited DC motor and its power balance.",
+			"fr": "Force électromagnétique, moteur à excitation séparée et bilan des puissances."
+		},
+		"status": "outline",
+		"goals": [
+			{
+				"en": "Predict the speed and current of a DC motor under load",
+				"fr": "Prévoir la vitesse et le courant d’un moteur à courant continu en charge"
+			}
+		],
+		"prerequisites": [],
+		"topics": [
+			{
+				"en": "Electromagnetic force and the DC motor",
+				"fr": "Force électromagnétique et moteur à courant continu"
+			},
+			{
+				"en": "Back-EMF (E = k·Φ·Ω)",
+				"fr": "F.c.é.m. (E = k·Φ·Ω)"
+			},
+			{
+				"en": "Separately excited motor",
+				"fr": "Moteur à excitation séparée"
+			},
+			{
+				"en": "Speed control",
+				"fr": "Variation de vitesse"
+			},
+			{
+				"en": "Power balance and efficiency",
+				"fr": "Bilan des puissances et rendement"
+			}
+		],
+		"lessonIds": [],
+		"labIds": [],
+		"safetyNotes": [],
+		"practicalOutcome": {
+			"en": "Predict the speed and current of a DC motor under load",
+			"fr": "Prévoir la vitesse et le courant d’un moteur à courant continu en charge"
+		}
+	},
+	{
+		"id": "chapter.29",
+		"number": "29",
+		"moduleId": "module.h",
+		"title": {
+			"en": "Power electronics",
+			"fr": "Électronique de puissance"
+		},
+		"summary": {
+			"en": "Three-phase and controlled rectifiers, choppers and AC dimmers.",
+			"fr": "Redresseurs triphasés et commandés, hacheurs et gradateurs."
+		},
+		"status": "outline",
+		"goals": [
+			{
+				"en": "Choose a converter to control the power sent to a load",
+				"fr": "Choisir un convertisseur pour régler la puissance fournie à une charge"
+			}
+		],
+		"prerequisites": [],
+		"topics": [
+			{
+				"en": "Three-phase rectifiers (P3, PD3)",
+				"fr": "Redressement triphasé (P3, PD3)"
+			},
+			{
+				"en": "Thyristor and controlled rectification",
+				"fr": "Thyristor et redressement commandé"
+			},
+			{
+				"en": "Transistor switching for power",
+				"fr": "Transistor en commutation de puissance"
+			},
+			{
+				"en": "Choppers (DC–DC)",
+				"fr": "Hacheurs"
+			},
+			{
+				"en": "Triac and AC dimmers",
+				"fr": "Triac et gradateurs"
+			},
+			{
+				"en": "Average value and duty cycle",
+				"fr": "Valeur moyenne et rapport cyclique"
+			}
+		],
+		"lessonIds": [],
+		"labIds": [],
+		"safetyNotes": [],
+		"practicalOutcome": {
+			"en": "Choose a converter to control the power sent to a load",
+			"fr": "Choisir un convertisseur pour régler la puissance fournie à une charge"
+		}
+	},
+	{
+		"id": "chapter.30",
+		"number": "30",
+		"moduleId": "module.i",
+		"title": {
+			"en": "Control equipment and diagrams",
+			"fr": "Appareillage et schémas de commande"
+		},
+		"summary": {
+			"en": "The devices that switch and protect a motor, the power circuit and the control circuit, and how to read their diagrams.",
+			"fr": "Les appareils qui commandent et protègent un moteur, le circuit de puissance et le circuit de commande, et la lecture de leurs schémas."
+		},
+		"status": "outline",
+		"goals": [
+			{
+				"en": "Choose the switching and protection devices of a motor feeder and draw its power and control diagrams",
+				"fr": "Choisir l’appareillage de commande et de protection d’un départ moteur et tracer ses schémas de puissance et de commande"
+			}
+		],
+		"prerequisites": ["diagrams.symbols"],
+		"topics": [
+			{
+				"en": "Power circuit and control circuit",
+				"fr": "Circuit de puissance et circuit de commande"
+			},
+			{
+				"en": "Fuse switch-disconnector and motor circuit breaker",
+				"fr": "Sectionneur porte-fusibles et disjoncteur-moteur"
+			},
+			{
+				"en": "Contactor: coil, main poles and auxiliary contacts",
+				"fr": "Contacteur : bobine, pôles de puissance et contacts auxiliaires"
+			},
+			{
+				"en": "Thermal overload relay",
+				"fr": "Relais de protection thermique"
+			},
+			{
+				"en": "Push buttons and pilot lights",
+				"fr": "Boutons-poussoirs et voyants de signalisation"
+			},
+			{
+				"en": "Extra-low-voltage control circuit supplied by a control transformer",
+				"fr": "Circuit de commande en TBT alimenté par un transformateur de commande"
+			},
+			{
+				"en": "Reading and drawing power and control diagrams (device and terminal marking)",
+				"fr": "Lire et tracer les schémas de puissance et de commande (repérage des appareils et des bornes)"
+			}
+		],
+		"lessonIds": [],
+		"labIds": [],
+		"safetyNotes": [
+			{
+				"en": "Wiring practice uses extra-low-voltage control circuits and de-energised training boards, under supervision; the power circuit is studied through diagrams and simulation.",
+				"fr": "Les exercices de câblage se font sur des circuits de commande en TBT et des maquettes hors tension, sous surveillance ; le circuit de puissance est étudié sur schéma et en simulation."
+			},
+			{
+				"en": "Opening the disconnector isolates the motor feeder only once it has been locked out and absence of voltage has been verified.",
+				"fr": "L’ouverture du sectionneur n’isole le départ moteur qu’après consignation et vérification d’absence de tension."
+			}
+		],
+		"practicalOutcome": {
+			"en": "Choose the switching and protection devices of a motor feeder and draw its power and control diagrams",
+			"fr": "Choisir l’appareillage de commande et de protection d’un départ moteur et tracer ses schémas de puissance et de commande"
+		}
+	},
+	{
+		"id": "chapter.31",
+		"number": "31",
+		"moduleId": "module.i",
+		"title": {
+			"en": "Motor control circuits",
+			"fr": "Montages de commande des moteurs"
+		},
+		"summary": {
+			"en": "Classic control circuits: start/stop with latching, several control stations, reversing with interlocking, star–delta starting and braking.",
+			"fr": "Les montages classiques : marche/arrêt avec auto-maintien, commande depuis plusieurs postes, inversion du sens de marche avec verrouillage, démarrage étoile-triangle et freinage."
+		},
+		"status": "outline",
+		"goals": [
+			{
+				"en": "Draw and explain the control circuit of a reversing or star–delta motor starter",
+				"fr": "Tracer et expliquer le schéma de commande d’un démarreur à inversion du sens de marche ou étoile-triangle"
+			}
+		],
+		"prerequisites": [],
+		"topics": [
+			{
+				"en": "Direct-on-line start/stop with latching (holding contact)",
+				"fr": "Démarrage direct marche/arrêt avec auto-maintien"
+			},
+			{
+				"en": "Start/stop from several control stations",
+				"fr": "Commande marche/arrêt depuis plusieurs postes"
+			},
+			{
+				"en": "Reversing the direction of rotation",
+				"fr": "Inversion du sens de marche"
+			},
+			{
+				"en": "Electrical and mechanical interlocking",
+				"fr": "Verrouillages électrique et mécanique"
+			},
+			{
+				"en": "Star–delta starter: power wiring and changeover timing",
+				"fr": "Démarreur étoile-triangle : câblage de puissance et temporisation du passage étoile-triangle"
+			},
+			{
+				"en": "Motor braking (DC injection, electromechanical brake)",
+				"fr": "Freinage des moteurs (injection de courant continu, frein électromécanique)"
+			}
+		],
+		"lessonIds": [],
+		"labIds": [],
+		"safetyNotes": [
+			{
+				"en": "Without interlocking, closing both reversing contactors short-circuits two phases: always check the interlock before energising.",
+				"fr": "Sans verrouillage, la fermeture simultanée des deux contacteurs d’inversion met deux phases en court-circuit : vérifiez toujours le verrouillage avant la mise sous tension."
+			},
+			{
+				"en": "The stop button must use a normally closed contact so that a broken wire stops the motor.",
+				"fr": "Le bouton d’arrêt doit utiliser un contact à ouverture, pour qu’une rupture de fil provoque l’arrêt du moteur."
+			}
+		],
+		"practicalOutcome": {
+			"en": "Draw and explain the control circuit of a reversing or star–delta motor starter",
+			"fr": "Tracer et expliquer le schéma de commande d’un démarreur à inversion du sens de marche ou étoile-triangle"
+		}
+	},
+	{
+		"id": "chapter.32",
+		"number": "32",
+		"moduleId": "module.i",
+		"title": {
+			"en": "Variable-speed drives and PLCs",
+			"fr": "Variateurs de vitesse et automates programmables"
+		},
+		"summary": {
+			"en": "Soft starters and frequency inverters, then the programmable logic controller, its sensors and its programs in ladder and GRAFCET.",
+			"fr": "Démarreurs progressifs et variateurs de fréquence, puis l’automate programmable, ses capteurs et sa programmation en langage à contacts et en GRAFCET."
+		},
+		"status": "outline",
+		"goals": [
+			{
+				"en": "Set up a variable-speed drive for a motor and describe an automated sequence with a GRAFCET",
+				"fr": "Paramétrer un variateur de vitesse pour un moteur et décrire un cycle automatisé par un GRAFCET"
+			}
+		],
+		"prerequisites": [],
+		"topics": [
+			{
+				"en": "Soft starters: limiting the starting current",
+				"fr": "Démarreurs progressifs : limiter le courant de démarrage"
+			},
+			{
+				"en": "Frequency inverter: principle and U/f control",
+				"fr": "Variateur de fréquence : principe et commande U/f"
+			},
+			{
+				"en": "Drive parameters and acceleration and deceleration ramps",
+				"fr": "Paramétrage du variateur et rampes d’accélération et de décélération"
+			},
+			{
+				"en": "Drive wiring, protection and energy saving",
+				"fr": "Raccordement et protection d’un variateur, économies d’énergie"
+			},
+			{
+				"en": "Programmable logic controller: inputs and outputs",
+				"fr": "Automate programmable : entrées et sorties"
+			},
+			{
+				"en": "Sensors: limit switches, inductive, capacitive and photoelectric detectors",
+				"fr": "Capteurs : fins de course, détecteurs inductifs, capacitifs et photoélectriques"
+			},
+			{
+				"en": "Ladder logic and GRAFCET (steps, transitions, receptivities)",
+				"fr": "Langage à contacts et GRAFCET (étapes, transitions, réceptivités)"
+			}
+		],
+		"lessonIds": [],
+		"labIds": [],
+		"safetyNotes": [
+			{
+				"en": "A drive’s DC bus capacitors stay charged after it is switched off: wait for the time stated by the manufacturer and check for absence of voltage before touching its terminals.",
+				"fr": "Les condensateurs du bus continu d’un variateur restent chargés après la coupure : attendez le délai indiqué par le constructeur et vérifiez l’absence de tension avant de toucher ses bornes."
+			},
+			{
+				"en": "Emergency stops must act directly on the power supply, not only through the PLC program.",
+				"fr": "Les arrêts d’urgence doivent agir directement sur l’alimentation, et pas seulement par le programme de l’automate."
+			}
+		],
+		"practicalOutcome": {
+			"en": "Set up a variable-speed drive for a motor and describe an automated sequence with a GRAFCET",
+			"fr": "Paramétrer un variateur de vitesse pour un moteur et décrire un cycle automatisé par un GRAFCET"
+		}
+	}
+]

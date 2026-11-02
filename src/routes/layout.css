@@ -1,0 +1,378 @@
+@import 'tailwindcss';
+@import 'katex/dist/katex.min.css';
+
+@custom-variant dark (&:where([data-theme='dark'], [data-theme='dark'] *));
+
+/* ───────────── Design tokens ───────────── */
+:root {
+	--bg: #f5f3ec;
+	--surface: #ffffff;
+	--surface-2: #f0eee6;
+	--surface-3: #e7e5da;
+	--ink: #1c2620;
+	--ink-2: #56625a;
+	--ink-3: #87918a;
+	--line: #e3e0d5;
+	--line-strong: #cfcbbd;
+
+	--brand: #26493a;
+	--brand-2: #1d3a2d;
+	--brand-ink: #eef5e4;
+	--brand-ink-2: #a9c4ad;
+	--accent: #d4eda0;
+	--accent-strong: #b9dd73;
+	--accent-ink: #1f3a27;
+
+	--violet: #ece8fb;
+	--violet-ink: #6650b8;
+	--peach: #f8e8d8;
+	--peach-ink: #b4652a;
+	--sage: #e5efd9;
+	--sage-ink: #4a7a37;
+
+	--success: #3f7f3a;
+	--success-soft: #e3f1dc;
+	--warning: #a8681b;
+	--warning-soft: #fbefdc;
+	--danger: #b0412b;
+	--danger-soft: #f9e3dd;
+	--info: #2d6b8f;
+	--info-soft: #e1eef5;
+
+	--wire: #2a3a31;
+	--wire-flow: #4f9d3a;
+	--focus: #4f8f2f;
+
+	--radius: 1rem;
+	--text-scale: 1;
+	color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root:not([data-theme='light']) {
+		--bg: #111612;
+		--surface: #181f1a;
+		--surface-2: #1f2821;
+		--surface-3: #28322a;
+		--ink: #e6ece4;
+		--ink-2: #a4afa5;
+		--ink-3: #77837a;
+		--line: #2a342c;
+		--line-strong: #3a463c;
+		--brand: #1b3326;
+		--brand-2: #15291e;
+		--brand-ink: #eef5e4;
+		--brand-ink-2: #9cb8a0;
+		--accent: #c6e58a;
+		--accent-strong: #d7f0a6;
+		--accent-ink: #18301f;
+		--violet: #2a2640;
+		--violet-ink: #b5a6f2;
+		--peach: #3a2b1f;
+		--peach-ink: #f0b07a;
+		--sage: #233222;
+		--sage-ink: #a8d58f;
+		--success: #8fd07e;
+		--success-soft: #1f3420;
+		--warning: #f0b45e;
+		--warning-soft: #3a2d17;
+		--danger: #f08a73;
+		--danger-soft: #3d201a;
+		--info: #7fc0e6;
+		--info-soft: #18303d;
+		--wire: #c9d6cc;
+		--wire-flow: #a6e07f;
+		--focus: #b9e27a;
+		color-scheme: dark;
+	}
+}
+
+:root[data-theme='dark'] {
+	--bg: #111612;
+	--surface: #181f1a;
+	--surface-2: #1f2821;
+	--surface-3: #28322a;
+	--ink: #e6ece4;
+	--ink-2: #a4afa5;
+	--ink-3: #77837a;
+	--line: #2a342c;
+	--line-strong: #3a463c;
+	--brand: #1b3326;
+	--brand-2: #15291e;
+	--brand-ink: #eef5e4;
+	--brand-ink-2: #9cb8a0;
+	--accent: #c6e58a;
+	--accent-strong: #d7f0a6;
+	--accent-ink: #18301f;
+	--violet: #2a2640;
+	--violet-ink: #b5a6f2;
+	--peach: #3a2b1f;
+	--peach-ink: #f0b07a;
+	--sage: #233222;
+	--sage-ink: #a8d58f;
+	--success: #8fd07e;
+	--success-soft: #1f3420;
+	--warning: #f0b45e;
+	--warning-soft: #3a2d17;
+	--danger: #f08a73;
+	--danger-soft: #3d201a;
+	--info: #7fc0e6;
+	--info-soft: #18303d;
+	--wire: #c9d6cc;
+	--wire-flow: #a6e07f;
+	--focus: #b9e27a;
+	color-scheme: dark;
+}
+
+:root[data-text-size='small'] {
+	--text-scale: 0.9375;
+}
+:root[data-text-size='large'] {
+	--text-scale: 1.125;
+}
+:root[data-text-size='xlarge'] {
+	--text-scale: 1.25;
+}
+
+@theme inline {
+	--color-bg: var(--bg);
+	--color-surface: var(--surface);
+	--color-surface-2: var(--surface-2);
+	--color-surface-3: var(--surface-3);
+	--color-ink: var(--ink);
+	--color-ink-2: var(--ink-2);
+	--color-ink-3: var(--ink-3);
+	--color-line: var(--line);
+	--color-line-strong: var(--line-strong);
+	--color-brand: var(--brand);
+	--color-brand-2: var(--brand-2);
+	--color-brand-ink: var(--brand-ink);
+	--color-brand-ink-2: var(--brand-ink-2);
+	--color-accent: var(--accent);
+	--color-accent-strong: var(--accent-strong);
+	--color-accent-ink: var(--accent-ink);
+	--color-violet: var(--violet);
+	--color-violet-ink: var(--violet-ink);
+	--color-peach: var(--peach);
+	--color-peach-ink: var(--peach-ink);
+	--color-sage: var(--sage);
+	--color-sage-ink: var(--sage-ink);
+	--color-success: var(--success);
+	--color-success-soft: var(--success-soft);
+	--color-warning: var(--warning);
+	--color-warning-soft: var(--warning-soft);
+	--color-danger: var(--danger);
+	--color-danger-soft: var(--danger-soft);
+	--color-info: var(--info);
+	--color-info-soft: var(--info-soft);
+	--font-sans:
+		'Inter Variable', Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto,
+		'Helvetica Neue', Arial, sans-serif;
+	--font-mono: ui-monospace, 'SF Mono', 'Cascadia Mono', 'Roboto Mono', Menlo, Consolas, monospace;
+}
+
+/* ───────────── Base ───────────── */
+html {
+	font-size: calc(100% * var(--text-scale));
+	-webkit-text-size-adjust: 100%;
+	scrollbar-gutter: stable;
+}
+body {
+	background: var(--bg);
+	color: var(--ink);
+	font-family: var(--font-sans);
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	min-height: 100dvh;
+}
+:focus-visible {
+	outline: 2px solid var(--focus);
+	outline-offset: 2px;
+	border-radius: 6px;
+}
+::selection {
+	background: var(--accent);
+	color: var(--accent-ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.001ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.001ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+:root[data-reduced-motion='true'] *,
+:root[data-reduced-motion='true'] *::before,
+:root[data-reduced-motion='true'] *::after {
+	animation-duration: 0.001ms !important;
+	animation-iteration-count: 1 !important;
+	transition-duration: 0.001ms !important;
+	scroll-behavior: auto !important;
+}
+
+/* ───────────── Components ───────────── */
+@layer components {
+	.eyebrow {
+		font-family: var(--font-mono);
+		font-size: 0.6875rem;
+		letter-spacing: 0.14em;
+		text-transform: uppercase;
+		color: var(--ink-2);
+	}
+	.card {
+		background: var(--surface);
+		border: 1px solid var(--line);
+		border-radius: var(--radius);
+	}
+	.btn {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.5rem;
+		min-height: 2.75rem;
+		padding: 0.5rem 1.125rem;
+		border-radius: 0.75rem;
+		font-size: 0.9375rem;
+		font-weight: 600;
+		line-height: 1.2;
+		transition:
+			background-color 0.15s,
+			border-color 0.15s,
+			color 0.15s,
+			transform 0.1s;
+		user-select: none;
+	}
+	.btn:active:not(:disabled) {
+		transform: translateY(1px);
+	}
+	.btn:disabled {
+		opacity: 0.5;
+		cursor: not-allowed;
+	}
+	.btn-primary {
+		background: var(--brand);
+		color: var(--brand-ink);
+	}
+	.btn-primary:hover:not(:disabled) {
+		background: var(--brand-2);
+	}
+	.btn-accent {
+		background: var(--accent);
+		color: var(--accent-ink);
+	}
+	.btn-accent:hover:not(:disabled) {
+		background: var(--accent-strong);
+	}
+	.btn-ghost {
+		background: transparent;
+		color: var(--ink);
+		border: 1px solid var(--line);
+	}
+	.btn-ghost:hover:not(:disabled) {
+		background: var(--surface-2);
+	}
+	.btn-danger {
+		background: var(--danger);
+		color: #fff;
+	}
+	.btn-sm {
+		min-height: 2.25rem;
+		padding: 0.375rem 0.75rem;
+		font-size: 0.8125rem;
+		border-radius: 0.625rem;
+	}
+	.input {
+		min-height: 2.75rem;
+		width: 100%;
+		border-radius: 0.75rem;
+		border: 1px solid var(--line-strong);
+		background: var(--surface);
+		color: var(--ink);
+		padding: 0.5rem 0.875rem;
+		font-size: 1rem;
+	}
+	.input:focus {
+		outline: 2px solid var(--focus);
+		outline-offset: 0;
+		border-color: transparent;
+	}
+	.chip {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.375rem;
+		border-radius: 999px;
+		border: 1px solid var(--line);
+		padding: 0.125rem 0.625rem;
+		font-size: 0.75rem;
+		font-weight: 500;
+		color: var(--ink-2);
+		background: var(--surface);
+		white-space: nowrap;
+	}
+	.dot-grid {
+		background-image: radial-gradient(
+			color-mix(in srgb, var(--brand-ink) 18%, transparent) 1px,
+			transparent 1px
+		);
+		background-size: 18px 18px;
+	}
+}
+
+/* ───────────── Rich text (lesson prose) ───────────── */
+.prose-cp {
+	line-height: 1.65;
+	color: var(--ink);
+}
+.prose-cp p + p,
+.prose-cp p + ul,
+.prose-cp ul + p,
+.prose-cp ol + p,
+.prose-cp p + ol {
+	margin-top: 0.75em;
+}
+.prose-cp ul {
+	list-style: none;
+	padding-left: 0;
+}
+.prose-cp ul > li {
+	position: relative;
+	padding-left: 1.25em;
+	margin: 0.3em 0;
+}
+.prose-cp ul > li::before {
+	content: '';
+	position: absolute;
+	left: 0.25em;
+	top: 0.7em;
+	width: 0.4em;
+	height: 0.4em;
+	border-radius: 999px;
+	background: var(--sage-ink);
+}
+.prose-cp ol {
+	list-style: decimal;
+	padding-left: 1.4em;
+}
+.prose-cp strong {
+	font-weight: 650;
+}
+.prose-cp code {
+	font-family: var(--font-mono);
+	font-size: 0.9em;
+	background: var(--surface-2);
+	padding: 0.05em 0.35em;
+	border-radius: 0.3em;
+}
+.prose-cp .katex-display {
+	margin: 0.75em 0;
+	overflow-x: auto;
+	overflow-y: hidden;
+	padding: 0.25em 0;
+}
+.katex {
+	font-size: 1.08em;
+}

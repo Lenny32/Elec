@@ -1,0 +1,3437 @@
+[
+	{
+		"id": "exercise.ch00.si_base.current_unit",
+		"version": 1,
+		"conceptIds": ["units.si_base"],
+		"formulaIds": [],
+		"difficulty": 1,
+		"kind": "guided",
+		"pool": "practice",
+		"prompt": {
+			"en": "Which unit measures electric **current**?",
+			"fr": "Quelle unité mesure l’**intensité du courant** électrique ?"
+		},
+		"hints": [
+			{
+				"en": "Its symbol is a capital letter A.",
+				"fr": "Son symbole est un A majuscule."
+			}
+		],
+		"solution": [
+			{
+				"en": "Current → ampere (A). Voltage → volt (V). Resistance → ohm (Ω). Power → watt (W).",
+				"fr": "Intensité → ampère (A). Tension → volt (V). Résistance → ohm (Ω). Puissance → watt (W)."
+			}
+		],
+		"type": "multiple_choice",
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "the ampere (A)",
+					"fr": "l’ampère (A)"
+				},
+				"rationale": {
+					"en": "Correct: current is measured in amperes, symbol A.",
+					"fr": "Exact : l’intensité se mesure en ampères, symbole A."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "the volt (V)",
+					"fr": "le volt (V)"
+				},
+				"rationale": {
+					"en": "The volt measures voltage (the electrical “push”), not current.",
+					"fr": "Le volt mesure la tension (la « poussée » électrique), pas l’intensité."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "the watt (W)",
+					"fr": "le watt (W)"
+				},
+				"rationale": {
+					"en": "The watt measures power (energy per second).",
+					"fr": "Le watt mesure la puissance (l’énergie par seconde)."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "the ohm (Ω)",
+					"fr": "l’ohm (Ω)"
+				},
+				"rationale": {
+					"en": "The ohm measures resistance (how much a part opposes current).",
+					"fr": "L’ohm mesure la résistance (à quel point un composant s’oppose au courant)."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch00.si_base.omega_symbol",
+		"version": 1,
+		"conceptIds": ["units.si_base"],
+		"formulaIds": [],
+		"difficulty": 1,
+		"kind": "independent",
+		"pool": "practice",
+		"prompt": {
+			"en": "A resistor is marked **330 Ω**. What does the symbol Ω mean?",
+			"fr": "Une résistance porte l’inscription **330 Ω**. Que signifie le symbole Ω ?"
+		},
+		"hints": [
+			{
+				"en": "Ω is the last letter of the Greek alphabet, omega — think “Ohm”.",
+				"fr": "Ω est la dernière lettre de l’alphabet grec, oméga — pensez à « Ohm »."
+			}
+		],
+		"solution": [
+			{
+				"en": "330 Ω reads “330 ohms”: a resistance value. The ohm is the unit of resistance.",
+				"fr": "330 Ω se lit « 330 ohms » : c’est une valeur de résistance. L’ohm est l’unité de résistance."
+			}
+		],
+		"type": "multiple_choice",
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "ohms, the unit of resistance",
+					"fr": "des ohms, l’unité de résistance"
+				},
+				"rationale": {
+					"en": "Correct: Ω (the Greek letter omega) is the symbol of the ohm.",
+					"fr": "Exact : Ω (la lettre grecque oméga) est le symbole de l’ohm."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "watts, the unit of power",
+					"fr": "des watts, l’unité de puissance"
+				},
+				"rationale": {
+					"en": "Watts are written W. The power rating of a resistor is a different marking.",
+					"fr": "Les watts s’écrivent W. La puissance admissible d’une résistance est une autre indication."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "a maximum voltage of 330 V",
+					"fr": "une tension maximale de 330 V"
+				},
+				"rationale": {
+					"en": "Voltage is written with V, never with Ω.",
+					"fr": "La tension s’écrit avec V, jamais avec Ω."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "the resistor’s order in the circuit",
+					"fr": "le numéro de la résistance dans le circuit"
+				},
+				"rationale": {
+					"en": "The position in the circuit is given by its label (R1, R2…), not by its value.",
+					"fr": "La place dans le circuit est donnée par le repère (R1, R2…), pas par la valeur."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch00.si_base.symbol_case",
+		"version": 1,
+		"conceptIds": ["units.si_base"],
+		"formulaIds": [],
+		"difficulty": 2,
+		"kind": "independent",
+		"pool": "practice",
+		"prompt": {
+			"en": "Unit symbols are case-sensitive. Which way of writing “twenty milliamperes” is correct?",
+			"fr": "Les symboles d’unités sont sensibles à la casse. Quelle écriture de « vingt milliampères » est correcte ?"
+		},
+		"hints": [
+			{
+				"en": "Small m and capital M are two different prefixes.",
+				"fr": "Le m minuscule et le M majuscule sont deux préfixes différents."
+			}
+		],
+		"solution": [
+			{
+				"en": "Prefix milli = small m. Unit ampere = capital A. So 20 mA.",
+				"fr": "Préfixe milli = m minuscule. Unité ampère = A majuscule. Donc 20 mA."
+			}
+		],
+		"type": "multiple_choice",
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "20 mA",
+					"fr": "20 mA"
+				},
+				"rationale": {
+					"en": "Correct: small m for milli, capital A for ampere (named after André-Marie Ampère).",
+					"fr": "Exact : m minuscule pour milli, A majuscule pour ampère (du nom d’André-Marie Ampère)."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "20 MA",
+					"fr": "20 MA"
+				},
+				"rationale": {
+					"en": "Capital M means mega (a million): 20 MA would be twenty million amperes!",
+					"fr": "M majuscule signifie méga (un million) : 20 MA feraient vingt millions d’ampères !"
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "20 ma",
+					"fr": "20 ma"
+				},
+				"rationale": {
+					"en": "Units named after a person use a capital letter: A, V, W. “a” is not a unit.",
+					"fr": "Les unités qui portent le nom d’une personne s’écrivent avec une majuscule : A, V, W. « a » n’est pas une unité."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "20 Ma",
+					"fr": "20 Ma"
+				},
+				"rationale": {
+					"en": "Both letters are in the wrong case: M is mega and “a” is not the ampere.",
+					"fr": "Les deux lettres sont dans la mauvaise casse : M signifie méga et « a » n’est pas l’ampère."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch00.si_base.charger_label",
+		"version": 1,
+		"conceptIds": ["units.si_base"],
+		"formulaIds": [],
+		"difficulty": 2,
+		"kind": "applied",
+		"pool": "practice",
+		"prompt": {
+			"en": "A phone charger label reads: **OUTPUT 5 V ⎓ 2 A**. What is the “2 A”?",
+			"fr": "L’étiquette d’un chargeur de téléphone indique : **SORTIE 5 V ⎓ 2 A**. Que représente « 2 A » ?"
+		},
+		"hints": [
+			{
+				"en": "Look at the unit symbol after the number.",
+				"fr": "Regardez le symbole d’unité après le nombre."
+			}
+		],
+		"solution": [
+			{
+				"en": "Read the unit: A = ampere = current.",
+				"fr": "Lisez l’unité : A = ampère = intensité."
+			},
+			{
+				"en": "So 2 A is the largest current the charger is designed to supply; 5 V is its voltage. (⎓ means direct current, DC.)",
+				"fr": "Donc 2 A est le plus grand courant que le chargeur est prévu pour fournir ; 5 V est sa tension. (⎓ signifie courant continu.)"
+			}
+		],
+		"type": "multiple_choice",
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "the maximum current the charger can deliver",
+					"fr": "l’intensité maximale que le chargeur peut fournir"
+				},
+				"rationale": {
+					"en": "Correct: A is the ampere, so 2 A is a current.",
+					"fr": "Exact : A est l’ampère, donc 2 A est une intensité."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "the output voltage",
+					"fr": "la tension de sortie"
+				},
+				"rationale": {
+					"en": "The voltage is the 5 V part of the label.",
+					"fr": "La tension, c’est la partie 5 V de l’étiquette."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "the power of the charger",
+					"fr": "la puissance du chargeur"
+				},
+				"rationale": {
+					"en": "Power is in watts (W). It is not written here (it would be 5 V × 2 A = 10 W).",
+					"fr": "La puissance s’exprime en watts (W). Elle n’est pas écrite ici (elle vaudrait 5 V × 2 A = 10 W)."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "the number of USB sockets",
+					"fr": "le nombre de prises USB"
+				},
+				"rationale": {
+					"en": "A count has no unit symbol; “A” is a unit.",
+					"fr": "Un nombre d’objets n’a pas de symbole d’unité ; « A » est une unité."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch00.si_base.exam_match",
+		"version": 1,
+		"conceptIds": ["units.si_base"],
+		"formulaIds": [],
+		"difficulty": 1,
+		"kind": "independent",
+		"pool": "exam",
+		"prompt": {
+			"en": "Which quantity–unit pair is correct?",
+			"fr": "Quelle association grandeur–unité est correcte ?"
+		},
+		"hints": [],
+		"solution": [
+			{
+				"en": "Current → A, voltage → V, resistance → Ω, power → W, time → s.",
+				"fr": "Intensité → A, tension → V, résistance → Ω, puissance → W, temps → s."
+			}
+		],
+		"type": "multiple_choice",
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "resistance — ohm (Ω)",
+					"fr": "résistance — ohm (Ω)"
+				},
+				"rationale": {
+					"en": "Correct.",
+					"fr": "Exact."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "power — volt (V)",
+					"fr": "puissance — volt (V)"
+				},
+				"rationale": {
+					"en": "Power is in watts (W); the volt is for voltage.",
+					"fr": "La puissance est en watts (W) ; le volt sert à la tension."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "current — watt (W)",
+					"fr": "intensité — watt (W)"
+				},
+				"rationale": {
+					"en": "Current is in amperes (A); the watt is for power.",
+					"fr": "L’intensité est en ampères (A) ; le watt sert à la puissance."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "voltage — ampere (A)",
+					"fr": "tension — ampère (A)"
+				},
+				"rationale": {
+					"en": "Voltage is in volts (V); the ampere is for current.",
+					"fr": "La tension est en volts (V) ; l’ampère sert à l’intensité."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch00.si_base.exam_powerbank",
+		"version": 1,
+		"conceptIds": ["units.si_base"],
+		"formulaIds": [],
+		"difficulty": 2,
+		"kind": "applied",
+		"pool": "exam",
+		"prompt": {
+			"en": "A power bank is labelled **3.7 V · 10 000 mAh · 18 W**. Which value is a **power**?",
+			"fr": "Une batterie externe porte l’étiquette **3,7 V · 10 000 mAh · 18 W**. Quelle valeur est une **puissance** ?"
+		},
+		"hints": [],
+		"solution": [
+			{
+				"en": "Identify each unit: V → voltage, mAh → charge, W → power. The power is 18 W.",
+				"fr": "Identifiez chaque unité : V → tension, mAh → charge, W → puissance. La puissance vaut 18 W."
+			}
+		],
+		"type": "multiple_choice",
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "18 W",
+					"fr": "18 W"
+				},
+				"rationale": {
+					"en": "Correct: W (watt) is the unit of power.",
+					"fr": "Exact : le W (watt) est l’unité de puissance."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "3.7 V",
+					"fr": "3,7 V"
+				},
+				"rationale": {
+					"en": "V (volt) is a voltage.",
+					"fr": "V (volt) indique une tension."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "10 000 mAh",
+					"fr": "10 000 mAh"
+				},
+				"rationale": {
+					"en": "mAh (milliampere-hour) measures stored charge — how long it can supply a current — not power.",
+					"fr": "Le mAh (milliampère-heure) mesure une charge stockée — combien de temps elle peut fournir un courant — pas une puissance."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "none of them: power has no unit",
+					"fr": "aucune : la puissance n’a pas d’unité"
+				},
+				"rationale": {
+					"en": "Power has a unit: the watt.",
+					"fr": "La puissance a bien une unité : le watt."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch00.si_base.exam_time",
+		"version": 1,
+		"conceptIds": ["units.si_base"],
+		"formulaIds": [],
+		"difficulty": 1,
+		"kind": "independent",
+		"pool": "exam",
+		"prompt": {
+			"en": "What is the SI unit symbol for **time**?",
+			"fr": "Quel est le symbole de l’unité SI de **temps** ?"
+		},
+		"hints": [],
+		"solution": [
+			{
+				"en": "The SI unit of time is the second, written s (lower case).",
+				"fr": "L’unité SI de temps est la seconde, notée s (minuscule)."
+			}
+		],
+		"type": "multiple_choice",
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "s (second)",
+					"fr": "s (seconde)"
+				},
+				"rationale": {
+					"en": "Correct: the second, small s.",
+					"fr": "Exact : la seconde, s minuscule."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "S",
+					"fr": "S"
+				},
+				"rationale": {
+					"en": "Capital S is the siemens, a different unit. Case matters.",
+					"fr": "Le S majuscule est le siemens, une autre unité. La casse compte."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "sec",
+					"fr": "sec"
+				},
+				"rationale": {
+					"en": "Common in everyday writing, but the SI symbol is just “s”.",
+					"fr": "Fréquent dans la vie courante, mais le symbole SI est simplement « s »."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "h (hour)",
+					"fr": "h (heure)"
+				},
+				"rationale": {
+					"en": "The hour is accepted for everyday use, but the SI base unit of time is the second.",
+					"fr": "L’heure est admise dans la vie courante, mais l’unité SI de base du temps est la seconde."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch00.rearr.product",
+		"version": 1,
+		"conceptIds": ["math.rearranging"],
+		"formulaIds": [],
+		"difficulty": 1,
+		"kind": "guided",
+		"pool": "practice",
+		"prompt": {
+			"en": "Start from $a = b \\cdot c$. Which expression gives **b**?",
+			"fr": "On part de $a = b \\cdot c$. Quelle expression donne **b** ?"
+		},
+		"hints": [
+			{
+				"en": "Whatever you do to one side, do to the other. What undoes “× c”?",
+				"fr": "Ce que vous faites d’un côté, faites-le de l’autre. Quelle opération annule « × c » ?"
+			}
+		],
+		"solution": [
+			{
+				"en": "$a = b \\cdot c$. Divide both sides by c: $\\frac{a}{c} = \\frac{b \\cdot c}{c}$.",
+				"fr": "$a = b \\cdot c$. On divise les deux membres par c : $\\frac{a}{c} = \\frac{b \\cdot c}{c}$."
+			},
+			{
+				"en": "c cancels: $b = \\frac{a}{c}$ (valid when c ≠ 0). Check with 6 = 3 × 2: 6 ÷ 2 = 3 ✓.",
+				"fr": "c se simplifie : $b = \\frac{a}{c}$ (valable si c ≠ 0). Test avec 6 = 3 × 2 : 6 ÷ 2 = 3 ✓."
+			}
+		],
+		"type": "multiple_choice",
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "$b = \\frac{a}{c}$",
+					"fr": "$b = \\frac{a}{c}$"
+				},
+				"rationale": {
+					"en": "Correct: divide both sides by c, then c cancels on the right.",
+					"fr": "Exact : on divise les deux membres par c, et c disparaît à droite."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "$b = a \\cdot c$",
+					"fr": "$b = a \\cdot c$"
+				},
+				"rationale": {
+					"en": "Multiplying by c does not undo a multiplication by c. Check: a = 6, c = 2 gives b = 12, but 12 × 2 ≠ 6.",
+					"fr": "Multiplier par c n’annule pas une multiplication par c. Test : a = 6, c = 2 donnent b = 12, or 12 × 2 ≠ 6."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "$b = \\frac{c}{a}$",
+					"fr": "$b = \\frac{c}{a}$"
+				},
+				"rationale": {
+					"en": "The fraction is upside down. Check: a = 6, c = 2 gives b = 1/3, but 1/3 × 2 ≠ 6.",
+					"fr": "La fraction est à l’envers. Test : a = 6, c = 2 donnent b = 1/3, or 1/3 × 2 ≠ 6."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "$b = a - c$",
+					"fr": "$b = a - c$"
+				},
+				"rationale": {
+					"en": "Subtraction undoes addition, not multiplication.",
+					"fr": "La soustraction annule une addition, pas une multiplication."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch00.rearr.quotient_denominator",
+		"version": 1,
+		"conceptIds": ["math.rearranging"],
+		"formulaIds": [],
+		"difficulty": 2,
+		"kind": "independent",
+		"pool": "practice",
+		"prompt": {
+			"en": "Start from $a = \\frac{b}{c}$. Which expression gives **c**?",
+			"fr": "On part de $a = \\frac{b}{c}$. Quelle expression donne **c** ?"
+		},
+		"hints": [
+			{
+				"en": "First get c out of the denominator: multiply both sides by c.",
+				"fr": "Sortez d’abord c du dénominateur : multipliez les deux membres par c."
+			}
+		],
+		"solution": [
+			{
+				"en": "Multiply both sides by c: $a \\cdot c = b$.",
+				"fr": "On multiplie les deux membres par c : $a \\cdot c = b$."
+			},
+			{
+				"en": "Divide both sides by a: $c = \\frac{b}{a}$ (a ≠ 0). Check with 3 = 6/2: 6 ÷ 3 = 2 ✓.",
+				"fr": "On divise par a : $c = \\frac{b}{a}$ (a ≠ 0). Test avec 3 = 6/2 : 6 ÷ 3 = 2 ✓."
+			}
+		],
+		"type": "multiple_choice",
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "$c = \\frac{b}{a}$",
+					"fr": "$c = \\frac{b}{a}$"
+				},
+				"rationale": {
+					"en": "Correct: multiply by c to get a·c = b, then divide by a.",
+					"fr": "Exact : on multiplie par c pour obtenir a·c = b, puis on divise par a."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "$c = a \\cdot b$",
+					"fr": "$c = a \\cdot b$"
+				},
+				"rationale": {
+					"en": "Check with 3 = 6/2: a·b = 18, not 2.",
+					"fr": "Test avec 3 = 6/2 : a·b = 18, pas 2."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "$c = \\frac{a}{b}$",
+					"fr": "$c = \\frac{a}{b}$"
+				},
+				"rationale": {
+					"en": "Upside down. Check with 3 = 6/2: a/b = 0.5, not 2.",
+					"fr": "À l’envers. Test avec 3 = 6/2 : a/b = 0,5, pas 2."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "$c = b - a$",
+					"fr": "$c = b - a$"
+				},
+				"rationale": {
+					"en": "Subtracting does not undo a division. It only looks right by coincidence for some numbers.",
+					"fr": "Soustraire n’annule pas une division. Cela ne tombe juste que par hasard pour certains nombres."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch00.rearr.find_r",
+		"version": 1,
+		"conceptIds": ["math.rearranging"],
+		"formulaIds": [],
+		"difficulty": 2,
+		"kind": "independent",
+		"pool": "practice",
+		"prompt": {
+			"en": "A formula you will meet in chapter 1 is $V = I \\cdot R$. Rearrange it to find **R** when V = 6 V and I = 0.5 A. Give R in ohms.",
+			"fr": "Une formule que vous verrez au chapitre 1 est $V = I \\cdot R$ (les manuels français écrivent souvent **U** pour la tension). Transformez-la pour trouver **R** quand V = 6 V et I = 0,5 A. Donnez R en ohms."
+		},
+		"hints": [
+			{
+				"en": "Same shape as a = b·c: divide both sides by I.",
+				"fr": "Même forme que a = b·c : divisez les deux membres par I."
+			},
+			{
+				"en": "$R = \\frac{V}{I}$",
+				"fr": "$R = \\frac{V}{I}$"
+			}
+		],
+		"solution": [
+			{
+				"en": "Divide both sides by I: $R = \\frac{V}{I}$.",
+				"fr": "On divise les deux membres par I : $R = \\frac{V}{I}$."
+			},
+			{
+				"en": "$R = \\frac{6}{0.5} = 12$ Ω.",
+				"fr": "$R = \\frac{6}{0{,}5} = 12$ Ω."
+			}
+		],
+		"type": "numeric",
+		"answer": {
+			"algorithm": "ohm_resistance",
+			"inputs": {
+				"V": {
+					"value": 6,
+					"unit": "V"
+				},
+				"I": {
+					"value": 0.5,
+					"unit": "A"
+				}
+			},
+			"canonicalValue": 12,
+			"canonicalUnit": "ohm",
+			"acceptedUnits": ["ohm", "kohm"],
+			"absoluteTolerance": 0.01,
+			"relativeTolerance": 0.01
+		}
+	},
+	{
+		"id": "exercise.ch00.rearr.charger_current",
+		"version": 1,
+		"conceptIds": ["math.rearranging"],
+		"formulaIds": [],
+		"difficulty": 2,
+		"kind": "applied",
+		"pool": "practice",
+		"prompt": {
+			"en": "Electric charge obeys $Q = I \\cdot t$ (charge in coulombs, current in amperes, time in seconds). A charger moves Q = 7200 C into a phone in t = 3600 s (one hour). Rearrange to find the current **I**.",
+			"fr": "La charge électrique vérifie $Q = I \\cdot t$ (charge en coulombs, intensité en ampères, temps en secondes). Un chargeur transfère Q = 7200 C dans un téléphone en t = 3600 s (une heure). Transformez la formule pour trouver l’intensité **I**."
+		},
+		"hints": [
+			{
+				"en": "Divide both sides by t.",
+				"fr": "Divisez les deux membres par t."
+			}
+		],
+		"solution": [
+			{
+				"en": "$Q = I \\cdot t$ → divide both sides by t: $I = \\frac{Q}{t}$.",
+				"fr": "$Q = I \\cdot t$ → on divise par t : $I = \\frac{Q}{t}$."
+			},
+			{
+				"en": "$I = \\frac{7200}{3600} = 2$ A.",
+				"fr": "$I = \\frac{7200}{3600} = 2$ A."
+			},
+			{
+				"en": "Unit check: coulombs per second are amperes ✓.",
+				"fr": "Vérification des unités : des coulombs par seconde sont des ampères ✓."
+			}
+		],
+		"type": "numeric",
+		"answer": {
+			"algorithm": "current_qt",
+			"inputs": {
+				"Q": {
+					"value": 7200,
+					"unit": "C"
+				},
+				"t": {
+					"value": 3600,
+					"unit": "s"
+				}
+			},
+			"canonicalValue": 2,
+			"canonicalUnit": "A",
+			"acceptedUnits": ["A", "mA"],
+			"absoluteTolerance": 0.0001,
+			"relativeTolerance": 0.01
+		}
+	},
+	{
+		"id": "exercise.ch00.rearr.exam_power",
+		"version": 1,
+		"conceptIds": ["math.rearranging"],
+		"formulaIds": [],
+		"difficulty": 1,
+		"kind": "independent",
+		"pool": "exam",
+		"prompt": {
+			"en": "Power obeys $P = V \\cdot I$. Which expression gives **I**?",
+			"fr": "La puissance vérifie $P = V \\cdot I$. Quelle expression donne **I** ?"
+		},
+		"hints": [],
+		"solution": [
+			{
+				"en": "$P = V \\cdot I$ → divide both sides by V → $I = \\frac{P}{V}$ (V ≠ 0).",
+				"fr": "$P = V \\cdot I$ → on divise par V → $I = \\frac{P}{V}$ (V ≠ 0)."
+			}
+		],
+		"type": "multiple_choice",
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "$I = \\frac{P}{V}$",
+					"fr": "$I = \\frac{P}{V}$"
+				},
+				"rationale": {
+					"en": "Correct: divide both sides by V.",
+					"fr": "Exact : on divise les deux membres par V."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "$I = \\frac{V}{P}$",
+					"fr": "$I = \\frac{V}{P}$"
+				},
+				"rationale": {
+					"en": "Upside down: check with 12 = 6 × 2 → 6/12 = 0.5, not 2.",
+					"fr": "À l’envers : test avec 12 = 6 × 2 → 6/12 = 0,5, pas 2."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "$I = P \\cdot V$",
+					"fr": "$I = P \\cdot V$"
+				},
+				"rationale": {
+					"en": "Multiplying by V does not undo “× V”.",
+					"fr": "Multiplier par V n’annule pas « × V »."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "$I = P - V$",
+					"fr": "$I = P - V$"
+				},
+				"rationale": {
+					"en": "Subtraction undoes addition, not multiplication.",
+					"fr": "La soustraction annule une addition, pas une multiplication."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch00.rearr.exam_ohm_r",
+		"version": 1,
+		"conceptIds": ["math.rearranging"],
+		"formulaIds": [],
+		"difficulty": 1,
+		"kind": "independent",
+		"pool": "exam",
+		"prompt": {
+			"en": "Starting from $I = \\frac{V}{R}$, which expression gives **R**?",
+			"fr": "À partir de $I = \\frac{V}{R}$, quelle expression donne **R** ?"
+		},
+		"hints": [],
+		"solution": [
+			{
+				"en": "Multiply both sides by R: $I \\cdot R = V$.",
+				"fr": "On multiplie par R : $I \\cdot R = V$."
+			},
+			{
+				"en": "Divide by I: $R = \\frac{V}{I}$ (I ≠ 0).",
+				"fr": "On divise par I : $R = \\frac{V}{I}$ (I ≠ 0)."
+			}
+		],
+		"type": "multiple_choice",
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "$R = \\frac{V}{I}$",
+					"fr": "$R = \\frac{V}{I}$"
+				},
+				"rationale": {
+					"en": "Correct: multiply by R (I·R = V), then divide by I.",
+					"fr": "Exact : on multiplie par R (I·R = V), puis on divise par I."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "$R = \\frac{I}{V}$",
+					"fr": "$R = \\frac{I}{V}$"
+				},
+				"rationale": {
+					"en": "Upside down. Check with 2 = 6/3: 2/6 ≠ 3.",
+					"fr": "À l’envers. Test avec 2 = 6/3 : 2/6 ≠ 3."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "$R = V \\cdot I$",
+					"fr": "$R = V \\cdot I$"
+				},
+				"rationale": {
+					"en": "Check with 2 = 6/3: 6 × 2 = 12, not 3.",
+					"fr": "Test avec 2 = 6/3 : 6 × 2 = 12, pas 3."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "$R = V - I$",
+					"fr": "$R = V - I$"
+				},
+				"rationale": {
+					"en": "Subtraction does not undo a division (and you cannot subtract amperes from volts).",
+					"fr": "La soustraction n’annule pas une division (et on ne soustrait pas des ampères à des volts)."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch00.rearr.exam_find_i",
+		"version": 1,
+		"conceptIds": ["math.rearranging"],
+		"formulaIds": [],
+		"difficulty": 2,
+		"kind": "independent",
+		"pool": "exam",
+		"prompt": {
+			"en": "Using $V = I \\cdot R$, find **I** when V = 9 V and R = 3 Ω. Give I in amperes.",
+			"fr": "À l’aide de $V = I \\cdot R$, trouvez **I** quand V = 9 V et R = 3 Ω. Donnez I en ampères."
+		},
+		"hints": [],
+		"solution": [
+			{
+				"en": "Divide both sides by R: $I = \\frac{V}{R}$.",
+				"fr": "On divise les deux membres par R : $I = \\frac{V}{R}$."
+			},
+			{
+				"en": "$I = \\frac{9}{3} = 3$ A.",
+				"fr": "$I = \\frac{9}{3} = 3$ A."
+			}
+		],
+		"type": "numeric",
+		"answer": {
+			"algorithm": "ohm_current",
+			"inputs": {
+				"V": {
+					"value": 9,
+					"unit": "V"
+				},
+				"R": {
+					"value": 3,
+					"unit": "ohm"
+				}
+			},
+			"canonicalValue": 3,
+			"canonicalUnit": "A",
+			"acceptedUnits": ["A", "mA"],
+			"absoluteTolerance": 0.0001,
+			"relativeTolerance": 0.01
+		}
+	},
+	{
+		"id": "exercise.ch00.rearr.exam_led_part",
+		"version": 1,
+		"conceptIds": ["math.rearranging"],
+		"formulaIds": [],
+		"difficulty": 3,
+		"kind": "applied",
+		"pool": "exam",
+		"prompt": {
+			"en": "A part in a 3 V circuit carries a current of **20 mA**. Using $V = I \\cdot R$, find its resistance **R** in ohms. (Watch the prefix!)",
+			"fr": "Un composant d’un circuit de 3 V est traversé par un courant de **20 mA**. À l’aide de $V = I \\cdot R$, trouvez sa résistance **R** en ohms. (Attention au préfixe !)"
+		},
+		"hints": [],
+		"solution": [
+			{
+				"en": "Rearrange: $R = \\frac{V}{I}$.",
+				"fr": "On transforme : $R = \\frac{V}{I}$."
+			},
+			{
+				"en": "Convert first: 20 mA = 0.02 A.",
+				"fr": "On convertit d’abord : 20 mA = 0,02 A."
+			},
+			{
+				"en": "$R = \\frac{3}{0.02} = 150$ Ω. (Using 20 instead of 0.02 would give 0.15 Ω — a prefix error.)",
+				"fr": "$R = \\frac{3}{0{,}02} = 150$ Ω. (Utiliser 20 au lieu de 0,02 donnerait 0,15 Ω — une erreur de préfixe.)"
+			}
+		],
+		"type": "numeric",
+		"answer": {
+			"algorithm": "ohm_resistance",
+			"inputs": {
+				"V": {
+					"value": 3,
+					"unit": "V"
+				},
+				"I": {
+					"value": 20,
+					"unit": "mA"
+				}
+			},
+			"canonicalValue": 150,
+			"canonicalUnit": "ohm",
+			"acceptedUnits": ["ohm", "kohm"],
+			"absoluteTolerance": 0.1,
+			"relativeTolerance": 0.01
+		}
+	},
+	{
+		"id": "exercise.ch00.rearr.exam_powerbank_time",
+		"version": 1,
+		"conceptIds": ["math.rearranging"],
+		"formulaIds": [],
+		"difficulty": 3,
+		"kind": "applied",
+		"pool": "exam",
+		"prompt": {
+			"en": "A power bank stores a charge of Q = 36 000 C. It delivers a steady current I = 2 A. Using $Q = I \\cdot t$, how long (**t**) can it last?",
+			"fr": "Une batterie externe stocke une charge Q = 36 000 C. Elle fournit un courant constant I = 2 A. À l’aide de $Q = I \\cdot t$, combien de temps (**t**) peut-elle tenir ?"
+		},
+		"hints": [],
+		"solution": [
+			{
+				"en": "Divide both sides by I: $t = \\frac{Q}{I}$.",
+				"fr": "On divise les deux membres par I : $t = \\frac{Q}{I}$."
+			},
+			{
+				"en": "$t = \\frac{36\\,000}{2} = 18\\,000$ s.",
+				"fr": "$t = \\frac{36\\,000}{2} = 18\\,000$ s."
+			},
+			{
+				"en": "18 000 s ÷ 3600 = 5 h.",
+				"fr": "18 000 s ÷ 3600 = 5 h."
+			}
+		],
+		"type": "numeric",
+		"answer": {
+			"algorithm": "time_qi",
+			"inputs": {
+				"Q": {
+					"value": 36000,
+					"unit": "C"
+				},
+				"I": {
+					"value": 2,
+					"unit": "A"
+				}
+			},
+			"canonicalValue": 18000,
+			"canonicalUnit": "s",
+			"acceptedUnits": ["s", "min", "h"],
+			"absoluteTolerance": 0.5,
+			"relativeTolerance": 0.01
+		}
+	},
+	{
+		"id": "exercise.ch00.rearr.exam_reasoning",
+		"version": 1,
+		"conceptIds": ["math.rearranging"],
+		"formulaIds": [],
+		"difficulty": 3,
+		"kind": "independent",
+		"pool": "exam",
+		"prompt": {
+			"en": "In $a = b \\cdot c$, **a stays the same** while **c doubles**. What must happen to b?",
+			"fr": "Dans $a = b \\cdot c$, **a ne change pas** tandis que **c double**. Que doit-il arriver à b ?"
+		},
+		"hints": [],
+		"solution": [
+			{
+				"en": "Rearrange: $b = \\frac{a}{c}$.",
+				"fr": "On transforme : $b = \\frac{a}{c}$."
+			},
+			{
+				"en": "With c replaced by 2c: $\\frac{a}{2c} = \\frac{1}{2} \\cdot \\frac{a}{c}$, so b is halved. Example: 12 = 3 × 4 becomes 12 = 1.5 × 8.",
+				"fr": "En remplaçant c par 2c : $\\frac{a}{2c} = \\frac{1}{2} \\cdot \\frac{a}{c}$, donc b est divisé par deux. Exemple : 12 = 3 × 4 devient 12 = 1,5 × 8."
+			}
+		],
+		"type": "multiple_choice",
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "b is halved",
+					"fr": "b est divisé par deux"
+				},
+				"rationale": {
+					"en": "Correct: b = a/c, and dividing by a number twice as big gives half the result.",
+					"fr": "Exact : b = a/c, et diviser par un nombre deux fois plus grand donne un résultat deux fois plus petit."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "b doubles",
+					"fr": "b double"
+				},
+				"rationale": {
+					"en": "If b and c both doubled, b·c would be four times bigger, not equal to a.",
+					"fr": "Si b et c doublaient, b·c serait quatre fois plus grand, donc différent de a."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "b stays the same",
+					"fr": "b ne change pas"
+				},
+				"rationale": {
+					"en": "Then b·c would double and no longer equal a.",
+					"fr": "Alors b·c doublerait et ne serait plus égal à a."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "b decreases by 2",
+					"fr": "b diminue de 2"
+				},
+				"rationale": {
+					"en": "The change is a factor (÷ 2), not a fixed subtraction.",
+					"fr": "Le changement est un facteur (÷ 2), pas une soustraction fixe."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch00.sym.led",
+		"version": 1,
+		"conceptIds": ["diagrams.symbols"],
+		"formulaIds": [],
+		"difficulty": 1,
+		"kind": "guided",
+		"pool": "practice",
+		"prompt": {
+			"en": "In this schematic, what is component **D1** (a triangle pointing at a bar, with two small arrows coming out)?",
+			"fr": "Dans ce schéma, qu’est-ce que le composant **D1** (un triangle pointé vers une barre, avec deux petites flèches qui en sortent) ?"
+		},
+		"diagramId": "diagram.ch00.symbol_circuit",
+		"hints": [
+			{
+				"en": "The arrows point outwards: something leaves the component.",
+				"fr": "Les flèches pointent vers l’extérieur : quelque chose sort du composant."
+			}
+		],
+		"solution": [
+			{
+				"en": "Triangle + bar = diode. Outward arrows = light. So D1 is an LED.",
+				"fr": "Triangle + barre = diode. Flèches vers l’extérieur = lumière. D1 est donc une LED."
+			}
+		],
+		"type": "multiple_choice",
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "an LED (light-emitting diode)",
+					"fr": "une LED (diode électroluminescente)"
+				},
+				"rationale": {
+					"en": "Correct: a diode symbol plus arrows for the light it emits. Labels for diodes and LEDs start with D.",
+					"fr": "Exact : un symbole de diode avec des flèches pour la lumière émise. Les repères des diodes et LED commencent par D."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "a lamp (bulb)",
+					"fr": "une lampe (ampoule)"
+				},
+				"rationale": {
+					"en": "A lamp is drawn as a circle with a cross inside (IEC) or with a filament loop inside (ANSI), usually labelled L.",
+					"fr": "Une lampe se dessine comme un cercle avec une croix (IEC) ou avec une boucle de filament (ANSI), repère L en général."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "a resistor",
+					"fr": "une résistance"
+				},
+				"rationale": {
+					"en": "A resistor is a rectangle (or zigzag), labelled R.",
+					"fr": "Une résistance est un rectangle (ou un zigzag), repère R."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "a battery",
+					"fr": "une pile"
+				},
+				"rationale": {
+					"en": "A battery is a long and a short parallel line, labelled B.",
+					"fr": "Une pile, ce sont un trait long et un trait court parallèles, repère B."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch00.sym.battery_plus",
+		"version": 1,
+		"conceptIds": ["diagrams.symbols"],
+		"formulaIds": [],
+		"difficulty": 1,
+		"kind": "independent",
+		"pool": "practice",
+		"prompt": {
+			"en": "On a battery (cell) symbol, which plate is the **+** terminal?",
+			"fr": "Sur le symbole d’une pile, quel trait correspond à la borne **+** ?"
+		},
+		"hints": [
+			{
+				"en": "The + sign has a long stroke; the − sign is short.",
+				"fr": "Le signe + a un long trait ; le signe − est court."
+			}
+		],
+		"solution": [
+			{
+				"en": "Long thin line = + terminal; short thick line = − terminal.",
+				"fr": "Trait long et fin = borne + ; trait court et épais = borne −."
+			}
+		],
+		"type": "multiple_choice",
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "the longer, thinner line",
+					"fr": "le trait le plus long et le plus fin"
+				},
+				"rationale": {
+					"en": "Correct: long line = +, short thick line = −.",
+					"fr": "Exact : trait long = +, trait court et épais = −."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "the shorter, thicker line",
+					"fr": "le trait le plus court et le plus épais"
+				},
+				"rationale": {
+					"en": "That is the − terminal. A memory aid: the long line can be cut into a “+”.",
+					"fr": "C’est la borne −. Moyen mnémotechnique : on peut couper le long trait pour en faire un « + »."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "either one: a battery has no polarity",
+					"fr": "n’importe lequel : une pile n’a pas de polarité"
+				},
+				"rationale": {
+					"en": "A battery always has polarity, and many parts (LEDs) only work one way round.",
+					"fr": "Une pile a toujours une polarité, et beaucoup de composants (LED) ne fonctionnent que dans un sens."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "the one connected to the ground symbol",
+					"fr": "celui relié au symbole de masse"
+				},
+				"rationale": {
+					"en": "Ground is usually the − side, not the + side.",
+					"fr": "La masse est en général du côté −, pas du côté +."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch00.sym.ground",
+		"version": 1,
+		"conceptIds": ["diagrams.symbols"],
+		"formulaIds": [],
+		"difficulty": 2,
+		"kind": "independent",
+		"pool": "practice",
+		"prompt": {
+			"en": "What does the **ground** symbol G at the bottom of this schematic mean?",
+			"fr": "Que signifie le symbole de **masse** G en bas de ce schéma ?"
+		},
+		"diagramId": "diagram.ch00.symbol_circuit",
+		"hints": [
+			{
+				"en": "Here both B1 − and D1 cathode go to G. What does that tell you about them?",
+				"fr": "Ici, B1 − et la cathode de D1 vont tous deux à G. Qu’est-ce que cela vous apprend ?"
+			}
+		],
+		"solution": [
+			{
+				"en": "Ground marks the reference node, taken as 0 V.",
+				"fr": "La masse indique le nœud de référence, pris à 0 V."
+			},
+			{
+				"en": "All ground symbols are the same node: D1’s cathode is connected to B1’s − terminal, so the loop is closed.",
+				"fr": "Tous les symboles de masse sont le même nœud : la cathode de D1 est reliée à la borne − de B1, donc la boucle est fermée."
+			}
+		],
+		"type": "multiple_choice",
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "a common reference point (0 V): every point marked with it is connected together",
+					"fr": "un point de référence commun (0 V) : tous les points qui portent ce symbole sont reliés entre eux"
+				},
+				"rationale": {
+					"en": "Correct: in battery circuits “ground” is just the shared return wire, our 0 V reference.",
+					"fr": "Exact : dans un circuit à piles, la « masse » n’est que le fil de retour commun, notre référence 0 V."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "a metal spike pushed into the soil",
+					"fr": "un piquet métallique planté dans le sol"
+				},
+				"rationale": {
+					"en": "That is earth in house wiring. A battery circuit does not need to touch the soil.",
+					"fr": "C’est la terre de l’installation électrique d’une maison. Un circuit à piles n’a pas besoin de toucher le sol."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "a place where current leaves the circuit and disappears",
+					"fr": "un endroit où le courant quitte le circuit et disparaît"
+				},
+				"rationale": {
+					"en": "Current never disappears: it returns to the battery through ground.",
+					"fr": "Le courant ne disparaît jamais : il revient à la pile par la masse."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "a fuse that protects the circuit",
+					"fr": "un fusible qui protège le circuit"
+				},
+				"rationale": {
+					"en": "A fuse has its own symbol (a rectangle with a line through it).",
+					"fr": "Un fusible a son propre symbole (un rectangle traversé d’un trait)."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch00.sym.torch_lamp",
+		"version": 1,
+		"conceptIds": ["diagrams.symbols"],
+		"formulaIds": [],
+		"difficulty": 1,
+		"kind": "applied",
+		"pool": "practice",
+		"prompt": {
+			"en": "This is the schematic of a torch. You need to replace the **bulb**. Which label is it?",
+			"fr": "Voici le schéma d’une lampe de poche. Vous devez remplacer l’**ampoule**. Quel est son repère ?"
+		},
+		"diagramId": "diagram.ch00.torch",
+		"hints": [
+			{
+				"en": "Labels start with a letter for the type: B battery, S switch, L lamp.",
+				"fr": "Les repères commencent par une lettre de type : B pile, S interrupteur, L lampe."
+			}
+		],
+		"solution": [
+			{
+				"en": "Find the lamp symbol (a circle with a cross in IEC, with a loop in ANSI): it is labelled L1.",
+				"fr": "Repérez le symbole de la lampe (cercle avec une croix en IEC, avec une boucle en ANSI) : il porte le repère L1."
+			}
+		],
+		"type": "multiple_choice",
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "L1 (circle with a cross or a loop)",
+					"fr": "L1 (cercle avec une croix ou une boucle)"
+				},
+				"rationale": {
+					"en": "Correct: the lamp symbol is a circle with a cross (IEC) or a loop (ANSI); L stands for lamp.",
+					"fr": "Exact : le symbole de lampe est un cercle avec une croix (IEC) ou une boucle (ANSI) ; L pour lampe."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "S1",
+					"fr": "S1"
+				},
+				"rationale": {
+					"en": "S1 is the switch: the button you press to turn the torch on.",
+					"fr": "S1 est l’interrupteur : le bouton qu’on actionne pour allumer."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "B1",
+					"fr": "B1"
+				},
+				"rationale": {
+					"en": "B1 is one of the two cells (batteries).",
+					"fr": "B1 est l’une des deux piles."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "B2",
+					"fr": "B2"
+				},
+				"rationale": {
+					"en": "B2 is the second cell.",
+					"fr": "B2 est la seconde pile."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch00.sym.exam_open_switch",
+		"version": 1,
+		"conceptIds": ["diagrams.symbols"],
+		"formulaIds": [],
+		"difficulty": 1,
+		"kind": "independent",
+		"pool": "exam",
+		"prompt": {
+			"en": "Which description matches the symbol of an **open switch**?",
+			"fr": "Quelle description correspond au symbole d’un **interrupteur ouvert** ?"
+		},
+		"hints": [],
+		"solution": [
+			{
+				"en": "A switch is drawn as a movable blade. Open = blade lifted, leaving a gap; closed = blade touching both contacts.",
+				"fr": "Un interrupteur se dessine comme une lame mobile. Ouvert = lame soulevée, avec un espace ; fermé = lame touchant les deux contacts."
+			}
+		],
+		"type": "multiple_choice",
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "a line hinged at one contact and lifted away from the other contact",
+					"fr": "un trait articulé sur un contact et soulevé, loin de l’autre contact"
+				},
+				"rationale": {
+					"en": "Correct: the gap shows that the path is broken.",
+					"fr": "Exact : l’espace montre que le chemin est coupé."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "a rectangle or zigzag line",
+					"fr": "un rectangle ou un trait en zigzag"
+				},
+				"rationale": {
+					"en": "That is a resistor.",
+					"fr": "C’est une résistance."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "a circle with a cross inside",
+					"fr": "un cercle avec une croix à l’intérieur"
+				},
+				"rationale": {
+					"en": "That is a lamp.",
+					"fr": "C’est une lampe."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "a long line and a short line, parallel",
+					"fr": "un trait long et un trait court, parallèles"
+				},
+				"rationale": {
+					"en": "That is a cell (battery).",
+					"fr": "C’est une pile."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch00.sym.exam_shopping_list",
+		"version": 1,
+		"conceptIds": ["diagrams.symbols"],
+		"formulaIds": [],
+		"difficulty": 2,
+		"kind": "applied",
+		"pool": "exam",
+		"prompt": {
+			"en": "You want to build this circuit. Which shopping list matches the schematic exactly?",
+			"fr": "Vous voulez construire ce circuit. Quelle liste d’achats correspond exactement au schéma ?"
+		},
+		"diagramId": "diagram.ch00.symbol_circuit",
+		"hints": [],
+		"solution": [
+			{
+				"en": "Read each labelled symbol: B1 battery 4.5 V, S1 switch, R1 resistor 220 Ω, D1 LED. G (ground) is a connection, not a component.",
+				"fr": "Lisez chaque symbole repéré : B1 pile 4,5 V, S1 interrupteur, R1 résistance 220 Ω, D1 LED. G (masse) est une connexion, pas un composant."
+			}
+		],
+		"type": "multiple_choice",
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "one 4.5 V battery, one switch, one 220 Ω resistor, one LED",
+					"fr": "une pile de 4,5 V, un interrupteur, une résistance de 220 Ω, une LED"
+				},
+				"rationale": {
+					"en": "Correct: B1, S1, R1 and D1. Ground G is just a shared wire, not a part to buy.",
+					"fr": "Exact : B1, S1, R1 et D1. La masse G n’est qu’un fil commun, pas un composant à acheter."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "one 4.5 V battery, one 220 Ω resistor, one lamp",
+					"fr": "une pile de 4,5 V, une résistance de 220 Ω, une lampe"
+				},
+				"rationale": {
+					"en": "D1 is an LED (triangle and arrows), not a lamp, and the switch is missing.",
+					"fr": "D1 est une LED (triangle et flèches), pas une lampe, et l’interrupteur manque."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "two batteries, one switch, one 220 Ω resistor, one LED",
+					"fr": "deux piles, un interrupteur, une résistance de 220 Ω, une LED"
+				},
+				"rationale": {
+					"en": "The ground symbol is not a second battery.",
+					"fr": "Le symbole de masse n’est pas une seconde pile."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "one 4.5 V battery, one switch, one LED",
+					"fr": "une pile de 4,5 V, un interrupteur, une LED"
+				},
+				"rationale": {
+					"en": "The 220 Ω resistor R1 is missing — and the LED needs it.",
+					"fr": "La résistance R1 de 220 Ω manque — et la LED en a besoin."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch00.sym.exam_led_direction",
+		"version": 1,
+		"conceptIds": ["diagrams.symbols"],
+		"formulaIds": [],
+		"difficulty": 2,
+		"kind": "independent",
+		"pool": "exam",
+		"prompt": {
+			"en": "In an LED symbol, what does the direction of the triangle tell you?",
+			"fr": "Dans le symbole d’une LED, qu’indique le sens du triangle ?"
+		},
+		"hints": [],
+		"solution": [
+			{
+				"en": "Triangle = arrow for conventional current, anode → cathode. The bar marks the cathode (−, often the shorter leg / flat side of the LED).",
+				"fr": "Triangle = flèche du courant conventionnel, anode → cathode. La barre indique la cathode (−, souvent la patte la plus courte / le côté plat de la LED)."
+			}
+		],
+		"type": "multiple_choice",
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "the direction in which conventional current can flow (from anode to cathode)",
+					"fr": "le sens dans lequel le courant conventionnel peut circuler (de l’anode vers la cathode)"
+				},
+				"rationale": {
+					"en": "Correct: the triangle points like an arrow from anode (+) to cathode (bar, −).",
+					"fr": "Exact : le triangle pointe comme une flèche de l’anode (+) vers la cathode (barre, −)."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "nothing: it is only decoration",
+					"fr": "rien : c’est décoratif"
+				},
+				"rationale": {
+					"en": "The direction matters: a reversed LED stays dark.",
+					"fr": "Le sens compte : une LED à l’envers reste éteinte."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "the direction the light shines",
+					"fr": "la direction de la lumière"
+				},
+				"rationale": {
+					"en": "The light is shown by the small outward arrows, not the triangle.",
+					"fr": "La lumière est indiquée par les petites flèches vers l’extérieur, pas par le triangle."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "the direction electrons are forbidden to move in the whole circuit",
+					"fr": "le sens dans lequel les électrons sont interdits dans tout le circuit"
+				},
+				"rationale": {
+					"en": "The symbol describes only this part, and it shows conventional current, not a rule for the whole circuit.",
+					"fr": "Le symbole ne décrit que ce composant et indique le courant conventionnel, pas une règle pour tout le circuit."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch00.loop.open_switch",
+		"version": 1,
+		"conceptIds": ["diagrams.closed_loop"],
+		"formulaIds": [],
+		"difficulty": 1,
+		"kind": "guided",
+		"pool": "practice",
+		"prompt": {
+			"en": "Switch S1 is **open**. Predict the current in resistor R1.",
+			"fr": "L’interrupteur S1 est **ouvert**. Prédisez le courant dans la résistance R1."
+		},
+		"diagramId": "diagram.ch00.switched_loop",
+		"hints": [
+			{
+				"en": "Follow the path from + with your finger. Can you get back to −?",
+				"fr": "Suivez le chemin depuis le + avec le doigt. Pouvez-vous revenir au − ?"
+			}
+		],
+		"solution": [
+			{
+				"en": "From B1 + you reach S1, which is open. There is no other path back to B1 −. Open loop → I = 0.",
+				"fr": "Depuis B1 + on arrive à S1, qui est ouvert. Il n’y a pas d’autre chemin vers B1 −. Boucle ouverte → I = 0."
+			}
+		],
+		"type": "prediction",
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "zero: the loop is broken, so no current flows anywhere",
+					"fr": "nul : la boucle est coupée, aucun courant ne circule nulle part"
+				},
+				"rationale": {
+					"en": "Correct: current needs a complete path from + back to −.",
+					"fr": "Exact : le courant a besoin d’un chemin complet du + jusqu’au −."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "a small current, because some leaks through the gap",
+					"fr": "un petit courant, car un peu passe par l’espace"
+				},
+				"rationale": {
+					"en": "Air at low voltage is an excellent insulator: no current crosses the gap.",
+					"fr": "L’air sous basse tension est un excellent isolant : aucun courant ne franchit l’espace."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "the normal current, because R1 is still connected to the − terminal",
+					"fr": "le courant normal, car R1 reste relié à la borne −"
+				},
+				"rationale": {
+					"en": "One connection is not enough: the path must also come back from the + terminal.",
+					"fr": "Une seule connexion ne suffit pas : le chemin doit aussi venir de la borne +."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "current flows from + up to the switch and stops there",
+					"fr": "le courant va du + jusqu’à l’interrupteur et s’arrête là"
+				},
+				"rationale": {
+					"en": "Current does not “pile up” in a wire: with no complete loop, there is no current at all.",
+					"fr": "Le courant ne « s’entasse » pas dans un fil : sans boucle complète, il n’y a aucun courant."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch00.loop.crossing",
+		"version": 1,
+		"conceptIds": ["diagrams.closed_loop"],
+		"formulaIds": [],
+		"difficulty": 2,
+		"kind": "independent",
+		"pool": "practice",
+		"prompt": {
+			"en": "Is lamp **L1** electrically connected to resistor **R1**?",
+			"fr": "La lampe **L1** est-elle reliée électriquement à la résistance **R1** ?"
+		},
+		"diagramId": "diagram.ch00.junction_crossing",
+		"hints": [
+			{
+				"en": "Look closely at the crossings: is there a dot?",
+				"fr": "Regardez bien les croisements : y a-t-il un point ?"
+			}
+		],
+		"solution": [
+			{
+				"en": "Dots at R1’s top and bottom join R1 to B1’s wires.",
+				"fr": "Les points en haut et en bas de R1 relient R1 aux fils de B1."
+			},
+			{
+				"en": "The L1 return wire crosses those wires with no dot: no connection. L1 and B2 form their own separate loop.",
+				"fr": "Le fil de retour de L1 croise ces fils sans point : pas de connexion. L1 et B2 forment leur propre boucle séparée."
+			}
+		],
+		"type": "multiple_choice",
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "No: the wire from L1 crosses the other circuit without a dot, so it is not connected",
+					"fr": "Non : le fil venant de L1 croise l’autre circuit sans point, il n’y est donc pas relié"
+				},
+				"rationale": {
+					"en": "Correct: crossing lines without a dot are separate wires passing over each other.",
+					"fr": "Exact : des traits qui se croisent sans point sont des fils séparés qui passent l’un au-dessus de l’autre."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "Yes: wherever two wires touch on the drawing they are connected",
+					"fr": "Oui : partout où deux fils se touchent sur le dessin, ils sont reliés"
+				},
+				"rationale": {
+					"en": "Only a junction dot means a connection. A plain crossing does not.",
+					"fr": "Seul un point de jonction indique une connexion. Un simple croisement, non."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "Yes: they are drawn on the same schematic",
+					"fr": "Oui : ils sont dessinés sur le même schéma"
+				},
+				"rationale": {
+					"en": "A schematic can show several independent circuits.",
+					"fr": "Un schéma peut montrer plusieurs circuits indépendants."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "Only when B1 and B2 have the same voltage",
+					"fr": "Seulement si B1 et B2 ont la même tension"
+				},
+				"rationale": {
+					"en": "Connections depend on wires and dots, never on battery values.",
+					"fr": "Les connexions dépendent des fils et des points, jamais de la valeur des piles."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch00.loop.trace_torch",
+		"version": 1,
+		"conceptIds": ["diagrams.closed_loop"],
+		"formulaIds": [],
+		"difficulty": 2,
+		"kind": "independent",
+		"pool": "practice",
+		"prompt": {
+			"en": "Trace the torch loop in the direction of conventional current (from + to −). Put the steps in order.",
+			"fr": "Suivez la boucle de la lampe de poche dans le sens du courant conventionnel (du + vers le −). Mettez les étapes dans l’ordre."
+		},
+		"diagramId": "diagram.ch00.torch",
+		"hints": [
+			{
+				"en": "Start at the long line at the top of B1 and follow the wire.",
+				"fr": "Commencez au trait long en haut de B1 et suivez le fil."
+			}
+		],
+		"solution": [
+			{
+				"en": "B1 + → S1 → L1 → bottom wire → B2 − → through B2 and B1 → B1 +. One single loop: every part carries the same current.",
+				"fr": "B1 + → S1 → L1 → fil du bas → B2 − → à travers B2 et B1 → B1 +. Une seule boucle : tous les éléments sont traversés par le même courant."
+			}
+		],
+		"type": "ordering",
+		"items": [
+			{
+				"id": "leave",
+				"text": {
+					"en": "Leave the + terminal of B1",
+					"fr": "Partir de la borne + de B1"
+				}
+			},
+			{
+				"id": "switch",
+				"text": {
+					"en": "Pass through switch S1",
+					"fr": "Traverser l’interrupteur S1"
+				}
+			},
+			{
+				"id": "lamp",
+				"text": {
+					"en": "Pass through lamp L1",
+					"fr": "Traverser la lampe L1"
+				}
+			},
+			{
+				"id": "enter",
+				"text": {
+					"en": "Reach the − terminal of B2 along the bottom wire",
+					"fr": "Atteindre la borne − de B2 par le fil du bas"
+				}
+			},
+			{
+				"id": "cells",
+				"text": {
+					"en": "Go through B2 then B1, back to the start",
+					"fr": "Traverser B2 puis B1 pour revenir au départ"
+				}
+			}
+		],
+		"correctOrder": ["leave", "switch", "lamp", "enter", "cells"],
+		"displayOrder": ["lamp", "cells", "leave", "enter", "switch"]
+	},
+	{
+		"id": "exercise.ch00.loop.dead_torch",
+		"version": 1,
+		"conceptIds": ["diagrams.closed_loop"],
+		"formulaIds": [],
+		"difficulty": 2,
+		"kind": "applied",
+		"pool": "practice",
+		"prompt": {
+			"en": "A torch stays dark. The cells are new and the bulb works in another torch. The switch is on. What is the most likely cause?",
+			"fr": "Une lampe de poche reste éteinte. Les piles sont neuves et l’ampoule fonctionne dans une autre lampe. L’interrupteur est sur marche. Quelle est la cause la plus probable ?"
+		},
+		"hints": [
+			{
+				"en": "All the parts are good. What else must be true for current to flow?",
+				"fr": "Tous les composants sont bons. Que faut-il d’autre pour que le courant circule ?"
+			}
+		],
+		"solution": [
+			{
+				"en": "Current needs a complete closed loop through every part.",
+				"fr": "Le courant a besoin d’une boucle fermée complète à travers chaque élément."
+			},
+			{
+				"en": "Good parts but no light → look for an open point: dirty contacts, a bent spring, a cell the wrong way round.",
+				"fr": "Composants bons mais pas de lumière → cherchez un point d’ouverture : contacts sales, ressort tordu, pile à l’envers."
+			}
+		],
+		"type": "diagnose",
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "a break in the loop, such as a corroded spring contact or a cell inserted backwards",
+					"fr": "une coupure dans la boucle, par exemple un ressort de contact oxydé ou une pile mise à l’envers"
+				},
+				"rationale": {
+					"en": "Correct: if the parts are good, the path is the suspect. A reversed cell also cancels the other cell’s voltage.",
+					"fr": "Exact : si les composants sont bons, c’est le chemin qui est suspect. Une pile à l’envers annule aussi la tension de l’autre."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "the cells are too full of charge",
+					"fr": "les piles sont trop chargées"
+				},
+				"rationale": {
+					"en": "There is no such thing: a fresh cell simply has its full voltage.",
+					"fr": "Cela n’existe pas : une pile neuve a simplement sa pleine tension."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "the bulb uses up the current before it can return",
+					"fr": "l’ampoule consomme le courant avant qu’il revienne"
+				},
+				"rationale": {
+					"en": "Current is not used up: the same current flows all the way round the loop. The bulb converts energy, not current.",
+					"fr": "Le courant ne s’use pas : le même courant fait tout le tour de la boucle. L’ampoule convertit de l’énergie, pas du courant."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "the wires are too long for current to reach the bulb",
+					"fr": "les fils sont trop longs pour que le courant atteigne l’ampoule"
+				},
+				"rationale": {
+					"en": "A few centimetres of wire make no difference in a torch.",
+					"fr": "Quelques centimètres de fil ne changent rien dans une lampe de poche."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch00.loop.exam_branches",
+		"version": 1,
+		"conceptIds": ["diagrams.closed_loop"],
+		"formulaIds": [],
+		"difficulty": 2,
+		"kind": "independent",
+		"pool": "exam",
+		"prompt": {
+			"en": "In this schematic, current leaving B1 can return to B1 through which components?",
+			"fr": "Dans ce schéma, le courant qui sort de B1 peut revenir à B1 en traversant quels composants ?"
+		},
+		"diagramId": "diagram.ch00.junction_crossing",
+		"hints": [],
+		"solution": [
+			{
+				"en": "Follow B1 + along the top wire: dots lead into R1 and R2, and both come back via the bottom wire (with a dot) to B1 −. The L1 wire only crosses, without dots.",
+				"fr": "Suivez B1 + sur le fil du haut : des points mènent à R1 et R2, qui reviennent toutes deux par le fil du bas (avec un point) jusqu’à B1 −. Le fil de L1 ne fait que croiser, sans point."
+			}
+		],
+		"type": "prediction",
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "R1 or R2 (two paths, joined by the dots)",
+					"fr": "R1 ou R2 (deux chemins, reliés par les points)"
+				},
+				"rationale": {
+					"en": "Correct: the dots join R1 and R2 to B1’s top and bottom wires, giving two closed loops.",
+					"fr": "Exact : les points relient R1 et R2 aux fils du haut et du bas de B1, ce qui donne deux boucles fermées."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "only R2, because R1 is drawn in the middle",
+					"fr": "seulement R2, car R1 est dessinée au milieu"
+				},
+				"rationale": {
+					"en": "Position on the page does not matter; the dots show R1 is connected.",
+					"fr": "La position sur la feuille ne compte pas ; les points montrent que R1 est reliée."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "R1, R2 and L1, because the L1 wire crosses B1’s wires",
+					"fr": "R1, R2 et L1, car le fil de L1 croise les fils de B1"
+				},
+				"rationale": {
+					"en": "Crossings without a dot are not connections: L1 belongs to B2’s loop.",
+					"fr": "Les croisements sans point ne sont pas des connexions : L1 appartient à la boucle de B2."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "none: there is no switch, so the loop is open",
+					"fr": "aucun : il n’y a pas d’interrupteur, donc la boucle est ouverte"
+				},
+				"rationale": {
+					"en": "A loop does not need a switch to be closed; wires alone can close it.",
+					"fr": "Une boucle n’a pas besoin d’interrupteur pour être fermée ; des fils suffisent."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch00.loop.exam_doorbell",
+		"version": 1,
+		"conceptIds": ["diagrams.closed_loop"],
+		"formulaIds": [],
+		"difficulty": 2,
+		"kind": "applied",
+		"pool": "exam",
+		"prompt": {
+			"en": "A battery doorbell (battery, push-button, buzzer in one loop) only rings **while the button is held down**. Why?",
+			"fr": "Une sonnette à pile (pile, bouton-poussoir, buzzer dans une seule boucle) ne sonne **que tant qu’on appuie sur le bouton**. Pourquoi ?"
+		},
+		"hints": [],
+		"solution": [
+			{
+				"en": "Button pressed → loop closed → current → buzzer sounds. Button released → gap → open loop → no current.",
+				"fr": "Bouton enfoncé → boucle fermée → courant → le buzzer sonne. Bouton relâché → espace → boucle ouverte → pas de courant."
+			}
+		],
+		"type": "diagnose",
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "pressing the button closes the loop; releasing it opens the loop again",
+					"fr": "appuyer sur le bouton ferme la boucle ; le relâcher la rouvre"
+				},
+				"rationale": {
+					"en": "Correct: a push-button is a switch that is closed only while pressed.",
+					"fr": "Exact : un bouton-poussoir est un interrupteur fermé seulement pendant l’appui."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "the button stores current and releases it while pressed",
+					"fr": "le bouton stocke du courant et le libère pendant l’appui"
+				},
+				"rationale": {
+					"en": "A switch stores nothing: it only connects or disconnects the path.",
+					"fr": "Un interrupteur ne stocke rien : il ne fait que relier ou couper le chemin."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "the battery only produces voltage when the button is pressed",
+					"fr": "la pile ne produit une tension que lorsqu’on appuie"
+				},
+				"rationale": {
+					"en": "The battery voltage is always there; without a closed loop it just cannot drive a current.",
+					"fr": "La tension de la pile est toujours présente ; sans boucle fermée, elle ne peut simplement pas faire circuler de courant."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "the doorbell is faulty: it should ring all the time",
+					"fr": "la sonnette est en panne : elle devrait sonner en permanence"
+				},
+				"rationale": {
+					"en": "That is the intended behaviour of a doorbell.",
+					"fr": "C’est le fonctionnement voulu d’une sonnette."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch00.loop.exam_torch_open",
+		"version": 1,
+		"conceptIds": ["diagrams.closed_loop"],
+		"formulaIds": [],
+		"difficulty": 1,
+		"kind": "independent",
+		"pool": "exam",
+		"prompt": {
+			"en": "In this torch, switch S1 is opened. Which statement is true?",
+			"fr": "Dans cette lampe de poche, on ouvre l’interrupteur S1. Quelle affirmation est vraie ?"
+		},
+		"diagramId": "diagram.ch00.torch",
+		"hints": [],
+		"solution": [
+			{
+				"en": "The torch is one series loop: B1 → S1 → L1 → B2 → B1. Opening S1 breaks it, so I = 0 everywhere and the lamp goes out.",
+				"fr": "La lampe de poche est une seule boucle en série : B1 → S1 → L1 → B2 → B1. Ouvrir S1 la coupe, donc I = 0 partout et la lampe s’éteint."
+			}
+		],
+		"type": "multiple_choice",
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "no current flows anywhere in the loop, not even through the cells",
+					"fr": "aucun courant ne circule dans la boucle, pas même dans les piles"
+				},
+				"rationale": {
+					"en": "Correct: in a single loop, one gap stops the current everywhere.",
+					"fr": "Exact : dans une boucle unique, une seule coupure arrête le courant partout."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "current still flows between B1 and B2",
+					"fr": "le courant circule toujours entre B1 et B2"
+				},
+				"rationale": {
+					"en": "B1 and B2 are part of the same loop: they carry current only when the whole loop is closed.",
+					"fr": "B1 et B2 font partie de la même boucle : ils ne sont traversés par un courant que si toute la boucle est fermée."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "the lamp is dimmer but still on",
+					"fr": "la lampe brille moins mais reste allumée"
+				},
+				"rationale": {
+					"en": "An open switch is a complete break, not a reduction.",
+					"fr": "Un interrupteur ouvert est une coupure totale, pas une simple réduction."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "current flows from B2 to L1 along the bottom wire only",
+					"fr": "le courant circule de B2 vers L1 par le fil du bas seulement"
+				},
+				"rationale": {
+					"en": "Current cannot flow along one wire alone; it needs a full loop.",
+					"fr": "Le courant ne peut pas circuler dans un seul fil ; il lui faut une boucle complète."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch00.safety.source",
+		"version": 1,
+		"conceptIds": ["safety.low_voltage"],
+		"formulaIds": [],
+		"difficulty": 1,
+		"kind": "guided",
+		"pool": "practice",
+		"prompt": {
+			"en": "Which power source is appropriate for learning experiments?",
+			"fr": "Quelle source d’alimentation convient aux expériences d’apprentissage ?"
+		},
+		"hints": [
+			{
+				"en": "Stay at or below 12 V, from batteries or USB.",
+				"fr": "Restez à 12 V ou moins, avec des piles ou l’USB."
+			}
+		],
+		"solution": [
+			{
+				"en": "Use low-voltage sources (≤ 12 V) such as AA packs or USB 5 V. Never mains, never damaged lithium cells.",
+				"fr": "Utilisez des sources basse tension (≤ 12 V) comme des piles AA ou l’USB 5 V. Jamais le secteur, jamais de batterie lithium abîmée."
+			}
+		],
+		"type": "multiple_choice",
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "a holder with three AA cells (4.5 V)",
+					"fr": "un boîtier de trois piles AA (4,5 V)"
+				},
+				"rationale": {
+					"en": "Correct: low voltage, limited energy, easy to disconnect.",
+					"fr": "Exact : basse tension, énergie limitée, facile à débrancher."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "a wall socket, using a cut-off appliance cable",
+					"fr": "une prise murale, avec un câble d’appareil coupé"
+				},
+				"rationale": {
+					"en": "Never: mains (230 V / 120 V) can kill.",
+					"fr": "Jamais : le secteur (230 V / 120 V) peut tuer."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "a transformer salvaged from an old microwave oven",
+					"fr": "un transformateur récupéré dans un vieux micro-ondes"
+				},
+				"rationale": {
+					"en": "Extremely dangerous: it is mains-powered and produces lethal high voltage.",
+					"fr": "Extrêmement dangereux : il est branché sur le secteur et produit une haute tension mortelle."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "a swollen phone battery",
+					"fr": "une batterie de téléphone gonflée"
+				},
+				"rationale": {
+					"en": "A swollen lithium battery can catch fire. Stop using it and recycle it.",
+					"fr": "Une batterie lithium gonflée peut prendre feu. Cessez de l’utiliser et recyclez-la."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch00.safety.short_switch",
+		"version": 1,
+		"conceptIds": ["safety.low_voltage"],
+		"formulaIds": [],
+		"difficulty": 2,
+		"kind": "independent",
+		"pool": "practice",
+		"prompt": {
+			"en": "What happens if someone presses push-button **S1**?",
+			"fr": "Que se passe-t-il si quelqu’un appuie sur le bouton-poussoir **S1** ?"
+		},
+		"diagramId": "diagram.ch00.short_risk",
+		"hints": [
+			{
+				"en": "Trace a path from B1 + to B1 − through S1. Is there any component on it to limit current?",
+				"fr": "Tracez un chemin de B1 + à B1 − à travers S1. Y a-t-il un composant pour limiter le courant ?"
+			}
+		],
+		"solution": [
+			{
+				"en": "S1 is connected directly between + and −, in parallel with the battery.",
+				"fr": "S1 est branché directement entre + et −, en parallèle sur la pile."
+			},
+			{
+				"en": "Closing it creates a short circuit: only the tiny resistance of wires and battery limits current, so they heat up fast. A 9 V battery can get hot enough to burn.",
+				"fr": "Le fermer crée un court-circuit : seule la très faible résistance des fils et de la pile limite le courant, qui chauffent vite. Une pile de 9 V peut devenir assez chaude pour brûler."
+			}
+		],
+		"type": "diagnose",
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "S1 short-circuits the battery: a very large current heats the battery and wires, and the lamp goes out",
+					"fr": "S1 court-circuite la pile : un courant très fort fait chauffer la pile et les fils, et la lampe s’éteint"
+				},
+				"rationale": {
+					"en": "Correct: S1 joins + to − with almost no resistance. The current takes that easy path instead of the lamp.",
+					"fr": "Exact : S1 relie le + au − avec presque aucune résistance. Le courant prend ce chemin facile plutôt que la lampe."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "the lamp gets brighter",
+					"fr": "la lampe brille davantage"
+				},
+				"rationale": {
+					"en": "The lamp is bypassed by the switch, so it gets almost no current.",
+					"fr": "La lampe est court-circuitée par l’interrupteur, elle ne reçoit presque plus de courant."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "nothing: a switch is not a load",
+					"fr": "rien : un interrupteur n’est pas une charge"
+				},
+				"rationale": {
+					"en": "That is exactly the problem: with no load, nothing limits the current.",
+					"fr": "C’est justement le problème : sans charge, rien ne limite le courant."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "the lamp turns off safely, like a normal off switch",
+					"fr": "la lampe s’éteint sans danger, comme avec un interrupteur normal"
+				},
+				"rationale": {
+					"en": "The lamp does go out, but not safely — the battery is shorted. An off switch should be in series with the lamp.",
+					"fr": "La lampe s’éteint bien, mais pas sans danger — la pile est en court-circuit. Un interrupteur d’arrêt doit être en série avec la lampe."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch00.safety.led_direct",
+		"version": 1,
+		"conceptIds": ["safety.low_voltage"],
+		"formulaIds": [],
+		"difficulty": 2,
+		"kind": "independent",
+		"pool": "practice",
+		"prompt": {
+			"en": "An LED is connected straight to a 9 V battery, with no resistor. Predict what happens.",
+			"fr": "Une LED est branchée directement sur une pile de 9 V, sans résistance. Prédisez ce qui se passe."
+		},
+		"diagramId": "diagram.ch00.led_no_resistor",
+		"hints": [
+			{
+				"en": "What limits the current in this loop?",
+				"fr": "Qu’est-ce qui limite le courant dans cette boucle ?"
+			}
+		],
+		"solution": [
+			{
+				"en": "A red LED drops about 2 V. The remaining 7 V has nothing to “push against” except tiny wire and battery resistance.",
+				"fr": "Une LED rouge consomme environ 2 V. Les 7 V restants n’ont presque rien contre quoi « pousser », hormis la très faible résistance des fils et de la pile."
+			},
+			{
+				"en": "The current becomes far larger than the ~20 mA an LED can take. Always put a resistor in series (you will compute it in chapter 1).",
+				"fr": "Le courant devient bien plus fort que les ~20 mA qu’une LED supporte. Mettez toujours une résistance en série (vous la calculerez au chapitre 1)."
+			}
+		],
+		"type": "prediction",
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "far too much current flows: the LED flashes brightly and is likely destroyed",
+					"fr": "un courant bien trop fort circule : la LED flashe et risque d’être détruite"
+				},
+				"rationale": {
+					"en": "Correct: an LED needs only about 2 V and has almost nothing to limit current above that.",
+					"fr": "Exact : une LED n’a besoin que d’environ 2 V et presque rien ne limite le courant au-delà."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "it glows normally: LEDs take only the current they need",
+					"fr": "elle brille normalement : une LED ne prend que le courant dont elle a besoin"
+				},
+				"rationale": {
+					"en": "This is the classic misconception. LEDs do not regulate their own current.",
+					"fr": "C’est l’idée fausse classique. Une LED ne règle pas elle-même son courant."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "nothing happens: an LED needs a resistor to light up at all",
+					"fr": "rien ne se passe : sans résistance, une LED ne peut pas s’allumer"
+				},
+				"rationale": {
+					"en": "The resistor is not what makes it light; it protects it by limiting current.",
+					"fr": "Ce n’est pas la résistance qui l’allume ; elle la protège en limitant le courant."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "the battery voltage safely drops to 2 V",
+					"fr": "la tension de la pile descend sans danger à 2 V"
+				},
+				"rationale": {
+					"en": "Forcing the battery down that far means a huge current — not safe.",
+					"fr": "Faire chuter ainsi la tension de la pile suppose un courant énorme — pas sans danger."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch00.safety.swollen_cell",
+		"version": 1,
+		"conceptIds": ["safety.low_voltage"],
+		"formulaIds": [],
+		"difficulty": 1,
+		"kind": "applied",
+		"pool": "practice",
+		"prompt": {
+			"en": "An old phone’s lithium battery looks **puffy and swollen**. What should you do?",
+			"fr": "La batterie lithium d’un vieux téléphone est **bombée et gonflée**. Que devez-vous faire ?"
+		},
+		"hints": [
+			{
+				"en": "Swelling is a warning sign of internal damage.",
+				"fr": "Le gonflement est un signe de dommage interne."
+			}
+		],
+		"solution": [
+			{
+				"en": "Swollen lithium cell = damaged. Do not charge, puncture or use it. Store it away from flammable things and recycle it at a collection point.",
+				"fr": "Batterie lithium gonflée = abîmée. Ne la chargez pas, ne la percez pas, ne l’utilisez pas. Rangez-la loin de tout produit inflammable et déposez-la dans un point de collecte."
+			}
+		],
+		"type": "multiple_choice",
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "stop using it, do not charge or pierce it, and take it to a battery recycling point",
+					"fr": "cesser de l’utiliser, ne pas la charger ni la percer, et la déposer dans un point de collecte de piles"
+				},
+				"rationale": {
+					"en": "Correct: swelling means internal damage and a fire risk.",
+					"fr": "Exact : le gonflement signale un dommage interne et un risque d’incendie."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "pierce it to let the gas out, then keep using it",
+					"fr": "la percer pour laisser sortir le gaz, puis continuer à l’utiliser"
+				},
+				"rationale": {
+					"en": "Piercing a lithium cell can make it burst into flames.",
+					"fr": "Percer une batterie lithium peut la faire s’enflammer."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "use it for your experiments since it still holds charge",
+					"fr": "l’utiliser pour vos expériences puisqu’elle tient encore la charge"
+				},
+				"rationale": {
+					"en": "Damaged lithium cells can overheat suddenly; never use them.",
+					"fr": "Une batterie lithium abîmée peut surchauffer brusquement ; ne l’utilisez jamais."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "put it in the household bin",
+					"fr": "la jeter à la poubelle ordinaire"
+				},
+				"rationale": {
+					"en": "Lithium cells in rubbish trucks cause fires; they must be recycled separately.",
+					"fr": "Les batteries lithium dans les camions-poubelles provoquent des incendies ; elles se recyclent à part."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch00.safety.exam_pocket",
+		"version": 1,
+		"conceptIds": ["safety.low_voltage"],
+		"formulaIds": [],
+		"difficulty": 1,
+		"kind": "independent",
+		"pool": "exam",
+		"prompt": {
+			"en": "Why should you never carry a loose 9 V battery in a pocket with coins or keys?",
+			"fr": "Pourquoi ne faut-il jamais transporter une pile de 9 V en vrac dans une poche avec des pièces ou des clés ?"
+		},
+		"hints": [],
+		"solution": [
+			{
+				"en": "Metal across both terminals = short circuit = large current = heat (burns, even fire). Keep batteries in their packaging or tape the terminals.",
+				"fr": "Du métal entre les deux bornes = court-circuit = fort courant = chaleur (brûlures, voire incendie). Gardez les piles dans leur emballage ou protégez les bornes avec du ruban adhésif."
+			}
+		],
+		"type": "multiple_choice",
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "a coin or key can bridge the two close terminals and short the battery, making it very hot",
+					"fr": "une pièce ou une clé peut relier les deux bornes proches et court-circuiter la pile, qui devient très chaude"
+				},
+				"rationale": {
+					"en": "Correct: 9 V terminals sit side by side, so a short is easy.",
+					"fr": "Exact : les bornes d’une pile de 9 V sont côte à côte, le court-circuit est donc facile."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "the coins magnetise the battery",
+					"fr": "les pièces aimantent la pile"
+				},
+				"rationale": {
+					"en": "Magnetism is not the issue; a metal bridge between terminals is.",
+					"fr": "Le magnétisme n’y est pour rien ; le problème est le pont métallique entre les bornes."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "the battery slowly and harmlessly discharges into the coins",
+					"fr": "la pile se décharge lentement et sans danger dans les pièces"
+				},
+				"rationale": {
+					"en": "A short is fast and produces heat; it is not harmless.",
+					"fr": "Un court-circuit est rapide et produit de la chaleur ; ce n’est pas sans danger."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "the metal raises the battery voltage",
+					"fr": "le métal augmente la tension de la pile"
+				},
+				"rationale": {
+					"en": "Nothing in a pocket can raise the battery voltage.",
+					"fr": "Rien dans une poche ne peut augmenter la tension de la pile."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch00.safety.exam_hot_resistor",
+		"version": 1,
+		"conceptIds": ["safety.low_voltage"],
+		"formulaIds": [],
+		"difficulty": 1,
+		"kind": "applied",
+		"pool": "exam",
+		"prompt": {
+			"en": "A minute after switching on, a resistor in your breadboard circuit smells burnt and is too hot to touch. What should you do **first**?",
+			"fr": "Une minute après la mise sous tension, une résistance de votre circuit sur plaque d’essai sent le brûlé et est trop chaude pour être touchée. Que devez-vous faire **en premier** ?"
+		},
+		"hints": [],
+		"solution": [
+			{
+				"en": "Power off first. A burning smell means the resistor dissipates more power than it is rated for (wrong value, short, or too high a voltage). Find the cause before powering on again.",
+				"fr": "Coupez d’abord l’alimentation. L’odeur de brûlé signifie que la résistance dissipe plus de puissance que prévu (mauvaise valeur, court-circuit ou tension trop élevée). Trouvez la cause avant de remettre sous tension."
+			}
+		],
+		"type": "diagnose",
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "disconnect the power, let it cool, then check its value and the circuit",
+					"fr": "couper l’alimentation, la laisser refroidir, puis vérifier sa valeur et le circuit"
+				},
+				"rationale": {
+					"en": "Correct: remove the energy source first, then investigate once cool.",
+					"fr": "Exact : on supprime d’abord la source d’énergie, puis on cherche la cause une fois refroidi."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "touch it to judge how hot it is",
+					"fr": "la toucher pour juger de sa température"
+				},
+				"rationale": {
+					"en": "It can burn your skin. Never touch a part that smells hot.",
+					"fr": "Elle peut vous brûler. Ne touchez jamais un composant qui sent le chaud."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "pour water on it to cool it down",
+					"fr": "verser de l’eau dessus pour la refroidir"
+				},
+				"rationale": {
+					"en": "Never pour liquid on a powered circuit: it can short other parts and damage the battery.",
+					"fr": "Ne versez jamais de liquide sur un circuit alimenté : cela peut court-circuiter d’autres éléments et abîmer la pile."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "leave it running: resistors are meant to get hot",
+					"fr": "le laisser fonctionner : les résistances sont faites pour chauffer"
+				},
+				"rationale": {
+					"en": "Slightly warm can be normal; burnt and too hot to touch means it is overloaded.",
+					"fr": "Tiède peut être normal ; une odeur de brûlé et une chaleur insupportable signalent une surcharge."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch00.safety.exam_polarized",
+		"version": 1,
+		"conceptIds": ["safety.low_voltage"],
+		"formulaIds": [],
+		"difficulty": 2,
+		"kind": "independent",
+		"pool": "exam",
+		"prompt": {
+			"en": "A part is described as **polarized** (for example an LED or an electrolytic capacitor). What does this mean?",
+			"fr": "Un composant est dit **polarisé** (par exemple une LED ou un condensateur électrolytique). Qu’est-ce que cela signifie ?"
+		},
+		"hints": [],
+		"solution": [
+			{
+				"en": "Polarized = it has a defined + and −. Check the marking (long leg, flat side, stripe) before connecting.",
+				"fr": "Polarisé = il a un + et un − définis. Vérifiez le repère (patte longue, méplat, bande) avant de brancher."
+			}
+		],
+		"type": "multiple_choice",
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "it has a + side and a − side and must be connected the right way round",
+					"fr": "il a un côté + et un côté − et doit être branché dans le bon sens"
+				},
+				"rationale": {
+					"en": "Correct: reversed, an LED stays dark and an electrolytic capacitor can overheat or burst.",
+					"fr": "Exact : à l’envers, une LED reste éteinte et un condensateur électrolytique peut chauffer ou éclater."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "it works the same way in both directions",
+					"fr": "il fonctionne de la même façon dans les deux sens"
+				},
+				"rationale": {
+					"en": "That describes a non-polarized part, such as a resistor.",
+					"fr": "Cela décrit un composant non polarisé, comme une résistance."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "it can only be used with magnets",
+					"fr": "il ne s’utilise qu’avec des aimants"
+				},
+				"rationale": {
+					"en": "“Polarized” here refers to electrical + and −, not magnetic poles.",
+					"fr": "« Polarisé » désigne ici le + et le − électriques, pas des pôles magnétiques."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "it must be connected to the ground symbol",
+					"fr": "il doit être relié au symbole de masse"
+				},
+				"rationale": {
+					"en": "Polarity is about orientation, not about ground.",
+					"fr": "La polarité concerne l’orientation, pas la masse."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch00.safety.exam_mains",
+		"version": 1,
+		"conceptIds": ["safety.low_voltage"],
+		"formulaIds": [],
+		"difficulty": 1,
+		"kind": "independent",
+		"pool": "exam",
+		"prompt": {
+			"en": "Why does this course forbid experiments on mains (230 V / 120 V)?",
+			"fr": "Pourquoi ce cours interdit-il les expériences sur le secteur (230 V / 120 V) ?"
+		},
+		"hints": [],
+		"solution": [
+			{
+				"en": "Body resistance is high enough that ≤ 12 V drives only a tiny, harmless current through dry skin. 230 V can drive a current that stops the heart. So: batteries and USB only.",
+				"fr": "La résistance du corps est assez grande pour que ≤ 12 V ne fasse passer qu’un courant minuscule et sans danger à travers une peau sèche. 230 V peut faire passer un courant qui arrête le cœur. Donc : piles et USB uniquement."
+			}
+		],
+		"type": "multiple_choice",
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "mains voltage can drive a deadly current through the human body; low voltage (≤ 12 V) normally cannot",
+					"fr": "la tension du secteur peut faire passer un courant mortel dans le corps ; une basse tension (≤ 12 V) ne le peut normalement pas"
+				},
+				"rationale": {
+					"en": "Correct: the higher the voltage, the more current it can push through your skin and body.",
+					"fr": "Exact : plus la tension est élevée, plus elle peut faire passer de courant à travers la peau et le corps."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "mains electricity is weaker than batteries",
+					"fr": "le courant du secteur est plus faible que celui des piles"
+				},
+				"rationale": {
+					"en": "The opposite: mains can deliver far more power than any battery we use.",
+					"fr": "C’est l’inverse : le secteur peut fournir bien plus de puissance que nos piles."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "only because mains components are expensive",
+					"fr": "uniquement parce que les composants secteur sont chers"
+				},
+				"rationale": {
+					"en": "Cost is not the reason; the risk of electrocution and fire is.",
+					"fr": "Le coût n’est pas la raison ; c’est le risque d’électrocution et d’incendie."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "it is allowed if you wear rubber gloves",
+					"fr": "c’est autorisé si on porte des gants en caoutchouc"
+				},
+				"rationale": {
+					"en": "Ordinary gloves are not proper protection; mains work needs training. This course never uses mains.",
+					"fr": "Des gants ordinaires ne protègent pas vraiment ; travailler sur le secteur exige une formation. Ce cours n’utilise jamais le secteur."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch00.safety.exam_fix_led",
+		"version": 1,
+		"conceptIds": ["safety.low_voltage"],
+		"formulaIds": [],
+		"difficulty": 2,
+		"kind": "applied",
+		"pool": "exam",
+		"prompt": {
+			"en": "A friend wired this circuit. Which change makes it safe for the LED?",
+			"fr": "Un ami a câblé ce circuit. Quelle modification le rend sûr pour la LED ?"
+		},
+		"diagramId": "diagram.ch00.led_no_resistor",
+		"hints": [],
+		"solution": [
+			{
+				"en": "Nothing in the loop limits current. Put a resistor in series (in chapter 1 you will compute its value, e.g. about 390 Ω for a red LED on 9 V).",
+				"fr": "Rien dans la boucle ne limite le courant. Ajoutez une résistance en série (au chapitre 1 vous calculerez sa valeur, par exemple environ 390 Ω pour une LED rouge sur 9 V)."
+			}
+		],
+		"type": "multiple_choice",
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "add a resistor in series with the LED",
+					"fr": "ajouter une résistance en série avec la LED"
+				},
+				"rationale": {
+					"en": "Correct: the series resistor limits the current to a safe value.",
+					"fr": "Exact : la résistance en série limite le courant à une valeur sûre."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "add a second LED in parallel",
+					"fr": "ajouter une seconde LED en parallèle"
+				},
+				"rationale": {
+					"en": "Each LED still sees the full 9 V with nothing to limit current.",
+					"fr": "Chaque LED reçoit toujours les 9 V sans rien pour limiter le courant."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "turn the battery round",
+					"fr": "retourner la pile"
+				},
+				"rationale": {
+					"en": "The LED would simply stay dark; nothing would be limited or fixed.",
+					"fr": "La LED resterait simplement éteinte ; rien ne serait limité ni réparé."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "use a 12 V battery instead",
+					"fr": "utiliser une pile de 12 V à la place"
+				},
+				"rationale": {
+					"en": "More voltage makes the over-current even worse.",
+					"fr": "Plus de tension aggrave encore le surcourant."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch00.safety.exam_test_cell",
+		"version": 1,
+		"conceptIds": ["safety.low_voltage"],
+		"formulaIds": [],
+		"difficulty": 1,
+		"kind": "applied",
+		"pool": "exam",
+		"prompt": {
+			"en": "You want to know whether an AA cell is still good. Which method is safe?",
+			"fr": "Vous voulez savoir si une pile AA est encore bonne. Quelle méthode est sûre ?"
+		},
+		"hints": [],
+		"solution": [
+			{
+				"en": "Use the voltmeter (DC V range) across the terminals. Never short a cell, never put an ammeter directly across it.",
+				"fr": "Utilisez le voltmètre (calibre V continu) entre les bornes. Ne court-circuitez jamais une pile, ne branchez jamais un ampèremètre directement à ses bornes."
+			}
+		],
+		"type": "multiple_choice",
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "measure its voltage with a multimeter set to DC volts",
+					"fr": "mesurer sa tension avec un multimètre réglé sur volts continus"
+				},
+				"rationale": {
+					"en": "Correct: a voltmeter draws almost no current. A fresh AA cell reads about 1.5 V.",
+					"fr": "Exact : un voltmètre ne consomme presque aucun courant. Une pile AA neuve affiche environ 1,5 V."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "touch a wire across both ends to see if it sparks",
+					"fr": "relier ses deux bornes avec un fil pour voir s’il y a une étincelle"
+				},
+				"rationale": {
+					"en": "That is a deliberate short circuit: it heats the wire and damages the cell.",
+					"fr": "C’est un court-circuit volontaire : il fait chauffer le fil et abîme la pile."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "set the multimeter to amps and connect it directly across the cell",
+					"fr": "régler le multimètre sur ampères et le brancher directement sur la pile"
+				},
+				"rationale": {
+					"en": "An ammeter has almost no resistance: across a cell it acts as a short and can blow its fuse.",
+					"fr": "Un ampèremètre n’a presque pas de résistance : branché sur la pile, il fait court-circuit et peut griller son fusible."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "heat it gently to wake it up",
+					"fr": "la chauffer doucement pour la « réveiller »"
+				},
+				"rationale": {
+					"en": "Heating cells can make them leak or burst.",
+					"fr": "Chauffer une pile peut la faire fuir ou éclater."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch00.sym.exam_resistor_symbol",
+		"version": 1,
+		"conceptIds": ["diagrams.symbols"],
+		"formulaIds": [],
+		"difficulty": 2,
+		"kind": "independent",
+		"pool": "exam",
+		"prompt": {
+			"en": "Which drawing is the schematic symbol of a **resistor**?",
+			"fr": "Quel dessin est le symbole d’une **résistance** sur un schéma ?"
+		},
+		"hints": [],
+		"solution": [
+			{
+				"en": "A resistor is a zigzag line (US style) or a small rectangle (IEC/European style).",
+				"fr": "Une résistance est une ligne en zigzag (style américain) ou un petit rectangle (style CEI/européen)."
+			}
+		],
+		"type": "multiple_choice",
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "a zigzag line, or a small rectangle",
+					"fr": "une ligne en zigzag, ou un petit rectangle"
+				},
+				"rationale": {
+					"en": "Correct: both styles are used for a resistor.",
+					"fr": "Exact : les deux styles désignent une résistance."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "two parallel lines of different lengths",
+					"fr": "deux traits parallèles de longueurs différentes"
+				},
+				"rationale": {
+					"en": "That is a battery cell: the long line is +.",
+					"fr": "C’est une pile : le trait long est le +."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "a triangle pointing at a bar",
+					"fr": "un triangle pointant vers une barre"
+				},
+				"rationale": {
+					"en": "That is a diode (an LED if it has small outward arrows).",
+					"fr": "C’est une diode (une LED si elle a de petites flèches vers l’extérieur)."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "a circle with a cross inside",
+					"fr": "un cercle avec une croix à l’intérieur"
+				},
+				"rationale": {
+					"en": "That is a lamp.",
+					"fr": "C’est une lampe."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch00.sym.exam_ground",
+		"version": 1,
+		"conceptIds": ["diagrams.symbols"],
+		"formulaIds": [],
+		"difficulty": 2,
+		"kind": "independent",
+		"pool": "exam",
+		"prompt": {
+			"en": "A schematic shows the ground symbol (⏚) in three different places. What does that mean?",
+			"fr": "Un schéma montre le symbole de masse (⏚) à trois endroits différents. Qu’est-ce que cela signifie ?"
+		},
+		"hints": [],
+		"solution": [
+			{
+				"en": "Every ground symbol is the same node: they are all connected together and serve as the 0 V reference. Drawing several just saves wires.",
+				"fr": "Tous les symboles de masse sont le même nœud : ils sont tous reliés entre eux et servent de référence 0 V. En dessiner plusieurs évite simplement de tracer des fils."
+			}
+		],
+		"type": "multiple_choice",
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "all three points are connected together: they are one common 0 V reference",
+					"fr": "les trois points sont reliés entre eux : c’est une seule référence commune à 0 V"
+				},
+				"rationale": {
+					"en": "Correct: ground symbols are an invisible shared wire.",
+					"fr": "Exact : les symboles de masse sont un fil commun invisible."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "the three points are separate and must not be connected",
+					"fr": "les trois points sont séparés et ne doivent pas être reliés"
+				},
+				"rationale": {
+					"en": "The opposite: every ground symbol belongs to the same node.",
+					"fr": "C’est l’inverse : chaque symbole de masse appartient au même nœud."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "each point must be wired to a metal stake in the earth",
+					"fr": "chaque point doit être relié à un piquet de terre"
+				},
+				"rationale": {
+					"en": "In battery circuits, ground is just the reference node, not a connection to the earth.",
+					"fr": "Dans un circuit à piles, la masse est seulement le nœud de référence, pas une liaison à la terre."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "current is lost at those three points",
+					"fr": "du courant se perd en ces trois points"
+				},
+				"rationale": {
+					"en": "Current is never lost: it returns to the battery through the ground node.",
+					"fr": "Le courant ne se perd jamais : il retourne à la pile par le nœud de masse."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch00.sym.exam_junction_dot",
+		"version": 1,
+		"conceptIds": ["diagrams.symbols"],
+		"formulaIds": [],
+		"difficulty": 2,
+		"kind": "independent",
+		"pool": "exam",
+		"prompt": {
+			"en": "Two wires cross on a schematic. When are they electrically connected?",
+			"fr": "Deux fils se croisent sur un schéma. Quand sont-ils reliés électriquement ?"
+		},
+		"hints": [],
+		"solution": [
+			{
+				"en": "A dot at the crossing means a junction. A plain crossing without a dot means the wires pass over each other without touching.",
+				"fr": "Un point au croisement indique une jonction. Un simple croisement sans point signifie que les fils passent l’un au-dessus de l’autre sans se toucher."
+			}
+		],
+		"type": "multiple_choice",
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "only if there is a dot where they cross",
+					"fr": "seulement s’il y a un point au croisement"
+				},
+				"rationale": {
+					"en": "Correct: the dot marks a junction.",
+					"fr": "Exact : le point marque une jonction."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "always: crossing wires are always connected",
+					"fr": "toujours : des fils qui se croisent sont toujours reliés"
+				},
+				"rationale": {
+					"en": "Without a dot, crossing wires are not connected.",
+					"fr": "Sans point, des fils qui se croisent ne sont pas reliés."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "never: wires on a schematic cannot be joined",
+					"fr": "jamais : les fils d’un schéma ne peuvent pas être reliés"
+				},
+				"rationale": {
+					"en": "Junctions exist and are marked with a dot.",
+					"fr": "Les jonctions existent et sont marquées par un point."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "only if they cross at a right angle",
+					"fr": "seulement s’ils se croisent à angle droit"
+				},
+				"rationale": {
+					"en": "The angle means nothing; only the dot matters.",
+					"fr": "L’angle ne signifie rien ; seul le point compte."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch00.loop.exam_broken_wire",
+		"version": 1,
+		"conceptIds": ["diagrams.closed_loop"],
+		"formulaIds": [],
+		"difficulty": 2,
+		"kind": "applied",
+		"pool": "exam",
+		"prompt": {
+			"en": "A torch has new batteries and the switch is on, but the lamp stays dark. Inside, one wire has snapped. Why does nothing light?",
+			"fr": "Une lampe de poche a des piles neuves et l’interrupteur est sur marche, mais la lampe reste éteinte. À l’intérieur, un fil est cassé. Pourquoi rien ne s’allume ?"
+		},
+		"hints": [],
+		"solution": [
+			{
+				"en": "The break opens the loop. With no complete path, no current flows anywhere in the loop, so the lamp stays dark.",
+				"fr": "La cassure ouvre la boucle. Sans chemin complet, aucun courant ne circule nulle part dans la boucle : la lampe reste éteinte."
+			}
+		],
+		"type": "diagnose",
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "the break opens the loop, so no current flows anywhere",
+					"fr": "la cassure ouvre la boucle, donc aucun courant ne circule nulle part"
+				},
+				"rationale": {
+					"en": "Correct: one gap anywhere stops the current everywhere.",
+					"fr": "Exact : un seul trou n’importe où arrête le courant partout."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "current stops at the break but still flows in the rest of the loop",
+					"fr": "le courant s’arrête à la cassure mais circule encore dans le reste de la boucle"
+				},
+				"rationale": {
+					"en": "Current needs the whole loop: with a gap it stops everywhere.",
+					"fr": "Le courant a besoin de toute la boucle : avec un trou, il s’arrête partout."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "the batteries must be flat",
+					"fr": "les piles doivent être vides"
+				},
+				"rationale": {
+					"en": "The batteries are new; the open loop explains it.",
+					"fr": "Les piles sont neuves ; la boucle ouverte suffit à l’expliquer."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "the lamp now needs a higher voltage",
+					"fr": "la lampe a maintenant besoin d’une tension plus élevée"
+				},
+				"rationale": {
+					"en": "The lamp has not changed; no voltage can drive current through a gap.",
+					"fr": "La lampe n’a pas changé ; aucune tension ne fait passer de courant à travers un trou."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch00.loop.exam_switch_position",
+		"version": 1,
+		"conceptIds": ["diagrams.closed_loop"],
+		"formulaIds": [],
+		"difficulty": 2,
+		"kind": "applied",
+		"pool": "exam",
+		"prompt": {
+			"en": "A single loop contains a battery, a switch and a lamp. Does it matter whether the switch is placed before or after the lamp?",
+			"fr": "Une boucle unique contient une pile, un interrupteur et une lampe. L’interrupteur doit-il être placé avant ou après la lampe ?"
+		},
+		"hints": [],
+		"solution": [
+			{
+				"en": "In a single loop, opening the switch anywhere breaks the whole loop, so both positions work the same.",
+				"fr": "Dans une boucle unique, ouvrir l’interrupteur n’importe où coupe toute la boucle : les deux positions fonctionnent de la même façon."
+			}
+		],
+		"type": "multiple_choice",
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "no: opening the switch anywhere in the loop stops the current everywhere",
+					"fr": "non : ouvrir l’interrupteur n’importe où dans la boucle arrête le courant partout"
+				},
+				"rationale": {
+					"en": "Correct: there is only one path, so any gap opens it.",
+					"fr": "Exact : il n’y a qu’un chemin, donc tout trou l’ouvre."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "yes: it must be before the lamp, or current reaches the lamp first",
+					"fr": "oui : il doit être avant la lampe, sinon le courant atteint d’abord la lampe"
+				},
+				"rationale": {
+					"en": "Current flows all round the loop at once; it does not “arrive” at parts in turn.",
+					"fr": "Le courant circule dans toute la boucle à la fois ; il n’« arrive » pas aux composants l’un après l’autre."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "yes: after the lamp, the switch cannot stop the current",
+					"fr": "oui : après la lampe, l’interrupteur ne peut pas arrêter le courant"
+				},
+				"rationale": {
+					"en": "An open switch stops the current wherever it sits in a single loop.",
+					"fr": "Un interrupteur ouvert arrête le courant où qu’il soit dans une boucle unique."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "yes: the lamp is brighter with the switch after it",
+					"fr": "oui : la lampe brille plus avec l’interrupteur après elle"
+				},
+				"rationale": {
+					"en": "A closed switch is just a wire; its position changes nothing.",
+					"fr": "Un interrupteur fermé n’est qu’un fil ; sa position ne change rien."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch00.loop.exam_one_terminal",
+		"version": 1,
+		"conceptIds": ["diagrams.closed_loop"],
+		"formulaIds": [],
+		"difficulty": 2,
+		"kind": "applied",
+		"pool": "exam",
+		"prompt": {
+			"en": "A lamp is connected by one wire to the battery’s **+** terminal. Its other terminal is left unconnected. What happens?",
+			"fr": "Une lampe est reliée par un fil à la borne **+** de la pile. Son autre borne n’est reliée à rien. Que se passe-t-il ?"
+		},
+		"hints": [],
+		"solution": [
+			{
+				"en": "There is no return path to the − terminal, so the loop is open: no current, the lamp stays dark.",
+				"fr": "Il n’y a pas de chemin de retour vers la borne −, donc la boucle est ouverte : pas de courant, la lampe reste éteinte."
+			}
+		],
+		"type": "multiple_choice",
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "nothing: without a path back to −, the loop is open and no current flows",
+					"fr": "rien : sans chemin de retour vers le −, la boucle est ouverte et aucun courant ne circule"
+				},
+				"rationale": {
+					"en": "Correct: current needs a complete loop from + back to −.",
+					"fr": "Exact : le courant a besoin d’une boucle complète, du + jusqu’au −."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "the lamp glows dimly",
+					"fr": "la lampe brille faiblement"
+				},
+				"rationale": {
+					"en": "No loop means no current at all, not a small one.",
+					"fr": "Pas de boucle signifie aucun courant, pas un faible courant."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "the lamp lights normally",
+					"fr": "la lampe s’allume normalement"
+				},
+				"rationale": {
+					"en": "One wire is not enough: the current must come back to the battery.",
+					"fr": "Un seul fil ne suffit pas : le courant doit revenir à la pile."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "the battery is short-circuited",
+					"fr": "la pile est en court-circuit"
+				},
+				"rationale": {
+					"en": "A short needs a path from + to −; here there is no path at all.",
+					"fr": "Un court-circuit demande un chemin du + au − ; ici il n’y a aucun chemin."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch00.si_base.exam_cell_label",
+		"version": 1,
+		"conceptIds": ["units.si_base"],
+		"formulaIds": [],
+		"difficulty": 2,
+		"kind": "applied",
+		"pool": "exam",
+		"prompt": {
+			"en": "A rechargeable cell is labelled **3.7 V**. What does that value tell you?",
+			"fr": "Un accumulateur porte l’inscription **3,7 V**. Qu’indique cette valeur ?"
+		},
+		"hints": [],
+		"solution": [
+			{
+				"en": "V is the volt, the unit of voltage: the cell’s voltage is 3.7 V.",
+				"fr": "V est le volt, unité de la tension : la tension de l’accumulateur est de 3,7 V."
+			}
+		],
+		"type": "multiple_choice",
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "its voltage",
+					"fr": "sa tension"
+				},
+				"rationale": {
+					"en": "Correct: V = volt, the unit of voltage.",
+					"fr": "Exact : V = volt, l’unité de la tension."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "its current",
+					"fr": "son courant"
+				},
+				"rationale": {
+					"en": "Current is in amperes (A).",
+					"fr": "Le courant se mesure en ampères (A)."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "its power",
+					"fr": "sa puissance"
+				},
+				"rationale": {
+					"en": "Power is in watts (W).",
+					"fr": "La puissance se mesure en watts (W)."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "its resistance",
+					"fr": "sa résistance"
+				},
+				"rationale": {
+					"en": "Resistance is in ohms (Ω).",
+					"fr": "La résistance se mesure en ohms (Ω)."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch00.si_base.exam_heater_watts",
+		"version": 1,
+		"conceptIds": ["units.si_base"],
+		"formulaIds": [],
+		"difficulty": 2,
+		"kind": "applied",
+		"pool": "exam",
+		"prompt": {
+			"en": "A small USB heater pad is rated **10 W**. Which quantity is that?",
+			"fr": "Un petit coussin chauffant USB est donné pour **10 W**. De quelle grandeur s’agit-il ?"
+		},
+		"hints": [],
+		"solution": [
+			{
+				"en": "W is the watt, the unit of power.",
+				"fr": "W est le watt, unité de la puissance."
+			}
+		],
+		"type": "multiple_choice",
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "power",
+					"fr": "la puissance"
+				},
+				"rationale": {
+					"en": "Correct: W = watt, the unit of power.",
+					"fr": "Exact : W = watt, l’unité de la puissance."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "voltage",
+					"fr": "la tension"
+				},
+				"rationale": {
+					"en": "Voltage is in volts (V).",
+					"fr": "La tension se mesure en volts (V)."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "time",
+					"fr": "le temps"
+				},
+				"rationale": {
+					"en": "Time is in seconds (s).",
+					"fr": "Le temps se mesure en secondes (s)."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "current",
+					"fr": "le courant"
+				},
+				"rationale": {
+					"en": "Current is in amperes (A).",
+					"fr": "Le courant se mesure en ampères (A)."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	},
+	{
+		"id": "exercise.ch00.si_base.exam_meter_reading",
+		"version": 1,
+		"conceptIds": ["units.si_base"],
+		"formulaIds": [],
+		"difficulty": 2,
+		"kind": "applied",
+		"pool": "exam",
+		"prompt": {
+			"en": "A multimeter in a circuit shows **0.25** and the symbol **A**. What is it measuring?",
+			"fr": "Un multimètre branché dans un circuit affiche **0,25** et le symbole **A**. Que mesure-t-il ?"
+		},
+		"hints": [],
+		"solution": [
+			{
+				"en": "A is the ampere, the unit of current.",
+				"fr": "A est l’ampère, unité du courant."
+			}
+		],
+		"type": "multiple_choice",
+		"options": [
+			{
+				"id": "a",
+				"text": {
+					"en": "current",
+					"fr": "le courant"
+				},
+				"rationale": {
+					"en": "Correct: A = ampere, the unit of current.",
+					"fr": "Exact : A = ampère, l’unité du courant."
+				}
+			},
+			{
+				"id": "b",
+				"text": {
+					"en": "voltage",
+					"fr": "la tension"
+				},
+				"rationale": {
+					"en": "Voltage would show V.",
+					"fr": "Une tension afficherait V."
+				}
+			},
+			{
+				"id": "c",
+				"text": {
+					"en": "resistance",
+					"fr": "la résistance"
+				},
+				"rationale": {
+					"en": "Resistance would show Ω.",
+					"fr": "Une résistance afficherait Ω."
+				}
+			},
+			{
+				"id": "d",
+				"text": {
+					"en": "power",
+					"fr": "la puissance"
+				},
+				"rationale": {
+					"en": "Power would show W.",
+					"fr": "Une puissance afficherait W."
+				}
+			}
+		],
+		"correctOptionId": "a"
+	}
+]

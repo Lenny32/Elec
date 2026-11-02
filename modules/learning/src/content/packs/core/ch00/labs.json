@@ -1,0 +1,81 @@
+[
+	{
+		"id": "lab.ch00.closed_loop",
+		"version": 1,
+		"title": {
+			"en": "Open or closed loop?",
+			"fr": "Boucle ouverte ou fermée ?"
+		},
+		"intro": {
+			"en": "Flip switch S1 and watch the current. Change the battery voltage and the resistance too: with the switch open, nothing you change makes current flow.",
+			"fr": "Actionnez l’interrupteur S1 et observez le courant. Modifiez aussi la tension de la pile et la résistance : interrupteur ouvert, aucun réglage ne fait circuler de courant."
+		},
+		"diagramId": "diagram.ch00.switched_loop",
+		"model": "switched",
+		"params": [
+			{
+				"key": "V",
+				"label": {
+					"en": "Battery voltage",
+					"fr": "Tension de la pile"
+				},
+				"unit": "V",
+				"min": 1.5,
+				"max": 9,
+				"step": 1.5,
+				"default": 3
+			},
+			{
+				"key": "R",
+				"label": {
+					"en": "Resistance",
+					"fr": "Résistance"
+				},
+				"unit": "ohm",
+				"min": 100,
+				"max": 1000,
+				"step": 10,
+				"default": 330
+			},
+			{
+				"key": "closed",
+				"label": {
+					"en": "Switch closed (0 = open, 1 = closed)",
+					"fr": "Interrupteur fermé (0 = ouvert, 1 = fermé)"
+				},
+				"unit": "one",
+				"min": 0,
+				"max": 1,
+				"step": 1,
+				"default": 0
+			}
+		],
+		"constants": {
+			"Prating": 0.25
+		},
+		"assumptions": [
+			{
+				"en": "Ideal battery: its voltage does not change with the current.",
+				"fr": "Pile idéale : sa tension ne dépend pas du courant."
+			},
+			{
+				"en": "Ideal wires and switch: no resistance when closed, no current at all when open.",
+				"fr": "Fils et interrupteur idéaux : aucune résistance une fois fermé, aucun courant quand il est ouvert."
+			},
+			{
+				"en": "The resistor keeps the same value whatever its temperature.",
+				"fr": "La résistance garde la même valeur quelle que soit sa température."
+			}
+		],
+		"safety": [
+			{
+				"en": "This is a simulation. On a real bench, a 0.25 W resistor becomes hot if too much power flows through it — the lab will warn you.",
+				"fr": "Ceci est une simulation. En vrai, une résistance de 0,25 W chauffe si elle dissipe trop de puissance — le labo vous préviendra."
+			},
+			{
+				"en": "Never replace the resistor by a bare wire: that would short-circuit the battery.",
+				"fr": "Ne remplacez jamais la résistance par un simple fil : cela court-circuiterait la pile."
+			}
+		]
+	}
+]

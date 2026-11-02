@@ -1,0 +1,4 @@
+interface:
+  display_name: "Psychedelic Cognition Simulator"
+  short_description: "Explore unusual perspectives, then ground insights in reality"
+  default_prompt: "Use psychedelic cognition mode at intensity 2 to explore this problem from several unconventional angles, then integrate the most useful insights."
